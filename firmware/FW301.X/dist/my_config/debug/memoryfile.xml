@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/my_config/debug/FW301.X.debug.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>1040384</length>
+      <used>7798</used>
+      <free>1032586</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>262128</length>
+      <used>459</used>
+      <free>261669</free>
+    </memory>
+  </executable>
+</project>
