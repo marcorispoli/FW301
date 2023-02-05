@@ -77,18 +77,10 @@ typedef enum{
 } MET_CAN_PROTOCOL_COMMAND_ENUM;
     
 
-typedef struct _met_can_protocol_struct_t {
-
-    // Stato corrente della rice - trasmissione
-    MET_CANOPEN_ERROR_CALLBACK errorHandler;
-
-} MET_Can_Protocol_t;
-
-
 /******************************************************************************/
 /*                      API DI ISTALLAZIONE PROTOCOLLO                        */
 /******************************************************************************/
-void MET_Can_Protocol_Init(MET_CANOPEN_ERROR_CALLBACK appErrHandler);
+void MET_Can_Protocol_Init(void);
 void MET_Can_Protocol_Loop(void);  // Dichiarare nel loop principale dell'applicazione
 void MET_Can_Protocol_Start(void);      // Inizio attività di rxtx con protocollo CanOpen
 void MET_Can_Protocol_TestFrame(void);
