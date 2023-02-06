@@ -46,9 +46,9 @@
           <itemPath>../src/config/default/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="MetLib" displayName="MetLib" projectFiles="true">
-        <itemPath>../src/MetLib/MET_can_open.h</itemPath>
-        <itemPath>../src/MetLib/MET_can_protocol.h</itemPath>
+      <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+        <itemPath>../src/Lib/MET_can_protocol.h</itemPath>
+        <itemPath>../src/Lib/MET_can_open.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAME51J20A_DFP" projectFiles="true">
@@ -175,6 +175,9 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="Protocol" displayName="Protocol" projectFiles="true">
+        <itemPath>../src/Protocol/protocol.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -230,11 +233,15 @@
           <itemPath>../src/config/default/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="MetLib" displayName="MetLib" projectFiles="true">
-        <itemPath>../src/MetLib/MET_can_open.c</itemPath>
-        <itemPath>../src/MetLib/MET_can_protocol.c</itemPath>
+      <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+        <itemPath>../src/Lib/MET_can_open.c</itemPath>
+        <itemPath>../src/Lib/MET_can_protocol.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Protocol" displayName="Protocol" projectFiles="true">
+        <itemPath>../src/Protocol/protocol.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/application.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -270,7 +277,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.10</languageToolchainVersion>
+        <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1046,6 +1053,8 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/marco/Documents/GitHub/FW301/firmware/FW301.X/debug/default/FW301_ptg"/>
         <property key="programmerToGoImageName" value="FW301_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -1547,7 +1556,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/marco/Documents/GitHub/FW301/firmware/FW301.X/debug/default/FW301_ptg"/>
+                  value="C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/FW301.X/debug/default/FW301_ptg"/>
         <property key="programmerToGoImageName" value="FW301_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

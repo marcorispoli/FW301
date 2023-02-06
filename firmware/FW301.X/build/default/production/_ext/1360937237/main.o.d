@@ -114,7 +114,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/rtc/plib_rtc.h \
  ../src/config/default/peripheral/tc/plib_tc0.h \
  ../src/config/default/peripheral/tc/plib_tc_common.h \
- ../src/MetLib/MET_can_protocol.h ../src/MetLib/MET_can_open.h
+ ../src/application.h ../src/Lib/MET_can_open.h \
+ ../src/Lib/MET_can_protocol.h ../src/Protocol/protocol.h
 
 ../src/config/default/definitions.h:
 
@@ -348,6 +349,10 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/peripheral/tc/plib_tc_common.h:
 
-../src/MetLib/MET_can_protocol.h:
+../src/application.h:
 
-../src/MetLib/MET_can_open.h:
+../src/Lib/MET_can_open.h:
+
+../src/Lib/MET_can_protocol.h:
+
+../src/Protocol/protocol.h:

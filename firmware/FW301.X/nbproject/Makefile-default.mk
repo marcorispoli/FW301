@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/main.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/cmcc/plib_cmcc.c ../src/config/default/startup_xc32.c ../src/config/default/libc_syscalls.c ../src/config/default/peripheral/tc/plib_tc0.c ../src/config/default/peripheral/can/plib_can1.c ../src/config/default/peripheral/can/plib_can0.c ../src/MetLib/MET_can_open.c ../src/MetLib/MET_can_protocol.c ../src/config/default/peripheral/rtc/plib_rtc_timer.c
+SOURCEFILES_QUOTED_IF_SPACED=../src/config/default/peripheral/can/plib_can1.c ../src/config/default/peripheral/can/plib_can0.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/cmcc/plib_cmcc.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/rtc/plib_rtc_timer.c ../src/config/default/peripheral/tc/plib_tc0.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/config/default/startup_xc32.c ../src/config/default/libc_syscalls.c ../src/main.c ../src/Lib/MET_can_open.c ../src/Lib/MET_can_protocol.c ../src/Protocol/protocol.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ${OBJECTDIR}/_ext/60165182/plib_can1.o ${OBJECTDIR}/_ext/60165182/plib_can0.o ${OBJECTDIR}/_ext/1032945309/MET_can_open.o ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1865521619/plib_port.o.d ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d ${OBJECTDIR}/_ext/829342655/plib_tc0.o.d ${OBJECTDIR}/_ext/60165182/plib_can1.o.d ${OBJECTDIR}/_ext/60165182/plib_can0.o.d ${OBJECTDIR}/_ext/1032945309/MET_can_open.o.d ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o.d ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/60165182/plib_can1.o ${OBJECTDIR}/_ext/60165182/plib_can0.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/659830379/MET_can_open.o ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o ${OBJECTDIR}/_ext/1042908558/protocol.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/60165182/plib_can1.o.d ${OBJECTDIR}/_ext/60165182/plib_can0.o.d ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d ${OBJECTDIR}/_ext/1865521619/plib_port.o.d ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d ${OBJECTDIR}/_ext/829342655/plib_tc0.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/659830379/MET_can_open.o.d ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o.d ${OBJECTDIR}/_ext/1042908558/protocol.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ${OBJECTDIR}/_ext/60165182/plib_can1.o ${OBJECTDIR}/_ext/60165182/plib_can0.o ${OBJECTDIR}/_ext/1032945309/MET_can_open.o ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o
+OBJECTFILES=${OBJECTDIR}/_ext/60165182/plib_can1.o ${OBJECTDIR}/_ext/60165182/plib_can0.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/659830379/MET_can_open.o ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o ${OBJECTDIR}/_ext/1042908558/protocol.o
 
 # Source Files
-SOURCEFILES=../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/main.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/cmcc/plib_cmcc.c ../src/config/default/startup_xc32.c ../src/config/default/libc_syscalls.c ../src/config/default/peripheral/tc/plib_tc0.c ../src/config/default/peripheral/can/plib_can1.c ../src/config/default/peripheral/can/plib_can0.c ../src/MetLib/MET_can_open.c ../src/MetLib/MET_can_protocol.c ../src/config/default/peripheral/rtc/plib_rtc_timer.c
+SOURCEFILES=../src/config/default/peripheral/can/plib_can1.c ../src/config/default/peripheral/can/plib_can0.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/cmcc/plib_cmcc.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/rtc/plib_rtc_timer.c ../src/config/default/peripheral/tc/plib_tc0.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/config/default/startup_xc32.c ../src/config/default/libc_syscalls.c ../src/main.c ../src/Lib/MET_can_open.c ../src/Lib/MET_can_protocol.c ../src/Protocol/protocol.c
 
 # Pack Options 
 PACK_COMMON_OPTIONS=-I "${CMSIS_DIR}/CMSIS/Core/Include"
@@ -110,234 +110,246 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o: ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/default/654a6c90ebe68215e75bdc524396e8aec8f7275b .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1593096446" 
-	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/ac30352db15a14bcaa563e38a237ee631a8ebea3 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
-	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ../src/config/default/peripheral/evsys/plib_evsys.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/d0b2c05028a10fb89d55818613edd7ea45f84360 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/flags/default/8def3fca604d1830952da00e2b2a4dcb3e448c7f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/flags/default/e08591a71bada87738694c85ee8a94f5f2ea57a6 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/flags/default/cb2897881d2c0869023b6add46a9c49810786939 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/783aadbc85f96a4b1c3c30ed465beb75a3fa3514 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
-	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
-	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/plib_port.c  .generated_files/flags/default/428801e508bfc1300c21530aa53675932a8376a3 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865521619" 
-	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/clock/plib_clock.c  .generated_files/flags/default/fd24182467c9441d639cfdcdc9c24735f39a50da .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1984496892" 
-	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865468468/plib_nvic.o: ../src/config/default/peripheral/nvic/plib_nvic.c  .generated_files/flags/default/153491557916dd6a1ac314d715b5696c38941663 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865468468" 
-	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ../src/config/default/peripheral/nvic/plib_nvic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865131932/plib_cmcc.o: ../src/config/default/peripheral/cmcc/plib_cmcc.c  .generated_files/flags/default/8834538886f6a7493006f56d948f541711ba4be5 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865131932" 
-	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d" -o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ../src/config/default/peripheral/cmcc/plib_cmcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.c  .generated_files/flags/default/ebf60d368cda05825feaa90296cac6918931942f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/libc_syscalls.o: ../src/config/default/libc_syscalls.c  .generated_files/flags/default/424f9f3fa3c80eae75679674085c92d806e2f12b .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ../src/config/default/libc_syscalls.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/829342655/plib_tc0.o: ../src/config/default/peripheral/tc/plib_tc0.c  .generated_files/flags/default/2721b674bd0a5a80322e46a0cc7b8ffcdec2eb8f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/829342655" 
-	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o.d 
-	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/829342655/plib_tc0.o.d" -o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ../src/config/default/peripheral/tc/plib_tc0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/60165182/plib_can1.o: ../src/config/default/peripheral/can/plib_can1.c  .generated_files/flags/default/d717c124d06fbd11dbe2290e13e77e15dbc701f0 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/60165182/plib_can1.o: ../src/config/default/peripheral/can/plib_can1.c  .generated_files/flags/default/ccfe1cff15e1e4ded00e70d82a62c19652a4522b .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60165182" 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165182/plib_can1.o.d" -o ${OBJECTDIR}/_ext/60165182/plib_can1.o ../src/config/default/peripheral/can/plib_can1.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/60165182/plib_can0.o: ../src/config/default/peripheral/can/plib_can0.c  .generated_files/flags/default/846d64c27cab413ddfed8b505688024a0aa47241 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/60165182/plib_can0.o: ../src/config/default/peripheral/can/plib_can0.c  .generated_files/flags/default/b581c7443def78c9add69ae9f2420322cbe6137f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60165182" 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can0.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can0.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165182/plib_can0.o.d" -o ${OBJECTDIR}/_ext/60165182/plib_can0.o ../src/config/default/peripheral/can/plib_can0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1032945309/MET_can_open.o: ../src/MetLib/MET_can_open.c  .generated_files/flags/default/a3e44fbb1520743f0be8d2fb8cbda46426efa849 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1032945309" 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_open.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1032945309/MET_can_open.o.d" -o ${OBJECTDIR}/_ext/1032945309/MET_can_open.o ../src/MetLib/MET_can_open.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/clock/plib_clock.c  .generated_files/flags/default/5374a0b97cb93ecc11878b5c0c50cf2d224a2f70 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1984496892" 
+	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o: ../src/MetLib/MET_can_protocol.c  .generated_files/flags/default/ad18b18dfcc0a97bb3f71a1d41c72a2113591454 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1032945309" 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o.d" -o ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o ../src/MetLib/MET_can_protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+${OBJECTDIR}/_ext/1865131932/plib_cmcc.o: ../src/config/default/peripheral/cmcc/plib_cmcc.c  .generated_files/flags/default/b248ae5b3a4cbacc204dd8ea1eeb4c74f079134 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865131932" 
+	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d" -o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ../src/config/default/peripheral/cmcc/plib_cmcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o: ../src/config/default/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/default/5e85db9172ffe474dac583061ccd1b036c60b1de .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/1741e6e180838786a46622b72b894b4c84a53f61 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
+	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ../src/config/default/peripheral/evsys/plib_evsys.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1865468468/plib_nvic.o: ../src/config/default/peripheral/nvic/plib_nvic.c  .generated_files/flags/default/1fab66ac92ab9c28ae7e572a0ca5a7ded1c09f2c .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865468468" 
+	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ../src/config/default/peripheral/nvic/plib_nvic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o: ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/default/2cedf78fcab2415590a65c9181734ca14ffd22b0 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1593096446" 
+	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/plib_port.c  .generated_files/flags/default/732d0c4a231985ed2621094d9c4d1f99e62b4e79 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865521619" 
+	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o: ../src/config/default/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/default/162f167940883db8ba1cbcbe02f46507faec4020 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60180175" 
 	@${RM} ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d" -o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o ../src/config/default/peripheral/rtc/plib_rtc_timer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-else
-${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o: ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/default/c9a9927f58bb6fb47388bd33854e27510d07d676 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1593096446" 
-	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/864ded23b4ce27c19dcc841780fdc5ff207749eb .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
-	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ../src/config/default/peripheral/evsys/plib_evsys.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/7a0d05afb48e816d425f4ffd91a02b7591a03e4c .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/flags/default/712bd0f5de0c0250c2a14811a94b9b0f01756261 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/flags/default/f20a90e0e68e975c45341924da119ce2ff4f722c .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/flags/default/b0210b7771de2ca8da688aff099bf87e296d7cdf .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/912908e73e491088b8b9225675fb5115ac8ea220 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
-	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
-	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/plib_port.c  .generated_files/flags/default/518b56fa46209d97adc79674d3a2863428ca961c .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865521619" 
-	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/clock/plib_clock.c  .generated_files/flags/default/ed1209ef2654f47c03b4c0c6c97a06d9d3c39ba1 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1984496892" 
-	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865468468/plib_nvic.o: ../src/config/default/peripheral/nvic/plib_nvic.c  .generated_files/flags/default/dfa5d8cc0ba370cb69c3cffde095a1ebffdeef1f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865468468" 
-	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ../src/config/default/peripheral/nvic/plib_nvic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1865131932/plib_cmcc.o: ../src/config/default/peripheral/cmcc/plib_cmcc.c  .generated_files/flags/default/b97178371b2f8fd35ee1cd5c90069fb2bf899866 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1865131932" 
-	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d" -o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ../src/config/default/peripheral/cmcc/plib_cmcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.c  .generated_files/flags/default/4e3feb250f789571845ab2ca8ea42afbd1f52dc6 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1171490990/libc_syscalls.o: ../src/config/default/libc_syscalls.c  .generated_files/flags/default/9ed2642871a4c783bc7ddbe30f63135951254f35 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ../src/config/default/libc_syscalls.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/829342655/plib_tc0.o: ../src/config/default/peripheral/tc/plib_tc0.c  .generated_files/flags/default/bbd4f8be4fc79576cd0c97a7a71d90a8cccec5e0 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/829342655/plib_tc0.o: ../src/config/default/peripheral/tc/plib_tc0.c  .generated_files/flags/default/6d99d92465170cb799216079994993e554b609ad .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/829342655" 
 	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o.d 
 	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/829342655/plib_tc0.o.d" -o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ../src/config/default/peripheral/tc/plib_tc0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/829342655/plib_tc0.o.d" -o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ../src/config/default/peripheral/tc/plib_tc0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/60165182/plib_can1.o: ../src/config/default/peripheral/can/plib_can1.c  .generated_files/flags/default/1c67def0ec6e4388abeb31940ef2a549ef7e0663 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/5bb45bf4d3f52c00a8bf7cb57e40db42b28b79b2 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
+	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
+	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/flags/default/23bc7d51e75ec8a52d18f3ac8e0f3d4970e018a .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/flags/default/ddd144b73f179aa28e4d1028dc6e9e8d0882789 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/flags/default/dcfe420eb1910bfa202d06518c67e9499f703e08 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.c  .generated_files/flags/default/71743a4fcf019f8ef3004895e98d2b136432ca05 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/libc_syscalls.o: ../src/config/default/libc_syscalls.c  .generated_files/flags/default/53a1358f1b06bd360714d32c6db74ef9fa5b00a1 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ../src/config/default/libc_syscalls.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/15585c8b9aceb4714dbe8d031415d8f8eff97ac4 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/659830379/MET_can_open.o: ../src/Lib/MET_can_open.c  .generated_files/flags/default/a05495892ab86d958ea6a6906ffdc058ad622503 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/659830379" 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_open.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/659830379/MET_can_open.o.d" -o ${OBJECTDIR}/_ext/659830379/MET_can_open.o ../src/Lib/MET_can_open.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/659830379/MET_can_protocol.o: ../src/Lib/MET_can_protocol.c  .generated_files/flags/default/2ca7d9a40b186364c9c4d52b580c408d1088c45e .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/659830379" 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o.d 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/659830379/MET_can_protocol.o.d" -o ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o ../src/Lib/MET_can_protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1042908558/protocol.o: ../src/Protocol/protocol.c  .generated_files/flags/default/75f7dd72ecbedb562d18d0c600fe0edcf543e49e .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1042908558" 
+	@${RM} ${OBJECTDIR}/_ext/1042908558/protocol.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1042908558/protocol.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1042908558/protocol.o.d" -o ${OBJECTDIR}/_ext/1042908558/protocol.o ../src/Protocol/protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+else
+${OBJECTDIR}/_ext/60165182/plib_can1.o: ../src/config/default/peripheral/can/plib_can1.c  .generated_files/flags/default/2c63b62ed4b7720e44e37ed9531ed0c27d14cd05 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60165182" 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165182/plib_can1.o.d" -o ${OBJECTDIR}/_ext/60165182/plib_can1.o ../src/config/default/peripheral/can/plib_can1.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/60165182/plib_can0.o: ../src/config/default/peripheral/can/plib_can0.c  .generated_files/flags/default/8e704c59d66e0e4df0ef34a6470ae288c4e0a42f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/60165182/plib_can0.o: ../src/config/default/peripheral/can/plib_can0.c  .generated_files/flags/default/60eb0a8658a93e467565625268c8e89a322d2322 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60165182" 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can0.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165182/plib_can0.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165182/plib_can0.o.d" -o ${OBJECTDIR}/_ext/60165182/plib_can0.o ../src/config/default/peripheral/can/plib_can0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1032945309/MET_can_open.o: ../src/MetLib/MET_can_open.c  .generated_files/flags/default/c7f1dccd80d5c280cad8033c37ca08e045224ea7 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1032945309" 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_open.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1032945309/MET_can_open.o.d" -o ${OBJECTDIR}/_ext/1032945309/MET_can_open.o ../src/MetLib/MET_can_open.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/clock/plib_clock.c  .generated_files/flags/default/4ac6c8d02ecbb064bb7d4fe47ab0b5e4a5a05e9c .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1984496892" 
+	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o: ../src/MetLib/MET_can_protocol.c  .generated_files/flags/default/567ddfc7fb398d65584623d01c5f6e0e64ba10e5 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
-	@${MKDIR} "${OBJECTDIR}/_ext/1032945309" 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o.d" -o ${OBJECTDIR}/_ext/1032945309/MET_can_protocol.o ../src/MetLib/MET_can_protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+${OBJECTDIR}/_ext/1865131932/plib_cmcc.o: ../src/config/default/peripheral/cmcc/plib_cmcc.c  .generated_files/flags/default/66788649792d0499d0d142a29303868dc3b733e0 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865131932" 
+	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865131932/plib_cmcc.o.d" -o ${OBJECTDIR}/_ext/1865131932/plib_cmcc.o ../src/config/default/peripheral/cmcc/plib_cmcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o: ../src/config/default/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/default/93ccaad37c343d0425bcd350d16646cffb9e1ae6 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/5f55ac68885a7d56f1ebe7801ecc4be04852bff .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
+	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1986646378/plib_evsys.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ../src/config/default/peripheral/evsys/plib_evsys.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1865468468/plib_nvic.o: ../src/config/default/peripheral/nvic/plib_nvic.c  .generated_files/flags/default/15b0f084948e605f474c3c943ec78df068dbca96 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865468468" 
+	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865468468/plib_nvic.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ../src/config/default/peripheral/nvic/plib_nvic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o: ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/default/1c99abb4670b4042be69915f8abb5dbebd186c84 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1593096446" 
+	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/plib_port.c  .generated_files/flags/default/1d3dece6643bb823e392aa76638a0ff2bb85824d .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1865521619" 
+	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o: ../src/config/default/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/default/22b1076c81f14bec298927122b9c5a5a2f0c9ff8 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
 	@${MKDIR} "${OBJECTDIR}/_ext/60180175" 
 	@${RM} ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o.d" -o ${OBJECTDIR}/_ext/60180175/plib_rtc_timer.o ../src/config/default/peripheral/rtc/plib_rtc_timer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/829342655/plib_tc0.o: ../src/config/default/peripheral/tc/plib_tc0.c  .generated_files/flags/default/c2ee975cb180524a95587eb2fdff86f85c8f109f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/829342655" 
+	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o.d 
+	@${RM} ${OBJECTDIR}/_ext/829342655/plib_tc0.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/829342655/plib_tc0.o.d" -o ${OBJECTDIR}/_ext/829342655/plib_tc0.o ../src/config/default/peripheral/tc/plib_tc0.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/118f06f6cf9fbd328272e9a41f72402a0bfb48c6 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
+	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
+	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/flags/default/d5d76e994b0a9f9a5fb33c086879c0f2b51e8790 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/flags/default/a754d467fd92c86eed639808355e9062d9cffc2d .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/flags/default/4bf3722afa7d9ee2bd4566dc2365974649ba41df .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.c  .generated_files/flags/default/c36940202491bd3eb2bee982644e03f77dc42f7 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1171490990/libc_syscalls.o: ../src/config/default/libc_syscalls.c  .generated_files/flags/default/34a70506e376f892d96d09c4d26db999ad21d6e3 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ../src/config/default/libc_syscalls.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/f10fd9b0a05e16f688542fc28c1734bcd3312a58 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/659830379/MET_can_open.o: ../src/Lib/MET_can_open.c  .generated_files/flags/default/d04d98bf7ad3ca44bca872468ba00a15badcab0a .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/659830379" 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_open.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/659830379/MET_can_open.o.d" -o ${OBJECTDIR}/_ext/659830379/MET_can_open.o ../src/Lib/MET_can_open.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/659830379/MET_can_protocol.o: ../src/Lib/MET_can_protocol.c  .generated_files/flags/default/d8bd4eec0be22190d4fbd9292dff1138fa201e3f .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/659830379" 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o.d 
+	@${RM} ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/659830379/MET_can_protocol.o.d" -o ${OBJECTDIR}/_ext/659830379/MET_can_protocol.o ../src/Lib/MET_can_protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/1042908558/protocol.o: ../src/Protocol/protocol.c  .generated_files/flags/default/bff4e901eaaeae02a97fc7048749d377eecec5b1 .generated_files/flags/default/287b6168c2390f6aae73a35d8f186754c68efcf4
+	@${MKDIR} "${OBJECTDIR}/_ext/1042908558" 
+	@${RM} ${OBJECTDIR}/_ext/1042908558/protocol.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1042908558/protocol.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAME51J20A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1042908558/protocol.o.d" -o ${OBJECTDIR}/_ext/1042908558/protocol.o ../src/Protocol/protocol.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}" ${PACK_COMMON_OPTIONS} 
 	
 endif
 
@@ -373,3 +385,11 @@ endif
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r build/default
 	${RM} -r dist/default
+
+# Enable dependency checking
+.dep.inc: .depcheck-impl
+
+DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
+ifneq (${DEPFILES},)
+include ${DEPFILES}
+endif

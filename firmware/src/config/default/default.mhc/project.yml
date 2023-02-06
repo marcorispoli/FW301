@@ -34,27 +34,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: E0AEC0A0CC9F911C160DC2748831F759
+- generatedChecksum: 32C032D6CE34A8F441D0C53E3C553DC3
   logicalPath: config/default/peripheral/can
   name: plib_can0.c
   physicalPath: peripheral/can
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E0AEC0A0CC9F911C160DC2748831F759
-- generatedChecksum: 2CFF29BBB0FBA3F3D67467026BC36A7F
+  userChecksum: 32C032D6CE34A8F441D0C53E3C553DC3
+- generatedChecksum: D943A99FB31FE4A021FD5BD03D387260
   logicalPath: config/default/peripheral/can
   name: plib_can1.c
   physicalPath: peripheral/can
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2CFF29BBB0FBA3F3D67467026BC36A7F
-- generatedChecksum: DE1E6D255FE62F2E814C03C1D5381A77
+  userChecksum: D943A99FB31FE4A021FD5BD03D387260
+- generatedChecksum: 1241940FE61E2DA77A9276E3FD8D28D3
   logicalPath: config/default/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DE1E6D255FE62F2E814C03C1D5381A77
+  userChecksum: 1241940FE61E2DA77A9276E3FD8D28D3
 - generatedChecksum: D903E8D9DCBC4107D0AA841E07F653BA
   logicalPath: config/default/peripheral/cmcc
   name: plib_cmcc.c

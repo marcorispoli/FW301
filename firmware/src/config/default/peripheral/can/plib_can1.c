@@ -120,7 +120,7 @@ void CAN1_Initialize(void)
     CAN1_REGS->CAN_CCCR |= CAN_CCCR_CCE_Msk;
 
     /* Set Nominal Bit timing and Prescaler Register */
-    CAN1_REGS->CAN_NBTP  = CAN_NBTP_NTSEG2(43UL) | CAN_NBTP_NTSEG1(254UL) | CAN_NBTP_NBRP(1UL) | CAN_NBTP_NSJW(43UL);
+    CAN1_REGS->CAN_NBTP  = CAN_NBTP_NTSEG2(0UL) | CAN_NBTP_NTSEG1(57UL) | CAN_NBTP_NBRP(0UL) | CAN_NBTP_NSJW(0UL);
 
 
     /* Global Filter Configuration Register */

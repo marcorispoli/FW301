@@ -10,14 +10,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: CALCULATED_NOMINAL_BITRATE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '100'}
+        attributes: {id: can1, value: '1000'}
   - type: String
     attributes: {id: CALCULATED_NOMINAL_ERRORRATE}
     children:
@@ -67,7 +67,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! CAN1 Clock Frequency is too high for required
+        - {type: Value, value: Warning!!! CAN1 Clock Frequency is too low for required
             Nominal Bit Timing}
       - type: Boolean
         attributes: {id: visible}
@@ -81,7 +81,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! Error 1088.981%}
+        - {type: Value, value: Warning!!! Error 6.660%}
       - type: Boolean
         attributes: {id: visible}
         children:
@@ -94,7 +94,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! Number of Time Quanta is too high for required
+        - {type: Value, value: Warning!!! Number of Time Quanta is too low for required
             Nominal Bit Timing}
       - type: Boolean
         attributes: {id: visible}
@@ -136,46 +136,46 @@ children:
       - type: Boolean
         attributes: {id: readOnly}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '1'}
+        attributes: {id: can1, value: '0'}
   - type: Integer
     attributes: {id: NBTP_NSJW}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '44'}
+        attributes: {id: can1, value: '1'}
   - type: Integer
     attributes: {id: NBTP_NTSEG1}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '255'}
+        attributes: {id: can1, value: '58'}
   - type: Integer
     attributes: {id: NBTP_NTSEG2}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '44'}
+        attributes: {id: can1, value: '1'}
   - type: Integer
     attributes: {id: NBTP_TOTAL_TIME_QUANTA}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '300'}
+        attributes: {id: can1, value: '60'}
   - type: Integer
     attributes: {id: NOMINAL_BITRATE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '100'}
+        attributes: {value: '1000'}
   - type: Float
     attributes: {id: NOMINAL_SAMPLE_POINT}
     children:
@@ -184,18 +184,18 @@ children:
       - type: Boolean
         attributes: {id: readOnly}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '85.666664'}
+        attributes: {id: can1, value: '98.333336'}
   - type: String
     attributes: {id: NOMINAL_TIME_QUANTA_PERIOD}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '33.333'}
+        attributes: {id: can1, value: '16.667'}
   - type: Boolean
     attributes: {id: RXF1_USE}
     children:

@@ -26,8 +26,10 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
-#include "MetLib/MET_can_protocol.h"
-#include "MetLib/MET_can_open.h"
+#include "application.h"
+#include "Lib/MET_can_open.h"
+#include "Lib/MET_can_protocol.h"
+#include "Protocol/protocol.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -57,24 +59,28 @@ int main ( void )
     // Start the TCo to start the Vitality LED
     TC0_CompareStart();
     
-    MET_Can_Protocol_Init();
     MET_Can_Open_Init();
-          
-    void MET_Can_Protocol_Start();
-    void MET_Can_Open_Start();
+    MET_Can_Open_Start();
+    
+    // Application Protocol initialization
+    ApplicationProtocolInit();
+    
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
         
-         if(isToggleTime){ 
-            MET_Can_Open_TestFrame();
+        // Protocol management
+        MET_Can_Protocol_Loop();
+        
+        
+        if(isToggleTime){            
             isToggleTime = false;
+            
+            MET_Can_Open_Send_ReadStatus(_STAT_REVISION_IDX);
         }
         
-        // Gestione del protocollo CAN
-        //MET_Can_Protocol_Loop();
-        MET_Can_Protocol_Loop();
+       
     }
 
     /* Execution should not come here during normal operation */
