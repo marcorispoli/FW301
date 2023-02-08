@@ -1,6 +1,6 @@
 build/default/production/_ext/1042908558/protocol.o: \
  ../src/Protocol/protocol.c ../src/application.h \
- ../src/Lib/MET_can_protocol.h ../src/config/default/definitions.h \
+ ../src/Protocol/protocol.h ../src/config/default/definitions.h \
  ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/default/device.h \
  ../src/packs/ATSAME51J20A_DFP/same51j20a.h \
@@ -114,11 +114,12 @@ build/default/production/_ext/1042908558/protocol.o: \
  ../src/config/default/peripheral/can/plib_can0.h \
  ../src/config/default/peripheral/rtc/plib_rtc.h \
  ../src/config/default/peripheral/tc/plib_tc0.h \
- ../src/config/default/peripheral/tc/plib_tc_common.h
+ ../src/config/default/peripheral/tc/plib_tc_common.h \
+ ../src/Protocol/MET_can_protocol.h
 
 ../src/application.h:
 
-../src/Lib/MET_can_protocol.h:
+../src/Protocol/protocol.h:
 
 ../src/config/default/definitions.h:
 
@@ -351,3 +352,5 @@ build/default/production/_ext/1042908558/protocol.o: \
 ../src/config/default/peripheral/tc/plib_tc0.h:
 
 ../src/config/default/peripheral/tc/plib_tc_common.h:
+
+../src/Protocol/MET_can_protocol.h:

@@ -1,0 +1,28 @@
+var hmatrix_8h =
+[
+    [ "HMATRIX_INSTANCE_ID", "hmatrix_8h.html#a310421c908760031341788f7e15f41cb", null ],
+    [ "HMATRIX_MASTER_CM4_S", "hmatrix_8h.html#a1c994a99286ead7e70c7ac3073d5fad2", null ],
+    [ "HMATRIX_MASTER_CMCC", "hmatrix_8h.html#a31944709b333f3a3672e0e0af4b65766", null ],
+    [ "HMATRIX_MASTER_DMAC_DTRD", "hmatrix_8h.html#a0a26c81cfedb8ee2ae78b91c842d1c73", null ],
+    [ "HMATRIX_MASTER_DMAC_DTWR", "hmatrix_8h.html#aa2c70d4ab4bb51df3ee8bb39c9808a6e", null ],
+    [ "HMATRIX_MASTER_DSU", "hmatrix_8h.html#a3b9735304a129d70d166df3ed8fc74df", null ],
+    [ "HMATRIX_MASTER_ICM", "hmatrix_8h.html#a9d2334b09ac12ceac32dbe6a1bdac3c6", null ],
+    [ "HMATRIX_MASTER_NUM", "hmatrix_8h.html#a5ea04e212f75aa7f7d2ffede379de0a8", null ],
+    [ "HMATRIX_MASTER_PICOP_IO", "hmatrix_8h.html#ab0e9b2327a354defba6d8a82c5e4aab3", null ],
+    [ "HMATRIX_MASTER_PICOP_MEM", "hmatrix_8h.html#a7870842f7b745adc3ea01bcc298bbe01", null ],
+    [ "HMATRIX_SLAVE_BKUPRAM", "hmatrix_8h.html#ae79c25f490810e36de63927c295744e0", null ],
+    [ "HMATRIX_SLAVE_FLASH", "hmatrix_8h.html#a71f58dc711bea141d5dd72097d407149", null ],
+    [ "HMATRIX_SLAVE_FLASH_ALT", "hmatrix_8h.html#a8996fefd8cbcc931d5e47d13917815de", null ],
+    [ "HMATRIX_SLAVE_HPB0", "hmatrix_8h.html#a44519a35434fea26a6e5e27885b93113", null ],
+    [ "HMATRIX_SLAVE_HPB1", "hmatrix_8h.html#a74078a1e516eb36a16622ff133d217be", null ],
+    [ "HMATRIX_SLAVE_HPB2", "hmatrix_8h.html#a3ffac4c34135922dbdb73a94d3b9441b", null ],
+    [ "HMATRIX_SLAVE_HPB3", "hmatrix_8h.html#a218b4099c42c6c22eb289369fbbdd9fe", null ],
+    [ "HMATRIX_SLAVE_NUM", "hmatrix_8h.html#ab7e0fb7c568f40fa927b6e2b1c710477", null ],
+    [ "HMATRIX_SLAVE_QSPI", "hmatrix_8h.html#a56a1255b8fc8240d018273bc9c9202e1", null ],
+    [ "HMATRIX_SLAVE_RAMCM4S", "hmatrix_8h.html#a7002d85c180aae4e6d03e8e20a392917", null ],
+    [ "HMATRIX_SLAVE_RAMDMACICM", "hmatrix_8h.html#a064eb4f9a2320910ab29d41545e63385", null ],
+    [ "HMATRIX_SLAVE_RAMDMAWR", "hmatrix_8h.html#a6651389ba40f4b57bc861910d6a6bf9c", null ],
+    [ "HMATRIX_SLAVE_RAMPPPDSU", "hmatrix_8h.html#a7ee92b9ed20eb7983977ef2f31a409c6", null ],
+    [ "HMATRIX_SLAVE_SDHC0", "hmatrix_8h.html#a4534d23d887609ce5a08282973f8e114", null ],
+    [ "HMATRIX_SLAVE_SEEPROM", "hmatrix_8h.html#a90ed0e373387f715dc32638fcfb38664", null ]
+];

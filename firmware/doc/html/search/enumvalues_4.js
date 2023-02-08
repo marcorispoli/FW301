@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['dac_5fempty_5f0_5firqn_0',['DAC_EMPTY_0_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a592147cb6b68e4fbaf53f65a56e36f70',1,'same51j20a.h']]],
+  ['dac_5fempty_5f1_5firqn_1',['DAC_EMPTY_1_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a0803dfb364dd05272617493ee2edbe98',1,'same51j20a.h']]],
+  ['dac_5fother_5firqn_2',['DAC_OTHER_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a02f8f671a24847dcbd3e6c6808cf6189',1,'same51j20a.h']]],
+  ['dac_5fresrdy_5f0_5firqn_3',['DAC_RESRDY_0_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a3a4d5e14cb2a40c45d1684b419c6c4b3',1,'same51j20a.h']]],
+  ['dac_5fresrdy_5f1_5firqn_4',['DAC_RESRDY_1_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a5d5cd6779769d446158b62ae178e9672',1,'same51j20a.h']]],
+  ['debugmonitor_5firqn_5',['DebugMonitor_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a8e033fcef7aed98a31c60a7de206722c',1,'same51j20a.h']]],
+  ['dmac_5f0_5firqn_6',['DMAC_0_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a121f079732f57561854775ff5677f262',1,'same51j20a.h']]],
+  ['dmac_5f1_5firqn_7',['DMAC_1_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a2a4bd89e3302eb7bc92d2098b8bc9150',1,'same51j20a.h']]],
+  ['dmac_5f2_5firqn_8',['DMAC_2_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a0a824639000c40d8192594c687263bd5',1,'same51j20a.h']]],
+  ['dmac_5f3_5firqn_9',['DMAC_3_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083ad4bfdc63a348e0a68f4da0a807c0cf3e',1,'same51j20a.h']]],
+  ['dmac_5fchannel_5f0_10',['DMAC_CHANNEL_0',['../plib__dmac_8h.html#a99999f7248e471a0bb59d880c6821b47a7d0414d122ef81f92eb8533da47130a6',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fbeat_5fsize_5fbyte_11',['DMAC_CRC_BEAT_SIZE_BYTE',['../plib__dmac_8h.html#adcad07af4ed307919a28d24975f9fa54a3c032ee55ad1081352a31bc959063824',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fbeat_5fsize_5fhword_12',['DMAC_CRC_BEAT_SIZE_HWORD',['../plib__dmac_8h.html#adcad07af4ed307919a28d24975f9fa54aa2f26f241d5cb02edf332804d80db723',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fbeat_5fsize_5fword_13',['DMAC_CRC_BEAT_SIZE_WORD',['../plib__dmac_8h.html#adcad07af4ed307919a28d24975f9fa54af2329340e38564d37944351e4762c023',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fmode_5fdefault_14',['DMAC_CRC_MODE_DEFAULT',['../plib__dmac_8h.html#a7877a10665856f8bbec0f7d353a69ccaa82586d309b01c38e7fcdcc24a03df65c',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fmode_5fmemory_5fgen_15',['DMAC_CRC_MODE_MEMORY_GEN',['../plib__dmac_8h.html#a7877a10665856f8bbec0f7d353a69ccaa7493901698fad860b2956735834ee89d',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fmode_5fmemory_5fmonitor_16',['DMAC_CRC_MODE_MEMORY_MONITOR',['../plib__dmac_8h.html#a7877a10665856f8bbec0f7d353a69ccaa88940b8be62146163a85181664819c68',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5fmode_5freserved_17',['DMAC_CRC_MODE_RESERVED',['../plib__dmac_8h.html#a7877a10665856f8bbec0f7d353a69ccaa7906ba66e0422eec8d341072f9a1d2f9',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5ftype_5f16_18',['DMAC_CRC_TYPE_16',['../plib__dmac_8h.html#a03ef8d0a0040621773709ad32bf6cd3ead32d085f15b0ccdd1e2e468b8225dd3c',1,'plib_dmac.h']]],
+  ['dmac_5fcrc_5ftype_5f32_19',['DMAC_CRC_TYPE_32',['../plib__dmac_8h.html#a03ef8d0a0040621773709ad32bf6cd3ea720faa7691c6061d5a098c9c31024109',1,'plib_dmac.h']]],
+  ['dmac_5fother_5firqn_20',['DMAC_OTHER_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083a20b5ae1de841bbcc514d951c7cf5d77e',1,'same51j20a.h']]],
+  ['dmac_5ftransfer_5fevent_5fcomplete_21',['DMAC_TRANSFER_EVENT_COMPLETE',['../plib__dmac_8h.html#a4bcc945896502e7f99de28888ac96bf5a44ce2904134fa225fccb0401aa939758',1,'plib_dmac.h']]],
+  ['dmac_5ftransfer_5fevent_5ferror_22',['DMAC_TRANSFER_EVENT_ERROR',['../plib__dmac_8h.html#a4bcc945896502e7f99de28888ac96bf5a7b5ae4da9df32b16025ddcdf0dc9db88',1,'plib_dmac.h']]]
+];

@@ -27,9 +27,9 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
 #include "application.h"
-#include "Lib/MET_can_open.h"
-#include "Lib/MET_can_protocol.h"
 #include "Protocol/protocol.h"
+#include "Motors/MET_can_open.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -63,7 +63,7 @@ int main ( void )
     MET_Can_Open_Start();
     
     // Application Protocol initialization
-    ApplicationProtocolInit();
+    ApplicationProtocolInit(APP_DEVICE_ID);
     
     while ( true )
     {
@@ -71,13 +71,13 @@ int main ( void )
         SYS_Tasks ( );
         
         // Protocol management
-        MET_Can_Protocol_Loop();
+        ApplicationProtocolLoop();
         
         
         if(isToggleTime){            
             isToggleTime = false;
             
-            MET_Can_Open_Send_ReadStatus(_STAT_REVISION_IDX);
+            MET_Can_Open_Send_ReadStatus(1);
         }
         
        

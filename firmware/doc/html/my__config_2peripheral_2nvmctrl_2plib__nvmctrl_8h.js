@@ -1,0 +1,35 @@
+var my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h =
+[
+    [ "NVMCTRL_FLASH_BLOCKSIZE", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a4656a905220ccdf7e85be1ea7711d85a", null ],
+    [ "NVMCTRL_FLASH_PAGESIZE", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a1f1a87239313a9155257d4ab5b0a58df", null ],
+    [ "NVMCTRL_FLASH_START_ADDRESS", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#aca3b5d5f1197457cadda53d96f3e25c5", null ],
+    [ "NVMCTRL_WRITEMODE", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690", [
+      [ "NVMCTRL_WMODE_MAN", "default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a85c7e83745c7d1f78c912b35628022f5", null ],
+      [ "NVMCTRL_WMODE_ADW", "default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a9706150520f3dae5449a9ef505cdf910", null ],
+      [ "NVMCTRL_WMODE_AQW", "default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae9b79be9f454872e04a246e2eb55b191", null ],
+      [ "NVMCTRL_WMODE_AP", "default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae1bfff0530e888a7db035b0cbcfe8c28", null ],
+      [ "NVMCTRL_WMODE_MAN", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a85c7e83745c7d1f78c912b35628022f5", null ],
+      [ "NVMCTRL_WMODE_ADW", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a9706150520f3dae5449a9ef505cdf910", null ],
+      [ "NVMCTRL_WMODE_AQW", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae9b79be9f454872e04a246e2eb55b191", null ],
+      [ "NVMCTRL_WMODE_AP", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae1bfff0530e888a7db035b0cbcfe8c28", null ]
+    ] ],
+    [ "NVMCTRL_BankSwap", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a4b071a939379ca7bd917e8c3704810be", null ],
+    [ "NVMCTRL_BlockErase", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#ac0b8bd2b4dba81b13aa479fc78c3f08e", null ],
+    [ "NVMCTRL_DoubleWordWrite", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#acbf4226b855e1a2db1c9c1cd6f50aa50", null ],
+    [ "NVMCTRL_ErrorGet", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a85d3ae298024488c547ad55206c01e3a", null ],
+    [ "NVMCTRL_Initialize", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#af9ac71e5b6c61fe140a2f7f25b458841", null ],
+    [ "NVMCTRL_IsBusy", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#afaf648999067506e1dc68247c4111ba1", null ],
+    [ "NVMCTRL_PageWrite", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#af145a3b5eba08ded1b0afbf733fe76df", null ],
+    [ "NVMCTRL_QuadWordWrite", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a9fce33d63c14bc8d96682c88e7f76898", null ],
+    [ "NVMCTRL_Read", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a699d3044f629b33c32e3c62bf40db413", null ],
+    [ "NVMCTRL_RegionLock", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a310b122287f124f65e6110d44cca884a", null ],
+    [ "NVMCTRL_RegionLockStatusGet", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a6474697e86a1d1e22ae946737f8741cd", null ],
+    [ "NVMCTRL_RegionUnlock", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a477d08cf2c278cb64a672e41812363c7", null ],
+    [ "NVMCTRL_SetWriteMode", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#ade349621c2b8b5b60e77acc724d84798", null ],
+    [ "NVMCTRL_SmartEEPROM_IsActiveSectorFull", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#ad9666a450974e5a3415e87ca7c10a0d8", null ],
+    [ "NVMCTRL_SmartEEPROM_IsBusy", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a1df0e0495104dffc61530843b8eb9e58", null ],
+    [ "NVMCTRL_SmartEEPROMFlushPageBuffer", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#ab96516515e36eea5cf2dd09df959134a", null ],
+    [ "NVMCTRL_SmartEEPROMSectorReallocate", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a79323e1a8c62782ecf00b4aedbbcb976", null ],
+    [ "NVMCTRL_SmartEEPROMStatusGet", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a12422bb661c1c12aecb6d288b5244b99", null ],
+    [ "NVMCTRL_StatusGet", "my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a33081e7cb07852ae63b97e05494335c5", null ]
+];

@@ -1,0 +1,28 @@
+var structusb__device__registers__t =
+[
+    [ "DEVICE_ENDPOINT", "structusb__device__registers__t.html#a17766ed950b7575c8bdde2cda9bb8492", null ],
+    [ "Reserved1", "structusb__device__registers__t.html#aff8d62c470ea4bff8bc765f90d92ec90", null ],
+    [ "Reserved10", "structusb__device__registers__t.html#a18ba48b162a3a6e3df900ebfc87443ad", null ],
+    [ "Reserved2", "structusb__device__registers__t.html#a81f4ab30adc1b2569de135caef55cdb4", null ],
+    [ "Reserved3", "structusb__device__registers__t.html#a0a81cee2be5a055404d683a12b4ebdf6", null ],
+    [ "Reserved4", "structusb__device__registers__t.html#a659485ba7c34caa340cb3c0dc1e73959", null ],
+    [ "Reserved5", "structusb__device__registers__t.html#a3d56166a3e03f403d6cf44c34ed647e8", null ],
+    [ "Reserved6", "structusb__device__registers__t.html#a70f47021ff83756f40640d82eca1de06", null ],
+    [ "Reserved7", "structusb__device__registers__t.html#aa6933ec2d5ad73850c11c5925cfbb311", null ],
+    [ "Reserved8", "structusb__device__registers__t.html#a5a2fb7ac03ae01c316dac0c16223fdc8", null ],
+    [ "Reserved9", "structusb__device__registers__t.html#a4b6a7f5b053879e3f020ac04ab5630cf", null ],
+    [ "USB_CTRLA", "structusb__device__registers__t.html#a027df8c0a9d3cd65fc11cce2cd8e5e91", null ],
+    [ "USB_CTRLB", "structusb__device__registers__t.html#a9a13d98f118833f84d2a5c3acf7e2ed0", null ],
+    [ "USB_DADD", "structusb__device__registers__t.html#a000c6001b7b580e6a563fe5a8750a303", null ],
+    [ "USB_DESCADD", "structusb__device__registers__t.html#a3e7d332b05068dc0ae7b6e76918e5002", null ],
+    [ "USB_EPINTSMRY", "structusb__device__registers__t.html#aa055c4e8f0a272835a69fe957a8ce328", null ],
+    [ "USB_FNUM", "structusb__device__registers__t.html#a04eaf5c45a48c5a8a12a3bb22232e5b5", null ],
+    [ "USB_FSMSTATUS", "structusb__device__registers__t.html#a1be961450a19171b36eee3d3760bdbcb", null ],
+    [ "USB_INTENCLR", "structusb__device__registers__t.html#a505d87c87f241b62385fe7db909cbb9a", null ],
+    [ "USB_INTENSET", "structusb__device__registers__t.html#a92e0e217ec72afa95adf800c1d9c6e5e", null ],
+    [ "USB_INTFLAG", "structusb__device__registers__t.html#a441bd4fc0fe136f8455b4c997426e00e", null ],
+    [ "USB_PADCAL", "structusb__device__registers__t.html#a6e939347a0f17cb5760d18bce1e6d9a3", null ],
+    [ "USB_QOSCTRL", "structusb__device__registers__t.html#aa8c01bcd715edaae21564c553c609d09", null ],
+    [ "USB_STATUS", "structusb__device__registers__t.html#a616776d9459966d9532cf58ded166c91", null ],
+    [ "USB_SYNCBUSY", "structusb__device__registers__t.html#a36f2eb705771489b919aa2e6fc5f7d03", null ]
+];

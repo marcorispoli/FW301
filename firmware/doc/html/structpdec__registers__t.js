@@ -1,0 +1,25 @@
+var structpdec__registers__t =
+[
+    [ "PDEC_CC", "structpdec__registers__t.html#a1285e293469d550f7fe8ed1e229531e2", null ],
+    [ "PDEC_CCBUF", "structpdec__registers__t.html#af8278a2cb969da26f36dc98559590f08", null ],
+    [ "PDEC_COUNT", "structpdec__registers__t.html#a6be7296f60213117b8cb94bd10c045a8", null ],
+    [ "PDEC_CTRLA", "structpdec__registers__t.html#aaf72667840e9dacca7519af9eda1fe0d", null ],
+    [ "PDEC_CTRLBCLR", "structpdec__registers__t.html#af0ab4e366029a79d8e993ba1a9f28153", null ],
+    [ "PDEC_CTRLBSET", "structpdec__registers__t.html#ab864357396003af7450bc059c96d8368", null ],
+    [ "PDEC_DBGCTRL", "structpdec__registers__t.html#a5aa1ee164d4442a0766cb5338d408274", null ],
+    [ "PDEC_EVCTRL", "structpdec__registers__t.html#a3269650c5e91d17b11703cc145248129", null ],
+    [ "PDEC_FILTER", "structpdec__registers__t.html#a06ebbd785e850bdae1bd5abfe427a191", null ],
+    [ "PDEC_FILTERBUF", "structpdec__registers__t.html#aa007e1d23f185e389bde1353ebfe8483", null ],
+    [ "PDEC_INTENCLR", "structpdec__registers__t.html#a2f1738d2409090a81736f04eb0680ec7", null ],
+    [ "PDEC_INTENSET", "structpdec__registers__t.html#addb779192b50b7738667be66f45eb1e6", null ],
+    [ "PDEC_INTFLAG", "structpdec__registers__t.html#a78af6018bfa7e6685bf917eb9f954f6f", null ],
+    [ "PDEC_PRESC", "structpdec__registers__t.html#a546689131dcdce0c91f80df83aa01b1e", null ],
+    [ "PDEC_PRESCBUF", "structpdec__registers__t.html#af152d260bb0f630cb3677fd36a89f06b", null ],
+    [ "PDEC_STATUS", "structpdec__registers__t.html#a7ec34f20b025f8c28af4dc2769f27511", null ],
+    [ "PDEC_SYNCBUSY", "structpdec__registers__t.html#a8a133dc584c6b4f7a7851821184d6911", null ],
+    [ "Reserved1", "structpdec__registers__t.html#aff8d62c470ea4bff8bc765f90d92ec90", null ],
+    [ "Reserved2", "structpdec__registers__t.html#ac482e0ceb29b8ac680e404a80331a6c4", null ],
+    [ "Reserved3", "structpdec__registers__t.html#adb038a9fb17684fc5bf253ece3d61f49", null ],
+    [ "Reserved4", "structpdec__registers__t.html#a659485ba7c34caa340cb3c0dc1e73959", null ],
+    [ "Reserved5", "structpdec__registers__t.html#a737715e788828d7af5289ab4b66f7766", null ]
+];

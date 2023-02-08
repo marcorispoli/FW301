@@ -1,0 +1,28 @@
+var my__config_2peripheral_2can_2plib__can0_8h =
+[
+    [ "CAN0_MESSAGE_RAM_CONFIG_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a7dd32162ee2b43f2903e0a905290daab", null ],
+    [ "CAN0_RX_FIFO0_ELEMENT_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a1b6857a9bc48f68b0882a34b8d002f79", null ],
+    [ "CAN0_RX_FIFO0_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a4e61422fc72359959fbe11849c0b8b5d", null ],
+    [ "CAN0_RX_FIFO1_ELEMENT_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#af3bc877fd416ba17f4b61177b02546d9", null ],
+    [ "CAN0_RX_FIFO1_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#af3bfac34029c0aa5f09133811ebf0739", null ],
+    [ "CAN0_STD_MSG_ID_FILTER_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a6820db4eae4da08c51247c22f38123bf", null ],
+    [ "CAN0_TX_EVENT_FIFO_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a4520edb2265fec07e6787ca1d2f0d93f", null ],
+    [ "CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a893a8c2d80269be3b350cab884fef4d3", null ],
+    [ "CAN0_TX_FIFO_BUFFER_SIZE", "my__config_2peripheral_2can_2plib__can0_8h.html#a964b43ceda1a02dc046c2320b672068b", null ],
+    [ "CAN0_ErrorCountGet", "my__config_2peripheral_2can_2plib__can0_8h.html#abd10ce24a248bd07639b6d6f41247372", null ],
+    [ "CAN0_ErrorGet", "my__config_2peripheral_2can_2plib__can0_8h.html#a2655c680eef0120a5f6d9d59054adbb7", null ],
+    [ "CAN0_Initialize", "my__config_2peripheral_2can_2plib__can0_8h.html#a974ffb53b7e74871d8e6b898b1c91373", null ],
+    [ "CAN0_InterruptClear", "my__config_2peripheral_2can_2plib__can0_8h.html#a56898c2c31eb49a1dd0ec9c2592db09e", null ],
+    [ "CAN0_InterruptGet", "my__config_2peripheral_2can_2plib__can0_8h.html#ac965855c20b3ef75e23acb57fe422274", null ],
+    [ "CAN0_MessageRAMConfigSet", "my__config_2peripheral_2can_2plib__can0_8h.html#a7d826ca2d9ff923b4c470d23f3960015", null ],
+    [ "CAN0_MessageReceive", "my__config_2peripheral_2can_2plib__can0_8h.html#a0d4f30d40bd95e6cc8ce1c55a319f883", null ],
+    [ "CAN0_MessageTransmit", "my__config_2peripheral_2can_2plib__can0_8h.html#a0728214971aaad86f2934c4f22961f9e", null ],
+    [ "CAN0_RxCallbackRegister", "my__config_2peripheral_2can_2plib__can0_8h.html#a0b593c840ba581a73165d165b1e2bf7d", null ],
+    [ "CAN0_SleepModeEnter", "my__config_2peripheral_2can_2plib__can0_8h.html#a0343854119997e5519ea56b294632cd4", null ],
+    [ "CAN0_SleepModeExit", "my__config_2peripheral_2can_2plib__can0_8h.html#af5996c77e07ef7a950248aa33f4c6862", null ],
+    [ "CAN0_StandardFilterElementGet", "my__config_2peripheral_2can_2plib__can0_8h.html#a26e5775cdee9f0abcd76058dfcf71644", null ],
+    [ "CAN0_StandardFilterElementSet", "my__config_2peripheral_2can_2plib__can0_8h.html#a462926a9085ec61ef924ae13a5822cc6", null ],
+    [ "CAN0_TransmitEventFIFOElementGet", "my__config_2peripheral_2can_2plib__can0_8h.html#a33c92e48f844b02a97f954d512e92aab", null ],
+    [ "CAN0_TxCallbackRegister", "my__config_2peripheral_2can_2plib__can0_8h.html#a2ace1275203d0bb8bb74b854317f240b", null ],
+    [ "CAN0_TxFIFOIsFull", "my__config_2peripheral_2can_2plib__can0_8h.html#adff07fea8664f7ec5ea8e7def43a3178", null ]
+];

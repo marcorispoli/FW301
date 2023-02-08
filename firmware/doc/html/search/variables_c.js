@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['n_0',['N',['../group___c_m_s_i_s__core___debug_functions.html#gabae0610bc2a97bbf7f689e953e0b451f',1,'APSR_Type::N()'],['../group___c_m_s_i_s__core___debug_functions.html#gabae0610bc2a97bbf7f689e953e0b451f',1,'APSR_Type::@1::N()'],['../group___c_m_s_i_s__core___debug_functions.html#gabae0610bc2a97bbf7f689e953e0b451f',1,'xPSR_Type::N()'],['../group___c_m_s_i_s__core___debug_functions.html#gabae0610bc2a97bbf7f689e953e0b451f',1,'xPSR_Type::@3::N()']]],
+  ['npriv_1',['nPRIV',['../group___c_m_s_i_s__core___debug_functions.html#ga2a6e513e8a6bf4e58db169e312172332',1,'CONTROL_Type::nPRIV()'],['../group___c_m_s_i_s__core___debug_functions.html#ga2a6e513e8a6bf4e58db169e312172332',1,'CONTROL_Type::@4::nPRIV()']]],
+  ['nvmctrl_5faddr_2',['NVMCTRL_ADDR',['../structnvmctrl__registers__t.html#a1ac9361db8497e59aadb5705aca05b8a',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fctrla_3',['NVMCTRL_CTRLA',['../structnvmctrl__registers__t.html#a472115cb84ce8b2d7d982923d28cc081',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fctrlb_4',['NVMCTRL_CTRLB',['../structnvmctrl__registers__t.html#a19cd4eae272340cd5fecfc80384a4c92',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fdbgctrl_5',['NVMCTRL_DBGCTRL',['../structnvmctrl__registers__t.html#a549ac7c66820d49fd6bed38b9293f06c',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5feccerr_6',['NVMCTRL_ECCERR',['../structnvmctrl__registers__t.html#aedda5bba9ffcbb8c6e7561ee9f6d83ab',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fintenclr_7',['NVMCTRL_INTENCLR',['../structnvmctrl__registers__t.html#a293fe8f7dd39e78d4e7f60f279b731b6',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fintenset_8',['NVMCTRL_INTENSET',['../structnvmctrl__registers__t.html#a0f9d2f7175ae03404ba0cdda622a0256',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fintflag_9',['NVMCTRL_INTFLAG',['../structnvmctrl__registers__t.html#a52077bea76e03ee48ac91350ff0e9eed',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fparam_10',['NVMCTRL_PARAM',['../structnvmctrl__registers__t.html#a7306a13f121df6f6db3a53a13dea9d16',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fpbldata_11',['NVMCTRL_PBLDATA',['../structnvmctrl__registers__t.html#a8e0d75f733116875c54b947f0ba8ea32',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5frunlock_12',['NVMCTRL_RUNLOCK',['../structnvmctrl__registers__t.html#a6caba1e55633d257cb198067a5bb95c9',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fseecfg_13',['NVMCTRL_SEECFG',['../structnvmctrl__registers__t.html#a81d44c897c0a3e3d7c20334e07b8c8a0',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fseestat_14',['NVMCTRL_SEESTAT',['../structnvmctrl__registers__t.html#a5dca9a43ad93f617f015f725aa9b8ba8',1,'nvmctrl_registers_t']]],
+  ['nvmctrl_5fstatus_15',['NVMCTRL_STATUS',['../structnvmctrl__registers__t.html#aab00df53826129f44bb299cef9e0b0df',1,'nvmctrl_registers_t']]]
+];

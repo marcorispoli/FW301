@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['nonmaskableint_5firqn_0',['NonMaskableInt_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30',1,'same51j20a.h']]],
+  ['nvmctrl_5f0_5firqn_1',['NVMCTRL_0_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083ac2e76fece6a4453d3711e977c7602237',1,'same51j20a.h']]],
+  ['nvmctrl_5f1_5firqn_2',['NVMCTRL_1_IRQn',['../same51j20a_8h.html#a666eb0caeb12ec0e281415592ae89083aabee9b239722efabe7b1727a70be5041',1,'same51j20a.h']]],
+  ['nvmctrl_5fwmode_5fadw_3',['NVMCTRL_WMODE_ADW',['../default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a9706150520f3dae5449a9ef505cdf910',1,'NVMCTRL_WMODE_ADW():&#160;plib_nvmctrl.h'],['../my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a9706150520f3dae5449a9ef505cdf910',1,'NVMCTRL_WMODE_ADW():&#160;plib_nvmctrl.h']]],
+  ['nvmctrl_5fwmode_5fap_4',['NVMCTRL_WMODE_AP',['../default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae1bfff0530e888a7db035b0cbcfe8c28',1,'NVMCTRL_WMODE_AP():&#160;plib_nvmctrl.h'],['../my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae1bfff0530e888a7db035b0cbcfe8c28',1,'NVMCTRL_WMODE_AP():&#160;plib_nvmctrl.h']]],
+  ['nvmctrl_5fwmode_5faqw_5',['NVMCTRL_WMODE_AQW',['../default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae9b79be9f454872e04a246e2eb55b191',1,'NVMCTRL_WMODE_AQW():&#160;plib_nvmctrl.h'],['../my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690ae9b79be9f454872e04a246e2eb55b191',1,'NVMCTRL_WMODE_AQW():&#160;plib_nvmctrl.h']]],
+  ['nvmctrl_5fwmode_5fman_6',['NVMCTRL_WMODE_MAN',['../default_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a85c7e83745c7d1f78c912b35628022f5',1,'NVMCTRL_WMODE_MAN():&#160;plib_nvmctrl.h'],['../my__config_2peripheral_2nvmctrl_2plib__nvmctrl_8h.html#a88142eeef171836ed636eadab478e690a85c7e83745c7d1f78c912b35628022f5',1,'NVMCTRL_WMODE_MAN():&#160;plib_nvmctrl.h']]]
+];
