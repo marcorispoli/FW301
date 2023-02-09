@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['rambootloadertable_0',['ramBootloaderTable',['../_m_e_t___bootloader_8c.html#a5f1769936b806e3468a25a160e93bf24',1,'ramBootloaderTable():&#160;MET_Bootloader.c'],['../_m_e_t___bootloader__table_8h.html#a5f1769936b806e3468a25a160e93bf24',1,'ramBootloaderTable():&#160;MET_Bootloader_table.h']]],
-  ['registers_20application_20macro_1',['Registers application Macro',['../group__application_macro.html',1,'']]],
-  ['registers_20type_20definition_2',['Registers type definition',['../group__type_def.html',1,'']]],
-  ['revision_20registers_20application_20macro_3',['REVISION Registers application Macro',['../group__revision_macro.html',1,'']]],
-  ['rtceventhandler_4',['rtcEventHandler',['../main_8c.html#a59696b308d4db70e327a1e26dc64ec91',1,'main.c']]],
-  ['rx_5fmessage_5',['rx_message',['../struct_m_e_t___can___open___rx_tx__t.html#a9eeaa0bebb257690d3f537fea1cdc668',1,'MET_Can_Open_RxTx_t::rx_message()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#af1e15b3a6bb56feffec66e5272116d00',1,'MET_Can_Protocol_RxTx_t::rx_message()']]],
-  ['rx_5fmessageid_6',['rx_messageID',['../struct_m_e_t___can___open___rx_tx__t.html#abb3848ff1660c28e09a5d4b72980ada9',1,'MET_Can_Open_RxTx_t::rx_messageID()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#ae9ed0524ed8b3f1c3de8b01483e42847',1,'MET_Can_Protocol_RxTx_t::rx_messageID()']]],
-  ['rx_5fmessagelength_7',['rx_messageLength',['../struct_m_e_t___can___open___rx_tx__t.html#a17a75fd998e9cc43033d6b1a14be501f',1,'MET_Can_Open_RxTx_t::rx_messageLength()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#aebe0b1c3a2cfda6de70b0f437cc28f44',1,'MET_Can_Protocol_RxTx_t::rx_messageLength()']]],
-  ['rx_5ftimestamp_8',['rx_timestamp',['../struct_m_e_t___can___open___rx_tx__t.html#a78ba46524f662d85ab0cb5f92f800252',1,'MET_Can_Open_RxTx_t::rx_timestamp()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#a7c426f1a25f77ae76357788642855f0a',1,'MET_Can_Protocol_RxTx_t::rx_timestamp()']]],
-  ['rxerrortrigger_9',['rxErrorTrigger',['../_m_e_t__can__open_8c.html#a10eb58d986546fe08165b32c5a60faa9',1,'rxErrorTrigger():&#160;MET_can_open.c'],['../_m_e_t__can__protocol_8c.html#a10eb58d986546fe08165b32c5a60faa9',1,'rxErrorTrigger():&#160;MET_can_protocol.c']]],
-  ['rxreceptiontrigger_10',['rxReceptionTrigger',['../_m_e_t__can__open_8c.html#aa7278e3189e2f4f26b8f1fa2e561ed97',1,'rxReceptionTrigger():&#160;MET_can_open.c'],['../_m_e_t__can__protocol_8c.html#aa7278e3189e2f4f26b8f1fa2e561ed97',1,'rxReceptionTrigger():&#160;MET_can_protocol.c']]]
+  ['pedal_5fcarm_5fdwn_0',['pedal_carm_dwn',['../struct___system___status__t.html#a9d9f1a1694c8f92925bb9b5a8c6c9160',1,'_System_Status_t']]],
+  ['pedal_5fcarm_5fup_1',['pedal_carm_up',['../struct___system___status__t.html#ad4568cd620c9f1b1a6c7ae04af33f01a',1,'_System_Status_t']]],
+  ['pedal_5fcmp_5fdwn_5flock_2',['pedal_cmp_dwn_lock',['../struct___errors___status__t.html#afc29754db75b630b8064ee79a5a499de',1,'_Errors_Status_t']]],
+  ['pedal_5fcmp_5fup_5flock_3',['pedal_cmp_up_lock',['../struct___errors___status__t.html#aecac060b975756f9dc7b3c313f0194bb',1,'_Errors_Status_t']]],
+  ['pedal_5fcompression_5fdwn_4',['pedal_compression_dwn',['../struct___system___status__t.html#a3aac15c4f898c95d998f2cff084c4c05',1,'_System_Status_t']]],
+  ['pedal_5fcompression_5fup_5',['pedal_compression_up',['../struct___system___status__t.html#adf97806ebc257a3e6424cd1ed42fe531',1,'_System_Status_t']]],
+  ['pedal_5fdwn_5flock_6',['pedal_dwn_lock',['../struct___errors___status__t.html#a7cf6fbf5d49aa478ee67546c1dd1a741',1,'_Errors_Status_t']]],
+  ['pedal_5fup_5flock_7',['pedal_up_lock',['../struct___errors___status__t.html#a30036f3472da176ff1787e9233eafe6b',1,'_Errors_Status_t']]],
+  ['powerdown_5fdetected_8',['powerdown_detected',['../struct___system___status__t.html#af7d52105842f3e409dfff038c572b1e3',1,'_System_Status_t']]],
+  ['protocol_2ec_9',['protocol.c',['../protocol_8c.html',1,'']]],
+  ['protocol_2eh_10',['protocol.h',['../protocol_8h.html',1,'']]],
+  ['pstatusarray_11',['pStatusArray',['../struct_m_e_t___protocol___data__t.html#a5e388bc4a6ec131b0bcab717a91011df',1,'MET_Protocol_Data_t']]]
 ];

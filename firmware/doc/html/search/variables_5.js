@@ -10,12 +10,12 @@ var searchData=
   ['manual_5fslide_5fdwn_5flock_7',['manual_slide_dwn_lock',['../struct___errors___status__t.html#aad0eb6de91491dc8b0aedb018124e845',1,'_Errors_Status_t']]],
   ['manual_5fslide_5fup_5flock_8',['manual_slide_up_lock',['../struct___errors___status__t.html#a67182f1f9a282b6374f369009905afa4',1,'_Errors_Status_t']]],
   ['met_5fcan_5fopen_5frxtx_5fstruct_9',['MET_Can_Open_RxTx_Struct',['../_m_e_t__can__open_8c.html#a54f1241b87ecfd03a8730d9c2142fca4',1,'MET_can_open.c']]],
-  ['met_5fcan_5fprotocol_5frxtx_5fstruct_10',['MET_Can_Protocol_RxTx_Struct',['../_m_e_t__can__protocol_8c.html#a8f7da4f52625debcd1f7828869a61ceb',1,'MET_can_protocol.c']]],
-  ['met_5fprotocol_5fdata_5fstruct_11',['MET_Protocol_Data_Struct',['../_m_e_t__can__protocol_8c.html#a297e870a9ed50c2f2db3a264a293dd5b',1,'MET_can_protocol.c']]],
+  ['met_5fcan_5fprotocol_5frxtx_5fstruct_10',['MET_Can_Protocol_RxTx_Struct',['../group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb',1,'MET_can_protocol.h']]],
+  ['met_5fprotocol_5fdata_5fstruct_11',['MET_Protocol_Data_Struct',['../group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b',1,'MET_can_protocol.h']]],
   ['min_12',['min',['../struct___revision___status__t.html#a37277f68b8cc07db650eaeb47e39991e',1,'_Revision_Status_t']]],
   ['motor_5fdc_5fok_13',['motor_dc_ok',['../struct___system___status__t.html#ab0255d8c5df286313699d5e4d5cd73f4',1,'_System_Status_t']]],
   ['motor_5fpower_5factivate_14',['motor_power_activate',['../struct___system___status__t.html#a44250cf459164cbb880c7290ef645d6b',1,'_System_Status_t']]],
   ['motor_5fsafety_15',['motor_safety',['../struct___system___status__t.html#aff159545aed92d3e80408c338a62278e',1,'_System_Status_t']]],
   ['msgframeattr_16',['msgFrameAttr',['../_m_e_t__can__open_8c.html#a509192470afd52f71be2ac365fe8e07c',1,'MET_can_open.c']]],
-  ['msgframeattr0_17',['msgFrameAttr0',['../_m_e_t__can__protocol_8c.html#a30cf79b3e53e0facc45bd43a88698d30',1,'MET_can_protocol.c']]]
+  ['msgframeattr0_17',['msgFrameAttr0',['../group__met_can_harmony.html#ga30cf79b3e53e0facc45bd43a88698d30',1,'MET_can_protocol.c']]]
 ];

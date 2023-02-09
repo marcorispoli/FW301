@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 32C032D6CE34A8F441D0C53E3C553DC3
+- generatedChecksum: 7D5AE193AB2B46D633B087B67CE42484
   logicalPath: config/default/peripheral/can
   name: plib_can0.c
   physicalPath: peripheral/can
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 32C032D6CE34A8F441D0C53E3C553DC3
+  userChecksum: 7D5AE193AB2B46D633B087B67CE42484
 - generatedChecksum: D943A99FB31FE4A021FD5BD03D387260
   logicalPath: config/default/peripheral/can
   name: plib_can1.c

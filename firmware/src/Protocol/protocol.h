@@ -10,7 +10,7 @@
 #endif
 
 /*!
- * \defgroup protocolModule CAN Communicaiton Protocol Module
+ * \defgroup protocolModule CAN Communication Protocol Module
  *
  * \ingroup applicationModule
  * 

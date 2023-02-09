@@ -393,8 +393,6 @@ Discarded input sections
  .text          0x00000000        0x0 build/default/production/_ext/1042908558/MET_can_protocol.o
  .data          0x00000000        0x0 build/default/production/_ext/1042908558/MET_can_protocol.o
  .bss           0x00000000        0x0 build/default/production/_ext/1042908558/MET_can_protocol.o
- .text.MET_DefaultError_Callback
-                0x00000000        0x2 build/default/production/_ext/1042908558/MET_can_protocol.o
  .text          0x00000000        0x0 build/default/production/_ext/1360937237/main.o
  .data          0x00000000        0x0 build/default/production/_ext/1360937237/main.o
  .bss           0x00000000        0x0 build/default/production/_ext/1360937237/main.o
@@ -665,7 +663,7 @@ LOAD data_init
  .comment       0x00000053       0x54 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .comment       0x00000053       0x54 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
 
-.debug_info     0x00000000    0x165af
+.debug_info     0x00000000    0x16502
  .debug_info    0x00000000     0x287b build/default/production/_ext/60165182/plib_can1.o
  .debug_info    0x0000287b     0x287b build/default/production/_ext/60165182/plib_can0.o
  .debug_info    0x000050f6      0xc06 build/default/production/_ext/1984496892/plib_clock.o
@@ -679,13 +677,13 @@ LOAD data_init
  .debug_info    0x0000d3c3     0x225c build/default/production/_ext/1171490990/interrupts.o
  .debug_info    0x0000f61f      0xfb4 build/default/production/_ext/1171490990/exceptions.o
  .debug_info    0x000105d3      0x969 build/default/production/_ext/1171490990/startup_xc32.o
- .debug_info    0x00010f3c     0x1814 build/default/production/_ext/1023676168/MET_can_open.o
- .debug_info    0x00012750     0x1030 build/default/production/_ext/1042908558/protocol.o
- .debug_info    0x00013780     0x1a4e build/default/production/_ext/1042908558/MET_can_protocol.o
- .debug_info    0x000151ce     0x1114 build/default/production/_ext/1360937237/main.o
- .debug_info    0x000162e2      0x2cd c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_info    0x00010f3c     0x1769 build/default/production/_ext/1023676168/MET_can_open.o
+ .debug_info    0x000126a5     0x1030 build/default/production/_ext/1042908558/protocol.o
+ .debug_info    0x000136d5     0x1a4c build/default/production/_ext/1042908558/MET_can_protocol.o
+ .debug_info    0x00015121     0x1114 build/default/production/_ext/1360937237/main.o
+ .debug_info    0x00016235      0x2cd c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.debug_abbrev   0x00000000     0x270b
+.debug_abbrev   0x00000000     0x2718
  .debug_abbrev  0x00000000      0x45e build/default/production/_ext/60165182/plib_can1.o
  .debug_abbrev  0x0000045e      0x45e build/default/production/_ext/60165182/plib_can0.o
  .debug_abbrev  0x000008bc      0x135 build/default/production/_ext/1984496892/plib_clock.o
@@ -701,9 +699,9 @@ LOAD data_init
  .debug_abbrev  0x00001b2b      0x209 build/default/production/_ext/1171490990/startup_xc32.o
  .debug_abbrev  0x00001d34      0x2a8 build/default/production/_ext/1023676168/MET_can_open.o
  .debug_abbrev  0x00001fdc      0x208 build/default/production/_ext/1042908558/protocol.o
- .debug_abbrev  0x000021e4      0x2c5 build/default/production/_ext/1042908558/MET_can_protocol.o
- .debug_abbrev  0x000024a9      0x234 build/default/production/_ext/1360937237/main.o
- .debug_abbrev  0x000026dd       0x2e c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_abbrev  0x000021e4      0x2d2 build/default/production/_ext/1042908558/MET_can_protocol.o
+ .debug_abbrev  0x000024b6      0x234 build/default/production/_ext/1360937237/main.o
+ .debug_abbrev  0x000026ea       0x2e c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
 .debug_loc      0x00000000     0x23e9
  .debug_loc     0x00000000      0x99a build/default/production/_ext/60165182/plib_can1.o
@@ -721,7 +719,7 @@ LOAD data_init
  .debug_loc     0x000023b5       0x20 build/default/production/_ext/1360937237/main.o
  .debug_loc     0x000023d5       0x14 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.debug_aranges  0x00000000      0x598
+.debug_aranges  0x00000000      0x590
  .debug_aranges
                 0x00000000       0xa0 build/default/production/_ext/60165182/plib_can1.o
  .debug_aranges
@@ -753,13 +751,13 @@ LOAD data_init
  .debug_aranges
                 0x000004e8       0x28 build/default/production/_ext/1042908558/protocol.o
  .debug_aranges
-                0x00000510       0x40 build/default/production/_ext/1042908558/MET_can_protocol.o
+                0x00000510       0x38 build/default/production/_ext/1042908558/MET_can_protocol.o
  .debug_aranges
-                0x00000550       0x28 build/default/production/_ext/1360937237/main.o
+                0x00000548       0x28 build/default/production/_ext/1360937237/main.o
  .debug_aranges
-                0x00000578       0x20 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+                0x00000570       0x20 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.debug_ranges   0x00000000      0x498
+.debug_ranges   0x00000000      0x490
  .debug_ranges  0x00000000       0x90 build/default/production/_ext/60165182/plib_can1.o
  .debug_ranges  0x00000090       0x90 build/default/production/_ext/60165182/plib_can0.o
  .debug_ranges  0x00000120       0x10 build/default/production/_ext/1984496892/plib_clock.o
@@ -775,11 +773,11 @@ LOAD data_init
  .debug_ranges  0x000003b8       0x18 build/default/production/_ext/1171490990/startup_xc32.o
  .debug_ranges  0x000003d0       0x38 build/default/production/_ext/1023676168/MET_can_open.o
  .debug_ranges  0x00000408       0x18 build/default/production/_ext/1042908558/protocol.o
- .debug_ranges  0x00000420       0x50 build/default/production/_ext/1042908558/MET_can_protocol.o
- .debug_ranges  0x00000470       0x18 build/default/production/_ext/1360937237/main.o
- .debug_ranges  0x00000488       0x10 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_ranges  0x00000420       0x48 build/default/production/_ext/1042908558/MET_can_protocol.o
+ .debug_ranges  0x00000468       0x18 build/default/production/_ext/1360937237/main.o
+ .debug_ranges  0x00000480       0x10 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.debug_line     0x00000000     0x4149
+.debug_line     0x00000000     0x410c
  .debug_line    0x00000000      0x8d9 build/default/production/_ext/60165182/plib_can1.o
  .debug_line    0x000008d9      0x8d9 build/default/production/_ext/60165182/plib_can0.o
  .debug_line    0x000011b2      0x342 build/default/production/_ext/1984496892/plib_clock.o
@@ -793,11 +791,11 @@ LOAD data_init
  .debug_line    0x00002dc5      0x1a8 build/default/production/_ext/1171490990/interrupts.o
  .debug_line    0x00002f6d      0x201 build/default/production/_ext/1171490990/exceptions.o
  .debug_line    0x0000316e      0x2b5 build/default/production/_ext/1171490990/startup_xc32.o
- .debug_line    0x00003423      0x37b build/default/production/_ext/1023676168/MET_can_open.o
- .debug_line    0x0000379e      0x1e5 build/default/production/_ext/1042908558/protocol.o
- .debug_line    0x00003983      0x3df build/default/production/_ext/1042908558/MET_can_protocol.o
- .debug_line    0x00003d62      0x2d7 build/default/production/_ext/1360937237/main.o
- .debug_line    0x00004039      0x110 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_line    0x00003423      0x355 build/default/production/_ext/1023676168/MET_can_open.o
+ .debug_line    0x00003778      0x1e5 build/default/production/_ext/1042908558/protocol.o
+ .debug_line    0x0000395d      0x3c8 build/default/production/_ext/1042908558/MET_can_protocol.o
+ .debug_line    0x00003d25      0x2d7 build/default/production/_ext/1360937237/main.o
+ .debug_line    0x00003ffc      0x110 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
 .debug_str      0x00000000      0x66d
  .debug_str     0x00000000       0x96 build/default/production/_ext/60165182/plib_can1.o
@@ -819,7 +817,7 @@ LOAD data_init
  .debug_str     0x000005a0       0xcd build/default/production/_ext/1360937237/main.o
  .debug_str     0x0000066d        0x0 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.debug_frame    0x00000000      0xabc
+.debug_frame    0x00000000      0xaac
  .debug_frame   0x00000000      0x190 build/default/production/_ext/60165182/plib_can1.o
  .debug_frame   0x00000190      0x190 build/default/production/_ext/60165182/plib_can0.o
  .debug_frame   0x00000320       0x20 build/default/production/_ext/1984496892/plib_clock.o
@@ -835,9 +833,9 @@ LOAD data_init
  .debug_frame   0x0000089c       0x38 build/default/production/_ext/1171490990/startup_xc32.o
  .debug_frame   0x000008d4       0xa0 build/default/production/_ext/1023676168/MET_can_open.o
  .debug_frame   0x00000974       0x40 build/default/production/_ext/1042908558/protocol.o
- .debug_frame   0x000009b4       0x98 build/default/production/_ext/1042908558/MET_can_protocol.o
- .debug_frame   0x00000a4c       0x38 build/default/production/_ext/1360937237/main.o
- .debug_frame   0x00000a84       0x38 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_frame   0x000009b4       0x88 build/default/production/_ext/1042908558/MET_can_protocol.o
+ .debug_frame   0x00000a3c       0x38 build/default/production/_ext/1360937237/main.o
+ .debug_frame   0x00000a74       0x38 c:/program files/microchip/xc32/v3.01/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
 .stack          0x200003f0      0x100
  .stack         0x200003f0      0x100 stack
@@ -1097,7 +1095,6 @@ LOAD data_init
                 0x00001058       0x38
  .text.MET_Can_Protocol_Reception_Trigger
                 0x00001058       0x38 build/default/production/_ext/1042908558/MET_can_protocol.o
-                0x00001058                MET_Can_Protocol_Reception_Trigger
 
 .text.PORT_Initialize%50
                 0x00001090       0x30
@@ -1133,7 +1130,6 @@ LOAD data_init
                 0x00001168       0x28
  .text.MET_Can_Protocol_Reception_Callback
                 0x00001168       0x28 build/default/production/_ext/1042908558/MET_can_protocol.o
-                0x00001168                MET_Can_Protocol_Reception_Callback
 
 .text.MET_Can_Protocol_Init%56
                 0x00001190       0x20

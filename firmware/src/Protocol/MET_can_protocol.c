@@ -3,20 +3,65 @@
 #include "MET_can_protocol.h"                // SYS function prototypes
 #include "application.h"
 
-// Harmony 3 library Data structure of the Can Module
-uint8_t Can0MessageRAM[CAN0_MESSAGE_RAM_CONFIG_SIZE] __attribute__((aligned (32)));
-CAN_MSG_RX_FRAME_ATTRIBUTE msgFrameAttr0 = CAN_MSG_RX_DATA_FRAME;
+/**
+ * \defgroup metCanImplementation Implementation module
+ * 
+ * \ingroup metProtocolModule
+ * 
+ * This Module provides the implementation details
+ * 
+ *  @{ 
+ */
 
-void MET_DefaultError_Callback(uint8_t event); //!< Default Error callback in case of not assigned error handler 
-void MET_Can_Protocol_Reception_Callback(uintptr_t context); 
+    /**
+     * \defgroup metCanHarmony Harmony 3 necessary declarations
+     * 
+     * The declaration of this section are necessary for the usage of the CAN channel
+     * based on the Harmony 3 configuration library.
+     * 
+     *  @{
+     */ 
+        /// Harmony 3 data declaration
+        uint8_t Can0MessageRAM[CAN0_MESSAGE_RAM_CONFIG_SIZE] __attribute__((aligned (32))); 
+        
+        /// Attribute used into the CAN Rx/Tx functions
+        CAN_MSG_RX_FRAME_ATTRIBUTE msgFrameAttr0 = CAN_MSG_RX_DATA_FRAME; 
+        
+    /** @}*/  // metCanHarmony
+    
+     /**
+     * \defgroup metCanLocal Locale Module function declaration
+     * 
+     * 
+     *  @{
+     */        
+    
+        /// Error Callback routine
+        static void MET_DefaultError_Callback(uint8_t event); 
 
+        /// Interrupt routine
+        static void MET_Can_Protocol_Reception_Callback(uintptr_t context); 
 
-static bool rxReceptionTrigger = false;
-static bool rxErrorTrigger = false;
-static MET_Can_Protocol_RxTx_t MET_Can_Protocol_RxTx_Struct; //!< This is the structure handling the data transmitted and received
-static MET_Protocol_Data_t MET_Protocol_Data_Struct;
+        /// Reception activation routine
+        static void MET_Can_Protocol_Reception_Trigger(void);     
 
+        static bool rxReceptionTrigger = false; //!< RX received frame flag
+        static bool rxErrorTrigger = false;//!< TX received frame flag
 
+    /** @}*/  // metCanLocal
+
+        
+/**
+ * @brief This function triggers the reception of a further CAN frame.
+ * 
+ * The Function firstly rearm the interrupt handler to be launched.
+ * After the interrupt is armed, the function assignes the data pointer to the
+ * receving buffer.
+ * 
+ * In case of an error in activating the Reception, the error  MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION
+ * is signaled to the Error Handler routine.
+ *  
+ */
 void MET_Can_Protocol_Reception_Trigger(void){
 
     // Reception Event callback registered on the FIFO0
@@ -50,8 +95,23 @@ void MET_Can_Protocol_Init(uint8_t deviceID, uint8_t** pStatusArray, uint8_t sta
  }
 
 
-/*
-    Funzione da far girare nel main loop dell'applicazione
+/**
+ * @brief 
+ * 
+ * The function checks the flags rxReceptionTrigger or rxErrorTrigger.
+ * 
+ * In case of reception the function checks the CRC, data Lenght
+ * in order to proceed with the protocol decoding.
+ * 
+ * With the correct frame checked, the protocol is identified:
+ * - The Status Register is handled;
+ * - The Parameter Register is handled;
+ * - The Data Register is handled;
+ * - The Command frame is Handled;
+ * 
+ * The function activate the proper TX frame based on the
+ * received processed frame.
+ * 
  */
 void MET_Can_Protocol_Loop(void){
     MET_Can_Protocol_Command_t cmdFrame;
@@ -87,6 +147,7 @@ void MET_Can_Protocol_Loop(void){
         MET_Can_Protocol_RxTx_Struct.tx_message[2] = cmdFrame.d[0];
         
         uint8_t idx;
+        
         
         // Identifies the Protocol command
         switch(cmdFrame.command){
@@ -135,13 +196,21 @@ void MET_Can_Protocol_Loop(void){
 }   
 
 
-/*
- ****************************************************************************
- *                      CALLBACKS MODULO CAN
- ****************************************************************************
-
+/**
+ * @brief CAN Reception Interrupt Handler
+ * 
+ * This function is assigned in the MET_Can_Protocol_Reception_Trigger() function
+ * when the reception is activated. When the interrupt is executed it needs to be 
+ * rescheduled in order to be executed again.
+ * 
+ * The function determines if the interrupt has been generated 
+ * because of an error condition or because of a correct 
+ * frame received. In both cases a given flag is set so it can be 
+ * handled into the MET_Can_Protocol_Loop() function out of the Interrupt context.
+ * 
+ * 
+ * @param context
  */
-
 void MET_Can_Protocol_Reception_Callback(uintptr_t context)
 {
  
@@ -160,6 +229,11 @@ void MET_Can_Protocol_Reception_Callback(uintptr_t context)
     }
 }
 
+/**
+ * @brief Module Error Handler
+ * 
+ * @param errEvent This is the error code signaled
+ */
 void MET_DefaultError_Callback(uint8_t errEvent)
 {
     switch(errEvent){
@@ -172,3 +246,4 @@ void MET_DefaultError_Callback(uint8_t errEvent)
     return;
 }
 
+/** @}*/  // metCanLocal

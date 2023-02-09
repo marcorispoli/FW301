@@ -84,248 +84,70 @@ $(document).ready(function(){initNavTree('_m_e_t__can__protocol_8h.html',''); in
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">MET_can_protocol.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;definitions.h&quot;</code><br />
-</div>
+
 <p><a href="_m_e_t__can__protocol_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for module customization.  <a href="struct_m_e_t___protocol___data__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rx and Tx communication data.  <a href="struct_m_e_t___can___protocol___rx_tx__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html">MET_Can_Protocol_Command_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class user to cast the received can frame.  <a href="struct_m_e_t___can___protocol___command__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___read___status___command__t.html">MET_Read_Status_Command_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:aad8c02978d9eb65b809dbc42e26b9db7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#aad8c02978d9eb65b809dbc42e26b9db7">_CAN_ID_BASE_ADDRESS</a>&#160;&#160;&#160;0x200</td></tr>
-<tr class="separator:aad8c02978d9eb65b809dbc42e26b9db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8524dce9448789ade7b4ec56a48df57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#ae8524dce9448789ade7b4ec56a48df57">_CAN_ID_BROADCAST_ADDRESS</a>&#160;&#160;&#160;0x100</td></tr>
-<tr class="separator:ae8524dce9448789ade7b4ec56a48df57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a2419e1bdb7226bd3e47a61ee072db8dc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#a2419e1bdb7226bd3e47a61ee072db8dc">MET_CAN_PROTOCOL_READ_STATUS_CALLBACK</a>) (<a class="el" href="struct_m_e_t___read___status___command__t.html">MET_Read_Status_Command_t</a> *status)</td></tr>
-<tr class="separator:a2419e1bdb7226bd3e47a61ee072db8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:adb3609377b79c1613ab7838024beb604"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604">MET_CAN_PROTOCOL_ERROR_DEFS</a> { <br />
-&#160;&#160;<a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947">MET_CAN_PROTOCOL_ERROR_OK</a> =0
-, <a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1">MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION</a>
-, <a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604a9ab8f724f79b54cb0b63c47550a04b51">MET_CAN_PROTOCOL_ERROR_TRANSMISSION</a>
-, <a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604a43ec6e22e6225f9c90e2d472e19d4a05">MET_CAN_PROTOCOL_ERROR_INVALID_CRC</a>
+<tr class="memitem:gadb3609377b79c1613ab7838024beb604"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#gadb3609377b79c1613ab7838024beb604">MET_CAN_PROTOCOL_ERROR_DEFS</a> { <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947">MET_CAN_PROTOCOL_ERROR_OK</a> =0
+, <a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1">MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION</a>
+, <a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a9ab8f724f79b54cb0b63c47550a04b51">MET_CAN_PROTOCOL_ERROR_TRANSMISSION</a>
+, <a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a43ec6e22e6225f9c90e2d472e19d4a05">MET_CAN_PROTOCOL_ERROR_INVALID_CRC</a>
 , <br />
-&#160;&#160;<a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604abad8dfa78fa2d096ac4e5c14ae2aa62e">MET_CAN_PROTOCOL_ERROR_INVALID_LENGHT</a>
+&#160;&#160;<a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604abad8dfa78fa2d096ac4e5c14ae2aa62e">MET_CAN_PROTOCOL_ERROR_INVALID_LENGHT</a>
 <br />
  }</td></tr>
-<tr class="memdesc:adb3609377b79c1613ab7838024beb604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can Protocol Error codes.  <a href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604">More...</a><br /></td></tr>
-<tr class="separator:adb3609377b79c1613ab7838024beb604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a0ce77ef495fd2830cd71660e00a44"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44">MET_CAN_PROTOCOL_COMMAND_ENUM</a> { <br />
-&#160;&#160;<a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44aa7bbb172281656e791cdba9fc48ad356">MET_CAN_PROTOCOL_READ_STATUS</a> = 1
-, <a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44a589f3a80e091260e760e513d372d5393">MET_CAN_PROTOCOL_WRITE_PARAM</a> = 2
-, <a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44a06b47a130baed3e1188eab3ae3688a13">MET_CAN_PROTOCOL_WRITE_DATA</a> = 3
-, <a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44aed9a0b32fc2a12cbbe69cbe60498b01e">MET_CAN_PROTOCOL_STORE_PARAMS</a> = 4
+<tr class="memdesc:gadb3609377b79c1613ab7838024beb604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can Protocol Error codes.  <a href="group__met_can_data.html#gadb3609377b79c1613ab7838024beb604">More...</a><br /></td></tr>
+<tr class="separator:gadb3609377b79c1613ab7838024beb604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b94fa803d972c728b243a1b236f4cec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">MET_FRAME_CODES</a> { <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356">MET_CAN_PROTOCOL_READ_STATUS</a> = 1
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393">MET_CAN_PROTOCOL_WRITE_PARAM</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca06b47a130baed3e1188eab3ae3688a13">MET_CAN_PROTOCOL_WRITE_DATA</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaed9a0b32fc2a12cbbe69cbe60498b01e">MET_CAN_PROTOCOL_STORE_PARAMS</a>
 , <br />
-&#160;&#160;<a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44ab370056a009782a0ab8b4db65b61d7b0">MET_CAN_PROTOCOL_COMMAND_EXEC</a> = 5
+&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecab370056a009782a0ab8b4db65b61d7b0">MET_CAN_PROTOCOL_COMMAND_EXEC</a>
 <br />
  }</td></tr>
-<tr class="separator:a01a0ce77ef495fd2830cd71660e00a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga1b94fa803d972c728b243a1b236f4cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the enumeration class for the Frame Command codes.  <a href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">More...</a><br /></td></tr>
+<tr class="separator:ga1b94fa803d972c728b243a1b236f4cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abe9962e1d6e03a681e8bca2f9e157cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#abe9962e1d6e03a681e8bca2f9e157cdd">MET_Can_Protocol_Init</a> (uint8_t deviceID, uint8_t **pStatArray, uint8_t statusLen)</td></tr>
-<tr class="separator:abe9962e1d6e03a681e8bca2f9e157cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe1efb354abe5681694ab13a6625e410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#afe1efb354abe5681694ab13a6625e410">MET_Can_Protocol_Loop</a> (void)</td></tr>
-<tr class="separator:afe1efb354abe5681694ab13a6625e410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a15793de261f083ad17b3db1bec867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t__can__protocol_8h.html#a05a15793de261f083ad17b3db1bec867">MET_Can_Protocol_Reception_Trigger</a> (void)</td></tr>
-<tr class="separator:a05a15793de261f083ad17b3db1bec867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe9962e1d6e03a681e8bca2f9e157cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html#gabe9962e1d6e03a681e8bca2f9e157cdd">MET_Can_Protocol_Init</a> (uint8_t deviceID, uint8_t **pStatArray, uint8_t statusLen)</td></tr>
+<tr class="memdesc:gabe9962e1d6e03a681e8bca2f9e157cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can protocol initialization.  <a href="group__met_can_api.html#gabe9962e1d6e03a681e8bca2f9e157cdd">More...</a><br /></td></tr>
+<tr class="separator:gabe9962e1d6e03a681e8bca2f9e157cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe1efb354abe5681694ab13a6625e410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html#gafe1efb354abe5681694ab13a6625e410">MET_Can_Protocol_Loop</a> (void)</td></tr>
+<tr class="memdesc:gafe1efb354abe5681694ab13a6625e410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Main Loop function handler.  <a href="group__met_can_api.html#gafe1efb354abe5681694ab13a6625e410">More...</a><br /></td></tr>
+<tr class="separator:gafe1efb354abe5681694ab13a6625e410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b">MET_Protocol_Data_Struct</a></td></tr>
+<tr class="memdesc:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the internal protocol data structure.  <a href="group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b">More...</a><br /></td></tr>
+<tr class="separator:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb">MET_Can_Protocol_RxTx_Struct</a></td></tr>
+<tr class="memdesc:ga8f7da4f52625debcd1f7828869a61ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the structure handling the data transmitted and received.  <a href="group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb">More...</a><br /></td></tr>
+<tr class="separator:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aad8c02978d9eb65b809dbc42e26b9db7" name="aad8c02978d9eb65b809dbc42e26b9db7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad8c02978d9eb65b809dbc42e26b9db7">&#9670;&nbsp;</a></span>_CAN_ID_BASE_ADDRESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _CAN_ID_BASE_ADDRESS&#160;&#160;&#160;0x200</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae8524dce9448789ade7b4ec56a48df57" name="ae8524dce9448789ade7b4ec56a48df57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8524dce9448789ade7b4ec56a48df57">&#9670;&nbsp;</a></span>_CAN_ID_BROADCAST_ADDRESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _CAN_ID_BROADCAST_ADDRESS&#160;&#160;&#160;0x100</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a2419e1bdb7226bd3e47a61ee072db8dc" name="a2419e1bdb7226bd3e47a61ee072db8dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2419e1bdb7226bd3e47a61ee072db8dc">&#9670;&nbsp;</a></span>MET_CAN_PROTOCOL_READ_STATUS_CALLBACK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* MET_CAN_PROTOCOL_READ_STATUS_CALLBACK) (<a class="el" href="struct_m_e_t___read___status___command__t.html">MET_Read_Status_Command_t</a> *status)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a01a0ce77ef495fd2830cd71660e00a44" name="a01a0ce77ef495fd2830cd71660e00a44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a0ce77ef495fd2830cd71660e00a44">&#9670;&nbsp;</a></span>MET_CAN_PROTOCOL_COMMAND_ENUM</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_m_e_t__can__protocol_8h.html#a01a0ce77ef495fd2830cd71660e00a44">MET_CAN_PROTOCOL_COMMAND_ENUM</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a01a0ce77ef495fd2830cd71660e00a44aa7bbb172281656e791cdba9fc48ad356" name="a01a0ce77ef495fd2830cd71660e00a44aa7bbb172281656e791cdba9fc48ad356"></a>MET_CAN_PROTOCOL_READ_STATUS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a01a0ce77ef495fd2830cd71660e00a44a589f3a80e091260e760e513d372d5393" name="a01a0ce77ef495fd2830cd71660e00a44a589f3a80e091260e760e513d372d5393"></a>MET_CAN_PROTOCOL_WRITE_PARAM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a01a0ce77ef495fd2830cd71660e00a44a06b47a130baed3e1188eab3ae3688a13" name="a01a0ce77ef495fd2830cd71660e00a44a06b47a130baed3e1188eab3ae3688a13"></a>MET_CAN_PROTOCOL_WRITE_DATA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a01a0ce77ef495fd2830cd71660e00a44aed9a0b32fc2a12cbbe69cbe60498b01e" name="a01a0ce77ef495fd2830cd71660e00a44aed9a0b32fc2a12cbbe69cbe60498b01e"></a>MET_CAN_PROTOCOL_STORE_PARAMS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a01a0ce77ef495fd2830cd71660e00a44ab370056a009782a0ab8b4db65b61d7b0" name="a01a0ce77ef495fd2830cd71660e00a44ab370056a009782a0ab8b4db65b61d7b0"></a>MET_CAN_PROTOCOL_COMMAND_EXEC&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="adb3609377b79c1613ab7838024beb604" name="adb3609377b79c1613ab7838024beb604"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb3609377b79c1613ab7838024beb604">&#9670;&nbsp;</a></span>MET_CAN_PROTOCOL_ERROR_DEFS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_m_e_t__can__protocol_8h.html#adb3609377b79c1613ab7838024beb604">MET_CAN_PROTOCOL_ERROR_DEFS</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Can Protocol Error codes. </p>
-<p >Descriptive File Name</p>
-<p >@Company Company Name</p>
-<p >@File Name filename.h</p>
-<p >@Summary Brief description of the file.</p>
-<p >@Description Describe the purpose of this file. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947" name="adb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947"></a>MET_CAN_PROTOCOL_ERROR_OK&#160;</td><td class="fielddoc"><p >No error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="adb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1" name="adb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1"></a>MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION&#160;</td><td class="fielddoc"><p >Error in activating the reception. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="adb3609377b79c1613ab7838024beb604a9ab8f724f79b54cb0b63c47550a04b51" name="adb3609377b79c1613ab7838024beb604a9ab8f724f79b54cb0b63c47550a04b51"></a>MET_CAN_PROTOCOL_ERROR_TRANSMISSION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adb3609377b79c1613ab7838024beb604a43ec6e22e6225f9c90e2d472e19d4a05" name="adb3609377b79c1613ab7838024beb604a43ec6e22e6225f9c90e2d472e19d4a05"></a>MET_CAN_PROTOCOL_ERROR_INVALID_CRC&#160;</td><td class="fielddoc"><blockquote class="doxtable">
-<p >&zwj;Error during data transmission <br  />
- </p>
-</blockquote>
-</td></tr>
-<tr><td class="fieldname"><a id="adb3609377b79c1613ab7838024beb604abad8dfa78fa2d096ac4e5c14ae2aa62e" name="adb3609377b79c1613ab7838024beb604abad8dfa78fa2d096ac4e5c14ae2aa62e"></a>MET_CAN_PROTOCOL_ERROR_INVALID_LENGHT&#160;</td><td class="fielddoc"><blockquote class="doxtable">
-<p >&zwj;Frame with invalid CRC received <br  />
- </p>
-</blockquote>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="abe9962e1d6e03a681e8bca2f9e157cdd" name="abe9962e1d6e03a681e8bca2f9e157cdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe9962e1d6e03a681e8bca2f9e157cdd">&#9670;&nbsp;</a></span>MET_Can_Protocol_Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MET_Can_Protocol_Init </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>deviceID</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t **&#160;</td>
-          <td class="paramname"><em>pStatArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>statusLen</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afe1efb354abe5681694ab13a6625e410" name="afe1efb354abe5681694ab13a6625e410"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe1efb354abe5681694ab13a6625e410">&#9670;&nbsp;</a></span>MET_Can_Protocol_Loop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MET_Can_Protocol_Loop </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a05a15793de261f083ad17b3db1bec867" name="a05a15793de261f083ad17b3db1bec867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05a15793de261f083ad17b3db1bec867">&#9670;&nbsp;</a></span>MET_Can_Protocol_Reception_Trigger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MET_Can_Protocol_Reception_Trigger </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

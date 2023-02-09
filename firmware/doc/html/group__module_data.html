@@ -83,157 +83,19 @@ $(document).ready(function(){initNavTree('group__module_data.html',''); initResi
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">Data structure declaration<div class="ingroups"><a class="el" href="group__application_module.html">ApplicationModule</a> &raquo; <a class="el" href="group__protocol_module.html">CAN Communicaiton Protocol Module</a> &raquo; <a class="el" href="group__status_register.html">Status Registers Data definition</a></div></div></div>
+  <div class="headertitle"><div class="title">Data structure declaration<div class="ingroups"><a class="el" href="group__application_module.html">ApplicationModule</a> &raquo; <a class="el" href="group__protocol_module.html">CAN Communication Protocol Module</a> &raquo; <a class="el" href="group__status_register.html">Status Registers Data definition</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:gab1c601d9ee7bddfa5aae6a1d67ab1d9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#gab1c601d9ee7bddfa5aae6a1d67ab1d9c">PROTOCOL_NUMBER_OF_STATUS_REGISTERS</a>&#160;&#160;&#160;6</td></tr>
-<tr class="memdesc:gab1c601d9ee7bddfa5aae6a1d67ab1d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the total number of implemented status registers.  <a href="group__module_data.html#gab1c601d9ee7bddfa5aae6a1d67ab1d9c">More...</a><br /></td></tr>
-<tr class="separator:gab1c601d9ee7bddfa5aae6a1d67ab1d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84b383e09c174808bcf2533e3504b341"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#ga84b383e09c174808bcf2533e3504b341">PROTOCOL_RESERVED_REGISTER_PTR</a>&#160;&#160;&#160;(&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[0][0]))</td></tr>
-<tr class="memdesc:ga84b383e09c174808bcf2533e3504b341"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the reserved register.  <a href="group__module_data.html#ga84b383e09c174808bcf2533e3504b341">More...</a><br /></td></tr>
-<tr class="separator:ga84b383e09c174808bcf2533e3504b341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99e2baa9ba52b367ad09c43a39b9c54c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#ga99e2baa9ba52b367ad09c43a39b9c54c">PROTOCOL_REVISION_REGISTER_PTR</a>&#160;&#160;&#160;((<a class="el" href="struct___revision___status__t.html">_Revision_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[1][0]))</td></tr>
-<tr class="memdesc:ga99e2baa9ba52b367ad09c43a39b9c54c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the REVISION status register.  <a href="group__module_data.html#ga99e2baa9ba52b367ad09c43a39b9c54c">More...</a><br /></td></tr>
-<tr class="separator:ga99e2baa9ba52b367ad09c43a39b9c54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd60391ba1013ed0adbc10adb0e9df24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#gadd60391ba1013ed0adbc10adb0e9df24">PROTOCOL_SYSTEM_REGISTER_PTR</a>&#160;&#160;&#160;((<a class="el" href="struct___system___status__t.html">_System_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[2][0]))</td></tr>
-<tr class="memdesc:gadd60391ba1013ed0adbc10adb0e9df24"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the SYSTEM status register.  <a href="group__module_data.html#gadd60391ba1013ed0adbc10adb0e9df24">More...</a><br /></td></tr>
-<tr class="separator:gadd60391ba1013ed0adbc10adb0e9df24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea85c1d5bbb9cbf69bd1adb3ddc46b10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#gaea85c1d5bbb9cbf69bd1adb3ddc46b10">PROTOCOL_ERRORS_REGISTER_PTR</a>&#160;&#160;&#160;((<a class="el" href="struct___errors___status__t.html">_Errors_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[3][0]))</td></tr>
-<tr class="memdesc:gaea85c1d5bbb9cbf69bd1adb3ddc46b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the ERRORS status register.  <a href="group__module_data.html#gaea85c1d5bbb9cbf69bd1adb3ddc46b10">More...</a><br /></td></tr>
-<tr class="separator:gaea85c1d5bbb9cbf69bd1adb3ddc46b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga48ac423b288cf48fff0ca82997ae52f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#ga48ac423b288cf48fff0ca82997ae52f1">PROTOCOL_COMMAND_REGISTER_PTR</a>&#160;&#160;&#160;((<a class="el" href="struct___command___status__t.html">_Command_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[4][0]))</td></tr>
-<tr class="memdesc:ga48ac423b288cf48fff0ca82997ae52f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the COMMAND status register.  <a href="group__module_data.html#ga48ac423b288cf48fff0ca82997ae52f1">More...</a><br /></td></tr>
-<tr class="separator:ga48ac423b288cf48fff0ca82997ae52f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadac1ea062bda607ca3d0fb8a2dc80fa6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#gadac1ea062bda607ca3d0fb8a2dc80fa6">PROTOCOL_BATTERY_REGISTER_PTR</a>&#160;&#160;&#160;((<a class="el" href="struct___battery___status__t.html">_Battery_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[5][0]))</td></tr>
-<tr class="memdesc:gadac1ea062bda607ca3d0fb8a2dc80fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the pointer to the BATTERY status register.  <a href="group__module_data.html#gadac1ea062bda607ca3d0fb8a2dc80fa6">More...</a><br /></td></tr>
-<tr class="separator:gadac1ea062bda607ca3d0fb8a2dc80fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ga3cb2bb9531897978d8fb3d16de5b7d51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="protocol_8h.html#adb948e66eaa499be63ab8a9cb0a75402">ext</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a> [<a class="el" href="group__module_data.html#gab1c601d9ee7bddfa5aae6a1d67ab1d9c">PROTOCOL_NUMBER_OF_STATUS_REGISTERS</a>][4]</td></tr>
+<tr class="memitem:ga3cb2bb9531897978d8fb3d16de5b7d51"><td class="memItemLeft" align="right" valign="top">ext uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a> [PROTOCOL_NUMBER_OF_STATUS_REGISTERS][4]</td></tr>
 <tr class="memdesc:ga3cb2bb9531897978d8fb3d16de5b7d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Status data Array: 6 frames of 4 bytes <br  />
   <a href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">More...</a><br /></td></tr>
 <tr class="separator:ga3cb2bb9531897978d8fb3d16de5b7d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="gadac1ea062bda607ca3d0fb8a2dc80fa6" name="gadac1ea062bda607ca3d0fb8a2dc80fa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadac1ea062bda607ca3d0fb8a2dc80fa6">&#9670;&nbsp;</a></span>PROTOCOL_BATTERY_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_BATTERY_REGISTER_PTR&#160;&#160;&#160;((<a class="el" href="struct___battery___status__t.html">_Battery_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[5][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the BATTERY status register. </p>
-
-</div>
-</div>
-<a id="ga48ac423b288cf48fff0ca82997ae52f1" name="ga48ac423b288cf48fff0ca82997ae52f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48ac423b288cf48fff0ca82997ae52f1">&#9670;&nbsp;</a></span>PROTOCOL_COMMAND_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_COMMAND_REGISTER_PTR&#160;&#160;&#160;((<a class="el" href="struct___command___status__t.html">_Command_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[4][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the COMMAND status register. </p>
-
-</div>
-</div>
-<a id="gaea85c1d5bbb9cbf69bd1adb3ddc46b10" name="gaea85c1d5bbb9cbf69bd1adb3ddc46b10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaea85c1d5bbb9cbf69bd1adb3ddc46b10">&#9670;&nbsp;</a></span>PROTOCOL_ERRORS_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_ERRORS_REGISTER_PTR&#160;&#160;&#160;((<a class="el" href="struct___errors___status__t.html">_Errors_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[3][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the ERRORS status register. </p>
-
-</div>
-</div>
-<a id="gab1c601d9ee7bddfa5aae6a1d67ab1d9c" name="gab1c601d9ee7bddfa5aae6a1d67ab1d9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab1c601d9ee7bddfa5aae6a1d67ab1d9c">&#9670;&nbsp;</a></span>PROTOCOL_NUMBER_OF_STATUS_REGISTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_NUMBER_OF_STATUS_REGISTERS&#160;&#160;&#160;6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines the total number of implemented status registers. </p>
-
-</div>
-</div>
-<a id="ga84b383e09c174808bcf2533e3504b341" name="ga84b383e09c174808bcf2533e3504b341"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga84b383e09c174808bcf2533e3504b341">&#9670;&nbsp;</a></span>PROTOCOL_RESERVED_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_RESERVED_REGISTER_PTR&#160;&#160;&#160;(&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[0][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the reserved register. </p>
-
-</div>
-</div>
-<a id="ga99e2baa9ba52b367ad09c43a39b9c54c" name="ga99e2baa9ba52b367ad09c43a39b9c54c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99e2baa9ba52b367ad09c43a39b9c54c">&#9670;&nbsp;</a></span>PROTOCOL_REVISION_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_REVISION_REGISTER_PTR&#160;&#160;&#160;((<a class="el" href="struct___revision___status__t.html">_Revision_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[1][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the REVISION status register. </p>
-
-</div>
-</div>
-<a id="gadd60391ba1013ed0adbc10adb0e9df24" name="gadd60391ba1013ed0adbc10adb0e9df24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd60391ba1013ed0adbc10adb0e9df24">&#9670;&nbsp;</a></span>PROTOCOL_SYSTEM_REGISTER_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROTOCOL_SYSTEM_REGISTER_PTR&#160;&#160;&#160;((<a class="el" href="struct___system___status__t.html">_System_Status_t</a>*)&amp;(<a class="el" href="group__module_data.html#ga3cb2bb9531897978d8fb3d16de5b7d51">statusRegisterArray</a>[2][0]))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the pointer to the SYSTEM status register. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="ga3cb2bb9531897978d8fb3d16de5b7d51" name="ga3cb2bb9531897978d8fb3d16de5b7d51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3cb2bb9531897978d8fb3d16de5b7d51">&#9670;&nbsp;</a></span>statusRegisterArray</h2>
@@ -242,7 +104,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="protocol_8h.html#adb948e66eaa499be63ab8a9cb0a75402">ext</a> uint8_t statusRegisterArray[<a class="el" href="group__module_data.html#gab1c601d9ee7bddfa5aae6a1d67ab1d9c">PROTOCOL_NUMBER_OF_STATUS_REGISTERS</a>][4]</td>
+          <td class="memname">ext uint8_t statusRegisterArray[PROTOCOL_NUMBER_OF_STATUS_REGISTERS][4]</td>
         </tr>
       </table>
 </div><div class="memdoc">

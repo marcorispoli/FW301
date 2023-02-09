@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xray_5fbutton_0',['xray_button',['../struct___system___status__t.html#ac2c0e8c895e33e179623ed0233b154c2',1,'_System_Status_t']]],
-  ['xray_5fbutton_5flock_1',['xray_button_lock',['../struct___errors___status__t.html#adc16838eefc859776279ac47742128e0',1,'_Errors_Status_t']]]
+  ['voltagebat1_0',['voltageBat1',['../struct___battery___status__t.html#afc01acb4eb7e15dd47d207d2bcb7e224',1,'_Battery_Status_t']]],
+  ['voltagebat2_1',['voltageBat2',['../struct___battery___status__t.html#ac8aca79c64d1ec3e7b9be1844aa2dc38',1,'_Battery_Status_t']]]
 ];

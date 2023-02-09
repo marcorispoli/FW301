@@ -112,7 +112,7 @@ void MET_Can_Open_Send_ReadStatus(uint8_t index){
     
     
     MET_Can_Open_RxTx_Struct.tx_message[0] = 0x1; // Sequence
-    MET_Can_Open_RxTx_Struct.tx_message[1] = MET_CAN_PROTOCOL_READ_STATUS;
+    MET_Can_Open_RxTx_Struct.tx_message[1] = 1;
     MET_Can_Open_RxTx_Struct.tx_message[2] = index;
     MET_Can_Open_RxTx_Struct.tx_message[3] = 0;
     MET_Can_Open_RxTx_Struct.tx_message[4] = 0;

@@ -8,6 +8,5 @@ var annotated_dup =
     [ "MET_Can_Open_RxTx_t", "struct_m_e_t___can___open___rx_tx__t.html", "struct_m_e_t___can___open___rx_tx__t" ],
     [ "MET_Can_Protocol_Command_t", "struct_m_e_t___can___protocol___command__t.html", "struct_m_e_t___can___protocol___command__t" ],
     [ "MET_Can_Protocol_RxTx_t", "struct_m_e_t___can___protocol___rx_tx__t.html", "struct_m_e_t___can___protocol___rx_tx__t" ],
-    [ "MET_Protocol_Data_t", "struct_m_e_t___protocol___data__t.html", "struct_m_e_t___protocol___data__t" ],
-    [ "MET_Read_Status_Command_t", "struct_m_e_t___read___status___command__t.html", "struct_m_e_t___read___status___command__t" ]
+    [ "MET_Protocol_Data_t", "struct_m_e_t___protocol___data__t.html", "struct_m_e_t___protocol___data__t" ]
 ];

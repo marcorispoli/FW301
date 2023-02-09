@@ -1,6 +1,5 @@
 var _m_e_t__can__open_8c =
 [
-    [ "_MET_CAN_OPEN_C", "_m_e_t__can__open_8c.html#afade6cdd8f02b90c2f0edd4b8e4c440a", null ],
     [ "__attribute__", "_m_e_t__can__open_8c.html#aa149b7fcf91eb7cee40420e0d747ac79", null ],
     [ "MET_Can_Open_Init", "_m_e_t__can__open_8c.html#a2df63b702b625e3842254e36aa486d77", null ],
     [ "MET_Can_Open_Loop", "_m_e_t__can__open_8c.html#a455993a7fba50b42630c87cc42f44a06", null ],

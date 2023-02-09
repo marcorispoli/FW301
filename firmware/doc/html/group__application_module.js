@@ -1,6 +1,6 @@
 var group__application_module =
 [
-    [ "Application Constants", "group__definitions.html", "group__definitions" ],
+    [ "Application Constants", "group__definitions.html", null ],
     [ "Microchip Licence Agreement", "group__license_agreement.html", null ],
-    [ "CAN Communicaiton Protocol Module", "group__protocol_module.html", "group__protocol_module" ]
+    [ "CAN Communication Protocol Module", "group__protocol_module.html", "group__protocol_module" ]
 ];

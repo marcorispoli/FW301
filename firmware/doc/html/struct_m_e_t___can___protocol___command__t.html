@@ -85,30 +85,71 @@ $(document).ready(function(){initNavTree('struct_m_e_t___can___protocol___comman
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_m_e_t___can___protocol___command__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">MET_Can_Protocol_Command_t Struct Reference</div></div>
+  <div class="headertitle"><div class="title">MET_Can_Protocol_Command_t Struct Reference<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a> &raquo; <a class="el" href="group__met_can_data.html">Module data structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper class user to cast the received can frame.  
+ <a href="struct_m_e_t___can___protocol___command__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_m_e_t__can__protocol_8h_source.html">MET_can_protocol.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aeb38d988b29a13e2b32365b4664a9e8d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html#aeb38d988b29a13e2b32365b4664a9e8d">seq</a></td></tr>
+<tr class="memdesc:aeb38d988b29a13e2b32365b4664a9e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame sequence number.  <a href="struct_m_e_t___can___protocol___command__t.html#aeb38d988b29a13e2b32365b4664a9e8d">More...</a><br /></td></tr>
 <tr class="separator:aeb38d988b29a13e2b32365b4664a9e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abccbe22fa6dadf2d250fc21431ba19c6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html#abccbe22fa6dadf2d250fc21431ba19c6">command</a></td></tr>
-<tr class="separator:abccbe22fa6dadf2d250fc21431ba19c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca49e096bc832521e857dd6cc76f3fc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">MET_FRAME_CODES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html#aca49e096bc832521e857dd6cc76f3fc0">command</a></td></tr>
+<tr class="memdesc:aca49e096bc832521e857dd6cc76f3fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame command code.  <a href="struct_m_e_t___can___protocol___command__t.html#aca49e096bc832521e857dd6cc76f3fc0">More...</a><br /></td></tr>
+<tr class="separator:aca49e096bc832521e857dd6cc76f3fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad884b833eb197f82d4398b5a7864a8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html#abad884b833eb197f82d4398b5a7864a8">d</a> [5]</td></tr>
+<tr class="memdesc:abad884b833eb197f82d4398b5a7864a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame data code.  <a href="struct_m_e_t___can___protocol___command__t.html#abad884b833eb197f82d4398b5a7864a8">More...</a><br /></td></tr>
 <tr class="separator:abad884b833eb197f82d4398b5a7864a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cabd213906d0208dc7fdc5ef957839"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html#a49cabd213906d0208dc7fdc5ef957839">crc</a></td></tr>
+<tr class="separator:a49cabd213906d0208dc7fdc5ef957839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="abccbe22fa6dadf2d250fc21431ba19c6" name="abccbe22fa6dadf2d250fc21431ba19c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abccbe22fa6dadf2d250fc21431ba19c6">&#9670;&nbsp;</a></span>command</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Helper class user to cast the received can frame. </p>
+<p >The Can data frame is coded with the following data field:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Byte   </th><th class="markdownTableHeadCenter">Name   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">0   </td><td class="markdownTableBodyCenter">SEQ   </td><td class="markdownTableBodyLeft">Frame sequence number set by the sender    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">1   </td><td class="markdownTableBodyCenter">Frame Command Code   </td><td class="markdownTableBodyLeft">defines the frame type    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">2:6   </td><td class="markdownTableBodyCenter">D[0:4]   </td><td class="markdownTableBodyLeft">Frame data content    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">7   </td><td class="markdownTableBodyCenter">CRC   </td><td class="markdownTableBodyLeft">Crc frame code    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="3"></td></tr>
+</table>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="aca49e096bc832521e857dd6cc76f3fc0" name="aca49e096bc832521e857dd6cc76f3fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca49e096bc832521e857dd6cc76f3fc0">&#9670;&nbsp;</a></span>command</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t MET_Can_Protocol_Command_t::command</td>
+          <td class="memname"><a class="el" href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">MET_FRAME_CODES</a> MET_Can_Protocol_Command_t::command</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frame command code. </p>
+
+</div>
+</div>
+<a id="a49cabd213906d0208dc7fdc5ef957839" name="a49cabd213906d0208dc7fdc5ef957839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cabd213906d0208dc7fdc5ef957839">&#9670;&nbsp;</a></span>crc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_Command_t::crc</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -127,6 +168,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Frame data code. </p>
+
 </div>
 </div>
 <a id="aeb38d988b29a13e2b32365b4664a9e8d" name="aeb38d988b29a13e2b32365b4664a9e8d"></a>
@@ -140,6 +183,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Frame sequence number. </p>
 
 </div>
 </div>

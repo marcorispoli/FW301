@@ -6,6 +6,5 @@ var struct_m_e_t___can___protocol___rx_tx__t =
     [ "rx_timestamp", "struct_m_e_t___can___protocol___rx_tx__t.html#a7c426f1a25f77ae76357788642855f0a", null ],
     [ "tx_message", "struct_m_e_t___can___protocol___rx_tx__t.html#a115ab8d04b225a9998e818c0f7069a5e", null ],
     [ "tx_messageID", "struct_m_e_t___can___protocol___rx_tx__t.html#aef124981778a81cac78eebb5227e0d38", null ],
-    [ "tx_messageLength", "struct_m_e_t___can___protocol___rx_tx__t.html#af4ed0a8caf08ac13ab726a8b2ebfb472", null ],
-    [ "tx_timestamp", "struct_m_e_t___can___protocol___rx_tx__t.html#a82cd69e40b988d2774919de096ae7d72", null ]
+    [ "tx_messageLength", "struct_m_e_t___can___protocol___rx_tx__t.html#af4ed0a8caf08ac13ab726a8b2ebfb472", null ]
 ];
