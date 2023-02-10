@@ -83,12 +83,19 @@ $(document).ready(function(){initNavTree('_m_e_t___bootloader_8c.html',''); init
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">MET_Bootloader.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="_m_e_t___bootloader__table_8h_source.html">MET_Bootloader_table.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a495ddd295ef0c4a10cda0ba444fa6be5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t___bootloader_8c.html#a495ddd295ef0c4a10cda0ba444fa6be5">_MET_BOOTLOADER_TABLE_C</a></td></tr>
+<tr class="separator:a495ddd295ef0c4a10cda0ba444fa6be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a903c8765e27d6932083c2f8248bd6408"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t___bootloader_8c.html#a903c8765e27d6932083c2f8248bd6408">MET_Bootloader_Activation_Request</a> (void)</td></tr>
@@ -96,9 +103,24 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5f1769936b806e3468a25a160e93bf24"><td class="memItemLeft" align="right" valign="top">volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t___bootloader_8c.html#a5f1769936b806e3468a25a160e93bf24">ramBootloaderTable</a> = (uint32_t *)_MET_BOOTLOADER_RAM_START</td></tr>
+<tr class="memitem:a5f1769936b806e3468a25a160e93bf24"><td class="memItemLeft" align="right" valign="top">volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m_e_t___bootloader_8c.html#a5f1769936b806e3468a25a160e93bf24">ramBootloaderTable</a> = (uint32_t *) (0x20000000)</td></tr>
 <tr class="separator:a5f1769936b806e3468a25a160e93bf24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a495ddd295ef0c4a10cda0ba444fa6be5" name="a495ddd295ef0c4a10cda0ba444fa6be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495ddd295ef0c4a10cda0ba444fa6be5">&#9670;&nbsp;</a></span>_MET_BOOTLOADER_TABLE_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MET_BOOTLOADER_TABLE_C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a903c8765e27d6932083c2f8248bd6408" name="a903c8765e27d6932083c2f8248bd6408"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a903c8765e27d6932083c2f8248bd6408">&#9670;&nbsp;</a></span>MET_Bootloader_Activation_Request()</h2>
@@ -126,7 +148,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">volatile uint32_t* ramBootloaderTable = (uint32_t *)_MET_BOOTLOADER_RAM_START</td>
+          <td class="memname">volatile uint32_t* ramBootloaderTable = (uint32_t *) (0x20000000)</td>
         </tr>
       </table>
 </div><div class="memdoc">

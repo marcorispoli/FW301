@@ -50,7 +50,7 @@ void MET_Can_Open_Loop(void){
     if(rxReceptionTrigger){
         rxReceptionTrigger = false;
         MET_Can_Open_Start();
-        VITALITY_LED_Toggle();
+        
         
     }else if(rxErrorTrigger){
         rxErrorTrigger = false;

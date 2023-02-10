@@ -29,6 +29,7 @@
 #include "application.h"
 #include "Protocol/protocol.h"
 #include "Motors/MET_can_open.h"
+#include "BusHardware/bushw.h"
 
 
 // *****************************************************************************
@@ -40,8 +41,17 @@ static bool isToggleTime = false;
 
 static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 {
+    // Periodic Interval Handler: Freq = 1024 / 2 ^ (n+3)
+    if (intCause & RTC_TIMER32_INT_MASK_PER0){
+        // 7.82ms Interrupt
+        
+        BusHwRtcInterrupt(); // Handles the Signals filtering
+        return;
+    }
+    
     if (intCause & RTC_TIMER32_INT_MASK_PER7)
     {   
+        // 1.024s
         isToggleTime    = true;
         
     }
@@ -65,6 +75,10 @@ int main ( void )
     // Application Protocol initialization
     ApplicationProtocolInit(APP_DEVICE_ID);
     
+    // This call shall follows the ApplicationProtocolInit() function
+    BusHwInit();
+    
+    
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
@@ -73,6 +87,9 @@ int main ( void )
         // Protocol management
         ApplicationProtocolLoop();
         
+        // Bus Hardware Management
+        BusHwLoop();
+        
         
         if(isToggleTime){            
             isToggleTime = false;
@@ -80,9 +97,11 @@ int main ( void )
             MET_Can_Open_Send_ReadStatus(1);
         }
         
-       
+        if(PROTOCOL_SYSTEM_SLIDE_UP) VITALITY_LED_Set();
+        else VITALITY_LED_Clear();
     }
 
+    
     /* Execution should not come here during normal operation */
 
     return ( EXIT_FAILURE );

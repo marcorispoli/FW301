@@ -24,7 +24,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: rtc, value: '128'}
+        attributes: {id: rtc, value: '129'}
+  - type: Boolean
+    attributes: {id: RTC_MODE0_INTENSET_PER0_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Boolean
     attributes: {id: RTC_MODE0_INTENSET_PER7_ENABLE}
     children:

@@ -115,7 +115,7 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/tc/plib_tc0.h \
  ../src/config/default/peripheral/tc/plib_tc_common.h \
  ../src/application.h ../src/Protocol/protocol.h \
- ../src/Motors/MET_can_open.h
+ ../src/Motors/MET_can_open.h ../src/BusHardware/bushw.h
 
 ../src/config/default/definitions.h:
 
@@ -354,3 +354,5 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/Protocol/protocol.h:
 
 ../src/Motors/MET_can_open.h:
+
+../src/BusHardware/bushw.h:

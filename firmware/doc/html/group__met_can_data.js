@@ -20,6 +20,8 @@ var group__met_can_data =
       [ "d", "struct_m_e_t___can___protocol___command__t.html#abad884b833eb197f82d4398b5a7864a8", null ],
       [ "seq", "struct_m_e_t___can___protocol___command__t.html#aeb38d988b29a13e2b32365b4664a9e8d", null ]
     ] ],
+    [ "_CAN_ID_BASE_ADDRESS", "group__met_can_data.html#gaad8c02978d9eb65b809dbc42e26b9db7", null ],
+    [ "_CAN_ID_LOADER_ADDRESS", "group__met_can_data.html#ga90d0bbd024bddfb2e734f37664388aeb", null ],
     [ "MET_CAN_PROTOCOL_ERROR_DEFS", "group__met_can_data.html#gadb3609377b79c1613ab7838024beb604", [
       [ "MET_CAN_PROTOCOL_ERROR_OK", "group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947", null ],
       [ "MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION", "group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1", null ],

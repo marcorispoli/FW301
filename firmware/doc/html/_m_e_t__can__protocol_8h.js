@@ -1,5 +1,9 @@
 var _m_e_t__can__protocol_8h =
 [
+    [ "_CAN_ID_BASE_ADDRESS", "group__met_can_data.html#gaad8c02978d9eb65b809dbc42e26b9db7", null ],
+    [ "_CAN_ID_LOADER_ADDRESS", "group__met_can_data.html#ga90d0bbd024bddfb2e734f37664388aeb", null ],
+    [ "ext", "_m_e_t__can__protocol_8h.html#adb948e66eaa499be63ab8a9cb0a75402", null ],
+    [ "ext_static", "_m_e_t__can__protocol_8h.html#a134499fecb8d1c9779b705b7d32d21af", null ],
     [ "MET_CAN_PROTOCOL_ERROR_DEFS", "group__met_can_data.html#gadb3609377b79c1613ab7838024beb604", [
       [ "MET_CAN_PROTOCOL_ERROR_OK", "group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947", null ],
       [ "MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION", "group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1", null ],

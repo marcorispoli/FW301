@@ -1,5 +1,6 @@
 var _m_e_t__can__protocol_8c =
 [
+    [ "_MET_CAN_PROTOCOL_C", "_m_e_t__can__protocol_8c.html#a02b0c6e280715bc097218f5e18f95a2c", null ],
     [ "__attribute__", "group__met_can_harmony.html#ga2a97ef52c4e97f6844a6dd703a5fd3fc", null ],
     [ "MET_Can_Protocol_Init", "group__met_can_implementation.html#ga6bb3b55a468fc6f67acd8aa71712f043", null ],
     [ "MET_Can_Protocol_Loop", "group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410", null ],

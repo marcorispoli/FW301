@@ -48,7 +48,8 @@ var NAVTREE =
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ]
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -56,7 +57,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_m_e_t___bootloader_8c.html"
+"_m_e_t___bootloader_8c.html",
+"struct___errors___status__t.html#afd0c089e4a7cd1d5d60a9e379f506ae4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

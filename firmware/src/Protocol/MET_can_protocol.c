@@ -141,7 +141,7 @@ void MET_Can_Protocol_Loop(void){
         cmdFrame.command = MET_Can_Protocol_RxTx_Struct.rx_message[1];
         for(i=3;i<7;i++) cmdFrame.d[i-3] = MET_Can_Protocol_RxTx_Struct.rx_message[i];
         
-        VITALITY_LED_Toggle();
+      
         MET_Can_Protocol_RxTx_Struct.tx_message[0] = cmdFrame.seq;
         MET_Can_Protocol_RxTx_Struct.tx_message[1] = cmdFrame.command;
         MET_Can_Protocol_RxTx_Struct.tx_message[2] = cmdFrame.d[0];

@@ -1,6 +1,18 @@
-#ifdef _MET_CAN_PROTOCOL_C    /* Guard against multiple inclusion */
+#ifndef _MET_CAN_PROTOCOL_H
+    #define _MET_CAN_PROTOCOL_H
 
 #include "definitions.h"                // SYS function prototypes
+
+#undef ext
+#undef ext_static
+
+#ifdef _MET_CAN_PROTOCOL_C
+    #define ext
+    #define ext_static static 
+#else
+    #define ext extern
+    #define ext_static extern
+#endif
 
 /*!
  * \defgroup metProtocolModule  CAN Communication Engine Module
@@ -122,7 +134,7 @@
             uint8_t   statusArrayLen; //!< This is the Status Register array lenght
 
         } MET_Protocol_Data_t;
-        static MET_Protocol_Data_t MET_Protocol_Data_Struct; //!< This is the internal protocol data structure
+        ext_static MET_Protocol_Data_t MET_Protocol_Data_Struct; //!< This is the internal protocol data structure
         
         /** 
          * @brief Rx and Tx communication data
@@ -147,7 +159,7 @@
             uint8_t tx_messageLength;//!< transmitting data lenght
 
         } MET_Can_Protocol_RxTx_t;        
-        static MET_Can_Protocol_RxTx_t MET_Can_Protocol_RxTx_Struct; //!< This is the structure handling the data transmitted and received
+        ext_static MET_Can_Protocol_RxTx_t MET_Can_Protocol_RxTx_Struct; //!< This is the structure handling the data transmitted and received
 
         /**
          * @brief This is the enumeration class for the Frame Command codes
@@ -186,14 +198,13 @@
 
 /** @}*/  // metProtocolModule
         
-#endif /* _MET_CAN_PROTOCOL_C */
+
 
 /******************************************************************************/
 /*                      API DI ISTALLAZIONE PROTOCOLLO                        */
 /******************************************************************************/
         
-#ifndef _MET_CAN_PROTOCOL_H
-#define _MET_CAN_PROTOCOL_H
+
         
      /** 
      * \defgroup metCanApi  Module API

@@ -3,6 +3,8 @@
 
 #include "definitions.h"  
 
+#undef ext
+
 #ifdef _PROTOCOL_C
 #define ext
 #else
@@ -14,16 +16,18 @@
  *
  * \ingroup applicationModule
  * 
- * # GENERAL OVERVIEW
- *
- * This protocol implements the functionalities 
+ * 
+ * This Module implements the functions 
  * of the PCB/22-301 Software Communication protocol specifications.
  * 
- * This module makes use of the application library module MET_Can_Protocol
- * that implements the communication based mechanisms.
+ * ## Dependencies
+ * 
+ * This module requires the following library modules:
+ * - MET_Can_Protocol.c
+ * - MET_Can_Protocol.h
  * 
  * 
- * # COMMUNICATION CHARACTERISTICS
+ * ## Communication setting
  * 
  * The CAN communication is based on the following 
  * characteristics:
@@ -33,7 +37,7 @@
  * - Baude Rate: 1Mb/s;
  * - Can ID reception address: 0x201;
  * 
- * # PROTOCOL DESCRIPTION
+ * ## Protocol description
  * 
  * The Application iplements the protocol Items 
  * described in the PCB/22-301 Software Communication protocol specifications.
@@ -41,7 +45,7 @@
  * In this chapter it will be briefly described the protocol Items.
  * For details refer to the document specification.
  * 
- * ## PROTOCOL STATUS REGISTERS
+ * ### STATUS Registers
  * 
  * The available registers are:
  * 
@@ -52,11 +56,11 @@
  * - COMMAND    (IDX=4);
  * - BATTERY    (IDX=5);
  * 
- * ## PROTOCOL DATA REGISTERS
+ * ### DATA Registers
  * 
- * ## PROTOCOL PARAMETER REGISTERS
+ * ### PARAMETER Registers
  * 
- * ## PROTOCOL COMMANDS
+ * ### COMMAND Register
  * 
  *  @{
  * 
