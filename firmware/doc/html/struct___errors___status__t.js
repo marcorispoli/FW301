@@ -1,9 +1,9 @@
 var struct___errors___status__t =
 [
-    [ "D0", "struct___errors___status__t.html#a267150392cf3507192a346da9da5dbb8", null ],
-    [ "D1", "struct___errors___status__t.html#a3ade4bdde06ee302e73b5d0042ff538b", null ],
-    [ "D2", "struct___errors___status__t.html#a071aa8d83423e68e93ab6729bee64ac0", null ],
-    [ "D3", "struct___errors___status__t.html#aaea82fa883a40d896771629b22051c5c", null ],
+    [ "D0", "struct___errors___status__t.html#a661b302bef5f1128f8d7e0caee19b605", null ],
+    [ "D1", "struct___errors___status__t.html#a0a6b4f6aed931f933dd95c704674c7d2", null ],
+    [ "D2", "struct___errors___status__t.html#a6e22daa2501dc499cf86fc407d6ea6c7", null ],
+    [ "D3", "struct___errors___status__t.html#a0fc191d43a4b6c4206c772561e5f1e17", null ],
     [ "manual_body_ccw_lock", "struct___errors___status__t.html#aaf8308060ea5fa767c2d7315c5504d21", null ],
     [ "manual_body_cw_lock", "struct___errors___status__t.html#af82d594d74727085a3b15a0b900bb99d", null ],
     [ "manual_carm_dwn_lock", "struct___errors___status__t.html#ad0d53b18c19191a3d23cb95275fa14ff", null ],
@@ -27,13 +27,5 @@ var struct___errors___status__t =
     [ "spare_25", "struct___errors___status__t.html#a626d42150468f78bbef75366b31f8773", null ],
     [ "spare_26", "struct___errors___status__t.html#aaebd465a631920238033f01d744a1533", null ],
     [ "spare_27", "struct___errors___status__t.html#a282bafa5be5838d4ef3d47c9e687f3e3", null ],
-    [ "spare_30", "struct___errors___status__t.html#a3ca5887971205fa0290fc28e37262d5f", null ],
-    [ "spare_31", "struct___errors___status__t.html#a17823c6148e1cf20d423e20dc4c00539", null ],
-    [ "spare_32", "struct___errors___status__t.html#af233cd08a199e71927ca3ba512c81849", null ],
-    [ "spare_33", "struct___errors___status__t.html#aa1d45c5b81b169db5bfe0835b0e1f86e", null ],
-    [ "spare_34", "struct___errors___status__t.html#a3573f81f4425a5e65a26a2cd3aba7c4a", null ],
-    [ "spare_35", "struct___errors___status__t.html#aa08754afd63df156359c9b1ff5c44d52", null ],
-    [ "spare_36", "struct___errors___status__t.html#a1f307fa27ad0b2485b46baaa5f93bf26", null ],
-    [ "spare_37", "struct___errors___status__t.html#a10f6a1969e126baa04ed1a8852be29e3", null ],
     [ "xray_button_lock", "struct___errors___status__t.html#adc16838eefc859776279ac47742128e0", null ]
 ];

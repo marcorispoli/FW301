@@ -118,6 +118,15 @@
         } MET_CAN_PROTOCOL_ERROR_DEFS;
 
         /**
+         * Register Data type defining the content of a register
+         *  
+         */
+        typedef struct {
+            uint8_t d[4]; //!< Register data content
+        }MET_Register_t;
+        
+        
+        /**
          * @brief Structure for module customization
          * 
          * This structure is filled with the initialization data 
@@ -126,12 +135,18 @@
          * The pStatusArray is a pointer to the Status Register Array:
          * + The Status Register Array is an array[N][4] where N is the number 
          * of implemented registers and 4 is the number of register bytes
+         * 
+         * The pDataArray is a pointer to the DATA Register Array:
+         * + The DATA Register Array is an array[N][4] where N is the number 
+         * of implemented registers and 4 is the number of register bytes
          */
         typedef struct {
             uint8_t deviceID; //!< This is the device ID from 1:255
 
-            uint8_t** pStatusArray; //!< This is the Status Register array pointer
-            uint8_t   statusArrayLen; //!< This is the Status Register array lenght
+            MET_Register_t*   pStatusArray; //!< This is the Status Register array pointer
+            uint8_t     statusArrayLen; //!< This is the Status Register array lenght
+            MET_Register_t*   pDataArray; //!< This is the DATA Register array pointer
+            uint8_t     dataArrayLen; //!< This is the DATA Register array lenght
 
         } MET_Protocol_Data_t;
         ext_static MET_Protocol_Data_t MET_Protocol_Data_Struct; //!< This is the internal protocol data structure
@@ -172,6 +187,9 @@
             MET_CAN_PROTOCOL_COMMAND_EXEC //!< Command Execution frame
         }MET_FRAME_CODES;
         
+        
+        
+        
         /**
          * @brief Helper class user to cast the received can frame
          * 
@@ -188,11 +206,13 @@
          */
         typedef struct {
             uint8_t seq; //!< Frame sequence number
-            MET_FRAME_CODES command;//!< Frame command code
-            uint8_t d[5]; //!< Frame data code 
-            uint8_t crc;    //! CRC filed
+            MET_FRAME_CODES frame_cmd;//!< Frame command code
+            uint8_t idx; //!< Register index
+            MET_Register_t data; //!< Register data content
+            uint8_t crc;  //! CRC filed
         } MET_Can_Protocol_Command_t;
 
+        
         
     /** @}*/  // metCanData
 
@@ -223,15 +243,24 @@
          * 
          *  
          * @param deviceID this is the assigned deviceID (1:255)
-         * @param pStatArray pointer to the Status Register's Array
+         * @param pStatusArray pointer to the Status Register's Array
          *  The structure is array[N][4]: 
          *  + N is the number of the Status registers;
          *  + [4] is the register data content;
          * 
-         * @param statusLen number of Status Registers pointed
+         * @param StatusLen number of Status Registers pointed
          * NOTE: the array shall be instantiated into the implementing class!
+         * 
+         * @param pDataArray pointer to the DATA Register's Array
+         *  The structure is array[N][4]: 
+         *  + N is the number of the DATA registers;
+         *  + [4] is the register data content;
+         * 
+         * @param DataLen number of DATA Registers pointed
+         * NOTE: the array shall be instantiated into the implementing class!
+         * 
          */
-        void MET_Can_Protocol_Init(uint8_t deviceID, uint8_t** pStatArray, uint8_t statusLen);
+        void MET_Can_Protocol_Init(uint8_t deviceID, MET_Register_t* pStatusArray, uint8_t StatusLen, MET_Register_t* pDataArray, uint8_t DataLen);
         
         /**
          * @brief Application Main Loop function handler

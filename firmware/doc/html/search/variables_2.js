@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['d_0',['d',['../struct_m_e_t___can___protocol___command__t.html#abad884b833eb197f82d4398b5a7864a8',1,'MET_Can_Protocol_Command_t']]],
-  ['d0_1',['D0',['../struct___system___status__t.html#afe8faffba717a69707d85890110b6b0d',1,'_System_Status_t::D0()'],['../struct___errors___status__t.html#a267150392cf3507192a346da9da5dbb8',1,'_Errors_Status_t::D0()']]],
-  ['d0_2',['d0',['../struct___command___status__t.html#a54e1170d7d12b9dd322a26454cc2d1f0',1,'_Command_Status_t']]],
-  ['d1_3',['d1',['../struct___command___status__t.html#ac450a115a8430bca2669a3113ff8dab5',1,'_Command_Status_t']]],
-  ['d1_4',['D1',['../struct___system___status__t.html#a81fd47af80fac9f2b15947eebb446afc',1,'_System_Status_t::D1()'],['../struct___errors___status__t.html#a3ade4bdde06ee302e73b5d0042ff538b',1,'_Errors_Status_t::D1()']]],
-  ['d2_5',['d2',['../struct___command___status__t.html#a21a670c50d881d3d43f9bd6b5afb6ed2',1,'_Command_Status_t::d2()'],['../struct___battery___status__t.html#a93c7b9bde1095119a3982a863ba3908f',1,'_Battery_Status_t::d2()']]],
-  ['d2_6',['D2',['../struct___system___status__t.html#a1973f41abc36086d83a8749279509061',1,'_System_Status_t::D2()'],['../struct___errors___status__t.html#a071aa8d83423e68e93ab6729bee64ac0',1,'_Errors_Status_t::D2()']]],
-  ['d3_7',['D3',['../struct___system___status__t.html#a9c0fafef3ca5627b437c62a92173f05b',1,'_System_Status_t::D3()'],['../struct___errors___status__t.html#aaea82fa883a40d896771629b22051c5c',1,'_Errors_Status_t::D3()']]],
-  ['d3_8',['d3',['../struct___revision___status__t.html#a4a98d30051b43d7be1a45bcfcad1f3c9',1,'_Revision_Status_t::d3()'],['../struct___command___status__t.html#a507a73d0f80a94a8fb236fa7f7248a34',1,'_Command_Status_t::d3()'],['../struct___battery___status__t.html#af3742df43da9c7bed1657e7a8fa392a8',1,'_Battery_Status_t::d3()']]],
-  ['deviceid_9',['deviceID',['../struct_m_e_t___protocol___data__t.html#a1ba9abc1e0d1e0967563fa16e5250167',1,'MET_Protocol_Data_t']]]
+  ['carm_5fdwn_0',['carm_dwn',['../struct___system___status__t.html#ad47efec695ef770a02ca77ae34ac710d',1,'_System_Status_t']]],
+  ['carm_5frot_5fccw_1',['carm_rot_ccw',['../struct___system___status__t.html#a2afa6d94330bf764dd3fedc6f4d9cd75',1,'_System_Status_t']]],
+  ['carm_5frot_5fcw_2',['carm_rot_cw',['../struct___system___status__t.html#aa7952318cc8222319b9b286d1df9d340',1,'_System_Status_t']]],
+  ['carm_5fup_3',['carm_up',['../struct___system___status__t.html#acd55b351e5d3b4396cb343d58b9a334e',1,'_System_Status_t']]],
+  ['closed_5fdoor_4',['closed_door',['../struct___system___status__t.html#adaad1eb8c51e008eb6a03cd45be2773f',1,'_System_Status_t']]],
+  ['compression_5fon_5',['compression_on',['../struct___system___status__t.html#a3c9e801d1b2fb50b2bd108b2dc6a7eb6',1,'_System_Status_t']]],
+  ['crc_6',['crc',['../struct_m_e_t___can___protocol___command__t.html#a49cabd213906d0208dc7fdc5ef957839',1,'MET_Can_Protocol_Command_t']]]
 ];

@@ -58,6 +58,9 @@ void MET_Can_Open_Start(void);      // Inizio attività di rxtx con protocollo Ca
 
 /////////////////////////////////////////////////////////////////////////
 void MET_Can_Open_Send_ReadStatus(uint8_t index);
+void MET_Can_Open_Send_WriteData(uint8_t index, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3 );
+
+
 
 
 #endif /* _MET_CAN_OPEN_H */

@@ -30,6 +30,7 @@
 #include "Protocol/protocol.h"
 #include "Motors/MET_can_open.h"
 #include "BusHardware/bushw.h"
+#include "GeneratorBus/generator.h"
 
 
 // *****************************************************************************
@@ -37,24 +38,19 @@
 // Section: Main Entry Point
 // *****************************************************************************
 // *****************************************************************************
-static bool isToggleTime = false;
+static uint8_t trigger_time = 0;
+
+#define _1024_ms_TriggerTime 0x1
+#define _7820_us_TriggerTime 0x2
+
 
 static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 {
     // Periodic Interval Handler: Freq = 1024 / 2 ^ (n+3)
-    if (intCause & RTC_TIMER32_INT_MASK_PER0){
-        // 7.82ms Interrupt
-        
-        BusHwRtcInterrupt(); // Handles the Signals filtering
-        return;
-    }
     
-    if (intCause & RTC_TIMER32_INT_MASK_PER7)
-    {   
-        // 1.024s
-        isToggleTime    = true;
-        
-    }
+    if (intCause & RTC_TIMER32_INT_MASK_PER0) trigger_time |= _7820_us_TriggerTime; // 7.82ms Interrupt
+    if (intCause & RTC_TIMER32_INT_MASK_PER7) trigger_time |= _1024_ms_TriggerTime; // 1024 ms Interrupt
+    
 }
 
 int main ( void )
@@ -62,9 +58,9 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
-     // Registra la callback richiesta
+    // Registers the RTC interrupt routine to the RTC module
     RTC_Timer32CallbackRegister(rtcEventHandler, 0);
-    RTC_Timer32Start();
+    RTC_Timer32Start(); // Start the RTC module
             
     // Start the TCo to start the Vitality LED
     TC0_CompareStart();
@@ -75,9 +71,11 @@ int main ( void )
     // Application Protocol initialization
     ApplicationProtocolInit(APP_DEVICE_ID);
     
-    // This call shall follows the ApplicationProtocolInit() function
-    BusHwInit();
+    // Initializes the Bus Hardware signals
+    BusHwInit(); // Call AFTER the ApplicationProtocolInit();
     
+    // Initializes the Generator signals
+    GeneratorInit(); // Call AFTER the ApplicationProtocolInit();
     
     while ( true )
     {
@@ -87,18 +85,25 @@ int main ( void )
         // Protocol management
         ApplicationProtocolLoop();
         
-        // Bus Hardware Management
-        BusHwLoop();
         
-        
-        if(isToggleTime){            
-            isToggleTime = false;
-            
-            MET_Can_Open_Send_ReadStatus(1);
+        // Timer events activated into the RTC interrupt
+        if(trigger_time & _7820_us_TriggerTime){
+            trigger_time &=~ _7820_us_TriggerTime;
+            BusHwLoop(); // Bus Hardware Management    
+            GeneratorLoop(); // Generator Signals Management 
         }
         
-        if(PROTOCOL_SYSTEM_SLIDE_UP) VITALITY_LED_Set();
-        else VITALITY_LED_Clear();
+        if(trigger_time & _1024_ms_TriggerTime){
+            trigger_time &=~ _1024_ms_TriggerTime;
+             //MET_Can_Open_Send_WriteData(1,0x20,0,0,0);
+                //VITALITY_LED_Toggle();
+                
+                if(GeneratorGetHvOn()) VITALITY_LED_Set();
+                else VITALITY_LED_Clear();
+                   
+        }        
+     
+
     }
 
     

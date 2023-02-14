@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('group__bus_hw_module_api.html',''); in
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">API Module<div class="ingroups"><a class="el" href="group__application_module.html">ApplicationModule</a> &raquo; <a class="el" href="group__bus_hw_module.html">BUS Hardware management module</a></div></div></div>
+  <div class="headertitle"><div class="title">API Module<div class="ingroups"><a class="el" href="group__application_module.html">Application Modules section</a> &raquo; <a class="el" href="group__bus_hw_module.html">BUS Hardware management module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -96,9 +96,6 @@ Functions</h2></td></tr>
 <tr class="memitem:gaee02af9829cfd14862645fb1db54746e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e">BusHwLoop</a> (void)</td></tr>
 <tr class="memdesc:gaee02af9829cfd14862645fb1db54746e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles the Bus Hardware status.  <a href="group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e">More...</a><br /></td></tr>
 <tr class="separator:gaee02af9829cfd14862645fb1db54746e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga19d60abdd04f4dfa12932fb2cefcf112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bus_hw_module_api.html#ga19d60abdd04f4dfa12932fb2cefcf112">BusHwRtcInterrupt</a> (void)</td></tr>
-<tr class="memdesc:ga19d60abdd04f4dfa12932fb2cefcf112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bus hardware rtc interrupt.  <a href="group__bus_hw_module_api.html#ga19d60abdd04f4dfa12932fb2cefcf112">More...</a><br /></td></tr>
-<tr class="separator:ga19d60abdd04f4dfa12932fb2cefcf112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -143,38 +140,20 @@ Functions</h2></td></tr>
 <p>This function handles the Bus Hardware status. </p>
 <p >The function shall be called into the MAIN loop of the Application</p>
 <p >This function handles the Bus Hardware status.</p>
+<p >This function shall be launched every T milli seconds in order to make a signal filtering of period T.</p>
 <p >This function executes the following jobs:</p><ul>
 <li>Get the Bus Hardware inputs assigning the status to the Protocol-Status registers;</li>
 <li>Get the Protocol-Data Register outputs and set the related Output signal on the Bus Hardware;</li>
 </ul>
 <p ><em><b>Input Handling</b></em></p>
-<p >This function reads the BUS-HARDWARE inputs, and makes a time filter on the signal levels before to assign the steady status to the Protocol/Status register fields.</p>
-<p >The Function operate every 7.28ms and every signals needs to be stable almost for two consecutive time slots:</p><ul>
-<li>***A signal is assigned if it remains steady for 7.28ms ***</li>
+<p >This function reads the BUS-HARDWARE inputs and converts the filtered status into the CAN Protocol Status register.</p>
+<p ><em><b>Output Handling</b></em></p>
+<p >This section set the Bus hardware outputs that are directly under the control of the Microcontroller:</p>
+<ul>
+<li>COMPRESSOR_ENA output;</li>
+<li>CALIBRATION_ENA Output (SPO1 Output);</li>
+<li>SPO2 Output; </li>
 </ul>
-<p >*** Output Handling*** </p>
-
-</div>
-</div>
-<a id="ga19d60abdd04f4dfa12932fb2cefcf112" name="ga19d60abdd04f4dfa12932fb2cefcf112"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga19d60abdd04f4dfa12932fb2cefcf112">&#9670;&nbsp;</a></span>BusHwRtcInterrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BusHwRtcInterrupt </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Bus hardware rtc interrupt. </p>
-<p >This function shall be used with the RTC Interrupt with 7.82ms .</p>
-<p >The function is used to filter the input signals </p>
 
 </div>
 </div>

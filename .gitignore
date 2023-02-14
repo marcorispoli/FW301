@@ -4,3 +4,4 @@
 *.d
 *.err
 *.lst
+firmware/doc/html/**

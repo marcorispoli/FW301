@@ -25,31 +25,18 @@
 var NAVTREE =
 [
   [ "FW301 Power Service Board Firmware Documentation", "index.html", [
-    [ "GENERAL OVERVIEW", "index.html#autotoc_md0", null ],
-    [ "DEPENDENCIES AND CONFIGURATION FILES", "index.html#autotoc_md1", null ],
-    [ "APPLICATION MODULES", "index.html#autotoc_md2", null ],
-    [ "COMPILATION", "index.html#autotoc_md3", null ],
-    [ "SOFTWARE LICENCING", "index.html#autotoc_md4", null ],
-    [ "APPLICATION DOCUMENTATION", "index.html#autotoc_md5", null ],
+    [ "Overview", "index.html#autotoc_md0", null ],
+    [ "Dependencies", "index.html#autotoc_md1", null ],
+    [ "Modules", "index.html#autotoc_md2", null ],
+    [ "Compilation", "index.html#autotoc_md3", null ],
+    [ "Licensing", "index.html#autotoc_md4", null ],
+    [ "Documentation", "index.html#autotoc_md5", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -57,8 +44,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_m_e_t___bootloader_8c.html",
-"struct___errors___status__t.html#afd0c089e4a7cd1d5d60a9e379f506ae4"
+"annotated.html",
+"struct_m_e_t___can___open___rx_tx__t.html#abb3848ff1660c28e09a5d4b72980ada9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

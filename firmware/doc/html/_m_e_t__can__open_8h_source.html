@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('_m_e_t__can__open_8h_source.html','');
   <div class="headertitle"><div class="title">MET_can_open.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_m_e_t__can__open_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* ************************************************************************** */</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef _MET_CAN_OPEN_H    </span><span class="comment">/* Guard against multiple inclusion */</span><span class="preprocessor"></span></div>
@@ -95,14 +95,14 @@ $(document).ready(function(){initNavTree('_m_e_t__can__open_8h_source.html','');
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;definitions.h&quot;</span>                <span class="comment">// SYS function prototypes</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0">   26</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{    </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0a64bb71d178275b527fdea3f575c174f4">   28</a></span>    <a class="code hl_enumvalue" href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0a64bb71d178275b527fdea3f575c174f4">MET_CAN_OPEN_ERROR_OK</a>=0, </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    MET_CAN_OPEN_ERROR_OK=0, </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <a class="code hl_enumeration" href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0">MET_CAN_OPEN_ERROR_DEFS</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} MET_CAN_OPEN_ERROR_DEFS;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Callback eventi CanOpen</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="_m_e_t__can__open_8h.html#aff313ad02a3f7c3cb3ae0044479ea913">   33</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="_m_e_t__can__open_8h.html#aff313ad02a3f7c3cb3ae0044479ea913">MET_CANOPEN_ERROR_CALLBACK</a>) (uint8_t event);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">typedef</span> void (*MET_CANOPEN_ERROR_CALLBACK) (uint8_t event);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_m_e_t___can___open___rx_tx__t.html">   35</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -123,26 +123,22 @@ $(document).ready(function(){initNavTree('_m_e_t__can__open_8h_source.html','');
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/******************************************************************************/</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/*                      API DI ISTALLAZIONE PROTOCOLLO                        */</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/******************************************************************************/</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="_m_e_t__can__open_8h.html#a2df63b702b625e3842254e36aa486d77">MET_Can_Open_Init</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="_m_e_t__can__open_8h.html#a455993a7fba50b42630c87cc42f44a06">MET_Can_Open_Loop</a>(<span class="keywordtype">void</span>);  <span class="comment">// Dichiarare nel loop principale dell&#39;applicazione</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="_m_e_t__can__open_8h.html#ab7d6b53021b5f68997357ef352b45778">MET_Can_Open_Start</a>(<span class="keywordtype">void</span>);      <span class="comment">// Inizio attività di rxtx con protocollo CanOpen</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> MET_Can_Open_Init(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> MET_Can_Open_Loop(<span class="keywordtype">void</span>);  <span class="comment">// Dichiarare nel loop principale dell&#39;applicazione</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> MET_Can_Open_Start(<span class="keywordtype">void</span>);      <span class="comment">// Inizio attività di rxtx con protocollo CanOpen</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="_m_e_t__can__open_8h.html#a3112c499b3e9635150a6d6817348db86">MET_Can_Open_Send_ReadStatus</a>(uint8_t index);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> MET_Can_Open_Send_ReadStatus(uint8_t index);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> MET_Can_Open_Send_WriteData(uint8_t index, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3 );</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">/* _MET_CAN_OPEN_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">/* *****************************************************************************</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">End of File</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">*/</span></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_a2df63b702b625e3842254e36aa486d77"><div class="ttname"><a href="_m_e_t__can__open_8h.html#a2df63b702b625e3842254e36aa486d77">MET_Can_Open_Init</a></div><div class="ttdeci">void MET_Can_Open_Init(void)</div><div class="ttdef"><b>Definition:</b> MET_can_open.c:21</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_a3112c499b3e9635150a6d6817348db86"><div class="ttname"><a href="_m_e_t__can__open_8h.html#a3112c499b3e9635150a6d6817348db86">MET_Can_Open_Send_ReadStatus</a></div><div class="ttdeci">void MET_Can_Open_Send_ReadStatus(uint8_t index)</div><div class="ttdef"><b>Definition:</b> MET_can_open.c:111</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_a455993a7fba50b42630c87cc42f44a06"><div class="ttname"><a href="_m_e_t__can__open_8h.html#a455993a7fba50b42630c87cc42f44a06">MET_Can_Open_Loop</a></div><div class="ttdeci">void MET_Can_Open_Loop(void)</div><div class="ttdef"><b>Definition:</b> MET_can_open.c:48</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_a6d702c9096be900c4623154767ab8be0"><div class="ttname"><a href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0">MET_CAN_OPEN_ERROR_DEFS</a></div><div class="ttdeci">MET_CAN_OPEN_ERROR_DEFS</div><div class="ttdoc">Can Open Error codes.</div><div class="ttdef"><b>Definition:</b> MET_can_open.h:27</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_a6d702c9096be900c4623154767ab8be0a64bb71d178275b527fdea3f575c174f4"><div class="ttname"><a href="_m_e_t__can__open_8h.html#a6d702c9096be900c4623154767ab8be0a64bb71d178275b527fdea3f575c174f4">MET_CAN_OPEN_ERROR_OK</a></div><div class="ttdeci">@ MET_CAN_OPEN_ERROR_OK</div><div class="ttdoc">No error.</div><div class="ttdef"><b>Definition:</b> MET_can_open.h:28</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_ab7d6b53021b5f68997357ef352b45778"><div class="ttname"><a href="_m_e_t__can__open_8h.html#ab7d6b53021b5f68997357ef352b45778">MET_Can_Open_Start</a></div><div class="ttdeci">void MET_Can_Open_Start(void)</div><div class="ttdef"><b>Definition:</b> MET_can_open.c:29</div></div>
-<div class="ttc" id="a_m_e_t__can__open_8h_html_aff313ad02a3f7c3cb3ae0044479ea913"><div class="ttname"><a href="_m_e_t__can__open_8h.html#aff313ad02a3f7c3cb3ae0044479ea913">MET_CANOPEN_ERROR_CALLBACK</a></div><div class="ttdeci">void(* MET_CANOPEN_ERROR_CALLBACK)(uint8_t event)</div><div class="ttdef"><b>Definition:</b> MET_can_open.h:33</div></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">/* _MET_CAN_OPEN_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/* *****************************************************************************</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">End of File</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">*/</span></div>
 <div class="ttc" id="astruct_m_e_t___can___open___rx_tx__t_html"><div class="ttname"><a href="struct_m_e_t___can___open___rx_tx__t.html">MET_Can_Open_RxTx_t</a></div><div class="ttdef"><b>Definition:</b> MET_can_open.h:35</div></div>
 <div class="ttc" id="astruct_m_e_t___can___open___rx_tx__t_html_a17a75fd998e9cc43033d6b1a14be501f"><div class="ttname"><a href="struct_m_e_t___can___open___rx_tx__t.html#a17a75fd998e9cc43033d6b1a14be501f">MET_Can_Open_RxTx_t::rx_messageLength</a></div><div class="ttdeci">uint8_t rx_messageLength</div><div class="ttdef"><b>Definition:</b> MET_can_open.h:40</div></div>
 <div class="ttc" id="astruct_m_e_t___can___open___rx_tx__t_html_a78ba46524f662d85ab0cb5f92f800252"><div class="ttname"><a href="struct_m_e_t___can___open___rx_tx__t.html#a78ba46524f662d85ab0cb5f92f800252">MET_Can_Open_RxTx_t::rx_timestamp</a></div><div class="ttdeci">uint16_t rx_timestamp</div><div class="ttdef"><b>Definition:</b> MET_can_open.h:41</div></div>
@@ -155,7 +151,7 @@ $(document).ready(function(){initNavTree('_m_e_t__can__open_8h_source.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_420356c119a276e4809354cd125d815d.html">Motors</a></li><li class="navelem"><a class="el" href="_m_e_t__can__open_8h.html">MET_can_open.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_420356c119a276e4809354cd125d815d.html">Motors</a></li><li class="navelem"><b>MET_can_open.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

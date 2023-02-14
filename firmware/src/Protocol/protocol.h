@@ -2,13 +2,17 @@
 #define _PROTOCOL_H
 
 #include "definitions.h"  
+#include "MET_can_protocol.h"
 
 #undef ext
+#undef ext_static
 
 #ifdef _PROTOCOL_C
-#define ext
+    #define ext
+    #define ext_static static 
 #else
-#define ext extern
+    #define ext extern
+    #define ext_static extern
 #endif
 
 /*!
@@ -58,6 +62,11 @@
  * 
  * ### DATA Registers
  * 
+ * The available DATA registers are:
+ * 
+ * - RESERVED   (IDX=0)
+ * - OUTPUT     (IDX=1); 
+ * 
  * ### PARAMETER Registers
  * 
  * ### COMMAND Register
@@ -68,7 +77,7 @@
 
 
 /**
- * \defgroup moduleInterface Module API interface
+ * \defgroup moduleInterface CAN Protocol API interface
  * 
  * This section describes the funtions implementing the Protocol module.
  * 
@@ -85,40 +94,162 @@ ext void  ApplicationProtocolLoop(void);
 /** @}*/  // moduleData
 
 //_________________________ STATUS REGISTER DATA DEFINITION _______________________
-
-/** \defgroup statusRegister Status Registers Data definition
+/** \defgroup DATA_Register DATA Registers description
  *  
- *  This section describes the implementation of the Status Registers.
+ *  This section describes the implementation of the DATA Registers.
  * 
  *  The section is dived in:
- * - @ref  moduleData: this section describes the data structure handling the registers;
- * - @ref  typeDef: this section provides the typedef and structures handling the registers content;
- * - @ref  applicationMacro: this section provides the helper macro to be used along the application to get and set the Status registers content.
+ * - @ref  DATA_module_struct: this section describes the DATA structure handling the registers;
+ * - @ref  DATA_typeDef: this section provides the typedef and structures handling the DATA registers content;
+ * - @ref  DATAapplicationMacro: this section provides the macros to be used along the application to get and set the DATA registers content.
  * 
  * 
  *  @{
  */
-        //_________________________ MODULE DATA DEFINITION _______________________
+       /**
+        * \defgroup DATA_module_struct DATA structure declaration
+        * 
+        *  @{
+        */
+            #define PROTOCOL_NUMBER_OF_DATA_REGISTERS 2 //!< Defines the total number of implemented DATA registers 
+            ext MET_Register_t dataRegisterArray[PROTOCOL_NUMBER_OF_DATA_REGISTERS]; //!< This is the DATA registers Array 
+            #define PROTOCOL_RESERVED_DATA_PTR  (&(dataRegisterArray[0].d)) //!< This is the pointer to the reserved-DATA register      
+            #define PROTOCOL_OUTPUT_DATA_PTR  ((_Output_DATA_t*)&(dataRegisterArray[1].d)) //!< This is the pointer to the OUTPUT-DATA register 
+                     
+        /** @}*/  // DATA_module_struct
+
         /**
-         * \defgroup moduleData Data structure declaration
+        * \defgroup DATA_typeDef Registers type definition
+        * 
+        * This section describes the typedf and struct defining the  
+        * DATA register structures
+        * 
+        *
+        *  @{
+        */
+            /** 
+            * ***OUTPUT DATA REGISTER***
+            * 
+            * This is the structure of the OUTPUT register content
+            * 
+            * The register data content is:
+            * 
+            * |BYTE|BIT|DESCRIPTION|
+            * |:---:|:---:|:---|                           
+            * |D0|0|Programming Power Lock|
+            * |D0|1|Enable Motor Power Supply|
+            * |D0|2|Enable Saftey Motor Power Supply|
+            * |D0|3|Enable Compressor (COMPRESSOR_ENA)|
+            * |D0|4|Enable Calibration|
+            * |D0|5|Enable Generator X-RAY signal|
+            * |D0|6|-|
+            * |D0|7|-|
+            * ||||
+            * |D1|0|Activate Burnin|
+            * |D1|1|Manual Buzzer activation|
+            * |D1|2|Buzzer Activation Mode|
+            * |D1|3|Activate X-RAY LED|
+            * |D1|4|Activate X-RAY Lamp-1|
+            * |D1|5|Activate X-RAY Lamp-2|
+            * |D1|6|-|
+            * |D1|7|-|
+            * ||||
+            * 
+            * 
+            */    
+            typedef struct {
+
+                struct{
+                    uint8_t programming:1; //!< D0.0 - This flag activates the power auto sustain during a Loader firmware download
+                    uint8_t enable_motor_power:1; //!< D0.1 - This flag activates ALL the Motor power supply
+                    uint8_t enable_motor_switch:1; //!< D0.2 - This flag enable the power supply external switch
+                    uint8_t enable_compressor:1; //!< D0.3 - This flag enables the compressor driver
+                    uint8_t enable_calibration:1;//!< D0.4 - This flag enables devices to operate calibrations
+                    uint8_t generator_xray_ena:1;//!< D0.5 - This flag activates the XRAY-ENA signal on the generator interface
+                    uint8_t d0_6:1;//!< D0.6 - NA
+                    uint8_t d0_7:1;//!< D0.7 - NA
+                }D0;
+
+                struct{
+                    uint8_t activate_burnin:1; //!< D1.0 - This flag activates the burnin output
+                    uint8_t manual_buzzer_Activation:1; //!< D1.1 - This flag manually activates the buzzer
+                    uint8_t buzzer_activation_mode:1; //!< D1.2 - This flag set the buzzer activation mode
+                    uint8_t exposure_xray_led:1; //!< D1.3 - This flag activate the XRAY-LED output
+                    uint8_t exposure_xray_lamp1:1; //!< D1.4 - This flag activates the external Lamp 1 during Exposure
+                    uint8_t exposure_xray_lamp2:1; //!< D1.5 - This flag activates the external Lamp 2 during Exposure
+                    uint8_t d1_6:1;//!< D1.6 - NA
+                    uint8_t d1_7:1;//!< D1.7 - NA
+                }D1;
+
+                uint8_t D2; //!< D2 - NA
+                uint8_t D3; //!< D3 - NA
+
+            }_Output_DATA_t;
+            
+            
+        /** @}*/  // DATA_typeDef
+            
+        /**
+         * \defgroup DATA_applicationMacro  DATA Registers application Macro
+         * 
+         * This section describes the macros to be used in the Application to point the content of
+         * the DATA registers
+         * 
+         *  @{
+         */
+            #define PROTOCOL_PROGRAMMING_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.programming //!< D0.0 - This flag activates the power auto sustain during a Loader firmware download
+            #define PROTOCOL_MOT_ENA_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.enable_motor_power //!< D0.1 - This flag activates ALL the Motor power supply
+            #define PROTOCOL_MOT_SWITCH_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.enable_motor_switch //!< D0.2 - This flag enable the power supply external switch
+            #define PROTOCOL_COMPRESSOR_ENA_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.enable_compressor //!< D0.3 - This flag enables the compressor driver
+            #define PROTOCOL_CALIB_ENA_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.enable_calibration //!< D0.4 - This flag enables devices to operate calibrations
+            #define PROTOCOL_XRAY_ENA_OUT  PROTOCOL_OUTPUT_DATA_PTR->D0.generator_xray_ena //!< D0.5 - This flag activates the XRAY-ENA signal on the generator interface
+            
+            #define PROTOCOL_BURNIN_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.activate_burnin //!< D1.0 - This flag activates the burnin output
+            #define PROTOCOL_MAN_BUZZER_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.manual_buzzer_Activation //!< D1.1 - This flag manually activates the buzzer
+            #define PROTOCOL_BUZZER_MODE_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.buzzer_activation_mode //!< D1.2 - This flag set the buzzer activation mode
+            #define PROTOCOL_XRAY_LED_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.exposure_xray_led //!< D1.3 - This flag activate the XRAY-LED output
+            #define PROTOCOL_XRAY_LAMP1_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.exposure_xray_lamp1 //!< D1.4 - This flag activates the external Lamp 1 during Exposure
+            #define PROTOCOL_XRAY_LAMP2_OUT  PROTOCOL_OUTPUT_DATA_PTR->D1.exposure_xray_lamp2 //!< D1.5 - This flag activates the external Lamp 2 during Exposure
+
+         /** @}*/  // DATA_applicationMacro
+            
+/** @}*/  // DATA_Register
+
+/** \defgroup statusRegister Status Registers description
+ *  
+ *  This section describes the implementation of the Status Registers.
+ * 
+ *  The section is dived in:
+ * - @ref  STATUSmodule_Struct: this section describes the data structure handling the registers;
+ * - @ref  STATUS_typeDef: this section provides the typedef and structures handling the STATUS registers content;
+ * - @ref  applicationMacro: this section provides the helper macro to be used along the application to get and set the Status registers content.
+ * 
+ * 
+ *  @{
+ */        
+        /**
+         * \defgroup STATUSmodule_Struct STATUS registers structure declaration
          * 
          *  @{
          */
 
-        #define PROTOCOL_NUMBER_OF_STATUS_REGISTERS 6 //!< Defines the total number of implemented status registers 
-        ext uint8_t statusRegisterArray[PROTOCOL_NUMBER_OF_STATUS_REGISTERS][4]; //!< This is the Status data Array: 6 frames of 4 bytes         
-        #define PROTOCOL_RESERVED_REGISTER_PTR  (&(statusRegisterArray[0][0])) //!< This is the pointer to the reserved register
-        #define PROTOCOL_REVISION_REGISTER_PTR  ((_Revision_Status_t*)&(statusRegisterArray[1][0])) //!< This is the pointer to the REVISION status register
-        #define PROTOCOL_SYSTEM_REGISTER_PTR    ((_System_Status_t*)&(statusRegisterArray[2][0])) //!< This is the pointer to the SYSTEM status register
-        #define PROTOCOL_ERRORS_REGISTER_PTR    ((_Errors_Status_t*)&(statusRegisterArray[3][0])) //!< This is the pointer to the ERRORS status register
-        #define PROTOCOL_COMMAND_REGISTER_PTR   ((_Command_Status_t*)&(statusRegisterArray[4][0])) //!< This is the pointer to the COMMAND status register
-        #define PROTOCOL_BATTERY_REGISTER_PTR   ((_Battery_Status_t*)&(statusRegisterArray[5][0])) //!< This is the pointer to the BATTERY status register
-        /** @}*/  // moduleData
+        #define PROTOCOL_NUMBER_OF_STATUS_REGISTERS 6 //!< Defines the total number of implemented STATUS registers 
+        ext MET_Register_t statusRegisterArray[PROTOCOL_NUMBER_OF_STATUS_REGISTERS]; //!< This is the Status data Array: 6 frames         
+        #define PROTOCOL_RESERVED_REGISTER_PTR  (&(statusRegisterArray[0].data)) //!< This is the pointer to the reserved register
+        #define PROTOCOL_REVISION_REGISTER_PTR  ((_Revision_Status_t*)&(statusRegisterArray[1].d)) //!< This is the pointer to the REVISION status register
+        #define PROTOCOL_SYSTEM_REGISTER_PTR    ((_System_Status_t*)&(statusRegisterArray[2].d)) //!< This is the pointer to the SYSTEM status register
+        #define PROTOCOL_ERRORS_REGISTER_PTR    ((_Errors_Status_t*)&(statusRegisterArray[3].d)) //!< This is the pointer to the ERRORS status register
+        #define PROTOCOL_COMMAND_REGISTER_PTR   ((_Command_Status_t*)&(statusRegisterArray[4].d)) //!< This is the pointer to the COMMAND status register
+        #define PROTOCOL_BATTERY_REGISTER_PTR   ((_Battery_Status_t*)&(statusRegisterArray[5].d)) //!< This is the pointer to the BATTERY status register
+        
+         
+        /** @}*/  // STATUSmodule_Struct
     
+        
         //_________________________ MODULE TYPEDEF DEFINITION _______________________
 
         /**
-        * \defgroup typeDef Registers type definition
+        * \defgroup STATUS_typeDef Registers type definition
         * 
         * This section describes the typedf and struct defining the  
         * status register structures
@@ -281,14 +412,6 @@ ext void  ApplicationProtocolLoop(void);
             * |D2|6|-|
             * |D2|7|-|
             * ||||
-            * |D3|0|-|
-            * |D3|1|-|
-            * |D3|2|-|
-            * |D3|3|-|
-            * |D3|4|-|
-            * |D3|5|-|
-            * |D3|6|-|
-            * |D3|7|-|
             * 
             * For details about the iimplementation see the 
             * + Gantry Software Detailed Documentation
@@ -328,17 +451,7 @@ ext void  ApplicationProtocolLoop(void);
                     uint8_t spare_26:1; //!< D2.6 - NA
                     uint8_t spare_27:1; //!< D2.7 - NA
                 }D2;
-
-                struct{
-                    uint8_t spare_30:1; //!< D3.0 - NA
-                    uint8_t spare_31:1; //!< D3.1 - NA
-                    uint8_t spare_32:1; //!< D3.2 - NA
-                    uint8_t spare_33:1; //!< D3.3 - NA
-                    uint8_t spare_34:1; //!< D3.4 - NA
-                    uint8_t spare_35:1; //!< D3.5 - NA
-                    uint8_t spare_36:1; //!< D3.6 - NA
-                    uint8_t spare_37:1; //!< D3.7 - NA
-                }D3;
+                uint8_t D3; //!< D3 - NA
 
             }_Errors_Status_t;
         
@@ -388,11 +501,11 @@ ext void  ApplicationProtocolLoop(void);
               uint8_t d3;           //!< D3 - NA
             }_Battery_Status_t;
         
-        /** @}*/  // typeDef
+        /** @}*/  // STATUS_typeDef
         
-         //_________________________ MODULE MACRO DEFINITION _______________________
+         
         /**
-         * \defgroup applicationMacro  Registers application Macro
+         * \defgroup STATUS_applicationMacro  STATUS Registers application Macro
          * 
          * This section describes the macros to be used in the Application to point to the 
          * registers and data bit
@@ -464,7 +577,7 @@ ext void  ApplicationProtocolLoop(void);
             /** @}*/  // batteryMacro
 
         
-        /** @}*/  // applicationMacro
+        /** @}*/  // STATUS_applicationMacro
         
         
 

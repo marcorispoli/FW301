@@ -77,7 +77,7 @@ void MET_Can_Protocol_Reception_Trigger(void){
     return;
 }
 
-void MET_Can_Protocol_Init(uint8_t deviceID, uint8_t** pStatusArray, uint8_t statusLen){
+void MET_Can_Protocol_Init(uint8_t deviceID, MET_Register_t* pStatusArray, uint8_t StatusLen,MET_Register_t* pDataArray, uint8_t DataLen){
     
     // Assignes the current device ID
     deviceID = deviceID;
@@ -85,10 +85,14 @@ void MET_Can_Protocol_Init(uint8_t deviceID, uint8_t** pStatusArray, uint8_t sta
     // Harmony 3 library call: Init memory of the CAN Bus module
     CAN0_MessageRAMConfigSet(Can0MessageRAM);
     
-    // Add the external status register array
+    // Add the external STATUS register array
     MET_Protocol_Data_Struct.pStatusArray = pStatusArray;
-    MET_Protocol_Data_Struct.statusArrayLen = statusLen;
+    MET_Protocol_Data_Struct.statusArrayLen = StatusLen;
     
+    // Add the external DATA register array
+    MET_Protocol_Data_Struct.pDataArray = pDataArray;
+    MET_Protocol_Data_Struct.dataArrayLen = DataLen;
+
     // Schedules the next reception interrupt
     MET_Can_Protocol_Reception_Trigger();      
     return ;
@@ -114,7 +118,7 @@ void MET_Can_Protocol_Init(uint8_t deviceID, uint8_t** pStatusArray, uint8_t sta
  * 
  */
 void MET_Can_Protocol_Loop(void){
-    MET_Can_Protocol_Command_t cmdFrame;
+    MET_Can_Protocol_Command_t* cmdFrame;
 
     uint8_t crc = 0;
     uint8_t i;
@@ -130,44 +134,45 @@ void MET_Can_Protocol_Loop(void){
         }
         
         // Verify the CRC code
-        for(i=0; i<7; i++) crc ^=  MET_Can_Protocol_RxTx_Struct.rx_message[i];
+        for(i=0; i<8; i++) crc ^=  MET_Can_Protocol_RxTx_Struct.rx_message[i];
         if(crc){
             MET_DefaultError_Callback(MET_CAN_PROTOCOL_ERROR_INVALID_CRC);
             MET_Can_Protocol_Reception_Trigger(); // Reschedule the new data reception
             return;
         }
         
-        cmdFrame.seq = MET_Can_Protocol_RxTx_Struct.rx_message[0];
-        cmdFrame.command = MET_Can_Protocol_RxTx_Struct.rx_message[1];
-        for(i=3;i<7;i++) cmdFrame.d[i-3] = MET_Can_Protocol_RxTx_Struct.rx_message[i];
+        // Cast pointer to help the received data decoding
+        cmdFrame = (MET_Can_Protocol_Command_t*) &MET_Can_Protocol_RxTx_Struct.rx_message;        
         
-      
-        MET_Can_Protocol_RxTx_Struct.tx_message[0] = cmdFrame.seq;
-        MET_Can_Protocol_RxTx_Struct.tx_message[1] = cmdFrame.command;
-        MET_Can_Protocol_RxTx_Struct.tx_message[2] = cmdFrame.d[0];
-        
-        uint8_t idx;
-        
-        
+        // Copy the received to the data that will be retransmitted 
+        memcpy(MET_Can_Protocol_RxTx_Struct.tx_message, MET_Can_Protocol_RxTx_Struct.rx_message,8);
+             
         // Identifies the Protocol command
-        switch(cmdFrame.command){
+        switch(cmdFrame->frame_cmd){
             case MET_CAN_PROTOCOL_READ_STATUS:
                 
                 // Read the Status register
-                idx = cmdFrame.d[0];
-                if( idx < MET_Protocol_Data_Struct.statusArrayLen){
-                    MET_Can_Protocol_RxTx_Struct.tx_message[3] = MET_Protocol_Data_Struct.pStatusArray[idx][0];
-                    MET_Can_Protocol_RxTx_Struct.tx_message[4] = MET_Protocol_Data_Struct.pStatusArray[idx][1];
-                    MET_Can_Protocol_RxTx_Struct.tx_message[5] = MET_Protocol_Data_Struct.pStatusArray[idx][2];
-                    MET_Can_Protocol_RxTx_Struct.tx_message[6] = MET_Protocol_Data_Struct.pStatusArray[idx][3];
+                if( cmdFrame->idx < MET_Protocol_Data_Struct.statusArrayLen){
+                    memcpy(&MET_Can_Protocol_RxTx_Struct.tx_message[3], MET_Protocol_Data_Struct.pStatusArray[cmdFrame->idx].d, sizeof(MET_Register_t));                   
                 }else{
                     // Error index out of range
                     MET_Can_Protocol_RxTx_Struct.tx_message[2] = 0; 
                 }                
                 break;
-            case MET_CAN_PROTOCOL_WRITE_PARAM:
-                break;
+                
             case MET_CAN_PROTOCOL_WRITE_DATA:
+                
+                // Write data Status register
+                if( cmdFrame->idx < MET_Protocol_Data_Struct.dataArrayLen){
+                    
+                    memcpy(MET_Protocol_Data_Struct.pDataArray[cmdFrame->idx].d, cmdFrame->data.d, sizeof(MET_Register_t));
+                }else{
+                    // Error index out of range
+                    MET_Can_Protocol_RxTx_Struct.tx_message[2] = 0; 
+                }                
+                break;
+
+            case MET_CAN_PROTOCOL_WRITE_PARAM:
                 break;
             case MET_CAN_PROTOCOL_STORE_PARAMS:
                 break;

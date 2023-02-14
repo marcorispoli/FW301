@@ -8,9 +8,7 @@ var searchData=
   ['body_5frot_5fcw_5',['body_rot_cw',['../struct___system___status__t.html#a7bbc5a7093844fcb54e14e492ee913a9',1,'_System_Status_t']]],
   ['burnin_5fjumper_6',['burnin_jumper',['../struct___system___status__t.html#a2c62a083df39f252c379c898f47500bf',1,'_System_Status_t']]],
   ['bus_20hardware_20management_20module_7',['BUS Hardware management module',['../group__bus_hw_module.html',1,'']]],
-  ['bushw_2ec_8',['bushw.c',['../bushw_8c.html',1,'']]],
-  ['bushw_2eh_9',['bushw.h',['../bushw_8h.html',1,'']]],
-  ['bushwinit_10',['BusHwInit',['../group__bus_hw_module_api.html#ga4fb2c725b2d3f3b10aeb334096f945bb',1,'BusHwInit(void):&#160;bushw.c'],['../group__bus_hw_module_api.html#ga4fb2c725b2d3f3b10aeb334096f945bb',1,'BusHwInit(void):&#160;bushw.c']]],
-  ['bushwloop_11',['BusHwLoop',['../group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e',1,'BusHwLoop(void):&#160;bushw.c'],['../group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e',1,'BusHwLoop(void):&#160;bushw.c']]],
-  ['bushwrtcinterrupt_12',['BusHwRtcInterrupt',['../group__bus_hw_module_api.html#ga19d60abdd04f4dfa12932fb2cefcf112',1,'BusHwRtcInterrupt(void):&#160;bushw.c'],['../group__bus_hw_module_api.html#ga19d60abdd04f4dfa12932fb2cefcf112',1,'BusHwRtcInterrupt(void):&#160;bushw.c']]]
+  ['bushwinit_8',['BusHwInit',['../group__bus_hw_module_api.html#ga4fb2c725b2d3f3b10aeb334096f945bb',1,'BusHwInit(void):&#160;bushw.c'],['../group__bus_hw_module_api.html#ga4fb2c725b2d3f3b10aeb334096f945bb',1,'BusHwInit(void):&#160;bushw.c']]],
+  ['bushwloop_9',['BusHwLoop',['../group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e',1,'BusHwLoop(void):&#160;bushw.c'],['../group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e',1,'BusHwLoop(void):&#160;bushw.c']]],
+  ['buzzer_5factivation_5fmode_10',['buzzer_activation_mode',['../struct___output___d_a_t_a__t.html#af9e90bd67ec4164d14b6b4bf0de8e763',1,'_Output_DATA_t']]]
 ];

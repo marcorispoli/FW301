@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['tx_5fmessage_0',['tx_message',['../struct_m_e_t___can___open___rx_tx__t.html#aa44606a2af420b6233c243b7cf58c162',1,'MET_Can_Open_RxTx_t::tx_message()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#a115ab8d04b225a9998e818c0f7069a5e',1,'MET_Can_Protocol_RxTx_t::tx_message()']]],
-  ['tx_5fmessageid_1',['tx_messageID',['../struct_m_e_t___can___open___rx_tx__t.html#a9bb767b21aa348b92864db1f5b530547',1,'MET_Can_Open_RxTx_t::tx_messageID()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#aef124981778a81cac78eebb5227e0d38',1,'MET_Can_Protocol_RxTx_t::tx_messageID()']]],
-  ['tx_5fmessagelength_2',['tx_messageLength',['../struct_m_e_t___can___open___rx_tx__t.html#af4e9b84aad19539bed63624a0d8d34ee',1,'MET_Can_Open_RxTx_t::tx_messageLength()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#af4ed0a8caf08ac13ab726a8b2ebfb472',1,'MET_Can_Protocol_RxTx_t::tx_messageLength()']]],
-  ['tx_5ftimestamp_3',['tx_timestamp',['../struct_m_e_t___can___open___rx_tx__t.html#a80f22421650be175ab4a8c4a67ca66ef',1,'MET_Can_Open_RxTx_t']]]
+  ['pdataarray_0',['pDataArray',['../struct_m_e_t___protocol___data__t.html#acac08fad68487155bb6578aa6fa4748c',1,'MET_Protocol_Data_t']]],
+  ['pedal_5fcarm_5fdwn_1',['pedal_carm_dwn',['../struct___system___status__t.html#a9d9f1a1694c8f92925bb9b5a8c6c9160',1,'_System_Status_t']]],
+  ['pedal_5fcarm_5fup_2',['pedal_carm_up',['../struct___system___status__t.html#ad4568cd620c9f1b1a6c7ae04af33f01a',1,'_System_Status_t']]],
+  ['pedal_5fcmp_5fdwn_5flock_3',['pedal_cmp_dwn_lock',['../struct___errors___status__t.html#afc29754db75b630b8064ee79a5a499de',1,'_Errors_Status_t']]],
+  ['pedal_5fcmp_5fup_5flock_4',['pedal_cmp_up_lock',['../struct___errors___status__t.html#aecac060b975756f9dc7b3c313f0194bb',1,'_Errors_Status_t']]],
+  ['pedal_5fcompression_5fdwn_5',['pedal_compression_dwn',['../struct___system___status__t.html#a3aac15c4f898c95d998f2cff084c4c05',1,'_System_Status_t']]],
+  ['pedal_5fcompression_5fup_6',['pedal_compression_up',['../struct___system___status__t.html#adf97806ebc257a3e6424cd1ed42fe531',1,'_System_Status_t']]],
+  ['pedal_5fdwn_5flock_7',['pedal_dwn_lock',['../struct___errors___status__t.html#a7cf6fbf5d49aa478ee67546c1dd1a741',1,'_Errors_Status_t']]],
+  ['pedal_5fup_5flock_8',['pedal_up_lock',['../struct___errors___status__t.html#a30036f3472da176ff1787e9233eafe6b',1,'_Errors_Status_t']]],
+  ['powerdown_5fdetected_9',['powerdown_detected',['../struct___system___status__t.html#af7d52105842f3e409dfff038c572b1e3',1,'_System_Status_t']]],
+  ['programming_10',['programming',['../struct___output___d_a_t_a__t.html#acba0b26ca99416baa2175eb3308f5a0d',1,'_Output_DATA_t']]],
+  ['pstatusarray_11',['pStatusArray',['../struct_m_e_t___protocol___data__t.html#acb2c369bb7a791f6c1f2820783d72e13',1,'MET_Protocol_Data_t']]]
 ];

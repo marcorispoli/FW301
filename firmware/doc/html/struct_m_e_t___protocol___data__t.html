@@ -99,20 +99,45 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1ba9abc1e0d1e0967563fa16e5250167"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#a1ba9abc1e0d1e0967563fa16e5250167">deviceID</a></td></tr>
 <tr class="memdesc:a1ba9abc1e0d1e0967563fa16e5250167"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the device ID from 1:255.  <a href="struct_m_e_t___protocol___data__t.html#a1ba9abc1e0d1e0967563fa16e5250167">More...</a><br /></td></tr>
 <tr class="separator:a1ba9abc1e0d1e0967563fa16e5250167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e388bc4a6ec131b0bcab717a91011df"><td class="memItemLeft" align="right" valign="top">uint8_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#a5e388bc4a6ec131b0bcab717a91011df">pStatusArray</a></td></tr>
-<tr class="memdesc:a5e388bc4a6ec131b0bcab717a91011df"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Status Register array pointer.  <a href="struct_m_e_t___protocol___data__t.html#a5e388bc4a6ec131b0bcab717a91011df">More...</a><br /></td></tr>
-<tr class="separator:a5e388bc4a6ec131b0bcab717a91011df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2c369bb7a791f6c1f2820783d72e13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#acb2c369bb7a791f6c1f2820783d72e13">pStatusArray</a></td></tr>
+<tr class="memdesc:acb2c369bb7a791f6c1f2820783d72e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Status Register array pointer.  <a href="struct_m_e_t___protocol___data__t.html#acb2c369bb7a791f6c1f2820783d72e13">More...</a><br /></td></tr>
+<tr class="separator:acb2c369bb7a791f6c1f2820783d72e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab82f25c47086a6e4115da2bad9d46956"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#ab82f25c47086a6e4115da2bad9d46956">statusArrayLen</a></td></tr>
 <tr class="memdesc:ab82f25c47086a6e4115da2bad9d46956"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Status Register array lenght.  <a href="struct_m_e_t___protocol___data__t.html#ab82f25c47086a6e4115da2bad9d46956">More...</a><br /></td></tr>
 <tr class="separator:ab82f25c47086a6e4115da2bad9d46956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac08fad68487155bb6578aa6fa4748c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#acac08fad68487155bb6578aa6fa4748c">pDataArray</a></td></tr>
+<tr class="memdesc:acac08fad68487155bb6578aa6fa4748c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the DATA Register array pointer.  <a href="struct_m_e_t___protocol___data__t.html#acac08fad68487155bb6578aa6fa4748c">More...</a><br /></td></tr>
+<tr class="separator:acac08fad68487155bb6578aa6fa4748c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9a26fcb6d67c9475edefe8963e762d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html#a7d9a26fcb6d67c9475edefe8963e762d">dataArrayLen</a></td></tr>
+<tr class="memdesc:a7d9a26fcb6d67c9475edefe8963e762d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the DATA Register array lenght.  <a href="struct_m_e_t___protocol___data__t.html#a7d9a26fcb6d67c9475edefe8963e762d">More...</a><br /></td></tr>
+<tr class="separator:a7d9a26fcb6d67c9475edefe8963e762d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Structure for module customization. </p>
 <p >This structure is filled with the initialization data passed by the Application Protocol Implementing Module.</p>
 <p >The pStatusArray is a pointer to the Status Register Array:</p><ul>
-<li>The Status Register Array is an array[N][4] where N is the number of implemented registers and 4 is the number of register bytes </li>
+<li>The Status Register Array is an array[N][4] where N is the number of implemented registers and 4 is the number of register bytes</li>
+</ul>
+<p >The pDataArray is a pointer to the DATA Register Array:</p><ul>
+<li>The DATA Register Array is an array[N][4] where N is the number of implemented registers and 4 is the number of register bytes </li>
 </ul>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7d9a26fcb6d67c9475edefe8963e762d" name="a7d9a26fcb6d67c9475edefe8963e762d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9a26fcb6d67c9475edefe8963e762d">&#9670;&nbsp;</a></span>dataArrayLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Protocol_Data_t::dataArrayLen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the DATA Register array lenght. </p>
+
+</div>
+</div>
 <a id="a1ba9abc1e0d1e0967563fa16e5250167" name="a1ba9abc1e0d1e0967563fa16e5250167"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ba9abc1e0d1e0967563fa16e5250167">&#9670;&nbsp;</a></span>deviceID</h2>
 
@@ -129,14 +154,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e388bc4a6ec131b0bcab717a91011df" name="a5e388bc4a6ec131b0bcab717a91011df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e388bc4a6ec131b0bcab717a91011df">&#9670;&nbsp;</a></span>pStatusArray</h2>
+<a id="acac08fad68487155bb6578aa6fa4748c" name="acac08fad68487155bb6578aa6fa4748c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac08fad68487155bb6578aa6fa4748c">&#9670;&nbsp;</a></span>pDataArray</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t** MET_Protocol_Data_t::pStatusArray</td>
+          <td class="memname"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a>* MET_Protocol_Data_t::pDataArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the DATA Register array pointer. </p>
+
+</div>
+</div>
+<a id="acb2c369bb7a791f6c1f2820783d72e13" name="acb2c369bb7a791f6c1f2820783d72e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2c369bb7a791f6c1f2820783d72e13">&#9670;&nbsp;</a></span>pStatusArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a>* MET_Protocol_Data_t::pStatusArray</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -161,9 +202,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Protocol/<a class="el" href="_m_e_t__can__protocol_8h_source.html">MET_can_protocol.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

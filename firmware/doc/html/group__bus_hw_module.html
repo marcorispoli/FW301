@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('group__bus_hw_module.html',''); initRe
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a>  </div>
-  <div class="headertitle"><div class="title">BUS Hardware management module<div class="ingroups"><a class="el" href="group__application_module.html">ApplicationModule</a></div></div></div>
+  <div class="headertitle"><div class="title">BUS Hardware management module<div class="ingroups"><a class="el" href="group__application_module.html">Application Modules section</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -98,8 +98,8 @@ Modules</h2></td></tr>
 <h2><a class="anchor" id="autotoc_md6"></a>
 Dependencies</h2>
 <p >This module requires the following library modules:</p><ul>
-<li><a class="el" href="protocol_8c.html">protocol.c</a></li>
-<li><a class="el" href="protocol_8h.html">protocol.h</a></li>
+<li>protocol.c</li>
+<li><a class="el" href="protocol_8h_source.html">protocol.h</a></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md7"></a>
 Harmony 3 configurator setting</h2>
@@ -113,24 +113,62 @@ Pin Assignement</h3>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">uc_CMP_ON   </td><td class="markdownTableBodyCenter">41   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Compression On signal from the Compressor device    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">uC_ROT_CW   </td><td class="markdownTableBodyCenter">61   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CW direction    </td></tr>
+<td class="markdownTableBodyLeft">uc_ROT_CW   </td><td class="markdownTableBodyCenter">61   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CW direction    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">uC_ROT_CCW   </td><td class="markdownTableBodyCenter">62   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CCW direction    </td></tr>
+<td class="markdownTableBodyLeft">uc_ROT_CCW   </td><td class="markdownTableBodyCenter">62   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CCW direction    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">uC_CARM_UP   </td><td class="markdownTableBodyCenter">63   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM UP request    </td></tr>
+<td class="markdownTableBodyLeft">uc_CARM_UP   </td><td class="markdownTableBodyCenter">63   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM UP request    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">uC_CARM_DWN   </td><td class="markdownTableBodyCenter">64   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM DWN request    </td></tr>
+<td class="markdownTableBodyLeft">uc_CARM_DWN   </td><td class="markdownTableBodyCenter">64   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual C-ARM DWN request    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">uC_SLIDE_UP   </td><td class="markdownTableBodyCenter">42   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual SLIDE UP request    </td></tr>
+<td class="markdownTableBodyLeft">uc_SLIDE_UP   </td><td class="markdownTableBodyCenter">42   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual SLIDE UP request    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">uC_SLIDE_DWN   </td><td class="markdownTableBodyCenter">51   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual SLIDE DWN request    </td></tr>
+<td class="markdownTableBodyLeft">uc_SLIDE_DWN   </td><td class="markdownTableBodyCenter">51   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">Manual SLIDE DWN request    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">uC_CMP_CALIB_ENA   </td><td class="markdownTableBodyCenter">5   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">Strong   </td><td class="markdownTableBodyLeft">Enables the Compressor calibration    </td></tr>
+<td class="markdownTableBodyLeft">uc_CALIB_ENA   </td><td class="markdownTableBodyCenter">5   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">Strong   </td><td class="markdownTableBodyLeft">Enables the Compressor calibration    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">uC_HW_SPARE_OUT   </td><td class="markdownTableBodyCenter">6   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">Strong   </td><td class="markdownTableBodyLeft">-    </td></tr>
+<td class="markdownTableBodyLeft">uc_HW_SPO2   </td><td class="markdownTableBodyCenter">6   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">Strong   </td><td class="markdownTableBodyLeft">-    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">uC_HW_SPARE_IN   </td><td class="markdownTableBodyCenter">27   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">-   </td></tr>
+<td class="markdownTableBodyLeft">uc_HW_SPARE_IN   </td><td class="markdownTableBodyCenter">27   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">Pull-Down   </td><td class="markdownTableBodyLeft">-   </td></tr>
 </table>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Module Function Description</h2>
+<p >Most of the Bus Hardware signals are directly controlled by the microcontroller that set or read the related status.</p>
+<p >This module provides the following Signal controlling path:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Signal   </th><th class="markdownTableHeadCenter">Direction   </th><th class="markdownTableHeadCenter">Source   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_comp_ena   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Output.enable_compressor   </td><td class="markdownTableBodyLeft">This is the Compression enable signal to Compressor device    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">hw_cmp_on   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.compression_on   </td><td class="markdownTableBodyLeft">Compression On signal from the Compressor device    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_rot_cw   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.carm_rot_cw   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CW direction    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">hw_rot_ccw   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.carm_rot_ccw   </td><td class="markdownTableBodyLeft">Manual C-ARM rotation request CCW direction    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_carm_up   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.carm_up   </td><td class="markdownTableBodyLeft">Manual C-ARM UP request    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">hw_carm_dwn   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.carm_dwn   </td><td class="markdownTableBodyLeft">Manual C-ARM DWN request    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_tilt_up   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.slide_up   </td><td class="markdownTableBodyLeft">Manual SLIDE UP request    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">hw_tilt_dwn   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Status.slide_dwn   </td><td class="markdownTableBodyLeft">Manual SLIDE DWN request    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_spo1   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">CAN_PROTOCOL.Output.enable_calibration   </td><td class="markdownTableBodyLeft">Enables the Compressor calibration    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">hw_spo2   </td><td class="markdownTableBodyCenter">Out   </td><td class="markdownTableBodyCenter">-   </td><td class="markdownTableBodyLeft">-    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">hw_spi1   </td><td class="markdownTableBodyCenter">In   </td><td class="markdownTableBodyCenter">-   </td><td class="markdownTableBodyLeft">-   </td></tr>
+</table>
+<p >The Input signals shall be read and filtered at a rate of about 7.28ms;</p>
+<p >The Output shall set every 7.28ms;</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Module Implementation description</h2>
+<p >In order to implement the Module functions, the Module makes use of the following Methods:</p><ul>
+<li><a class="el" href="group__bus_hw_module_api.html#ga4fb2c725b2d3f3b10aeb334096f945bb" title="Bus Hardware Module Initialization.">BusHwInit()</a>: this is called in order to initialize the status of the IOs;</li>
+<li><a class="el" href="group__bus_hw_module_api.html#gaee02af9829cfd14862645fb1db54746e" title="This function handles the Bus Hardware status.">BusHwLoop()</a>: this function shall be called every 7.28ms to filter the Input levels; </li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

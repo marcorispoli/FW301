@@ -74,14 +74,32 @@
 #define uc_CALIB_ENA_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 4U)) & 0x01U)
 #define uc_CALIB_ENA_PIN                  PORT_PIN_PB04
 
-/*** Macros for uc_HW_SPARE_OUT pin ***/
-#define uc_HW_SPARE_OUT_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 5U))
-#define uc_HW_SPARE_OUT_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 5U))
-#define uc_HW_SPARE_OUT_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 5U))
-#define uc_HW_SPARE_OUT_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 5U))
-#define uc_HW_SPARE_OUT_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 5U))
-#define uc_HW_SPARE_OUT_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 5U)) & 0x01U)
-#define uc_HW_SPARE_OUT_PIN                  PORT_PIN_PB05
+/*** Macros for uc_HW_SPO2 pin ***/
+#define uc_HW_SPO2_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 5U))
+#define uc_HW_SPO2_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 5U))
+#define uc_HW_SPO2_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 5U))
+#define uc_HW_SPO2_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 5U))
+#define uc_HW_SPO2_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 5U))
+#define uc_HW_SPO2_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 5U)) & 0x01U)
+#define uc_HW_SPO2_PIN                  PORT_PIN_PB05
+
+/*** Macros for uc_HV_ON pin ***/
+#define uc_HV_ON_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 5U))
+#define uc_HV_ON_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 5U))
+#define uc_HV_ON_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 5U))
+#define uc_HV_ON_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 5U))
+#define uc_HV_ON_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 5U))
+#define uc_HV_ON_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 5U)) & 0x01U)
+#define uc_HV_ON_PIN                  PORT_PIN_PA05
+
+/*** Macros for uc_XRAY_ENA pin ***/
+#define uc_XRAY_ENA_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 11U))
+#define uc_XRAY_ENA_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 11U))
+#define uc_XRAY_ENA_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 11U))
+#define uc_XRAY_ENA_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 11U))
+#define uc_XRAY_ENA_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 11U))
+#define uc_XRAY_ENA_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 11U)) & 0x01U)
+#define uc_XRAY_ENA_PIN                  PORT_PIN_PA11
 
 /*** Macros for CAN1_TX pin ***/
 #define CAN1_TX_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 12U)) & 0x01U)

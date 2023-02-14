@@ -124,7 +124,24 @@ void MET_Can_Open_Send_ReadStatus(uint8_t index){
     for(i=0; i<7; i++) crc ^=  MET_Can_Open_RxTx_Struct.tx_message[i];
     MET_Can_Open_RxTx_Struct.tx_message[7] = crc;
     
-    CAN1_MessageTransmit(0x201, 8, MET_Can_Open_RxTx_Struct.tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);  
+    CAN1_MessageTransmit(0x211, 8, MET_Can_Open_RxTx_Struct.tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);  
     
 }
 
+void MET_Can_Open_Send_WriteData(uint8_t index, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3 ){
+    MET_Can_Open_RxTx_Struct.tx_message[0] = 0x1; // Sequence
+    MET_Can_Open_RxTx_Struct.tx_message[1] = 3;
+    MET_Can_Open_RxTx_Struct.tx_message[2] = index;
+    MET_Can_Open_RxTx_Struct.tx_message[3] = d0;
+    MET_Can_Open_RxTx_Struct.tx_message[4] = d1;
+    MET_Can_Open_RxTx_Struct.tx_message[5] = d2;
+    MET_Can_Open_RxTx_Struct.tx_message[6] = d3;
+    
+    uint8_t i;
+    uint8_t crc = 0;
+    for(i=0; i<7; i++) crc ^=  MET_Can_Open_RxTx_Struct.tx_message[i];
+    MET_Can_Open_RxTx_Struct.tx_message[7] = crc;
+    
+    CAN1_MessageTransmit(0x211, 8, MET_Can_Open_RxTx_Struct.tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);  
+    
+}

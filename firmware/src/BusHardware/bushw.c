@@ -4,7 +4,7 @@
 #include "bushw.h"
 #include "Protocol/protocol.h"
 
-static bool is_rtc_event = false;
+
 static bool uc_CMP_ON_back = false;
 static bool uc_ROT_CW_back = false;
 static bool uc_ROT_CCW_back = false;
@@ -18,14 +18,28 @@ static bool uc_SLIDE_DWN_back = false;
 
 void BusHwInit(void){
     
-    // Clear as default the outputs
+    // Clears the Inputs
+    PROTOCOL_SYSTEM_COMPRESSION_ON = 0;
+    PROTOCOL_SYSTEM_ROT_CW =0;
+    PROTOCOL_SYSTEM_ROT_CCW = 0;
+    PROTOCOL_SYSTEM_CARM_UP = 0;
+    PROTOCOL_SYSTEM_CARM_DWN = 0;
+    PROTOCOL_SYSTEM_SLIDE_UP = 0;
+    PROTOCOL_SYSTEM_SLIDE_DWN = 0;
+    
+    // Clear the outputs
     uc_CMP_ENA_Clear();    
-    uc_HW_SPARE_OUT_Clear();
+    uc_HW_SPO2_Clear();
+    uc_CALIB_ENA_Clear();
+    
         
 }
 
 /**
  * @brief Hardware Bus Loop module
+ * 
+ * This function shall be launched every T milli seconds in order 
+ * to make a signal filtering of period T.
  * 
  * This function executes the following jobs:
  * + Get the Bus Hardware inputs assigning the status to the Protocol-Status registers;
@@ -33,21 +47,23 @@ void BusHwInit(void){
  * 
  * ***Input Handling***
  * 
- * This function reads the BUS-HARDWARE inputs, 
- * and makes a time filter on the signal levels before to assign
- * the steady status to the Protocol/Status register fields.
+ * This function reads the BUS-HARDWARE inputs and converts the filtered status 
+ * into the CAN Protocol Status register.
  * 
- * The Function operate every 7.28ms and every signals needs to be stable
- * almost for two consecutive time slots:
- * + ***A signal is assigned if it remains steady for 7.28ms ***
  * 
- * *** Output Handling***
+ * ***Output Handling***
  * 
+ * This section set the Bus hardware outputs that are directly 
+ * under the control of the Microcontroller:
+ * 
+ * - COMPRESSOR_ENA output;
+ * - CALIBRATION_ENA Output (SPO1 Output);
+ * - SPO2 Output;
  * 
  */
 void BusHwLoop(void){
-    if(!is_rtc_event) return;
-    
+
+    // Direct BusHw to PROTOCOL STATUS REGISTER Input handling
     if(uc_CMP_ON_back != uc_CMP_ON_Get()){
         uc_CMP_ON_back = uc_CMP_ON_Get();
     }else{
@@ -91,11 +107,12 @@ void BusHwLoop(void){
         PROTOCOL_SYSTEM_SLIDE_DWN = uc_SLIDE_DWN_back;
     }
 
+    // Direct PROTOCOL OUTPUT REGISTER to BusHw Outputs
+    if(PROTOCOL_COMPRESSOR_ENA_OUT) uc_CMP_ENA_Set();
+    else uc_CMP_ENA_Clear();    
     
-
+    if(PROTOCOL_CALIB_ENA_OUT) uc_CALIB_ENA_Set();
+    else uc_CALIB_ENA_Clear();
+    
+    
 }
-
-void BusHwRtcInterrupt(void){
-    is_rtc_event = true;
-}
-

@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('struct___system___status__t.html','');
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct___system___status__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">_System_Status_t Struct Reference<div class="ingroups"><a class="el" href="group__application_module.html">ApplicationModule</a> &raquo; <a class="el" href="group__protocol_module.html">CAN Communication Protocol Module</a> &raquo; <a class="el" href="group__status_register.html">Status Registers Data definition</a> &raquo; <a class="el" href="group__type_def.html">Registers type definition</a></div></div></div>
+  <div class="headertitle"><div class="title">_System_Status_t Struct Reference<div class="ingroups"><a class="el" href="group__application_module.html">Application Modules section</a> &raquo; <a class="el" href="group__protocol_module.html">CAN Communication Protocol Module</a> &raquo; <a class="el" href="group__status_register.html">Status Registers description</a> &raquo; <a class="el" href="group___s_t_a_t_u_s__type_def.html">Registers type definition</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -93,114 +93,114 @@ $(document).ready(function(){initNavTree('struct___system___status__t.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afe8faffba717a69707d85890110b6b0d"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:abe6b6b20504e94d496a3655523dc375f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a541a184a33f09ce32be725c3a87db658">error</a>:1</td></tr>
-<tr class="memdesc:abe6b6b20504e94d496a3655523dc375f"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.0 - This flag shall be set when an error is detected.  <a href="struct___system___status__t_1_1_0d0.html#abe6b6b20504e94d496a3655523dc375f">More...</a><br /></td></tr>
-<tr class="separator:abe6b6b20504e94d496a3655523dc375f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a582cb407863a1c75d66189041ab1d2bc"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a6b84e593a8305d8544c2c942f8995f22">emergency_button</a>:1</td></tr>
-<tr class="memdesc:a582cb407863a1c75d66189041ab1d2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.1 - This flag is set when the emergency button is detected activated.  <a href="struct___system___status__t_1_1_0d0.html#a582cb407863a1c75d66189041ab1d2bc">More...</a><br /></td></tr>
-<tr class="separator:a582cb407863a1c75d66189041ab1d2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578db4abdf2ddad19d03eb552a5d7e7f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af7d52105842f3e409dfff038c572b1e3">powerdown_detected</a>:1</td></tr>
-<tr class="memdesc:a578db4abdf2ddad19d03eb552a5d7e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.2 - This flag shall be set when the Powerdown condiion is detected.  <a href="struct___system___status__t_1_1_0d0.html#a578db4abdf2ddad19d03eb552a5d7e7f">More...</a><br /></td></tr>
-<tr class="separator:a578db4abdf2ddad19d03eb552a5d7e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60e6b885486c304d9613eda6f51d3ba"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aff159545aed92d3e80408c338a62278e">motor_safety</a>:1</td></tr>
-<tr class="memdesc:ae60e6b885486c304d9613eda6f51d3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.3 - This flag shall be set when the motor safety input is ON (safer condition)  <a href="struct___system___status__t_1_1_0d0.html#ae60e6b885486c304d9613eda6f51d3ba">More...</a><br /></td></tr>
-<tr class="separator:ae60e6b885486c304d9613eda6f51d3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0596e81c9e74018539efd516b0494def"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aca0ae28b542587ce1802a5a1ac5670af">soft_poweroff_request</a>:1</td></tr>
-<tr class="memdesc:a0596e81c9e74018539efd516b0494def"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.4 - This flag shall be set when a soft power off is requested to the Master.  <a href="struct___system___status__t_1_1_0d0.html#a0596e81c9e74018539efd516b0494def">More...</a><br /></td></tr>
-<tr class="separator:a0596e81c9e74018539efd516b0494def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab442ebf5f391b1be0dd3d82a597114d9"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a556d33318497a5d6ea2f3b6ecfa38970">batt1_low</a>:1</td></tr>
-<tr class="memdesc:ab442ebf5f391b1be0dd3d82a597114d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.5 - This flag shall be set when the battery1 level is detected low.  <a href="struct___system___status__t_1_1_0d0.html#ab442ebf5f391b1be0dd3d82a597114d9">More...</a><br /></td></tr>
-<tr class="separator:ab442ebf5f391b1be0dd3d82a597114d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7b37fb9526d6568d1118a137223dc3"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ae6371d92b4ce771a9b2e5bf99c978512">batt2_low</a>:1</td></tr>
-<tr class="memdesc:a2e7b37fb9526d6568d1118a137223dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.6 - This flag shall be set when the battery2 level is detected low.  <a href="struct___system___status__t_1_1_0d0.html#a2e7b37fb9526d6568d1118a137223dc3">More...</a><br /></td></tr>
-<tr class="separator:a2e7b37fb9526d6568d1118a137223dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae6274efdebc08940dda1448460879a9"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad510291033b1091721a8e4ee567b86e0">battery_enable_button</a>:1</td></tr>
-<tr class="memdesc:aae6274efdebc08940dda1448460879a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.7 - This flag shall be set when the battery enable button is detected ON.  <a href="struct___system___status__t_1_1_0d0.html#aae6274efdebc08940dda1448460879a9">More...</a><br /></td></tr>
-<tr class="separator:aae6274efdebc08940dda1448460879a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8faffba717a69707d85890110b6b0d"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#afe8faffba717a69707d85890110b6b0d">D0</a></td></tr>
-<tr class="separator:afe8faffba717a69707d85890110b6b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81fd47af80fac9f2b15947eebb446afc"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a461da02274e907bb6763911371d4328c"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#acd55b351e5d3b4396cb343d58b9a334e">carm_up</a>:1</td></tr>
-<tr class="memdesc:a461da02274e907bb6763911371d4328c"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.0 - This flag shall be set to request the C-ARM UP manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a461da02274e907bb6763911371d4328c">More...</a><br /></td></tr>
-<tr class="separator:a461da02274e907bb6763911371d4328c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97fb37e58ee02e893b68afd173d6788d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad47efec695ef770a02ca77ae34ac710d">carm_dwn</a>:1</td></tr>
-<tr class="memdesc:a97fb37e58ee02e893b68afd173d6788d"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.1 - This flag shall be set to request the C-ARM DWN manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a97fb37e58ee02e893b68afd173d6788d">More...</a><br /></td></tr>
-<tr class="separator:a97fb37e58ee02e893b68afd173d6788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b0c99e4e54522d72c78f918e5e8d2f3"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a5ce38d316b3d6ed710c6fa2bdb2972e0">slide_up</a>:1</td></tr>
-<tr class="memdesc:a1b0c99e4e54522d72c78f918e5e8d2f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.2 - This flag shall be set to request the SLIDE UP manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a1b0c99e4e54522d72c78f918e5e8d2f3">More...</a><br /></td></tr>
-<tr class="separator:a1b0c99e4e54522d72c78f918e5e8d2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef4ec70fc0ca4a769c945043f99b686"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a62f9a9820551ffafcae7fda01e5efe99">slide_dwn</a>:1</td></tr>
-<tr class="memdesc:a0ef4ec70fc0ca4a769c945043f99b686"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.3 - This flag shall be set to request the SLIDE DWN manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a0ef4ec70fc0ca4a769c945043f99b686">More...</a><br /></td></tr>
-<tr class="separator:a0ef4ec70fc0ca4a769c945043f99b686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a2e54c65815a64aff96423442b112a"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aa7952318cc8222319b9b286d1df9d340">carm_rot_cw</a>:1</td></tr>
-<tr class="memdesc:a05a2e54c65815a64aff96423442b112a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.4 - This flag shall be set to request the C-ARM Rotation CW manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a05a2e54c65815a64aff96423442b112a">More...</a><br /></td></tr>
-<tr class="separator:a05a2e54c65815a64aff96423442b112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46bf4d7ff10ee3b2dbb8a8cfb5db0d30"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a2afa6d94330bf764dd3fedc6f4d9cd75">carm_rot_ccw</a>:1</td></tr>
-<tr class="memdesc:a46bf4d7ff10ee3b2dbb8a8cfb5db0d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.5 - This flag shall be set to request the C-ARM Rotation CCW manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a46bf4d7ff10ee3b2dbb8a8cfb5db0d30">More...</a><br /></td></tr>
-<tr class="separator:a46bf4d7ff10ee3b2dbb8a8cfb5db0d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a6a8523761422cfad9f0e4364fe38b"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a7bbc5a7093844fcb54e14e492ee913a9">body_rot_cw</a>:1</td></tr>
-<tr class="memdesc:a64a6a8523761422cfad9f0e4364fe38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.6 - This flag shall be set to request the Body Rotation CW manual activation.  <a href="struct___system___status__t_1_1_0d1.html#a64a6a8523761422cfad9f0e4364fe38b">More...</a><br /></td></tr>
-<tr class="separator:a64a6a8523761422cfad9f0e4364fe38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2ab25721b9d03b1b8894b734358796"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af3d34c950afdc11d2ff6b3c097bd2b26">body_rot_ccw</a>:1</td></tr>
-<tr class="memdesc:abe2ab25721b9d03b1b8894b734358796"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.7 - This flag shall be set to request the Body Rotation CCW manual activation.  <a href="struct___system___status__t_1_1_0d1.html#abe2ab25721b9d03b1b8894b734358796">More...</a><br /></td></tr>
-<tr class="separator:abe2ab25721b9d03b1b8894b734358796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81fd47af80fac9f2b15947eebb446afc"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a81fd47af80fac9f2b15947eebb446afc">D1</a></td></tr>
-<tr class="separator:a81fd47af80fac9f2b15947eebb446afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1973f41abc36086d83a8749279509061"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:af0a705258b0837672ccac7a2dbc6c312"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ab0255d8c5df286313699d5e4d5cd73f4">motor_dc_ok</a>:1</td></tr>
-<tr class="memdesc:af0a705258b0837672ccac7a2dbc6c312"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.0 - This flag shall be set according with the External Motor Power supply DC-OK status.  <a href="struct___system___status__t_1_1_0d2.html#af0a705258b0837672ccac7a2dbc6c312">More...</a><br /></td></tr>
-<tr class="separator:af0a705258b0837672ccac7a2dbc6c312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab14c58cb4219670b887cf660dc7972f0"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a44250cf459164cbb880c7290ef645d6b">motor_power_activate</a>:1</td></tr>
-<tr class="memdesc:ab14c58cb4219670b887cf660dc7972f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.1 - This flag shall be set when the motor power supply is activated (external power switch)  <a href="struct___system___status__t_1_1_0d2.html#ab14c58cb4219670b887cf660dc7972f0">More...</a><br /></td></tr>
-<tr class="separator:ab14c58cb4219670b887cf660dc7972f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23fe53ba83cc82d54db4538b84056a12"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a3c9e801d1b2fb50b2bd108b2dc6a7eb6">compression_on</a>:1</td></tr>
-<tr class="memdesc:a23fe53ba83cc82d54db4538b84056a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.2 - This flag shall be set accordiing with the status of the COMPRESSION-ON external signal (see Bus Hardware)  <a href="struct___system___status__t_1_1_0d2.html#a23fe53ba83cc82d54db4538b84056a12">More...</a><br /></td></tr>
-<tr class="separator:a23fe53ba83cc82d54db4538b84056a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4a0d8222c409c8a567f7e6cfd51df1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ac2c0e8c895e33e179623ed0233b154c2">xray_button</a>:1</td></tr>
-<tr class="memdesc:a3d4a0d8222c409c8a567f7e6cfd51df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.3 - This flag shall be set according with the xray button activation status.  <a href="struct___system___status__t_1_1_0d2.html#a3d4a0d8222c409c8a567f7e6cfd51df1">More...</a><br /></td></tr>
-<tr class="separator:a3d4a0d8222c409c8a567f7e6cfd51df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b82e57ac378c37b133f6d5c4febbb62"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#adaad1eb8c51e008eb6a03cd45be2773f">closed_door</a>:1</td></tr>
-<tr class="memdesc:a8b82e57ac378c37b133f6d5c4febbb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.4 - This flag shall be set to according with the status of the external CLOSED_DOOR signal.  <a href="struct___system___status__t_1_1_0d2.html#a8b82e57ac378c37b133f6d5c4febbb62">More...</a><br /></td></tr>
-<tr class="separator:a8b82e57ac378c37b133f6d5c4febbb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3593278343e70275a12204216548294"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a2c62a083df39f252c379c898f47500bf">burnin_jumper</a>:1</td></tr>
-<tr class="memdesc:af3593278343e70275a12204216548294"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.5 - This flag shall be set according with the burnin jumper presence detection.  <a href="struct___system___status__t_1_1_0d2.html#af3593278343e70275a12204216548294">More...</a><br /></td></tr>
-<tr class="separator:af3593278343e70275a12204216548294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3253dce991bd3c100f533583bf3586e"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a645c14d47c7a0133478e337ffac3779d">spare_26</a>:1</td></tr>
-<tr class="memdesc:aa3253dce991bd3c100f533583bf3586e"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.6 - NA.  <a href="struct___system___status__t_1_1_0d2.html#aa3253dce991bd3c100f533583bf3586e">More...</a><br /></td></tr>
-<tr class="separator:aa3253dce991bd3c100f533583bf3586e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a5dfd57c6008a8f3a3d8ea95d366c8"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af58a3274e6fa3409b818f28df7c9e17b">spare_27</a>:1</td></tr>
-<tr class="memdesc:ab2a5dfd57c6008a8f3a3d8ea95d366c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.7 - NA.  <a href="struct___system___status__t_1_1_0d2.html#ab2a5dfd57c6008a8f3a3d8ea95d366c8">More...</a><br /></td></tr>
-<tr class="separator:ab2a5dfd57c6008a8f3a3d8ea95d366c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1973f41abc36086d83a8749279509061"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a1973f41abc36086d83a8749279509061">D2</a></td></tr>
-<tr class="separator:a1973f41abc36086d83a8749279509061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0fafef3ca5627b437c62a92173f05b"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a15b4eb67ed268f169861666cc550b5d1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad4568cd620c9f1b1a6c7ae04af33f01a">pedal_carm_up</a>:1</td></tr>
-<tr class="memdesc:a15b4eb67ed268f169861666cc550b5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.0 - This flag shall be set according with the External Pedal C-ARM Up input.  <a href="struct___system___status__t_1_1_0d3.html#a15b4eb67ed268f169861666cc550b5d1">More...</a><br /></td></tr>
-<tr class="separator:a15b4eb67ed268f169861666cc550b5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a384a79b23424d708e0c8050119846753"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a9d9f1a1694c8f92925bb9b5a8c6c9160">pedal_carm_dwn</a>:1</td></tr>
-<tr class="memdesc:a384a79b23424d708e0c8050119846753"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.1 - This flag shall be set according with the External Pedal C-ARM Down input.  <a href="struct___system___status__t_1_1_0d3.html#a384a79b23424d708e0c8050119846753">More...</a><br /></td></tr>
-<tr class="separator:a384a79b23424d708e0c8050119846753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e19abd28876277ae12760de37104b68"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#adf97806ebc257a3e6424cd1ed42fe531">pedal_compression_up</a>:1</td></tr>
-<tr class="memdesc:a6e19abd28876277ae12760de37104b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.2 - This flag shall be set according with the External Pedal Compression Up input.  <a href="struct___system___status__t_1_1_0d3.html#a6e19abd28876277ae12760de37104b68">More...</a><br /></td></tr>
-<tr class="separator:a6e19abd28876277ae12760de37104b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a1f8ed27a1958aba19bd4df39982bce"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a3aac15c4f898c95d998f2cff084c4c05">pedal_compression_dwn</a>:1</td></tr>
-<tr class="memdesc:a7a1f8ed27a1958aba19bd4df39982bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.3 - This flag shall be set according with the External Pedal Compression Down input.  <a href="struct___system___status__t_1_1_0d3.html#a7a1f8ed27a1958aba19bd4df39982bce">More...</a><br /></td></tr>
-<tr class="separator:a7a1f8ed27a1958aba19bd4df39982bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e6e7346fed5329135d3655ee315fd6"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a6858fb970056111fea922daa77829b3d">spare_34</a>:1</td></tr>
-<tr class="memdesc:af0e6e7346fed5329135d3655ee315fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.4 - NA.  <a href="struct___system___status__t_1_1_0d3.html#af0e6e7346fed5329135d3655ee315fd6">More...</a><br /></td></tr>
-<tr class="separator:af0e6e7346fed5329135d3655ee315fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9158cc35c35343a595688c3b9f806745"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a7d4ed62455b3fe78b42c8c71673c63f1">spare_35</a>:1</td></tr>
-<tr class="memdesc:a9158cc35c35343a595688c3b9f806745"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.5 - NA.  <a href="struct___system___status__t_1_1_0d3.html#a9158cc35c35343a595688c3b9f806745">More...</a><br /></td></tr>
-<tr class="separator:a9158cc35c35343a595688c3b9f806745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab12276edf335371fc4ad0ef821978b38"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a903a15d08a9f8e2d46544754eefdbd57">spare_36</a>:1</td></tr>
-<tr class="memdesc:ab12276edf335371fc4ad0ef821978b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.6 - NA.  <a href="struct___system___status__t_1_1_0d3.html#ab12276edf335371fc4ad0ef821978b38">More...</a><br /></td></tr>
-<tr class="separator:ab12276edf335371fc4ad0ef821978b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b0da0a61bab2ed76f11c440e6f36d8"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a40d90b19db68bb701e49e317370a6ae1">spare_37</a>:1</td></tr>
-<tr class="memdesc:aa7b0da0a61bab2ed76f11c440e6f36d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.7 - NA.  <a href="struct___system___status__t_1_1_0d3.html#aa7b0da0a61bab2ed76f11c440e6f36d8">More...</a><br /></td></tr>
-<tr class="separator:aa7b0da0a61bab2ed76f11c440e6f36d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0fafef3ca5627b437c62a92173f05b"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a9c0fafef3ca5627b437c62a92173f05b">D3</a></td></tr>
-<tr class="separator:a9c0fafef3ca5627b437c62a92173f05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168ae0f474b598786a2f1126704b31e1"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a2294e08e0960d0083eb3c3c6d2830575"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a541a184a33f09ce32be725c3a87db658">error</a>:1</td></tr>
+<tr class="memdesc:a2294e08e0960d0083eb3c3c6d2830575"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.0 - This flag shall be set when an error is detected.  <a href="struct___system___status__t_1_1_0d2.html#a2294e08e0960d0083eb3c3c6d2830575">More...</a><br /></td></tr>
+<tr class="separator:a2294e08e0960d0083eb3c3c6d2830575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3112ff1d934b378bf843454c477eed1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a6b84e593a8305d8544c2c942f8995f22">emergency_button</a>:1</td></tr>
+<tr class="memdesc:ad3112ff1d934b378bf843454c477eed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.1 - This flag is set when the emergency button is detected activated.  <a href="struct___system___status__t_1_1_0d2.html#ad3112ff1d934b378bf843454c477eed1">More...</a><br /></td></tr>
+<tr class="separator:ad3112ff1d934b378bf843454c477eed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1868bb0c672ccf9c4172f15e1e7d8707"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af7d52105842f3e409dfff038c572b1e3">powerdown_detected</a>:1</td></tr>
+<tr class="memdesc:a1868bb0c672ccf9c4172f15e1e7d8707"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.2 - This flag shall be set when the Powerdown condiion is detected.  <a href="struct___system___status__t_1_1_0d2.html#a1868bb0c672ccf9c4172f15e1e7d8707">More...</a><br /></td></tr>
+<tr class="separator:a1868bb0c672ccf9c4172f15e1e7d8707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4f3de3f1cd686e6ff3feffb0b28d7a"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aff159545aed92d3e80408c338a62278e">motor_safety</a>:1</td></tr>
+<tr class="memdesc:abf4f3de3f1cd686e6ff3feffb0b28d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.3 - This flag shall be set when the motor safety input is ON (safer condition)  <a href="struct___system___status__t_1_1_0d2.html#abf4f3de3f1cd686e6ff3feffb0b28d7a">More...</a><br /></td></tr>
+<tr class="separator:abf4f3de3f1cd686e6ff3feffb0b28d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e030f75079db961fce9748a64b404f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aca0ae28b542587ce1802a5a1ac5670af">soft_poweroff_request</a>:1</td></tr>
+<tr class="memdesc:a49e030f75079db961fce9748a64b404f"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.4 - This flag shall be set when a soft power off is requested to the Master.  <a href="struct___system___status__t_1_1_0d2.html#a49e030f75079db961fce9748a64b404f">More...</a><br /></td></tr>
+<tr class="separator:a49e030f75079db961fce9748a64b404f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fb397c1e764c6b30ac196c296688e2"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a556d33318497a5d6ea2f3b6ecfa38970">batt1_low</a>:1</td></tr>
+<tr class="memdesc:ad4fb397c1e764c6b30ac196c296688e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.5 - This flag shall be set when the battery1 level is detected low.  <a href="struct___system___status__t_1_1_0d2.html#ad4fb397c1e764c6b30ac196c296688e2">More...</a><br /></td></tr>
+<tr class="separator:ad4fb397c1e764c6b30ac196c296688e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2feefcdaf35d3efc57081e68dd5f6758"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ae6371d92b4ce771a9b2e5bf99c978512">batt2_low</a>:1</td></tr>
+<tr class="memdesc:a2feefcdaf35d3efc57081e68dd5f6758"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.6 - This flag shall be set when the battery2 level is detected low.  <a href="struct___system___status__t_1_1_0d2.html#a2feefcdaf35d3efc57081e68dd5f6758">More...</a><br /></td></tr>
+<tr class="separator:a2feefcdaf35d3efc57081e68dd5f6758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426a116bdeb508b2a1d38f8ad41a0008"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad510291033b1091721a8e4ee567b86e0">battery_enable_button</a>:1</td></tr>
+<tr class="memdesc:a426a116bdeb508b2a1d38f8ad41a0008"><td class="mdescLeft">&#160;</td><td class="mdescRight">D0.7 - This flag shall be set when the battery enable button is detected ON.  <a href="struct___system___status__t_1_1_0d2.html#a426a116bdeb508b2a1d38f8ad41a0008">More...</a><br /></td></tr>
+<tr class="separator:a426a116bdeb508b2a1d38f8ad41a0008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168ae0f474b598786a2f1126704b31e1"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a168ae0f474b598786a2f1126704b31e1">D0</a></td></tr>
+<tr class="separator:a168ae0f474b598786a2f1126704b31e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914e66e45aa972fe60d45bad37e7e556"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a86e354866a468723273f52dfb67bdf06"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#acd55b351e5d3b4396cb343d58b9a334e">carm_up</a>:1</td></tr>
+<tr class="memdesc:a86e354866a468723273f52dfb67bdf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.0 - This flag shall be set to request the C-ARM UP manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a86e354866a468723273f52dfb67bdf06">More...</a><br /></td></tr>
+<tr class="separator:a86e354866a468723273f52dfb67bdf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e8bde695cb155377eb62f83758af19"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad47efec695ef770a02ca77ae34ac710d">carm_dwn</a>:1</td></tr>
+<tr class="memdesc:a34e8bde695cb155377eb62f83758af19"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.1 - This flag shall be set to request the C-ARM DWN manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a34e8bde695cb155377eb62f83758af19">More...</a><br /></td></tr>
+<tr class="separator:a34e8bde695cb155377eb62f83758af19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65ba27698508d059289847a59997e60"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a5ce38d316b3d6ed710c6fa2bdb2972e0">slide_up</a>:1</td></tr>
+<tr class="memdesc:ae65ba27698508d059289847a59997e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.2 - This flag shall be set to request the SLIDE UP manual activation.  <a href="struct___system___status__t_1_1_0d3.html#ae65ba27698508d059289847a59997e60">More...</a><br /></td></tr>
+<tr class="separator:ae65ba27698508d059289847a59997e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79da33ff77bda630a0b46537ecfbe8d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a62f9a9820551ffafcae7fda01e5efe99">slide_dwn</a>:1</td></tr>
+<tr class="memdesc:af79da33ff77bda630a0b46537ecfbe8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.3 - This flag shall be set to request the SLIDE DWN manual activation.  <a href="struct___system___status__t_1_1_0d3.html#af79da33ff77bda630a0b46537ecfbe8d">More...</a><br /></td></tr>
+<tr class="separator:af79da33ff77bda630a0b46537ecfbe8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e95809472253b6cdf958819b8eaf8a6"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#aa7952318cc8222319b9b286d1df9d340">carm_rot_cw</a>:1</td></tr>
+<tr class="memdesc:a9e95809472253b6cdf958819b8eaf8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.4 - This flag shall be set to request the C-ARM Rotation CW manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a9e95809472253b6cdf958819b8eaf8a6">More...</a><br /></td></tr>
+<tr class="separator:a9e95809472253b6cdf958819b8eaf8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e7265df225ccf498c546bb8b1a10b3"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a2afa6d94330bf764dd3fedc6f4d9cd75">carm_rot_ccw</a>:1</td></tr>
+<tr class="memdesc:a33e7265df225ccf498c546bb8b1a10b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.5 - This flag shall be set to request the C-ARM Rotation CCW manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a33e7265df225ccf498c546bb8b1a10b3">More...</a><br /></td></tr>
+<tr class="separator:a33e7265df225ccf498c546bb8b1a10b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f5c336e6fb6e6ca1adfd6bd8979526"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a7bbc5a7093844fcb54e14e492ee913a9">body_rot_cw</a>:1</td></tr>
+<tr class="memdesc:a92f5c336e6fb6e6ca1adfd6bd8979526"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.6 - This flag shall be set to request the Body Rotation CW manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a92f5c336e6fb6e6ca1adfd6bd8979526">More...</a><br /></td></tr>
+<tr class="separator:a92f5c336e6fb6e6ca1adfd6bd8979526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5189bc79271e2dc34693f01d1527c145"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af3d34c950afdc11d2ff6b3c097bd2b26">body_rot_ccw</a>:1</td></tr>
+<tr class="memdesc:a5189bc79271e2dc34693f01d1527c145"><td class="mdescLeft">&#160;</td><td class="mdescRight">D1.7 - This flag shall be set to request the Body Rotation CCW manual activation.  <a href="struct___system___status__t_1_1_0d3.html#a5189bc79271e2dc34693f01d1527c145">More...</a><br /></td></tr>
+<tr class="separator:a5189bc79271e2dc34693f01d1527c145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914e66e45aa972fe60d45bad37e7e556"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a914e66e45aa972fe60d45bad37e7e556">D1</a></td></tr>
+<tr class="separator:a914e66e45aa972fe60d45bad37e7e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfe371f0a8e2333a3efdc44503dcb79"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:ad9da53b92fd69d2cae4ff88010af402b"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ab0255d8c5df286313699d5e4d5cd73f4">motor_dc_ok</a>:1</td></tr>
+<tr class="memdesc:ad9da53b92fd69d2cae4ff88010af402b"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.0 - This flag shall be set according with the External Motor Power supply DC-OK status.  <a href="struct___system___status__t_1_1_0d4.html#ad9da53b92fd69d2cae4ff88010af402b">More...</a><br /></td></tr>
+<tr class="separator:ad9da53b92fd69d2cae4ff88010af402b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792dbebac4ce84d0c9e915b2ffa6d7cd"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a44250cf459164cbb880c7290ef645d6b">motor_power_activate</a>:1</td></tr>
+<tr class="memdesc:a792dbebac4ce84d0c9e915b2ffa6d7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.1 - This flag shall be set when the motor power supply is activated (external power switch)  <a href="struct___system___status__t_1_1_0d4.html#a792dbebac4ce84d0c9e915b2ffa6d7cd">More...</a><br /></td></tr>
+<tr class="separator:a792dbebac4ce84d0c9e915b2ffa6d7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa274eece0f7bfd8763b0a8086dbc147a"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a3c9e801d1b2fb50b2bd108b2dc6a7eb6">compression_on</a>:1</td></tr>
+<tr class="memdesc:aa274eece0f7bfd8763b0a8086dbc147a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.2 - This flag shall be set accordiing with the status of the COMPRESSION-ON external signal (see Bus Hardware)  <a href="struct___system___status__t_1_1_0d4.html#aa274eece0f7bfd8763b0a8086dbc147a">More...</a><br /></td></tr>
+<tr class="separator:aa274eece0f7bfd8763b0a8086dbc147a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934b77c6b37a6a3d064e6bc90054fde9"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ac2c0e8c895e33e179623ed0233b154c2">xray_button</a>:1</td></tr>
+<tr class="memdesc:a934b77c6b37a6a3d064e6bc90054fde9"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.3 - This flag shall be set according with the xray button activation status.  <a href="struct___system___status__t_1_1_0d4.html#a934b77c6b37a6a3d064e6bc90054fde9">More...</a><br /></td></tr>
+<tr class="separator:a934b77c6b37a6a3d064e6bc90054fde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6997c0d11f442669852669eda9218df1"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#adaad1eb8c51e008eb6a03cd45be2773f">closed_door</a>:1</td></tr>
+<tr class="memdesc:a6997c0d11f442669852669eda9218df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.4 - This flag shall be set to according with the status of the external CLOSED_DOOR signal.  <a href="struct___system___status__t_1_1_0d4.html#a6997c0d11f442669852669eda9218df1">More...</a><br /></td></tr>
+<tr class="separator:a6997c0d11f442669852669eda9218df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b3e1b18fdd888935d48b8fc070516a"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a2c62a083df39f252c379c898f47500bf">burnin_jumper</a>:1</td></tr>
+<tr class="memdesc:ab9b3e1b18fdd888935d48b8fc070516a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.5 - This flag shall be set according with the burnin jumper presence detection.  <a href="struct___system___status__t_1_1_0d4.html#ab9b3e1b18fdd888935d48b8fc070516a">More...</a><br /></td></tr>
+<tr class="separator:ab9b3e1b18fdd888935d48b8fc070516a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad143c4d73e2a4ee9ed66b86a6d4b1814"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a645c14d47c7a0133478e337ffac3779d">spare_26</a>:1</td></tr>
+<tr class="memdesc:ad143c4d73e2a4ee9ed66b86a6d4b1814"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.6 - NA.  <a href="struct___system___status__t_1_1_0d4.html#ad143c4d73e2a4ee9ed66b86a6d4b1814">More...</a><br /></td></tr>
+<tr class="separator:ad143c4d73e2a4ee9ed66b86a6d4b1814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c4956ea92bb4b1cc359300e6e57c1f"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#af58a3274e6fa3409b818f28df7c9e17b">spare_27</a>:1</td></tr>
+<tr class="memdesc:a69c4956ea92bb4b1cc359300e6e57c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">D2.7 - NA.  <a href="struct___system___status__t_1_1_0d4.html#a69c4956ea92bb4b1cc359300e6e57c1f">More...</a><br /></td></tr>
+<tr class="separator:a69c4956ea92bb4b1cc359300e6e57c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfe371f0a8e2333a3efdc44503dcb79"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#a3dfe371f0a8e2333a3efdc44503dcb79">D2</a></td></tr>
+<tr class="separator:a3dfe371f0a8e2333a3efdc44503dcb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb59417bf8c2ffbf77b402657c9ba40"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a4005ed9a4b47a8e49a4fa690d4e1377a"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#ad4568cd620c9f1b1a6c7ae04af33f01a">pedal_carm_up</a>:1</td></tr>
+<tr class="memdesc:a4005ed9a4b47a8e49a4fa690d4e1377a"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.0 - This flag shall be set according with the External Pedal C-ARM Up input.  <a href="struct___system___status__t_1_1_0d5.html#a4005ed9a4b47a8e49a4fa690d4e1377a">More...</a><br /></td></tr>
+<tr class="separator:a4005ed9a4b47a8e49a4fa690d4e1377a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394a2e6ff31cf54f31fef636262cecaa"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a9d9f1a1694c8f92925bb9b5a8c6c9160">pedal_carm_dwn</a>:1</td></tr>
+<tr class="memdesc:a394a2e6ff31cf54f31fef636262cecaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.1 - This flag shall be set according with the External Pedal C-ARM Down input.  <a href="struct___system___status__t_1_1_0d5.html#a394a2e6ff31cf54f31fef636262cecaa">More...</a><br /></td></tr>
+<tr class="separator:a394a2e6ff31cf54f31fef636262cecaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0ce74aca88142a00ce0fbd8b436c46"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#adf97806ebc257a3e6424cd1ed42fe531">pedal_compression_up</a>:1</td></tr>
+<tr class="memdesc:abb0ce74aca88142a00ce0fbd8b436c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.2 - This flag shall be set according with the External Pedal Compression Up input.  <a href="struct___system___status__t_1_1_0d5.html#abb0ce74aca88142a00ce0fbd8b436c46">More...</a><br /></td></tr>
+<tr class="separator:abb0ce74aca88142a00ce0fbd8b436c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5550c461cfec5d7871da62e5451c86"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a3aac15c4f898c95d998f2cff084c4c05">pedal_compression_dwn</a>:1</td></tr>
+<tr class="memdesc:afc5550c461cfec5d7871da62e5451c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.3 - This flag shall be set according with the External Pedal Compression Down input.  <a href="struct___system___status__t_1_1_0d5.html#afc5550c461cfec5d7871da62e5451c86">More...</a><br /></td></tr>
+<tr class="separator:afc5550c461cfec5d7871da62e5451c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f2769166078c45124bb0c1124a1362"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a6858fb970056111fea922daa77829b3d">spare_34</a>:1</td></tr>
+<tr class="memdesc:a71f2769166078c45124bb0c1124a1362"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.4 - NA.  <a href="struct___system___status__t_1_1_0d5.html#a71f2769166078c45124bb0c1124a1362">More...</a><br /></td></tr>
+<tr class="separator:a71f2769166078c45124bb0c1124a1362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9511a023561ba0f7f53ede9385aef2d"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a7d4ed62455b3fe78b42c8c71673c63f1">spare_35</a>:1</td></tr>
+<tr class="memdesc:af9511a023561ba0f7f53ede9385aef2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.5 - NA.  <a href="struct___system___status__t_1_1_0d5.html#af9511a023561ba0f7f53ede9385aef2d">More...</a><br /></td></tr>
+<tr class="separator:af9511a023561ba0f7f53ede9385aef2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6138b71b85c741b8b58120d68f1ed5fe"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a903a15d08a9f8e2d46544754eefdbd57">spare_36</a>:1</td></tr>
+<tr class="memdesc:a6138b71b85c741b8b58120d68f1ed5fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.6 - NA.  <a href="struct___system___status__t_1_1_0d5.html#a6138b71b85c741b8b58120d68f1ed5fe">More...</a><br /></td></tr>
+<tr class="separator:a6138b71b85c741b8b58120d68f1ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de0da6ddff2d38881beed040c3ad407"><td class="memItemLeft" >&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="struct___system___status__t.html#a40d90b19db68bb701e49e317370a6ae1">spare_37</a>:1</td></tr>
+<tr class="memdesc:a4de0da6ddff2d38881beed040c3ad407"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3.7 - NA.  <a href="struct___system___status__t_1_1_0d5.html#a4de0da6ddff2d38881beed040c3ad407">More...</a><br /></td></tr>
+<tr class="separator:a4de0da6ddff2d38881beed040c3ad407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb59417bf8c2ffbf77b402657c9ba40"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___system___status__t.html#abdb59417bf8c2ffbf77b402657c9ba40">D3</a></td></tr>
+<tr class="separator:abdb59417bf8c2ffbf77b402657c9ba40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><em><b>SYSTEM STATUS REGISTER</b></em></p>
@@ -478,8 +478,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afe8faffba717a69707d85890110b6b0d" name="afe8faffba717a69707d85890110b6b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe8faffba717a69707d85890110b6b0d">&#9670;&nbsp;</a></span></h2>
+<a id="a168ae0f474b598786a2f1126704b31e1" name="a168ae0f474b598786a2f1126704b31e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168ae0f474b598786a2f1126704b31e1">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,8 +492,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a81fd47af80fac9f2b15947eebb446afc" name="a81fd47af80fac9f2b15947eebb446afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81fd47af80fac9f2b15947eebb446afc">&#9670;&nbsp;</a></span></h2>
+<a id="a914e66e45aa972fe60d45bad37e7e556" name="a914e66e45aa972fe60d45bad37e7e556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914e66e45aa972fe60d45bad37e7e556">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,8 +506,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1973f41abc36086d83a8749279509061" name="a1973f41abc36086d83a8749279509061"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1973f41abc36086d83a8749279509061">&#9670;&nbsp;</a></span></h2>
+<a id="a3dfe371f0a8e2333a3efdc44503dcb79" name="a3dfe371f0a8e2333a3efdc44503dcb79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dfe371f0a8e2333a3efdc44503dcb79">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,8 +520,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c0fafef3ca5627b437c62a92173f05b" name="a9c0fafef3ca5627b437c62a92173f05b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c0fafef3ca5627b437c62a92173f05b">&#9670;&nbsp;</a></span></h2>
+<a id="abdb59417bf8c2ffbf77b402657c9ba40" name="abdb59417bf8c2ffbf77b402657c9ba40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb59417bf8c2ffbf77b402657c9ba40">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -854,9 +854,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Protocol/<a class="el" href="protocol_8h_source.html">protocol.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

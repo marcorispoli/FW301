@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['carm_5fdwn_0',['carm_dwn',['../struct___system___status__t.html#ad47efec695ef770a02ca77ae34ac710d',1,'_System_Status_t']]],
-  ['carm_5frot_5fccw_1',['carm_rot_ccw',['../struct___system___status__t.html#a2afa6d94330bf764dd3fedc6f4d9cd75',1,'_System_Status_t']]],
-  ['carm_5frot_5fcw_2',['carm_rot_cw',['../struct___system___status__t.html#aa7952318cc8222319b9b286d1df9d340',1,'_System_Status_t']]],
-  ['carm_5fup_3',['carm_up',['../struct___system___status__t.html#acd55b351e5d3b4396cb343d58b9a334e',1,'_System_Status_t']]],
-  ['closed_5fdoor_4',['closed_door',['../struct___system___status__t.html#adaad1eb8c51e008eb6a03cd45be2773f',1,'_System_Status_t']]],
-  ['command_5',['command',['../struct_m_e_t___can___protocol___command__t.html#aca49e096bc832521e857dd6cc76f3fc0',1,'MET_Can_Protocol_Command_t']]],
-  ['compression_5fon_6',['compression_on',['../struct___system___status__t.html#a3c9e801d1b2fb50b2bd108b2dc6a7eb6',1,'_System_Status_t']]],
-  ['crc_7',['crc',['../struct_m_e_t___can___protocol___command__t.html#a49cabd213906d0208dc7fdc5ef957839',1,'MET_Can_Protocol_Command_t']]]
+  ['batt1_5flow_0',['batt1_low',['../struct___system___status__t.html#a556d33318497a5d6ea2f3b6ecfa38970',1,'_System_Status_t']]],
+  ['batt2_5flow_1',['batt2_low',['../struct___system___status__t.html#ae6371d92b4ce771a9b2e5bf99c978512',1,'_System_Status_t']]],
+  ['battery_5fenable_5fbutton_2',['battery_enable_button',['../struct___system___status__t.html#ad510291033b1091721a8e4ee567b86e0',1,'_System_Status_t']]],
+  ['body_5frot_5fccw_3',['body_rot_ccw',['../struct___system___status__t.html#af3d34c950afdc11d2ff6b3c097bd2b26',1,'_System_Status_t']]],
+  ['body_5frot_5fcw_4',['body_rot_cw',['../struct___system___status__t.html#a7bbc5a7093844fcb54e14e492ee913a9',1,'_System_Status_t']]],
+  ['burnin_5fjumper_5',['burnin_jumper',['../struct___system___status__t.html#a2c62a083df39f252c379c898f47500bf',1,'_System_Status_t']]],
+  ['buzzer_5factivation_5fmode_6',['buzzer_activation_mode',['../struct___output___d_a_t_a__t.html#af9e90bd67ec4164d14b6b4bf0de8e763',1,'_Output_DATA_t']]]
 ];

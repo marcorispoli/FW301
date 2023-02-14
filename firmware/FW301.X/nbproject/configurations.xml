@@ -230,6 +230,12 @@
           <itemPath>../src/config/default/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="GeneratorBus"
+                     displayName="GeneratorBus"
+                     projectFiles="true">
+        <itemPath>../src/GeneratorBus/generator.c</itemPath>
+        <itemPath>../src/GeneratorBus/generator.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="Motors" displayName="Motors" projectFiles="true">
         <itemPath>../src/Motors/MET_can_open.c</itemPath>
         <itemPath>../src/Motors/MET_can_open.h</itemPath>

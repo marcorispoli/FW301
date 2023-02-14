@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registers_20application_20macro_0',['Registers application Macro',['../group__application_macro.html',1,'']]],
-  ['registers_20type_20definition_1',['Registers type definition',['../group__type_def.html',1,'']]],
-  ['revision_20registers_20application_20macro_2',['REVISION Registers application Macro',['../group__revision_macro.html',1,'']]]
+  ['microchip_20licence_20agreement_0',['Microchip Licence Agreement',['../group__license_agreement.html',1,'']]],
+  ['module_20api_1',['Module API',['../group__met_can_api.html',1,'']]],
+  ['module_20data_20structures_2',['Module data structures',['../group__met_can_data.html',1,'']]]
 ];

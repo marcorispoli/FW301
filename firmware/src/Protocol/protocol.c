@@ -26,7 +26,9 @@ void ApplicationProtocolInit ( uint8_t deviceID )
     PROTOCOL_SUB_REVISION = APP_SUB_REV;
     
     // Initialize the Met Can Library
-    MET_Can_Protocol_Init(deviceID, (uint8_t**) statusRegisterArray,PROTOCOL_NUMBER_OF_STATUS_REGISTERS);
+    MET_Can_Protocol_Init(deviceID, \
+            &statusRegisterArray[0],PROTOCOL_NUMBER_OF_STATUS_REGISTERS, 
+            &dataRegisterArray[0],PROTOCOL_NUMBER_OF_DATA_REGISTERS);
              
 }
 
