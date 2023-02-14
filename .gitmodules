@@ -1,0 +1,3 @@
+[submodule "firmware/src/Shared"]
+	path = firmware/src/Shared
+	url = C:\\Users\\marco\\Documents\\Data\\Progetti-GIT\\FW\\fw_pcb301\\firmware\\src\\Shared
