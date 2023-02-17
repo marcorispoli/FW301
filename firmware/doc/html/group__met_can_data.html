@@ -85,24 +85,28 @@ $(document).ready(function(){initNavTree('group__met_can_data.html',''); initRes
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">Module data structures<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___frame__t.html">MET_Can_Frame_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for module customization.  <a href="struct_m_e_t___protocol___data__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___command_exec_return__t.html">MET_CommandExecReturn_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the data structure the application shall return from the command Handler routine.  <a href="struct_m_e_t___command_exec_return__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rx and Tx communication data.  <a href="struct_m_e_t___can___protocol___rx_tx__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___command___data__t.html">MET_Command_Data_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___command__t.html">MET_Can_Protocol_Command_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class user to cast the received can frame.  <a href="struct_m_e_t___can___protocol___command__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___revision___status__t.html">MET_Revision_Status_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___errors___status__t.html">MET_Errors_Status_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___command___status__t.html">_Command_Status_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -114,8 +118,31 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga90d0bbd024bddfb2e734f37664388aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the base address for the Loader frames.  <a href="group__met_can_data.html#ga90d0bbd024bddfb2e734f37664388aeb">More...</a><br /></td></tr>
 <tr class="separator:ga90d0bbd024bddfb2e734f37664388aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga2b89d21ea8186a3cc5e677fa571027ca"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">MET_commandHandler_t</a>) (void)</td></tr>
+<tr class="memdesc:ga2b89d21ea8186a3cc5e677fa571027ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the type definition for the Command callback function.  <a href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">More...</a><br /></td></tr>
+<tr class="separator:ga2b89d21ea8186a3cc5e677fa571027ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ga1b94fa803d972c728b243a1b236f4cec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">MET_FRAME_CODES</a> { <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca9b8f8f3db76aaefc2745d951e15f6eef">MET_CAN_PROTOCOL_READ_REVISION</a> = 1
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecab63865d05bb814eb00d2554f1bb8ad34">MET_CAN_PROTOCOL_READ_ERRORS</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecac68755a9bfd828a2d922079b288ccc61">MET_CAN_PROTOCOL_READ_COMMAND</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356">MET_CAN_PROTOCOL_READ_STATUS</a>
+, <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca0fff67b58d8ac510d97720b692fc86d2">MET_CAN_PROTOCOL_READ_DATA</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca7a8502e78ece315354b66a4a1b295213">MET_CAN_PROTOCOL_READ_PARAM</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca06b47a130baed3e1188eab3ae3688a13">MET_CAN_PROTOCOL_WRITE_DATA</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393">MET_CAN_PROTOCOL_WRITE_PARAM</a>
+, <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaed9a0b32fc2a12cbbe69cbe60498b01e">MET_CAN_PROTOCOL_STORE_PARAMS</a>
+, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecab370056a009782a0ab8b4db65b61d7b0">MET_CAN_PROTOCOL_COMMAND_EXEC</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga1b94fa803d972c728b243a1b236f4cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the enumeration class for the Frame Command codes.  <a href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">More...</a><br /></td></tr>
+<tr class="separator:ga1b94fa803d972c728b243a1b236f4cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb3609377b79c1613ab7838024beb604"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#gadb3609377b79c1613ab7838024beb604">MET_CAN_PROTOCOL_ERROR_DEFS</a> { <br />
 &#160;&#160;<a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604a72aa153e821d479a6d3f36d8c9a6d947">MET_CAN_PROTOCOL_ERROR_OK</a> =0
 , <a class="el" href="group__met_can_data.html#ggadb3609377b79c1613ab7838024beb604ada8dbf1df2629b90b048372a209acae1">MET_CAN_PROTOCOL_ERROR_RECEPTION_ACTIVATION</a>
@@ -127,26 +154,31 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gadb3609377b79c1613ab7838024beb604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can Protocol Error codes.  <a href="group__met_can_data.html#gadb3609377b79c1613ab7838024beb604">More...</a><br /></td></tr>
 <tr class="separator:gadb3609377b79c1613ab7838024beb604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1b94fa803d972c728b243a1b236f4cec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">MET_FRAME_CODES</a> { <br />
-&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356">MET_CAN_PROTOCOL_READ_STATUS</a> = 1
-, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393">MET_CAN_PROTOCOL_WRITE_PARAM</a>
-, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4ceca06b47a130baed3e1188eab3ae3688a13">MET_CAN_PROTOCOL_WRITE_DATA</a>
-, <a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecaed9a0b32fc2a12cbbe69cbe60498b01e">MET_CAN_PROTOCOL_STORE_PARAMS</a>
+<tr class="memitem:gad4329df6851e13a55e245becb2047c63"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#gad4329df6851e13a55e245becb2047c63">MET_CommandErrors_t</a> { <br />
+&#160;&#160;<a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63a82f7ab9495a66233b2d5418c7a587a7e">MET_CAN_COMMAND_NO_ERROR</a> = 0
+, <a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63afd5a82dbbe6bba0d2cf9ddd54eed4e3e">MET_CAN_COMMAND_BUSY</a> = 1
+, <a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63a4702aff9df655eb750d5f7f85cc0d1e4">MET_CAN_COMMAND_INVALID_DATA</a> = 2
+, <a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63a74296b26f0e5cbd79a8d0842536680f9">MET_CAN_COMMAND_NOT_ENABLED</a> = 3
 , <br />
-&#160;&#160;<a class="el" href="group__met_can_data.html#gga1b94fa803d972c728b243a1b236f4cecab370056a009782a0ab8b4db65b61d7b0">MET_CAN_PROTOCOL_COMMAND_EXEC</a>
+&#160;&#160;<a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63a3824ad67590c1ceca8066c6b7cdfaeca">MET_CAN_COMMAND_NOT_AVAILABLE</a> = 4
+, <a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63aebdc571eee48ac9be132921557e4a7b2">MET_CAN_COMMAND_WRONG_RETURN_CODE</a> = 5
+, <a class="el" href="group__met_can_data.html#ggad4329df6851e13a55e245becb2047c63ac3563848f0e33a5fe307d0942297d2f7">MET_CAN_COMMAND_APPLICATION_ERRORS</a>
 <br />
  }</td></tr>
-<tr class="memdesc:ga1b94fa803d972c728b243a1b236f4cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the enumeration class for the Frame Command codes.  <a href="group__met_can_data.html#ga1b94fa803d972c728b243a1b236f4cec">More...</a><br /></td></tr>
-<tr class="separator:ga1b94fa803d972c728b243a1b236f4cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b">MET_Protocol_Data_Struct</a></td></tr>
-<tr class="memdesc:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the internal protocol data structure.  <a href="group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b">More...</a><br /></td></tr>
-<tr class="separator:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb">MET_Can_Protocol_RxTx_Struct</a></td></tr>
-<tr class="memdesc:ga8f7da4f52625debcd1f7828869a61ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the structure handling the data transmitted and received.  <a href="group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb">More...</a><br /></td></tr>
-<tr class="separator:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gad4329df6851e13a55e245becb2047c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Command Error eenumeration.  <a href="group__met_can_data.html#gad4329df6851e13a55e245becb2047c63">More...</a><br /></td></tr>
+<tr class="separator:gad4329df6851e13a55e245becb2047c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49334b972bb64d59fe3d175b86af17bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#ga49334b972bb64d59fe3d175b86af17bd">MET_CommandExecStatus_t</a> { <a class="el" href="group__met_can_data.html#gga49334b972bb64d59fe3d175b86af17bda6e8ed8fb3a4d9638d7874131566ae0c3">MET_CAN_COMMAND_COMPLETED</a> = 0
+, <a class="el" href="group__met_can_data.html#gga49334b972bb64d59fe3d175b86af17bda11d7da9c40c1b3c8d27f92074b9acf89">MET_CAN_COMMAND_EXECUTING</a> = 1
+, <a class="el" href="group__met_can_data.html#gga49334b972bb64d59fe3d175b86af17bda6f4a3c52ce838b9a374c75504d4b82bb">MET_CAN_COMMAND_ERROR</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga49334b972bb64d59fe3d175b86af17bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This type defines the possible Command Execution status.  <a href="group__met_can_data.html#ga49334b972bb64d59fe3d175b86af17bd">More...</a><br /></td></tr>
+<tr class="separator:ga49334b972bb64d59fe3d175b86af17bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0062ccfdfd60202fbd428065901a8c0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a> { <a class="el" href="group__met_can_data.html#ggae0062ccfdfd60202fbd428065901a8c0a7796ccea805889d37ce86a9989e73478">MET_CAN_ERROR_MOM0</a> = 0
+, <a class="el" href="group__met_can_data.html#ggae0062ccfdfd60202fbd428065901a8c0acba525e12a988386c46fac5d09210a88">MET_CAN_ERROR_MOM1</a>
+, <a class="el" href="group__met_can_data.html#ggae0062ccfdfd60202fbd428065901a8c0ad1ced6a51260e4f654b81b5e4e72a084">MET_CAN_ERROR_PERSISTENT0</a>
+, <a class="el" href="group__met_can_data.html#ggae0062ccfdfd60202fbd428065901a8c0a3da164e4f02bce1b202d558e1944ada1">MET_CAN_ERROR_PERSISTENT1</a>
+ }</td></tr>
+<tr class="separator:gae0062ccfdfd60202fbd428065901a8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This section implements the data structures of the module </p>
@@ -183,7 +215,49 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga2b89d21ea8186a3cc5e677fa571027ca" name="ga2b89d21ea8186a3cc5e677fa571027ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b89d21ea8186a3cc5e677fa571027ca">&#9670;&nbsp;</a></span>MET_commandHandler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* MET_commandHandler_t) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the type definition for the Command callback function. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gae0062ccfdfd60202fbd428065901a8c0" name="gae0062ccfdfd60202fbd428065901a8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0062ccfdfd60202fbd428065901a8c0">&#9670;&nbsp;</a></span>MET_CAN_ERROR_BYTE_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This is the enumeration to access the content of the ERRORS register </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggae0062ccfdfd60202fbd428065901a8c0a7796ccea805889d37ce86a9989e73478" name="ggae0062ccfdfd60202fbd428065901a8c0a7796ccea805889d37ce86a9989e73478"></a>MET_CAN_ERROR_MOM0&#160;</td><td class="fielddoc"><p >byte index of the Momentary error 0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae0062ccfdfd60202fbd428065901a8c0acba525e12a988386c46fac5d09210a88" name="ggae0062ccfdfd60202fbd428065901a8c0acba525e12a988386c46fac5d09210a88"></a>MET_CAN_ERROR_MOM1&#160;</td><td class="fielddoc"><p >byte index of the Momentary error 1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae0062ccfdfd60202fbd428065901a8c0ad1ced6a51260e4f654b81b5e4e72a084" name="ggae0062ccfdfd60202fbd428065901a8c0ad1ced6a51260e4f654b81b5e4e72a084"></a>MET_CAN_ERROR_PERSISTENT0&#160;</td><td class="fielddoc"><p >byte index of the Persisten error 0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae0062ccfdfd60202fbd428065901a8c0a3da164e4f02bce1b202d558e1944ada1" name="ggae0062ccfdfd60202fbd428065901a8c0a3da164e4f02bce1b202d558e1944ada1"></a>MET_CAN_ERROR_PERSISTENT1&#160;</td><td class="fielddoc"><p >byte index of the Persisten error 1 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gadb3609377b79c1613ab7838024beb604" name="gadb3609377b79c1613ab7838024beb604"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadb3609377b79c1613ab7838024beb604">&#9670;&nbsp;</a></span>MET_CAN_PROTOCOL_ERROR_DEFS</h2>
 
@@ -218,6 +292,64 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="gad4329df6851e13a55e245becb2047c63" name="gad4329df6851e13a55e245becb2047c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4329df6851e13a55e245becb2047c63">&#9670;&nbsp;</a></span>MET_CommandErrors_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__met_can_data.html#gad4329df6851e13a55e245becb2047c63">MET_CommandErrors_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the Command Error eenumeration. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63a82f7ab9495a66233b2d5418c7a587a7e" name="ggad4329df6851e13a55e245becb2047c63a82f7ab9495a66233b2d5418c7a587a7e"></a>MET_CAN_COMMAND_NO_ERROR&#160;</td><td class="fielddoc"><p >No Error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63afd5a82dbbe6bba0d2cf9ddd54eed4e3e" name="ggad4329df6851e13a55e245becb2047c63afd5a82dbbe6bba0d2cf9ddd54eed4e3e"></a>MET_CAN_COMMAND_BUSY&#160;</td><td class="fielddoc"><p >A command is executing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63a4702aff9df655eb750d5f7f85cc0d1e4" name="ggad4329df6851e13a55e245becb2047c63a4702aff9df655eb750d5f7f85cc0d1e4"></a>MET_CAN_COMMAND_INVALID_DATA&#160;</td><td class="fielddoc"><p >The Command data are invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63a74296b26f0e5cbd79a8d0842536680f9" name="ggad4329df6851e13a55e245becb2047c63a74296b26f0e5cbd79a8d0842536680f9"></a>MET_CAN_COMMAND_NOT_ENABLED&#160;</td><td class="fielddoc"><p >The Command cannot be momentary executed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63a3824ad67590c1ceca8066c6b7cdfaeca" name="ggad4329df6851e13a55e245becb2047c63a3824ad67590c1ceca8066c6b7cdfaeca"></a>MET_CAN_COMMAND_NOT_AVAILABLE&#160;</td><td class="fielddoc"><p >The Command cannot be executed in this revision <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63aebdc571eee48ac9be132921557e4a7b2" name="ggad4329df6851e13a55e245becb2047c63aebdc571eee48ac9be132921557e4a7b2"></a>MET_CAN_COMMAND_WRONG_RETURN_CODE&#160;</td><td class="fielddoc"><p >The Command returned a non valid status code. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4329df6851e13a55e245becb2047c63ac3563848f0e33a5fe307d0942297d2f7" name="ggad4329df6851e13a55e245becb2047c63ac3563848f0e33a5fe307d0942297d2f7"></a>MET_CAN_COMMAND_APPLICATION_ERRORS&#160;</td><td class="fielddoc"><p >Starting code for applicaiton specific errors <br  />
+ </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga49334b972bb64d59fe3d175b86af17bd" name="ga49334b972bb64d59fe3d175b86af17bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49334b972bb64d59fe3d175b86af17bd">&#9670;&nbsp;</a></span>MET_CommandExecStatus_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__met_can_data.html#ga49334b972bb64d59fe3d175b86af17bd">MET_CommandExecStatus_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This type defines the possible Command Execution status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga49334b972bb64d59fe3d175b86af17bda6e8ed8fb3a4d9638d7874131566ae0c3" name="gga49334b972bb64d59fe3d175b86af17bda6e8ed8fb3a4d9638d7874131566ae0c3"></a>MET_CAN_COMMAND_COMPLETED&#160;</td><td class="fielddoc"><p >The Command has been processed successfully. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga49334b972bb64d59fe3d175b86af17bda11d7da9c40c1b3c8d27f92074b9acf89" name="gga49334b972bb64d59fe3d175b86af17bda11d7da9c40c1b3c8d27f92074b9acf89"></a>MET_CAN_COMMAND_EXECUTING&#160;</td><td class="fielddoc"><p >The Command is processing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga49334b972bb64d59fe3d175b86af17bda6f4a3c52ce838b9a374c75504d4b82bb" name="gga49334b972bb64d59fe3d175b86af17bda6f4a3c52ce838b9a374c75504d4b82bb"></a>MET_CAN_COMMAND_ERROR&#160;</td><td class="fielddoc"><p >The Command has been terminated with error condition. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga1b94fa803d972c728b243a1b236f4cec" name="ga1b94fa803d972c728b243a1b236f4cec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1b94fa803d972c728b243a1b236f4cec">&#9670;&nbsp;</a></span>MET_FRAME_CODES</h2>
 
@@ -232,66 +364,27 @@ Variables</h2></td></tr>
 
 <p>This is the enumeration class for the Frame Command codes. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356" name="gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356"></a>MET_CAN_PROTOCOL_READ_STATUS&#160;</td><td class="fielddoc"><p >Read Status registers frame type. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca9b8f8f3db76aaefc2745d951e15f6eef" name="gga1b94fa803d972c728b243a1b236f4ceca9b8f8f3db76aaefc2745d951e15f6eef"></a>MET_CAN_PROTOCOL_READ_REVISION&#160;</td><td class="fielddoc"><p >Read Application Special Revision registers frame type. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393" name="gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393"></a>MET_CAN_PROTOCOL_WRITE_PARAM&#160;</td><td class="fielddoc"><p >Write Parameter Registers frame type. </p>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecab63865d05bb814eb00d2554f1bb8ad34" name="gga1b94fa803d972c728b243a1b236f4cecab63865d05bb814eb00d2554f1bb8ad34"></a>MET_CAN_PROTOCOL_READ_ERRORS&#160;</td><td class="fielddoc"><p >Read Application Special Errors registers frame type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecac68755a9bfd828a2d922079b288ccc61" name="gga1b94fa803d972c728b243a1b236f4cecac68755a9bfd828a2d922079b288ccc61"></a>MET_CAN_PROTOCOL_READ_COMMAND&#160;</td><td class="fielddoc"><p >Read Application Special Command registers frame type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356" name="gga1b94fa803d972c728b243a1b236f4cecaa7bbb172281656e791cdba9fc48ad356"></a>MET_CAN_PROTOCOL_READ_STATUS&#160;</td><td class="fielddoc"><p >Read Application Status registers frame type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca0fff67b58d8ac510d97720b692fc86d2" name="gga1b94fa803d972c728b243a1b236f4ceca0fff67b58d8ac510d97720b692fc86d2"></a>MET_CAN_PROTOCOL_READ_DATA&#160;</td><td class="fielddoc"><p >Read DATA registers frame type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca7a8502e78ece315354b66a4a1b295213" name="gga1b94fa803d972c728b243a1b236f4ceca7a8502e78ece315354b66a4a1b295213"></a>MET_CAN_PROTOCOL_READ_PARAM&#160;</td><td class="fielddoc"><p >Read PARAMETER registers frame type. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca06b47a130baed3e1188eab3ae3688a13" name="gga1b94fa803d972c728b243a1b236f4ceca06b47a130baed3e1188eab3ae3688a13"></a>MET_CAN_PROTOCOL_WRITE_DATA&#160;</td><td class="fielddoc"><p >Write Data Registers frame type. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393" name="gga1b94fa803d972c728b243a1b236f4ceca589f3a80e091260e760e513d372d5393"></a>MET_CAN_PROTOCOL_WRITE_PARAM&#160;</td><td class="fielddoc"><p >Write Parameter Registers frame type. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecaed9a0b32fc2a12cbbe69cbe60498b01e" name="gga1b94fa803d972c728b243a1b236f4cecaed9a0b32fc2a12cbbe69cbe60498b01e"></a>MET_CAN_PROTOCOL_STORE_PARAMS&#160;</td><td class="fielddoc"><p >Store Parameters command frame. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga1b94fa803d972c728b243a1b236f4cecab370056a009782a0ab8b4db65b61d7b0" name="gga1b94fa803d972c728b243a1b236f4cecab370056a009782a0ab8b4db65b61d7b0"></a>MET_CAN_PROTOCOL_COMMAND_EXEC&#160;</td><td class="fielddoc"><p >Command Execution frame. </p>
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ga8f7da4f52625debcd1f7828869a61ceb" name="ga8f7da4f52625debcd1f7828869a61ceb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8f7da4f52625debcd1f7828869a61ceb">&#9670;&nbsp;</a></span>MET_Can_Protocol_RxTx_Struct</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a> MET_Can_Protocol_RxTx_Struct</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This is the structure handling the data transmitted and received. </p>
-
-</div>
-</div>
-<a id="ga297e870a9ed50c2f2db3a264a293dd5b" name="ga297e870a9ed50c2f2db3a264a293dd5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga297e870a9ed50c2f2db3a264a293dd5b">&#9670;&nbsp;</a></span>MET_Protocol_Data_Struct</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a> MET_Protocol_Data_Struct</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This is the internal protocol data structure. </p>
 
 </div>
 </div>

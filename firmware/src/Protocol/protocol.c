@@ -2,9 +2,9 @@
 
 #include "application.h"
 #include "protocol.h"
-#include "MET_can_protocol.h"
 
 
+static void ApplicationProtocolCommandHandler(void);
 
 /**
  * This function initiate the CAN Protocol communication.
@@ -18,17 +18,11 @@
  * \param[in] deviceID the device can specific address
  * 
  */
-void ApplicationProtocolInit ( uint8_t deviceID )
+void ApplicationProtocolInit ( void )
 {
-    // Assignes the Application revision code to the REVISION STATUS REGISTER
-    PROTOCOL_MAJ_REVISION = APP_MAJ_REV;
-    PROTOCOL_MIN_REVISION = APP_MIN_REV;
-    PROTOCOL_SUB_REVISION = APP_SUB_REV;
-    
+
     // Initialize the Met Can Library
-    MET_Can_Protocol_Init(deviceID, \
-            &statusRegisterArray[0],PROTOCOL_NUMBER_OF_STATUS_REGISTERS, 
-            &dataRegisterArray[0],PROTOCOL_NUMBER_OF_DATA_REGISTERS);
+    MET_Can_Protocol_Init(ApplicationProtocolCommandHandler);
              
 }
 
@@ -40,4 +34,18 @@ void ApplicationProtocolInit ( uint8_t deviceID )
  */
 void inline ApplicationProtocolLoop(void){
     MET_Can_Protocol_Loop();
+}
+
+/**
+ * This is the Application Command Execution Handler
+ *  
+ */
+void ApplicationProtocolCommandHandler(void){
+    
+    switch(MET_Can_Protocol_getCommandCode()){
+        default:
+            MET_Can_Protocol_setReturnCommand(MET_CAN_COMMAND_ERROR,0,0,MET_CAN_COMMAND_NOT_AVAILABLE);
+    }
+    
+    return;
 }

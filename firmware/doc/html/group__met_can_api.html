@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FW301 Power Service Board Firmware Documentation: Module API</title>
+<title>FW301 Power Service Board Firmware Documentation: Module Installation API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,15 +84,15 @@ $(document).ready(function(){initNavTree('group__met_can_api.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Module API<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a></div></div></div>
+  <div class="headertitle"><div class="title">Module Installation API<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabe325f5c2e32f7f36b11d4125e1def21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html#gabe325f5c2e32f7f36b11d4125e1def21">MET_Can_Protocol_Init</a> (uint8_t deviceID, <a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *pStatusArray, uint8_t StatusLen, <a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *pDataArray, uint8_t DataLen)</td></tr>
-<tr class="memdesc:gabe325f5c2e32f7f36b11d4125e1def21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can protocol initialization.  <a href="group__met_can_api.html#gabe325f5c2e32f7f36b11d4125e1def21">More...</a><br /></td></tr>
-<tr class="separator:gabe325f5c2e32f7f36b11d4125e1def21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeae332a426dd921d0758aebe56e2dbe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html#gaeae332a426dd921d0758aebe56e2dbe7">MET_Can_Protocol_Init</a> (<a class="el" href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">MET_commandHandler_t</a> pCommandHandler)</td></tr>
+<tr class="memdesc:gaeae332a426dd921d0758aebe56e2dbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can protocol initialization.  <a href="group__met_can_api.html#gaeae332a426dd921d0758aebe56e2dbe7">More...</a><br /></td></tr>
+<tr class="separator:gaeae332a426dd921d0758aebe56e2dbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe1efb354abe5681694ab13a6625e410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html#gafe1efb354abe5681694ab13a6625e410">MET_Can_Protocol_Loop</a> (void)</td></tr>
 <tr class="memdesc:gafe1efb354abe5681694ab13a6625e410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Main Loop function handler.  <a href="group__met_can_api.html#gafe1efb354abe5681694ab13a6625e410">More...</a><br /></td></tr>
 <tr class="separator:gafe1efb354abe5681694ab13a6625e410"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,8 +100,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This section providides the API for the CAN protocol integration. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gabe325f5c2e32f7f36b11d4125e1def21" name="gabe325f5c2e32f7f36b11d4125e1def21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabe325f5c2e32f7f36b11d4125e1def21">&#9670;&nbsp;</a></span>MET_Can_Protocol_Init()</h2>
+<a id="gaeae332a426dd921d0758aebe56e2dbe7" name="gaeae332a426dd921d0758aebe56e2dbe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeae332a426dd921d0758aebe56e2dbe7">&#9670;&nbsp;</a></span>MET_Can_Protocol_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,37 +109,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void MET_Can_Protocol_Init </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>deviceID</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">MET_commandHandler_t</a>&#160;</td>
+          <td class="paramname"><em>pCommandHandler</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td>
-          <td class="paramname"><em>pStatusArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>StatusLen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td>
-          <td class="paramname"><em>pDataArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>DataLen</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -148,19 +120,8 @@ Functions</h2></td></tr>
 <p >This function shall be called by the Application Implementing Protocol at the beginning of the program, in order to set the registers structure and to start the reception.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceID</td><td>this is the assigned deviceID (1:255) </td></tr>
-    <tr><td class="paramname">pStatusArray</td><td>pointer to the Status Register's Array The structure is array[N][4]:<ul>
-<li>N is the number of the Status registers;</li>
-<li>[4] is the register data content;</li>
-</ul>
-</td></tr>
-    <tr><td class="paramname">StatusLen</td><td>number of Status Registers pointed NOTE: the array shall be instantiated into the implementing class!</td></tr>
-    <tr><td class="paramname">pDataArray</td><td>pointer to the DATA Register's Array The structure is array[N][4]:<ul>
-<li>N is the number of the DATA registers;</li>
-<li>[4] is the register data content;</li>
-</ul>
-</td></tr>
-    <tr><td class="paramname">DataLen</td><td>number of DATA Registers pointed NOTE: the array shall be instantiated into the implementing class! </td></tr>
+    <tr><td class="paramname">deviceID</td><td>this is the assigned deviceID (1:255)</td></tr>
+    <tr><td class="paramname">pCommandHandler</td><td>application command handler </td></tr>
   </table>
   </dd>
 </dl>
@@ -184,9 +145,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Application Main Loop function handler. </p>
-<p >This function shall be called into the Application Main Loop.</p>
-<p >NOTE: when a can frame is received, an interrupt is generated and handled into the module. The interrupt will set an internal flag that will be processed by this routine in the Main Loop. This approach prevents to lock the interrupt routine for long time and allows the processes sharing the access with the data registers to don't face synchronization issues as long as those processes will access data into the same Main Loop.</p>
-<p >Application Main Loop function handler.</p>
+<p >The function checks the flags rxReceptionTrigger or rxErrorTrigger.</p>
 <p >In case of reception the function checks the CRC, data Lenght in order to proceed with the protocol decoding.</p>
 <p >With the correct frame checked, the protocol is identified:</p><ul>
 <li>The Status Register is handled;</li>

@@ -1,7 +1,10 @@
 var group__definitions =
 [
-    [ "APP_DEVICE_ID", "group__definitions.html#ga3c23783d10564b1a268850cdfdc8ce84", null ],
-    [ "APP_MAJ_REV", "group__definitions.html#gafb3da722e63ea819808436f7d6d6df40", null ],
-    [ "APP_MIN_REV", "group__definitions.html#ga2dc2565c355108244f419c05faf6401b", null ],
-    [ "APP_SUB_REV", "group__definitions.html#gae85e19d3c8f4ec187efd015b55eb068a", null ]
+    [ "MET_CAN_APP_DEVICE_ID", "group__definitions.html#gadf729521e458c54668b7c7db0dd69219", null ],
+    [ "MET_CAN_APP_MAJ_REV", "group__definitions.html#gaf326aece8786227ce813333aa322adf8", null ],
+    [ "MET_CAN_APP_MIN_REV", "group__definitions.html#ga8bab2aabb03caf59d5cf5f236dd94181", null ],
+    [ "MET_CAN_APP_SUB_REV", "group__definitions.html#ga8489bd5d8405a4566744b4d6731c81ca", null ],
+    [ "MET_CAN_DATA_REGISTERS", "group__definitions.html#ga82f6af8519ba84a6de8d8bc8e32bc114", null ],
+    [ "MET_CAN_PARAM_REGISTERS", "group__definitions.html#ga15aaef106895d30b66fce43573acb389", null ],
+    [ "MET_CAN_STATUS_REGISTERS", "group__definitions.html#ga802e7f7c0a56676cf6c2bcde3cf1915b", null ]
 ];

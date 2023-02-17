@@ -17,7 +17,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '60000000'}
+        attributes: {id: core, value: '24000000'}
   - type: Boolean
     attributes: {id: CAN0_INTERRUPT_ENABLE}
     children:
@@ -59,7 +59,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '60000000'}
+        attributes: {id: core, value: '24000000'}
   - type: Boolean
     attributes: {id: CAN1_INTERRUPT_ENABLE}
     children:
@@ -198,21 +198,21 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '4'}
+        attributes: {value: '22'}
   - type: Integer
     attributes: {id: CONFIG_CLOCK_DPLL1_LDR_INTEGER}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '243'}
+        attributes: {value: '2928'}
   - type: Float
     attributes: {id: CONFIG_CLOCK_DPLL1_MULTIPLIER_VALUE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '244.125'}
+        attributes: {id: core, value: '2929.6875'}
   - type: KeyValueSet
     attributes: {id: CONFIG_CLOCK_DPLL1_REF_CLOCK}
     children:
@@ -398,28 +398,28 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '0'}
+        attributes: {value: '2'}
   - type: Integer
     attributes: {id: GCLK_4_DIVIDER_VALUE}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '1'}
+        attributes: {id: core, value: '2'}
   - type: Integer
     attributes: {id: GCLK_4_FREQ}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '24000000'}
   - type: KeyValueSet
     attributes: {id: GCLK_4_SRC}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '8'}
+        attributes: {value: '6'}
   - type: ListEntry
     attributes: {id: GCLK_CODE}
     children:
@@ -433,6 +433,7 @@ children:
           - {type: Value, value: '    GCLK3_Initialize();'}
           - {type: Value, value: '    DFLL_Initialize();'}
           - {type: Value, value: '    GCLK2_Initialize();'}
+          - {type: Value, value: '    GCLK4_Initialize();'}
           - {type: Value, value: '    FDPLL0_Initialize();'}
           - {type: Value, value: '    GCLK0_Initialize();'}
           - {type: Value, value: '    GCLK1_Initialize();'}
@@ -495,14 +496,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '60000000'}
+        attributes: {id: core, value: '24000000'}
   - type: KeyValueSet
     attributes: {id: GCLK_ID_27_GENSEL}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '1'}
+        attributes: {value: '4'}
   - type: Boolean
     attributes: {id: GCLK_ID_28_CHEN}
     children:
@@ -518,14 +519,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '60000000'}
+        attributes: {id: core, value: '24000000'}
   - type: KeyValueSet
     attributes: {id: GCLK_ID_28_GENSEL}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '1'}
+        attributes: {value: '4'}
   - type: Boolean
     attributes: {id: GCLK_ID_9_CHEN}
     children:
@@ -574,7 +575,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: String
     attributes: {id: KEIL_STACK_HEAP_SIZE}
     children:

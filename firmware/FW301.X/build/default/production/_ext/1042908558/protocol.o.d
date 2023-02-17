@@ -115,7 +115,7 @@ build/default/production/_ext/1042908558/protocol.o: \
  ../src/config/default/peripheral/rtc/plib_rtc.h \
  ../src/config/default/peripheral/tc/plib_tc0.h \
  ../src/config/default/peripheral/tc/plib_tc_common.h \
- ../src/Protocol/MET_can_protocol.h
+ ../src/Shared/CAN/MET_can_protocol.h
 
 ../src/application.h:
 
@@ -353,4 +353,4 @@ build/default/production/_ext/1042908558/protocol.o: \
 
 ../src/config/default/peripheral/tc/plib_tc_common.h:
 
-../src/Protocol/MET_can_protocol.h:
+../src/Shared/CAN/MET_can_protocol.h:

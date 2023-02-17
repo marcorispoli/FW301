@@ -5,12 +5,33 @@ children:
 - type: Symbols
   children:
   - type: Boolean
+    attributes: {id: AUTO_DATA_BIT_TIMING_CALCULATION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
     attributes: {id: AUTO_NOMINAL_BIT_TIMING_CALCULATION}
     children:
     - type: Values
       children:
       - type: User
         attributes: {value: 'true'}
+  - type: Integer
+    attributes: {id: CALCULATED_DATA_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '125'}
+  - type: String
+    attributes: {id: CALCULATED_DATA_ERRORRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '0.000'}
   - type: Integer
     attributes: {id: CALCULATED_NOMINAL_BITRATE}
     children:
@@ -65,7 +86,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '60000000'}
+        attributes: {id: can0, value: '24000000'}
   - type: Comment
     attributes: {id: CAN_CORE_CLOCK_INVALID_COMMENT}
     children:
@@ -74,8 +95,17 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! CAN0 Clock Frequency is too low for required
-            Nominal Bit Timing}
+        - {type: Value, value: Warning!!! CAN0 Clock Frequency is too high for required
+            Data Bit Timing}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Comment
+    attributes: {id: CAN_DATA_ERRORRATE_COMMENT}
+    children:
+    - type: Attributes
+      children:
       - type: Boolean
         attributes: {id: visible}
         children:
@@ -88,7 +118,14 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! Error 100.000%}
+        - {type: Value, value: Warning!!! Error 6.667%}
+  - type: Combo
+    attributes: {id: CAN_OPMODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: NORMAL}
   - type: Comment
     attributes: {id: CAN_TIME_QUANTA_INVALID_COMMENT}
     children:
@@ -97,12 +134,80 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! Number of Time Quanta is too low for required
-            Nominal Bit Timing}
+        - {type: Value, value: Warning!!! Number of Time Quanta is too high for required
+            Data Bit Timing}
       - type: Boolean
         attributes: {id: visible}
         children:
         - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: DATA_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '125'}
+  - type: Float
+    attributes: {id: DATA_SAMPLE_POINT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '82.5'}
+  - type: String
+    attributes: {id: DATA_TIME_QUANTA_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '200.000'}
+  - type: Integer
+    attributes: {id: DBTP_DBRP}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '11'}
+  - type: Integer
+    attributes: {id: DBTP_DSJW}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '7'}
+  - type: Integer
+    attributes: {id: DBTP_DTSEG1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '32'}
+  - type: Integer
+    attributes: {id: DBTP_DTSEG2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '7'}
+  - type: Integer
+    attributes: {id: DBTP_TOTAL_TIME_QUANTA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can0, value: '40'}
   - type: Boolean
     attributes: {id: FILTERS_EXT_REJECT}
     children:
@@ -143,7 +248,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '0'}
+        attributes: {id: can0, value: '2'}
   - type: Integer
     attributes: {id: NBTP_NSJW}
     children:
@@ -157,7 +262,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '58'}
+        attributes: {id: can0, value: '6'}
   - type: Integer
     attributes: {id: NBTP_NTSEG2}
     children:
@@ -171,7 +276,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '60'}
+        attributes: {id: can0, value: '8'}
   - type: Integer
     attributes: {id: NOMINAL_BITRATE}
     children:
@@ -191,14 +296,32 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '98.333336'}
+        attributes: {id: can0, value: '87.5'}
   - type: String
     attributes: {id: NOMINAL_TIME_QUANTA_PERIOD}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can0, value: '16.667'}
+        attributes: {id: can0, value: '125.000'}
+  - type: KeyValueSet
+    attributes: {id: RXF0_BYTES_CFG}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: RXF1_BYTES_CFG}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: RXF1_USE}
     children:
@@ -206,6 +329,15 @@ children:
       children:
       - type: User
         attributes: {value: 'false'}
+  - type: KeyValueSet
+    attributes: {id: RX_BUFFER_BYTES_CFG}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: TIMESTAMP_ENABLE}
     children:
@@ -220,6 +352,15 @@ children:
       children:
       - type: Boolean
         attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: TX_FIFO_BYTES_CFG}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
         children:
         - {type: Value, value: 'true'}
   - type: Boolean
@@ -239,4 +380,4 @@ children:
         children:
         - {type: Value, value: 'false'}
 - type: ElementPosition
-  attributes: {x: '12', y: '228', id: can0}
+  attributes: {x: '14', y: '228', id: can0}

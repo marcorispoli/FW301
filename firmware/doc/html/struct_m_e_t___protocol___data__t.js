@@ -1,8 +1,16 @@
 var struct_m_e_t___protocol___data__t =
 [
-    [ "dataArrayLen", "struct_m_e_t___protocol___data__t.html#a7d9a26fcb6d67c9475edefe8963e762d", null ],
+    [ "applicationCommandHandler", "struct_m_e_t___protocol___data__t.html#a5aefe16115fea5b73f2cd501469758cf", null ],
+    [ "applicationDataArrayLen", "struct_m_e_t___protocol___data__t.html#a9f2d6e98428544910505dfaaf06b861e", null ],
+    [ "applicationParameterArrayLen", "struct_m_e_t___protocol___data__t.html#a6ab708bb11dcc6b025c7a5353e7d36f8", null ],
+    [ "applicationStatusArrayLen", "struct_m_e_t___protocol___data__t.html#a5f981a0db20b913e473783135f0baa88", null ],
+    [ "commandData", "struct_m_e_t___protocol___data__t.html#aa901e4c126f52b6a9538d608933d0122", null ],
+    [ "commandRegister", "struct_m_e_t___protocol___data__t.html#a1c6fa9f9d62df4f5e2afb113c3fbbdb3", null ],
     [ "deviceID", "struct_m_e_t___protocol___data__t.html#a1ba9abc1e0d1e0967563fa16e5250167", null ],
-    [ "pDataArray", "struct_m_e_t___protocol___data__t.html#acac08fad68487155bb6578aa6fa4748c", null ],
-    [ "pStatusArray", "struct_m_e_t___protocol___data__t.html#acb2c369bb7a791f6c1f2820783d72e13", null ],
-    [ "statusArrayLen", "struct_m_e_t___protocol___data__t.html#ab82f25c47086a6e4115da2bad9d46956", null ]
+    [ "errorsRegister", "struct_m_e_t___protocol___data__t.html#afba6eaa300547d588007124642154f31", null ],
+    [ "pApplicationDataArray", "struct_m_e_t___protocol___data__t.html#a203cf02448ce5c4aa9790af84413d1cc", null ],
+    [ "pApplicationParameterArray", "struct_m_e_t___protocol___data__t.html#acd181172f83321924e680ffcd24b6e86", null ],
+    [ "pApplicationStatusArray", "struct_m_e_t___protocol___data__t.html#a8c9cddf2b63202aa2db9a08c63202d97", null ],
+    [ "retCommand", "struct_m_e_t___protocol___data__t.html#a09f3c79bfa93ac944b5424a6b9eea47e", null ],
+    [ "revisionRegister", "struct_m_e_t___protocol___data__t.html#aed302c94ffc1507f53e2d90544ccce7b", null ]
 ];

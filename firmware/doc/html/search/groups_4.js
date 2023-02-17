@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errors_20registers_20application_20macro_0',['ERRORS Registers application Macro',['../group__errors_macro.html',1,'']]]
+  ['generator_20interface_20management_20module_0',['Generator Interface management module',['../group__generator_module.html',1,'']]]
 ];

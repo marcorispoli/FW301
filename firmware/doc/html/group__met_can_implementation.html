@@ -84,7 +84,9 @@ $(document).ready(function(){initNavTree('group__met_can_implementation.html',''
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Implementation module<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -96,13 +98,70 @@ Modules</h2></td></tr>
 <tr class="memitem:group__met_can_local"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_local.html">Locale Module function declaration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for module customization.  <a href="struct_m_e_t___protocol___data__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rx and Tx communication data.  <a href="struct_m_e_t___can___protocol___rx_tx__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabe325f5c2e32f7f36b11d4125e1def21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gabe325f5c2e32f7f36b11d4125e1def21">MET_Can_Protocol_Init</a> (uint8_t deviceID, <a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *pStatusArray, uint8_t StatusLen, <a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *pDataArray, uint8_t DataLen)</td></tr>
-<tr class="memdesc:gabe325f5c2e32f7f36b11d4125e1def21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can protocol initialization.  <a href="group__met_can_implementation.html#gabe325f5c2e32f7f36b11d4125e1def21">More...</a><br /></td></tr>
-<tr class="separator:gabe325f5c2e32f7f36b11d4125e1def21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeae332a426dd921d0758aebe56e2dbe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gaeae332a426dd921d0758aebe56e2dbe7">MET_Can_Protocol_Init</a> (<a class="el" href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">MET_commandHandler_t</a> pCommandHandler)</td></tr>
+<tr class="memdesc:gaeae332a426dd921d0758aebe56e2dbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can protocol initialization.  <a href="group__met_can_implementation.html#gaeae332a426dd921d0758aebe56e2dbe7">More...</a><br /></td></tr>
+<tr class="separator:gaeae332a426dd921d0758aebe56e2dbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabab3b4908a1fbf95c634aab9a75870e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gabab3b4908a1fbf95c634aab9a75870e3">MET_Can_Protocol_SetStatusReg</a> (uint8_t idx, uint8_t data_index, uint8_t val)</td></tr>
+<tr class="memdesc:gabab3b4908a1fbf95c634aab9a75870e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the whole content of a STATUS register.  <a href="group__met_can_implementation.html#gabab3b4908a1fbf95c634aab9a75870e3">More...</a><br /></td></tr>
+<tr class="separator:gabab3b4908a1fbf95c634aab9a75870e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf03edfbea2509ce955c1957806fbf2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gaaf03edfbea2509ce955c1957806fbf2c">MET_Can_Protocol_SetStatusBit</a> (uint8_t idx, uint8_t data_index, uint8_t mask, bool stat)</td></tr>
+<tr class="memdesc:gaaf03edfbea2509ce955c1957806fbf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bit-wise content of a STATUS register.  <a href="group__met_can_implementation.html#gaaf03edfbea2509ce955c1957806fbf2c">More...</a><br /></td></tr>
+<tr class="separator:gaaf03edfbea2509ce955c1957806fbf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga686bce925c95db4e7590d0a0df8f1e69"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga686bce925c95db4e7590d0a0df8f1e69">MET_Can_Protocol_GetStatus</a> (uint8_t idx, uint8_t data_index)</td></tr>
+<tr class="memdesc:ga686bce925c95db4e7590d0a0df8f1e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the STATUS register array.  <a href="group__met_can_implementation.html#ga686bce925c95db4e7590d0a0df8f1e69">More...</a><br /></td></tr>
+<tr class="separator:ga686bce925c95db4e7590d0a0df8f1e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd6cf75ecb11fd8ecb91238bedafde32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gafd6cf75ecb11fd8ecb91238bedafde32">MET_Can_Protocol_TestStatus</a> (uint8_t idx, uint8_t data_index, uint8_t mask)</td></tr>
+<tr class="separator:gafd6cf75ecb11fd8ecb91238bedafde32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae467558a81ad807066c09c6499a1cede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gae467558a81ad807066c09c6499a1cede">MET_Can_Protocol_SetErrorsBit</a> (<a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a> data_index, uint8_t mask, bool stat)</td></tr>
+<tr class="memdesc:gae467558a81ad807066c09c6499a1cede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bit-wise content of the ERRORS register <br  />
+  <a href="group__met_can_implementation.html#gae467558a81ad807066c09c6499a1cede">More...</a><br /></td></tr>
+<tr class="separator:gae467558a81ad807066c09c6499a1cede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf26c5e84bb238d3cba835a7b4a286eb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gaaf26c5e84bb238d3cba835a7b4a286eb">MET_Can_Protocol_GetErrors</a> (<a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a> data_index)</td></tr>
+<tr class="memdesc:gaaf26c5e84bb238d3cba835a7b4a286eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the ERRORS register array.  <a href="group__met_can_implementation.html#gaaf26c5e84bb238d3cba835a7b4a286eb">More...</a><br /></td></tr>
+<tr class="separator:gaaf26c5e84bb238d3cba835a7b4a286eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3923a24c8ba7badfde0fda5b9d3eadc4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga3923a24c8ba7badfde0fda5b9d3eadc4">MET_Can_Protocol_TestErrors</a> (<a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a> data_index, uint8_t mask)</td></tr>
+<tr class="separator:ga3923a24c8ba7badfde0fda5b9d3eadc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9afa9ffb42b7d3254602911fb264e446"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga9afa9ffb42b7d3254602911fb264e446">MET_Can_Protocol_GetData</a> (uint8_t idx, uint8_t data_index)</td></tr>
+<tr class="memdesc:ga9afa9ffb42b7d3254602911fb264e446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the Application Data register array.  <a href="group__met_can_implementation.html#ga9afa9ffb42b7d3254602911fb264e446">More...</a><br /></td></tr>
+<tr class="separator:ga9afa9ffb42b7d3254602911fb264e446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac42adeabe83aff664a2f16fe1efe6b32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gac42adeabe83aff664a2f16fe1efe6b32">MET_Can_Protocol_TestData</a> (uint8_t idx, uint8_t data_index, uint8_t mask)</td></tr>
+<tr class="separator:gac42adeabe83aff664a2f16fe1efe6b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga095a896db42b78c51d1c73a008eaed30"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga095a896db42b78c51d1c73a008eaed30">MET_Can_Protocol_GetParameter</a> (uint8_t idx, uint8_t data_index)</td></tr>
+<tr class="memdesc:ga095a896db42b78c51d1c73a008eaed30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the Application PARAMETER register array.  <a href="group__met_can_implementation.html#ga095a896db42b78c51d1c73a008eaed30">More...</a><br /></td></tr>
+<tr class="separator:ga095a896db42b78c51d1c73a008eaed30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37477233a8971c9759d9f053d8dfad22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga37477233a8971c9759d9f053d8dfad22">MET_Can_Protocol_TestParameter</a> (uint8_t idx, uint8_t data_index, uint8_t mask)</td></tr>
+<tr class="separator:ga37477233a8971c9759d9f053d8dfad22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0567d411699d9161b39b904085b0a44"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gac0567d411699d9161b39b904085b0a44">MET_Can_Protocol_getCommandCode</a> (void)</td></tr>
+<tr class="memdesc:gac0567d411699d9161b39b904085b0a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current command execution code.  <a href="group__met_can_implementation.html#gac0567d411699d9161b39b904085b0a44">More...</a><br /></td></tr>
+<tr class="separator:gac0567d411699d9161b39b904085b0a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae647c8690c41df42d4c4fb1d82670e72"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gae647c8690c41df42d4c4fb1d82670e72">MET_Can_Protocol_getCommandParam0</a> (void)</td></tr>
+<tr class="memdesc:gae647c8690c41df42d4c4fb1d82670e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current command parameter 0.  <a href="group__met_can_implementation.html#gae647c8690c41df42d4c4fb1d82670e72">More...</a><br /></td></tr>
+<tr class="separator:gae647c8690c41df42d4c4fb1d82670e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4ded6c5817e6db63ed45b3e381658da"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gaf4ded6c5817e6db63ed45b3e381658da">MET_Can_Protocol_getCommandParam1</a> (void)</td></tr>
+<tr class="memdesc:gaf4ded6c5817e6db63ed45b3e381658da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current command parameter 1.  <a href="group__met_can_implementation.html#gaf4ded6c5817e6db63ed45b3e381658da">More...</a><br /></td></tr>
+<tr class="separator:gaf4ded6c5817e6db63ed45b3e381658da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c20e57e13a58474bac1c1d3dff426d8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga0c20e57e13a58474bac1c1d3dff426d8">MET_Can_Protocol_getCommandParam2</a> (void)</td></tr>
+<tr class="memdesc:ga0c20e57e13a58474bac1c1d3dff426d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current command parameter 2.  <a href="group__met_can_implementation.html#ga0c20e57e13a58474bac1c1d3dff426d8">More...</a><br /></td></tr>
+<tr class="separator:ga0c20e57e13a58474bac1c1d3dff426d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga793a04dd4b409e65c972154333645a4c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga793a04dd4b409e65c972154333645a4c">MET_Can_Protocol_getCommandParam3</a> (void)</td></tr>
+<tr class="memdesc:ga793a04dd4b409e65c972154333645a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current command parameter 3.  <a href="group__met_can_implementation.html#ga793a04dd4b409e65c972154333645a4c">More...</a><br /></td></tr>
+<tr class="separator:ga793a04dd4b409e65c972154333645a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga088eda5718ebb7e58257d9a1ab5f25b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga088eda5718ebb7e58257d9a1ab5f25b2">MET_Can_Protocol_setReturnCommand</a> (<a class="el" href="group__met_can_data.html#ga49334b972bb64d59fe3d175b86af17bd">MET_CommandExecStatus_t</a> retstat, uint8_t ris0, uint8_t ris1, uint8_t error)</td></tr>
+<tr class="memdesc:ga088eda5718ebb7e58257d9a1ab5f25b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the execution returning code.  <a href="group__met_can_implementation.html#ga088eda5718ebb7e58257d9a1ab5f25b2">More...</a><br /></td></tr>
+<tr class="separator:ga088eda5718ebb7e58257d9a1ab5f25b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe1efb354abe5681694ab13a6625e410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410">MET_Can_Protocol_Loop</a> (void)</td></tr>
-<tr class="memdesc:gafe1efb354abe5681694ab13a6625e410"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function checks the flags rxReceptionTrigger or rxErrorTrigger.  <a href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410">More...</a><br /></td></tr>
+<tr class="memdesc:gafe1efb354abe5681694ab13a6625e410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Main Loop function handler.  <a href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410">More...</a><br /></td></tr>
 <tr class="separator:gafe1efb354abe5681694ab13a6625e410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga05a15793de261f083ad17b3db1bec867"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga05a15793de261f083ad17b3db1bec867">MET_Can_Protocol_Reception_Trigger</a> (void)</td></tr>
 <tr class="memdesc:ga05a15793de261f083ad17b3db1bec867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reception activation routine.  <a href="group__met_can_implementation.html#ga05a15793de261f083ad17b3db1bec867">More...</a><br /></td></tr>
@@ -113,45 +172,176 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7c8dbb12fb405c22dd156336fe1c1439"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga7c8dbb12fb405c22dd156336fe1c1439">MET_DefaultError_Callback</a> (uint8_t event)</td></tr>
 <tr class="memdesc:ga7c8dbb12fb405c22dd156336fe1c1439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error Callback routine.  <a href="group__met_can_implementation.html#ga7c8dbb12fb405c22dd156336fe1c1439">More...</a><br /></td></tr>
 <tr class="separator:ga7c8dbb12fb405c22dd156336fe1c1439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga297e870a9ed50c2f2db3a264a293dd5b">MET_Protocol_Data_Struct</a></td></tr>
+<tr class="memdesc:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the internal protocol data structure.  <a href="group__met_can_implementation.html#ga297e870a9ed50c2f2db3a264a293dd5b">More...</a><br /></td></tr>
+<tr class="separator:ga297e870a9ed50c2f2db3a264a293dd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_implementation.html#ga8f7da4f52625debcd1f7828869a61ceb">MET_Can_Protocol_RxTx_Struct</a></td></tr>
+<tr class="memdesc:ga8f7da4f52625debcd1f7828869a61ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the structure handling the data transmitted and received.  <a href="group__met_can_implementation.html#ga8f7da4f52625debcd1f7828869a61ceb">More...</a><br /></td></tr>
+<tr class="separator:ga8f7da4f52625debcd1f7828869a61ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This Module provides the implementation details </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gabe325f5c2e32f7f36b11d4125e1def21" name="gabe325f5c2e32f7f36b11d4125e1def21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabe325f5c2e32f7f36b11d4125e1def21">&#9670;&nbsp;</a></span>MET_Can_Protocol_Init()</h2>
+<a id="gac0567d411699d9161b39b904085b0a44" name="gac0567d411699d9161b39b904085b0a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0567d411699d9161b39b904085b0a44">&#9670;&nbsp;</a></span>MET_Can_Protocol_getCommandCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_getCommandCode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current command execution code. </p>
+
+</div>
+</div>
+<a id="gae647c8690c41df42d4c4fb1d82670e72" name="gae647c8690c41df42d4c4fb1d82670e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae647c8690c41df42d4c4fb1d82670e72">&#9670;&nbsp;</a></span>MET_Can_Protocol_getCommandParam0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_getCommandParam0 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current command parameter 0. </p>
+
+</div>
+</div>
+<a id="gaf4ded6c5817e6db63ed45b3e381658da" name="gaf4ded6c5817e6db63ed45b3e381658da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4ded6c5817e6db63ed45b3e381658da">&#9670;&nbsp;</a></span>MET_Can_Protocol_getCommandParam1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_getCommandParam1 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current command parameter 1. </p>
+
+</div>
+</div>
+<a id="ga0c20e57e13a58474bac1c1d3dff426d8" name="ga0c20e57e13a58474bac1c1d3dff426d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c20e57e13a58474bac1c1d3dff426d8">&#9670;&nbsp;</a></span>MET_Can_Protocol_getCommandParam2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_getCommandParam2 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current command parameter 2. </p>
+
+</div>
+</div>
+<a id="ga793a04dd4b409e65c972154333645a4c" name="ga793a04dd4b409e65c972154333645a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga793a04dd4b409e65c972154333645a4c">&#9670;&nbsp;</a></span>MET_Can_Protocol_getCommandParam3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_getCommandParam3 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current command parameter 3. </p>
+
+</div>
+</div>
+<a id="ga9afa9ffb42b7d3254602911fb264e446" name="ga9afa9ffb42b7d3254602911fb264e446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9afa9ffb42b7d3254602911fb264e446">&#9670;&nbsp;</a></span>MET_Can_Protocol_GetData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MET_Can_Protocol_Init </td>
+          <td class="memname">uint8_t MET_Can_Protocol_GetData </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>deviceID</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td>
-          <td class="paramname"><em>pStatusArray</em>, </td>
+          <td class="paramname"><em>idx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>StatusLen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_m_e_t___register__t.html">MET_Register_t</a> *&#160;</td>
-          <td class="paramname"><em>pDataArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>DataLen</em>&#160;</td>
+          <td class="paramname"><em>data_index</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,23 +351,147 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the pointer to the Application Data register array. </p>
+<p >This function return the Data register content</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the Data register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the register content or 0 in case of out of index range </dd></dl>
+
+</div>
+</div>
+<a id="gaaf26c5e84bb238d3cba835a7b4a286eb" name="gaaf26c5e84bb238d3cba835a7b4a286eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf26c5e84bb238d3cba835a7b4a286eb">&#9670;&nbsp;</a></span>MET_Can_Protocol_GetErrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_GetErrors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a>&#160;</td>
+          <td class="paramname"><em>data_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the ERRORS register array. </p>
+<p >This function return the ERRORS register byte content</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the register content or 0 in case of out of index range </dd></dl>
+
+</div>
+</div>
+<a id="ga095a896db42b78c51d1c73a008eaed30" name="ga095a896db42b78c51d1c73a008eaed30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga095a896db42b78c51d1c73a008eaed30">&#9670;&nbsp;</a></span>MET_Can_Protocol_GetParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_GetParameter </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the pointer to the Application PARAMETER register array. </p>
+<p >This function return the PARAMETER register content</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the PARAMETER register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the register content or 0 in case of out of index range </dd></dl>
+
+</div>
+</div>
+<a id="ga686bce925c95db4e7590d0a0df8f1e69" name="ga686bce925c95db4e7590d0a0df8f1e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga686bce925c95db4e7590d0a0df8f1e69">&#9670;&nbsp;</a></span>MET_Can_Protocol_GetStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MET_Can_Protocol_GetStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the STATUS register array. </p>
+<p >This function return the STATUS register content</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the STATUS register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the register content or 0 in case of out of index range </dd></dl>
+
+</div>
+</div>
+<a id="gaeae332a426dd921d0758aebe56e2dbe7" name="gaeae332a426dd921d0758aebe56e2dbe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeae332a426dd921d0758aebe56e2dbe7">&#9670;&nbsp;</a></span>MET_Can_Protocol_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MET_Can_Protocol_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#ga2b89d21ea8186a3cc5e677fa571027ca">MET_commandHandler_t</a>&#160;</td>
+          <td class="paramname"><em>pCommandHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Can protocol initialization. </p>
 <p >This function shall be called by the Application Implementing Protocol at the beginning of the program, in order to set the registers structure and to start the reception.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceID</td><td>this is the assigned deviceID (1:255) </td></tr>
-    <tr><td class="paramname">pStatusArray</td><td>pointer to the Status Register's Array The structure is array[N][4]:<ul>
-<li>N is the number of the Status registers;</li>
-<li>[4] is the register data content;</li>
-</ul>
-</td></tr>
-    <tr><td class="paramname">StatusLen</td><td>number of Status Registers pointed NOTE: the array shall be instantiated into the implementing class!</td></tr>
-    <tr><td class="paramname">pDataArray</td><td>pointer to the DATA Register's Array The structure is array[N][4]:<ul>
-<li>N is the number of the DATA registers;</li>
-<li>[4] is the register data content;</li>
-</ul>
-</td></tr>
-    <tr><td class="paramname">DataLen</td><td>number of DATA Registers pointed NOTE: the array shall be instantiated into the implementing class! </td></tr>
+    <tr><td class="paramname">deviceID</td><td>this is the assigned deviceID (1:255)</td></tr>
+    <tr><td class="paramname">pCommandHandler</td><td>application command handler </td></tr>
   </table>
   </dd>
 </dl>
@@ -200,8 +514,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The function checks the flags rxReceptionTrigger or rxErrorTrigger. </p>
-<p >Application Main Loop function handler.</p>
+<p>Application Main Loop function handler. </p>
+<p >The function checks the flags rxReceptionTrigger or rxErrorTrigger.</p>
 <p >In case of reception the function checks the CRC, data Lenght in order to proceed with the protocol decoding.</p>
 <p >With the correct frame checked, the protocol is identified:</p><ul>
 <li>The Status Register is handled;</li>
@@ -240,7 +554,7 @@ Functions</h2></td></tr>
 <p>Interrupt routine. </p>
 <p >CAN Reception Interrupt Handler.</p>
 <p >This function is assigned in the <a class="el" href="group__met_can_implementation.html#ga05a15793de261f083ad17b3db1bec867" title="Reception activation routine.">MET_Can_Protocol_Reception_Trigger()</a> function when the reception is activated. When the interrupt is executed it needs to be rescheduled in order to be executed again.</p>
-<p >The function determines if the interrupt has been generated because of an error condition or because of a correct frame received. In both cases a given flag is set so it can be handled into the <a class="el" href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410" title="The function checks the flags rxReceptionTrigger or rxErrorTrigger.">MET_Can_Protocol_Loop()</a> function out of the Interrupt context.</p>
+<p >The function determines if the interrupt has been generated because of an error condition or because of a correct frame received. In both cases a given flag is set so it can be handled into the <a class="el" href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410" title="Application Main Loop function handler.">MET_Can_Protocol_Loop()</a> function out of the Interrupt context.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">context</td><td></td></tr>
@@ -281,6 +595,361 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gae467558a81ad807066c09c6499a1cede" name="gae467558a81ad807066c09c6499a1cede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae467558a81ad807066c09c6499a1cede">&#9670;&nbsp;</a></span>MET_Can_Protocol_SetErrorsBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MET_Can_Protocol_SetErrorsBit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a>&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the bit-wise content of the ERRORS register <br  />
+ </p>
+<p >This function set a bitmask value into a Byte of the ERRORS register</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_index</td><td>index of the register data [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>data mask </td></tr>
+    <tr><td class="paramname">val</td><td>value to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga088eda5718ebb7e58257d9a1ab5f25b2" name="ga088eda5718ebb7e58257d9a1ab5f25b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga088eda5718ebb7e58257d9a1ab5f25b2">&#9670;&nbsp;</a></span>MET_Can_Protocol_setReturnCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MET_Can_Protocol_setReturnCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#ga49334b972bb64d59fe3d175b86af17bd">MET_CommandExecStatus_t</a>&#160;</td>
+          <td class="paramname"><em>retstat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ris0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ris1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the execution returning code. </p>
+
+</div>
+</div>
+<a id="gaaf03edfbea2509ce955c1957806fbf2c" name="gaaf03edfbea2509ce955c1957806fbf2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf03edfbea2509ce955c1957806fbf2c">&#9670;&nbsp;</a></span>MET_Can_Protocol_SetStatusBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MET_Can_Protocol_SetStatusBit </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the bit-wise content of a STATUS register. </p>
+<p >This function set a bit-set of a sub register data section</p>
+<p >The function perform the following setting: REGISTER[IDX][DATA_INDEX] = (REGISTER[IDX][DATA_INDEX] &amp;~ mask) | (val &amp; mask);</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the Status register array </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>data mask </td></tr>
+    <tr><td class="paramname">val</td><td>value to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabab3b4908a1fbf95c634aab9a75870e3" name="gabab3b4908a1fbf95c634aab9a75870e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabab3b4908a1fbf95c634aab9a75870e3">&#9670;&nbsp;</a></span>MET_Can_Protocol_SetStatusReg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MET_Can_Protocol_SetStatusReg </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the whole content of a STATUS register. </p>
+<p >This function set the whole content of a STATUS register</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data [0:3] </td></tr>
+    <tr><td class="paramname">val</td><td>value to be assigned </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac42adeabe83aff664a2f16fe1efe6b32" name="gac42adeabe83aff664a2f16fe1efe6b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac42adeabe83aff664a2f16fe1efe6b32">&#9670;&nbsp;</a></span>MET_Can_Protocol_TestData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MET_Can_Protocol_TestData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function tests a bit field condition on a Data register.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the Data register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>mask value to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the mask select a true condition </dd></dl>
+
+</div>
+</div>
+<a id="ga3923a24c8ba7badfde0fda5b9d3eadc4" name="ga3923a24c8ba7badfde0fda5b9d3eadc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3923a24c8ba7badfde0fda5b9d3eadc4">&#9670;&nbsp;</a></span>MET_Can_Protocol_TestErrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MET_Can_Protocol_TestErrors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__met_can_data.html#gae0062ccfdfd60202fbd428065901a8c0">MET_CAN_ERROR_BYTE_t</a>&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function tests a bit field condition on a ERRORS register.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>mask value to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the mask select a true condition </dd></dl>
+
+</div>
+</div>
+<a id="ga37477233a8971c9759d9f053d8dfad22" name="ga37477233a8971c9759d9f053d8dfad22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37477233a8971c9759d9f053d8dfad22">&#9670;&nbsp;</a></span>MET_Can_Protocol_TestParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MET_Can_Protocol_TestParameter </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function tests a bit field condition on a PARAMETER register.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the PARAMETER register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>mask value to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the mask select a true condition </dd></dl>
+
+</div>
+</div>
+<a id="gafd6cf75ecb11fd8ecb91238bedafde32" name="gafd6cf75ecb11fd8ecb91238bedafde32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd6cf75ecb11fd8ecb91238bedafde32">&#9670;&nbsp;</a></span>MET_Can_Protocol_TestStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MET_Can_Protocol_TestStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function tests a bit field condition on a STATUS register.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>index of the STATUS register </td></tr>
+    <tr><td class="paramname">data_index</td><td>index of the register data content [0:3] </td></tr>
+    <tr><td class="paramname">mask</td><td>mask value to be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the mask select a true condition </dd></dl>
+
+</div>
+</div>
 <a id="ga7c8dbb12fb405c22dd156336fe1c1439" name="ga7c8dbb12fb405c22dd156336fe1c1439"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7c8dbb12fb405c22dd156336fe1c1439">&#9670;&nbsp;</a></span>MET_DefaultError_Callback()</h2>
 
@@ -313,6 +982,55 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ga8f7da4f52625debcd1f7828869a61ceb" name="ga8f7da4f52625debcd1f7828869a61ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f7da4f52625debcd1f7828869a61ceb">&#9670;&nbsp;</a></span>MET_Can_Protocol_RxTx_Struct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_m_e_t___can___protocol___rx_tx__t.html">MET_Can_Protocol_RxTx_t</a> MET_Can_Protocol_RxTx_Struct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the structure handling the data transmitted and received. </p>
+
+</div>
+</div>
+<a id="ga297e870a9ed50c2f2db3a264a293dd5b" name="ga297e870a9ed50c2f2db3a264a293dd5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga297e870a9ed50c2f2db3a264a293dd5b">&#9670;&nbsp;</a></span>MET_Protocol_Data_Struct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_m_e_t___protocol___data__t.html">MET_Protocol_Data_t</a> MET_Protocol_Data_Struct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the internal protocol data structure. </p>
 
 </div>
 </div>

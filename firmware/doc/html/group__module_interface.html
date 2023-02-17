@@ -90,9 +90,9 @@ $(document).ready(function(){initNavTree('group__module_interface.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabada0ef2b3574562fe1a2646aa339e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_interface.html#gabada0ef2b3574562fe1a2646aa339e7b">ApplicationProtocolInit</a> (uint8_t deviceID)</td></tr>
-<tr class="memdesc:gabada0ef2b3574562fe1a2646aa339e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Protocol initialization function.  <a href="group__module_interface.html#gabada0ef2b3574562fe1a2646aa339e7b">More...</a><br /></td></tr>
-<tr class="separator:gabada0ef2b3574562fe1a2646aa339e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1861294200dfc024b4972df4251788c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_interface.html#ga1861294200dfc024b4972df4251788c1">ApplicationProtocolInit</a> (void)</td></tr>
+<tr class="memdesc:ga1861294200dfc024b4972df4251788c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Protocol initialization function.  <a href="group__module_interface.html#ga1861294200dfc024b4972df4251788c1">More...</a><br /></td></tr>
+<tr class="separator:ga1861294200dfc024b4972df4251788c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7949e716f9ce3e95fd49b4c6ee66764a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module_interface.html#ga7949e716f9ce3e95fd49b4c6ee66764a">ApplicationProtocolLoop</a> (void)</td></tr>
 <tr class="memdesc:ga7949e716f9ce3e95fd49b4c6ee66764a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Main Loop protocol function.  <a href="group__module_interface.html#ga7949e716f9ce3e95fd49b4c6ee66764a">More...</a><br /></td></tr>
 <tr class="separator:ga7949e716f9ce3e95fd49b4c6ee66764a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,8 +100,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This section describes the funtions implementing the Protocol module. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gabada0ef2b3574562fe1a2646aa339e7b" name="gabada0ef2b3574562fe1a2646aa339e7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabada0ef2b3574562fe1a2646aa339e7b">&#9670;&nbsp;</a></span>ApplicationProtocolInit()</h2>
+<a id="ga1861294200dfc024b4972df4251788c1" name="ga1861294200dfc024b4972df4251788c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1861294200dfc024b4972df4251788c1">&#9670;&nbsp;</a></span>ApplicationProtocolInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,8 +109,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void ApplicationProtocolInit </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>deviceID</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,7 +158,7 @@ Functions</h2></td></tr>
 
 <p>This is the Main Loop protocol function. </p>
 <p >This function shall be called by the MAIN loop application in order to manage the reception/transmission protocol activities.</p>
-<p >The function merely call the library function <a class="el" href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410" title="The function checks the flags rxReceptionTrigger or rxErrorTrigger.">MET_Can_Protocol_Loop()</a>. </p>
+<p >The function merely call the library function <a class="el" href="group__met_can_implementation.html#gafe1efb354abe5681694ab13a6625e410" title="Application Main Loop function handler.">MET_Can_Protocol_Loop()</a>. </p>
 
 </div>
 </div>

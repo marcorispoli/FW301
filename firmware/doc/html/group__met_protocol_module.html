@@ -94,14 +94,16 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__met_can_data"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_data.html">Module data structures</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__met_can_api"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html">Module API</a></td></tr>
+<tr class="memitem:group__met_can_api"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_api.html">Module Installation API</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__met_can_reg_api"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_reg_api.html">Module Register Access API</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Overview</h1>
-<p >This module implements the engine communication functionalities of the Z190 Device Communication protocol specifications.</p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<p >This module implements the engine communication functionalities of the Z190 Device Communication protocol specifications in the CAN CHannel 0.</p>
+<h1><a class="anchor" id="autotoc_md26"></a>
 Communication settings</h1>
 <p >The CAN communication is based on the following characteristics:</p>
 <ul>
@@ -111,25 +113,30 @@ Communication settings</h1>
 <li>Can ID reception address: 0x200 + deviceID;</li>
 </ul>
 <p >The deviceID is a decimal value from 1 to 255.</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Harmony 3 Configurator Settings</h1>
 <p >This Module makes use of the following Processor modules:</p><ul>
 <li>CAN0 peripheral module;</li>
 <li>Peripheral Can0 clock</li>
 <li>PIN Assignement</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Pin Assignement</h2>
 <ul>
 <li>The CAN TX Input shall be configured with CAN0-TX</li>
 <li>The CAN RX Input shall be configured with CAN0-TX</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 Peripheral Clock Settings</h2>
 <ul>
-<li>The CAN0 Peripheral clock shall be configured with a convenient Clock: 60MHz it is OK.</li>
+<li>Activate the GLK4 Clock:<ul>
+<li>Set the DFLL (48MHz) as the Input clock;</li>
+<li>Set the divisor to 2 to obtain a final 24MHz of GLK4 Clock;</li>
+<li>The CAN0 Peripheral clock shall be configured with the GLK4 clock at 24 MHz.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md30"></a>
 CAN0 peripheral module</h2>
 <p >Follows only those settings that shall be activated. What is not reported is disabled or not modified.</p>
 <ul>
@@ -169,7 +176,63 @@ CAN0 peripheral module</h2>
 </li>
 <li>Standard message No-Match disposion: Reject</li>
 <li>Reject Standard Remote Frames: YES</li>
-<li>Timestamp Enable: YES </li>
+<li>Timestamp Enable: YES</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md31"></a>
+Application Usage</h1>
+<p >The Application shall mandatory define a header file <a class="el" href="application_8h_source.html">application.h</a> that shall be stored into the same directory of the main.c file.</p>
+<p >The <a class="el" href="application_8h_source.html">application.h</a> shall contain the following defines:</p>
+<ul>
+<li>#define MET_CAN_APP_MAJ_REV : Revision Major Number</li>
+<li>#define MET_CAN_APP_MIN_REV : Revision Minor Number</li>
+<li>#define MET_CAN_APP_SUB_REV : Revision build Number</li>
+<li>#define MET_CAN_APP_DEVICE_ID : Application DEVICE CAN Id address</li>
+<li>#define MET_CAN_STATUS_REGISTERS : Defines the total number of implemented STATUS registers</li>
+<li>#define MET_CAN_DATA_REGISTERS : Defines the total number of implemented Application DATA registers</li>
+<li>#define MET_CAN_PARAM_REGISTERS : Defines the total number of implemented PARAMETER registers</li>
+</ul>
+<p >The Application shall define a Callback routine to handle the Protocol Commands:</p><ul>
+<li>void ApplicationHandler(void): this functon shall be passed as parameter to the <a class="el" href="group__met_can_api.html#gaeae332a426dd921d0758aebe56e2dbe7" title="Can protocol initialization.">MET_Can_Protocol_Init()</a>;</li>
+</ul>
+<p >The Applicaiton shall call the following routines to activate the communication:</p><ul>
+<li><a class="el" href="group__met_can_api.html#gaeae332a426dd921d0758aebe56e2dbe7" title="Can protocol initialization.">MET_Can_Protocol_Init()</a> function in the Setup section of the main.c file;</li>
+<li><a class="el" href="group__met_can_api.html#gafe1efb354abe5681694ab13a6625e410" title="Application Main Loop function handler.">MET_Can_Protocol_Loop()</a> function in the main.c Loop;</li>
+</ul>
+<p >The Application shall use the following routines to handle with the Registers:</p>
+<ul>
+<li>Functions to Get/Set the Application STATUS registers:<ul>
+<li><a class="el" href="group__met_can_reg_api.html#gaaf03edfbea2509ce955c1957806fbf2c" title="Sets the bit-wise content of a STATUS register.">MET_Can_Protocol_SetStatusBit()</a>: sets ON/OFF all the bits of a mask;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gabab3b4908a1fbf95c634aab9a75870e3" title="Sets the whole content of a STATUS register.">MET_Can_Protocol_SetStatusReg()</a>: sets a byte of a STATUS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga686bce925c95db4e7590d0a0df8f1e69" title="Returns the content of the STATUS register array.">MET_Can_Protocol_GetStatus()</a>: returns a byte value of a STATUS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gafd6cf75ecb11fd8ecb91238bedafde32">MET_Can_Protocol_TestStatus()</a>: test a condition on a STATUS register mask;</li>
+</ul>
+</li>
+<li>Functions to Get/Set the Application ERRORS register:<ul>
+<li><a class="el" href="group__met_can_reg_api.html#gae467558a81ad807066c09c6499a1cede" title="Sets the bit-wise content of the ERRORS register">MET_Can_Protocol_SetErrorsBit()</a>: sets ON/OFF all the bits of a mask into the ERRORS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga2f5a3d573799369aa0e8c7e215285ab1" title="Sets the whole content of the ERRORS register">MET_Can_Protocol_SetErrorsReg()</a>: sets a byte of a ERRORS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gaaf26c5e84bb238d3cba835a7b4a286eb" title="Returns the content of the ERRORS register array.">MET_Can_Protocol_GetErrors()</a>: returns a byte value of a ERRORS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga3923a24c8ba7badfde0fda5b9d3eadc4">MET_Can_Protocol_TestErrors()</a>: test a condition on a ERRORS register mask;</li>
+</ul>
+</li>
+<li>Functions to Test the Application DATA registers:<ul>
+<li><a class="el" href="group__met_can_reg_api.html#ga9afa9ffb42b7d3254602911fb264e446" title="Returns the pointer to the Application Data register array.">MET_Can_Protocol_GetData()</a>: returns a byte value of a DATA register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gac42adeabe83aff664a2f16fe1efe6b32">MET_Can_Protocol_TestData()</a>: test a condition on a DATA register mask;</li>
+</ul>
+</li>
+<li>Functions to Test the Application PARAMETER registers:<ul>
+<li><a class="el" href="group__met_can_reg_api.html#ga095a896db42b78c51d1c73a008eaed30" title="Returns the pointer to the Application PARAMETER register array.">MET_Can_Protocol_GetParameter()</a>: returns a byte value of a PARAMETER register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga37477233a8971c9759d9f053d8dfad22">MET_Can_Protocol_TestParameter()</a>: test a condition on a PARAMETER register mask;</li>
+</ul>
+</li>
+<li>Functions to handle the Command Execution:<ul>
+<li><a class="el" href="group__met_can_reg_api.html#gac0567d411699d9161b39b904085b0a44" title="Returns the current command execution code.">MET_Can_Protocol_getCommandCode()</a>: return the requested command code;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gae647c8690c41df42d4c4fb1d82670e72" title="Returns the current command parameter 0.">MET_Can_Protocol_getCommandParam0()</a>: requests for the command parameter 0;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gaf4ded6c5817e6db63ed45b3e381658da" title="Returns the current command parameter 1.">MET_Can_Protocol_getCommandParam1()</a>: requests for the command parameter 1;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga0c20e57e13a58474bac1c1d3dff426d8" title="Returns the current command parameter 2.">MET_Can_Protocol_getCommandParam2()</a>: requests for the command parameter 2;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga793a04dd4b409e65c972154333645a4c" title="Returns the current command parameter 3.">MET_Can_Protocol_getCommandParam3()</a>: requests for the command parameter 3;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga088eda5718ebb7e58257d9a1ab5f25b2" title="Set the execution returning code.">MET_Can_Protocol_setReturnCommand()</a>: set the return code should be returned after the command handling. </li>
 </ul>
 </li>
 </ul>

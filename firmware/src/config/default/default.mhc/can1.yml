@@ -58,7 +58,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '60000000'}
+        attributes: {id: can1, value: '24000000'}
   - type: Comment
     attributes: {id: CAN_CORE_CLOCK_INVALID_COMMENT}
     children:
@@ -81,7 +81,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: Warning!!! Error 6.660%}
+        - {type: Value, value: Warning!!! Error 6.667%}
   - type: Comment
     attributes: {id: CAN_TIME_QUANTA_INVALID_COMMENT}
     children:
@@ -136,7 +136,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '0'}
+        attributes: {id: can1, value: '2'}
   - type: Integer
     attributes: {id: NBTP_NSJW}
     children:
@@ -150,7 +150,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '58'}
+        attributes: {id: can1, value: '6'}
   - type: Integer
     attributes: {id: NBTP_NTSEG2}
     children:
@@ -164,7 +164,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '60'}
+        attributes: {id: can1, value: '8'}
   - type: Integer
     attributes: {id: NOMINAL_BITRATE}
     children:
@@ -184,14 +184,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '98.333336'}
+        attributes: {id: can1, value: '87.5'}
   - type: String
     attributes: {id: NOMINAL_TIME_QUANTA_PERIOD}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: can1, value: '16.667'}
+        attributes: {id: can1, value: '125.000'}
   - type: Boolean
     attributes: {id: RXF1_USE}
     children:

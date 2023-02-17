@@ -1,7 +1,7 @@
 #define _MET_CAN_OPEN_C
 
 #include "MET_can_open.h"     // SYS function prototypes
-#include "Protocol/MET_can_protocol.h"
+#include "Shared/CAN/MET_can_protocol.h"
 
 CAN_MSG_RX_FRAME_ATTRIBUTE msgFrameAttr = CAN_MSG_RX_DATA_FRAME;
 

@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['maj_0',['maj',['../struct___revision___status__t.html#afebcdf06b2ef91ec3acb00b5acef1602',1,'_Revision_Status_t']]],
-  ['manual_5fbody_5fccw_5flock_1',['manual_body_ccw_lock',['../struct___errors___status__t.html#aaf8308060ea5fa767c2d7315c5504d21',1,'_Errors_Status_t']]],
-  ['manual_5fbody_5fcw_5flock_2',['manual_body_cw_lock',['../struct___errors___status__t.html#af82d594d74727085a3b15a0b900bb99d',1,'_Errors_Status_t']]],
-  ['manual_5fbuzzer_5factivation_3',['manual_buzzer_Activation',['../struct___output___d_a_t_a__t.html#a0265010c9b8885ca0aafb39926f02abe',1,'_Output_DATA_t']]],
-  ['manual_5fcarm_5fdwn_5flock_4',['manual_carm_dwn_lock',['../struct___errors___status__t.html#ad0d53b18c19191a3d23cb95275fa14ff',1,'_Errors_Status_t']]],
-  ['manual_5fcarm_5fup_5flock_5',['manual_carm_up_lock',['../struct___errors___status__t.html#a942901474ce5a8bb02067c349f03f58b',1,'_Errors_Status_t']]],
-  ['manual_5frot_5fccw_5flock_6',['manual_rot_ccw_lock',['../struct___errors___status__t.html#a8e8e31c37d12979e4421b7a54de128e2',1,'_Errors_Status_t']]],
-  ['manual_5frot_5fcw_5flock_7',['manual_rot_cw_lock',['../struct___errors___status__t.html#a5e8a16e0328b86982f3465a337dada70',1,'_Errors_Status_t']]],
-  ['manual_5fslide_5fdwn_5flock_8',['manual_slide_dwn_lock',['../struct___errors___status__t.html#aad0eb6de91491dc8b0aedb018124e845',1,'_Errors_Status_t']]],
-  ['manual_5fslide_5fup_5flock_9',['manual_slide_up_lock',['../struct___errors___status__t.html#a67182f1f9a282b6374f369009905afa4',1,'_Errors_Status_t']]],
-  ['met_5fcan_5fprotocol_5frxtx_5fstruct_10',['MET_Can_Protocol_RxTx_Struct',['../group__met_can_data.html#ga8f7da4f52625debcd1f7828869a61ceb',1,'MET_can_protocol.h']]],
-  ['met_5fprotocol_5fdata_5fstruct_11',['MET_Protocol_Data_Struct',['../group__met_can_data.html#ga297e870a9ed50c2f2db3a264a293dd5b',1,'MET_can_protocol.h']]],
-  ['min_12',['min',['../struct___revision___status__t.html#a37277f68b8cc07db650eaeb47e39991e',1,'_Revision_Status_t']]],
-  ['motor_5fdc_5fok_13',['motor_dc_ok',['../struct___system___status__t.html#ab0255d8c5df286313699d5e4d5cd73f4',1,'_System_Status_t']]],
-  ['motor_5fpower_5factivate_14',['motor_power_activate',['../struct___system___status__t.html#a44250cf459164cbb880c7290ef645d6b',1,'_System_Status_t']]],
-  ['motor_5fsafety_15',['motor_safety',['../struct___system___status__t.html#aff159545aed92d3e80408c338a62278e',1,'_System_Status_t']]],
-  ['msgframeattr0_16',['msgFrameAttr0',['../group__met_can_harmony.html#ga30cf79b3e53e0facc45bd43a88698d30',1,'MET_can_protocol.c']]]
+  ['result_0',['result',['../struct_m_e_t___command_exec_return__t.html#a58f5cc8b05b646c26f05a29dce4b2fe3',1,'MET_CommandExecReturn_t']]],
+  ['retcommand_1',['retCommand',['../struct_m_e_t___protocol___data__t.html#a09f3c79bfa93ac944b5424a6b9eea47e',1,'MET_Protocol_Data_t']]],
+  ['revisionregister_2',['revisionRegister',['../struct_m_e_t___protocol___data__t.html#aed302c94ffc1507f53e2d90544ccce7b',1,'MET_Protocol_Data_t']]],
+  ['rx_5fmessage_3',['rx_message',['../struct_m_e_t___can___open___rx_tx__t.html#a9eeaa0bebb257690d3f537fea1cdc668',1,'MET_Can_Open_RxTx_t::rx_message()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#af1e15b3a6bb56feffec66e5272116d00',1,'MET_Can_Protocol_RxTx_t::rx_message()']]],
+  ['rx_5fmessageid_4',['rx_messageID',['../struct_m_e_t___can___open___rx_tx__t.html#abb3848ff1660c28e09a5d4b72980ada9',1,'MET_Can_Open_RxTx_t::rx_messageID()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#ae9ed0524ed8b3f1c3de8b01483e42847',1,'MET_Can_Protocol_RxTx_t::rx_messageID()']]],
+  ['rx_5fmessagelength_5',['rx_messageLength',['../struct_m_e_t___can___open___rx_tx__t.html#a17a75fd998e9cc43033d6b1a14be501f',1,'MET_Can_Open_RxTx_t::rx_messageLength()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#aebe0b1c3a2cfda6de70b0f437cc28f44',1,'MET_Can_Protocol_RxTx_t::rx_messageLength()']]],
+  ['rx_5ftimestamp_6',['rx_timestamp',['../struct_m_e_t___can___open___rx_tx__t.html#a78ba46524f662d85ab0cb5f92f800252',1,'MET_Can_Open_RxTx_t::rx_timestamp()'],['../struct_m_e_t___can___protocol___rx_tx__t.html#a7c426f1a25f77ae76357788642855f0a',1,'MET_Can_Protocol_RxTx_t::rx_timestamp()']]],
+  ['rxerrortrigger_7',['rxErrorTrigger',['../group__met_can_local.html#ga10eb58d986546fe08165b32c5a60faa9',1,'MET_can_protocol.c']]],
+  ['rxreceptiontrigger_8',['rxReceptionTrigger',['../group__met_can_local.html#gaa7278e3189e2f4f26b8f1fa2e561ed97',1,'MET_can_protocol.c']]]
 ];

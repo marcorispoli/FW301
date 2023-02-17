@@ -151,6 +151,16 @@ static void GCLK3_Initialize(void)
     }
 }
 
+static void GCLK4_Initialize(void)
+{
+    GCLK_REGS->GCLK_GENCTRL[4] = GCLK_GENCTRL_DIV(2) | GCLK_GENCTRL_SRC(6) | GCLK_GENCTRL_GENEN_Msk;
+
+    while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL_GCLK4) == GCLK_SYNCBUSY_GENCTRL_GCLK4)
+    {
+        /* wait for the Generator 4 synchronization */
+    }
+}
+
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -162,6 +172,7 @@ void CLOCK_Initialize (void)
     GCLK3_Initialize();
     DFLL_Initialize();
     GCLK2_Initialize();
+    GCLK4_Initialize();
     FDPLL0_Initialize();
     GCLK0_Initialize();
     GCLK1_Initialize();
@@ -176,14 +187,14 @@ void CLOCK_Initialize (void)
         /* Wait for synchronization */
     }
     /* Selection of the Generator and write Lock for CAN0 */
-    GCLK_REGS->GCLK_PCHCTRL[27] = GCLK_PCHCTRL_GEN(0x1)  | GCLK_PCHCTRL_CHEN_Msk;
+    GCLK_REGS->GCLK_PCHCTRL[27] = GCLK_PCHCTRL_GEN(0x4)  | GCLK_PCHCTRL_CHEN_Msk;
 
     while ((GCLK_REGS->GCLK_PCHCTRL[27] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk)
     {
         /* Wait for synchronization */
     }
     /* Selection of the Generator and write Lock for CAN1 */
-    GCLK_REGS->GCLK_PCHCTRL[28] = GCLK_PCHCTRL_GEN(0x1)  | GCLK_PCHCTRL_CHEN_Msk;
+    GCLK_REGS->GCLK_PCHCTRL[28] = GCLK_PCHCTRL_GEN(0x4)  | GCLK_PCHCTRL_CHEN_Msk;
 
     while ((GCLK_REGS->GCLK_PCHCTRL[28] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk)
     {

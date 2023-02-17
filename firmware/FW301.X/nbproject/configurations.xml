@@ -188,6 +188,11 @@
         <itemPath>../src/BusHardware/bushw.c</itemPath>
         <itemPath>../src/BusHardware/bushw.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="CAN" displayName="CAN" projectFiles="true">
+        <itemPath>../src/Shared/CAN/MET_can_protocol.c</itemPath>
+        <itemPath>../src/Shared/CAN/MET_can_protocol.h</itemPath>
+        <itemPath>../src/Shared/CAN/readme.md</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -242,8 +247,6 @@
       </logicalFolder>
       <logicalFolder name="Protocol" displayName="Protocol" projectFiles="true">
         <itemPath>../src/Protocol/protocol.c</itemPath>
-        <itemPath>../src/Protocol/MET_can_protocol.c</itemPath>
-        <itemPath>../src/Protocol/MET_can_protocol.h</itemPath>
         <itemPath>../src/Protocol/protocol.h</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -318,6 +321,8 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../src/Shared/CAN/readme.md" ex="true" overriding="false">
+      </item>
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.interface" value="swd"/>

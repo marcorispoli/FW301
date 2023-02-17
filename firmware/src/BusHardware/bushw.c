@@ -19,13 +19,13 @@ static bool uc_SLIDE_DWN_back = false;
 void BusHwInit(void){
     
     // Clears the Inputs
-    PROTOCOL_SYSTEM_COMPRESSION_ON = 0;
-    PROTOCOL_SYSTEM_ROT_CW =0;
-    PROTOCOL_SYSTEM_ROT_CCW = 0;
-    PROTOCOL_SYSTEM_CARM_UP = 0;
-    PROTOCOL_SYSTEM_CARM_DWN = 0;
-    PROTOCOL_SYSTEM_SLIDE_UP = 0;
-    PROTOCOL_SYSTEM_SLIDE_DWN = 0;
+    PROTOCOL_SYSTEM_COMPRESSION_ON(0);
+    PROTOCOL_SYSTEM_ROT_CW(0);
+    PROTOCOL_SYSTEM_ROT_CCW(0);
+    PROTOCOL_SYSTEM_CARM_UP(0);
+    PROTOCOL_SYSTEM_CARM_DWN(0);
+    PROTOCOL_SYSTEM_SLIDE_UP(0);
+    PROTOCOL_SYSTEM_SLIDE_DWN(0);
     
     // Clear the outputs
     uc_CMP_ENA_Clear();    
@@ -67,44 +67,44 @@ void BusHwLoop(void){
     if(uc_CMP_ON_back != uc_CMP_ON_Get()){
         uc_CMP_ON_back = uc_CMP_ON_Get();
     }else{
-        PROTOCOL_SYSTEM_COMPRESSION_ON = uc_CMP_ON_back;
+        PROTOCOL_SYSTEM_COMPRESSION_ON(uc_CMP_ON_back);
     }
     
     if(uc_ROT_CW_back != uc_ROT_CW_Get()){
         uc_ROT_CW_back = uc_ROT_CW_Get();
     }else{
-        PROTOCOL_SYSTEM_ROT_CW = uc_ROT_CW_back;
+        PROTOCOL_SYSTEM_ROT_CW(uc_ROT_CW_back);
     }
     
     if(uc_ROT_CCW_back != uc_ROT_CCW_Get()){
         uc_ROT_CCW_back = uc_ROT_CCW_Get();
     }else{
-        PROTOCOL_SYSTEM_ROT_CCW = uc_ROT_CCW_back;
+        PROTOCOL_SYSTEM_ROT_CCW(uc_ROT_CCW_back);
     }
     
     
     if(uc_CARM_UP_back != uc_CARM_UP_Get()){
         uc_CARM_UP_back = uc_CARM_UP_Get();
     }else{
-        PROTOCOL_SYSTEM_CARM_UP = uc_CARM_UP_back;
+        PROTOCOL_SYSTEM_CARM_UP(uc_CARM_UP_back);
     }
     
     if(uc_CARM_DWN_back != uc_CARM_DWN_Get()){
         uc_CARM_DWN_back = uc_CARM_DWN_Get();
     }else{
-        PROTOCOL_SYSTEM_CARM_DWN = uc_CARM_DWN_back;
+        PROTOCOL_SYSTEM_CARM_DWN(uc_CARM_DWN_back);
     }
     
     if(uc_SLIDE_UP_back != uc_SLIDE_UP_Get()){
         uc_SLIDE_UP_back = uc_SLIDE_UP_Get();
     }else{
-        PROTOCOL_SYSTEM_SLIDE_UP = uc_SLIDE_UP_back;
+        PROTOCOL_SYSTEM_SLIDE_UP(uc_SLIDE_UP_back);
     }
     
     if(uc_SLIDE_DWN_back != uc_SLIDE_DWN_Get()){
         uc_SLIDE_DWN_back = uc_SLIDE_DWN_Get();
     }else{
-        PROTOCOL_SYSTEM_SLIDE_DWN = uc_SLIDE_DWN_back;
+        PROTOCOL_SYSTEM_SLIDE_DWN(uc_SLIDE_DWN_back);
     }
 
     // Direct PROTOCOL OUTPUT REGISTER to BusHw Outputs

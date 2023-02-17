@@ -44,8 +44,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"struct_m_e_t___can___open___rx_tx__t.html#abb3848ff1660c28e09a5d4b72980ada9"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

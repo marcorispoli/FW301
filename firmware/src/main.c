@@ -65,11 +65,11 @@ int main ( void )
     // Start the TCo to start the Vitality LED
     TC0_CompareStart();
     
-    MET_Can_Open_Init();
-    MET_Can_Open_Start();
+    //MET_Can_Open_Init();
+    //MET_Can_Open_Start();
     
     // Application Protocol initialization
-    ApplicationProtocolInit(APP_DEVICE_ID);
+    ApplicationProtocolInit();
     
     // Initializes the Bus Hardware signals
     BusHwInit(); // Call AFTER the ApplicationProtocolInit();
@@ -97,10 +97,10 @@ int main ( void )
             trigger_time &=~ _1024_ms_TriggerTime;
              //MET_Can_Open_Send_WriteData(1,0x20,0,0,0);
                 //VITALITY_LED_Toggle();
-                
+                /*
                 if(GeneratorGetHvOn()) VITALITY_LED_Set();
                 else VITALITY_LED_Clear();
-                   
+                */   
         }        
      
 
