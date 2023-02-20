@@ -91,6 +91,7 @@ int main ( void )
             trigger_time &=~ _7820_us_TriggerTime;
             BusHwLoop(); // Bus Hardware Management    
             GeneratorLoop(); // Generator Signals Management 
+            Protocol_7280_us_callback();
         }
         
         if(trigger_time & _1024_ms_TriggerTime){

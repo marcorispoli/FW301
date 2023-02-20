@@ -23,7 +23,8 @@ void ApplicationProtocolInit ( void )
 
     // Initialize the Met Can Library
     MET_Can_Protocol_Init(ApplicationProtocolCommandHandler);
-             
+   
+    Protocol_test_100ms_timer = false;
 }
 
 /**
@@ -37,14 +38,41 @@ void inline ApplicationProtocolLoop(void){
 }
 
 /**
+ * This function is called every 7.82ms from the main loop
+ */
+void Protocol_7280_us_callback(void){
+    if(Protocol_test_100ms_timer){
+        Protocol_test_100ms_timer--;
+        if(!Protocol_test_100ms_timer){
+            MET_Can_Protocol_returnCommandExecuted(MET_Can_Protocol_getCommandParam0(), MET_Can_Protocol_getCommandParam1());
+        }
+    }
+}
+
+/**
  * This is the Application Command Execution Handler
  *  
  */
 void ApplicationProtocolCommandHandler(void){
     
     switch(MET_Can_Protocol_getCommandCode()){
+        case MET_COMMAND_ABORT:
+            
+            MET_Can_Protocol_returnCommandAborted();
+            break;
+        case TEST_LOOPBACK:
+            MET_Can_Protocol_returnCommandExecuted(MET_Can_Protocol_getCommandParam0(), MET_Can_Protocol_getCommandParam1());
+            break;
+        case TEST_100ms_LOOPBACK:
+            MET_Can_Protocol_returnCommandExecuting();
+            Protocol_test_100ms_timer = 13;            
+            break;
+        case TEST_INFINITE_CMD:
+            MET_Can_Protocol_returnCommandExecuting();
+            Protocol_test_100ms_timer = 0;            
+            break;
         default:
-            MET_Can_Protocol_setReturnCommand(MET_CAN_COMMAND_ERROR,0,0,MET_CAN_COMMAND_NOT_AVAILABLE);
+            MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_AVAILABLE);
     }
     
     return;

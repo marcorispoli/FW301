@@ -179,6 +179,23 @@
     
         
     /** @}*/  // PARAM_Register
+        
+     /** \defgroup COMMAND_exec COMMAND Execution Definition
+     *  
+     *  This section describes the Application Command Execution codes
+     *  @{
+     */
+        typedef enum{
+            TEST_LOOPBACK = 1,      //!< This is a test loopback Immediate Command
+            TEST_100ms_LOOPBACK,    //!< This is a test loopback 100ms delayed Command        
+            TEST_INFINITE_CMD,      //!< This is a infinite execution command         
+        }PROTO_COMMAND_EXEC_t;
+    
+        ext void Protocol_7280_us_callback(void);
+        ext uint8_t Protocol_test_100ms_timer; 
+       
+        
+    /** @}*/  // COMMAND_exec
 
         
 
