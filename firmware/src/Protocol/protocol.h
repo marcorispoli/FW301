@@ -193,6 +193,7 @@
     
         ext void Protocol_7280_us_callback(void);
         ext uint8_t Protocol_test_100ms_timer; 
+        ext uint8_t Protocol_test_d0, Protocol_test_d1;
        
         
     /** @}*/  // COMMAND_exec

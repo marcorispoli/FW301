@@ -4,7 +4,7 @@
 #include "protocol.h"
 
 
-static void ApplicationProtocolCommandHandler(void);
+static void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 );
 
 /**
  * This function initiate the CAN Protocol communication.
@@ -44,7 +44,7 @@ void Protocol_7280_us_callback(void){
     if(Protocol_test_100ms_timer){
         Protocol_test_100ms_timer--;
         if(!Protocol_test_100ms_timer){
-            MET_Can_Protocol_returnCommandExecuted(MET_Can_Protocol_getCommandParam0(), MET_Can_Protocol_getCommandParam1());
+            MET_Can_Protocol_returnCommandExecuted(Protocol_test_d0, Protocol_test_d1);
         }
     }
 }
@@ -53,17 +53,19 @@ void Protocol_7280_us_callback(void){
  * This is the Application Command Execution Handler
  *  
  */
-void ApplicationProtocolCommandHandler(void){
+void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 ){
     
-    switch(MET_Can_Protocol_getCommandCode()){
+    switch(cmd){
         case MET_COMMAND_ABORT:
             
             MET_Can_Protocol_returnCommandAborted();
             break;
         case TEST_LOOPBACK:
-            MET_Can_Protocol_returnCommandExecuted(MET_Can_Protocol_getCommandParam0(), MET_Can_Protocol_getCommandParam1());
+            MET_Can_Protocol_returnCommandExecuted(d0,d1);
             break;
         case TEST_100ms_LOOPBACK:
+            Protocol_test_d0 = d0;
+            Protocol_test_d1 = d1;            
             MET_Can_Protocol_returnCommandExecuting();
             Protocol_test_100ms_timer = 13;            
             break;
