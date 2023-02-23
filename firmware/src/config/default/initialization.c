@@ -58,8 +58,8 @@
 #pragma config BOD33_ACTION = RESET
 #pragma config BOD33_HYST = 0x2
 #pragma config NVMCTRL_BOOTPROT = 0
-#pragma config NVMCTRL_SEESBLK = 0x0
-#pragma config NVMCTRL_SEEPSZ = 0x0
+#pragma config NVMCTRL_SEESBLK = 0x1
+#pragma config NVMCTRL_SEEPSZ = 0x1
 #pragma config RAMECC_ECCDIS = SET
 #pragma config WDT_ENABLE = CLEAR
 #pragma config WDT_ALWAYSON = CLEAR

@@ -294,6 +294,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: Hex
+    attributes: {id: FUSE_SYMBOL_VALUE5}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Hex
+    attributes: {id: FUSE_SYMBOL_VALUE6}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
   - type: Integer
     attributes: {id: GCLK_0_FREQ}
     children:

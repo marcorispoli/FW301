@@ -44,6 +44,7 @@ static uint8_t trigger_time = 0;
 #define _7820_us_TriggerTime 0x2
 
 
+
 static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 {
     // Periodic Interval Handler: Freq = 1024 / 2 ^ (n+3)
@@ -55,9 +56,11 @@ static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 
 int main ( void )
 {
+  
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-
+    
+  
     // Registers the RTC interrupt routine to the RTC module
     RTC_Timer32CallbackRegister(rtcEventHandler, 0);
     RTC_Timer32Start(); // Start the RTC module

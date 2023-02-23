@@ -249,6 +249,10 @@
         <itemPath>../src/Protocol/protocol.c</itemPath>
         <itemPath>../src/Protocol/protocol.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="SMART_EEPROM"
+                     displayName="SMART_EEPROM"
+                     projectFiles="true">
+      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/application.h</itemPath>
       <itemPath>../src/license.h</itemPath>
@@ -322,6 +326,20 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="../src/Shared/CAN/readme.md" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <AtmelIceTool>
         <property key="AutoSelectMemRanges" value="auto"/>
