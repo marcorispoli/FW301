@@ -245,13 +245,13 @@
         <itemPath>../src/Motors/MET_can_open.c</itemPath>
         <itemPath>../src/Motors/MET_can_open.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="Power" displayName="Power" projectFiles="true">
+        <itemPath>../src/Power/power.c</itemPath>
+        <itemPath>../src/Power/power.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="Protocol" displayName="Protocol" projectFiles="true">
         <itemPath>../src/Protocol/protocol.c</itemPath>
         <itemPath>../src/Protocol/protocol.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="SMART_EEPROM"
-                     displayName="SMART_EEPROM"
-                     projectFiles="true">
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/application.h</itemPath>

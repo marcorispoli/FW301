@@ -703,6 +703,62 @@ children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
   - type: String
+    attributes: {id: PIN_13_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_13_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: uC_POWER_DOWN}
+  - type: String
+    attributes: {id: PIN_13_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_13_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'True'}
+  - type: String
+    attributes: {id: PIN_13_LAT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_13_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_13_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_13_PULLEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'True'}
+  - type: String
     attributes: {id: PIN_14_DIR}
     children:
     - type: Values
@@ -920,6 +976,118 @@ children:
       - type: User
         attributes: {value: 'True'}
   - type: String
+    attributes: {id: PIN_31_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: Out}
+  - type: KeyValueSet
+    attributes: {id: PIN_31_DRVSTR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: String
+    attributes: {id: PIN_31_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: uC_GEMMA_ON}
+  - type: String
+    attributes: {id: PIN_31_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_31_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_31_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_31_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_32_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: KeyValueSet
+    attributes: {id: PIN_32_DRVSTR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '0'}
+  - type: String
+    attributes: {id: PIN_32_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: uc_BUTTON_PWRON_REQ}
+  - type: String
+    attributes: {id: PIN_32_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_32_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'True'}
+  - type: String
+    attributes: {id: PIN_32_LAT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_32_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_32_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_32_PULLEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'True'}
+  - type: String
     attributes: {id: PIN_38_DIR}
     children:
     - type: Values
@@ -970,6 +1138,48 @@ children:
         attributes: {value: ''}
   - type: String
     attributes: {id: PIN_38_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_3_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: Out}
+  - type: String
+    attributes: {id: PIN_3_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: uC_DEVICE_ON}
+  - type: String
+    attributes: {id: PIN_3_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_3_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_3_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_3_PERIPHERAL_FUNCTION}
     children:
     - type: Values
       children:
@@ -1143,6 +1353,62 @@ children:
       children:
       - type: User
         attributes: {value: I}
+  - type: KeyValueSet
+    attributes: {id: PIN_4_DRVSTR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: String
+    attributes: {id: PIN_50_DIR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: Out}
+  - type: KeyValueSet
+    attributes: {id: PIN_50_DRVSTR}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: String
+    attributes: {id: PIN_50_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: uC_AUTORITENUTA}
+  - type: String
+    attributes: {id: PIN_50_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
+  - type: String
+    attributes: {id: PIN_50_INEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_50_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_50_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: GPIO}
   - type: String
     attributes: {id: PIN_51_DIR}
     children:
@@ -1576,7 +1842,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x80800'}
+        attributes: {id: core, value: '0x84804'}
   - type: String
     attributes: {id: PORT_GROUP_0_OUT}
     children:
@@ -1592,12 +1858,33 @@ children:
       - type: Dynamic
         attributes: {id: core, value: PA11}
   - type: String
+    attributes: {id: PORT_GROUP_0_PAD_14}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PA14}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PAD_15}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PA15}
+  - type: String
     attributes: {id: PORT_GROUP_0_PAD_19}
     children:
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: PA19}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PAD_2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PA02}
   - type: String
     attributes: {id: PORT_GROUP_0_PAD_20}
     children:
@@ -1634,6 +1921,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: PA27}
   - type: String
+    attributes: {id: PORT_GROUP_0_PAD_4}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PA04}
+  - type: String
     attributes: {id: PORT_GROUP_0_PAD_5}
     children:
     - type: Values
@@ -1648,12 +1942,33 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x40'}
   - type: String
+    attributes: {id: PORT_GROUP_0_PINCFG14}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x40'}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PINCFG15}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x6'}
+  - type: String
     attributes: {id: PORT_GROUP_0_PINCFG19}
     children:
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x40'}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PINCFG2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
   - type: String
     attributes: {id: PORT_GROUP_0_PINCFG20}
     children:
@@ -1690,12 +2005,33 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x6'}
   - type: String
+    attributes: {id: PORT_GROUP_0_PINCFG3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x40'}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PINCFG4}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x6'}
+  - type: String
     attributes: {id: PORT_GROUP_0_PINCFG5}
     children:
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x6'}
+  - type: String
+    attributes: {id: PORT_GROUP_0_PMUX1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
   - type: String
     attributes: {id: PORT_GROUP_0_PMUX10}
     children:
@@ -1732,6 +2068,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x0'}
   - type: String
+    attributes: {id: PORT_GROUP_0_PMUX7}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
     attributes: {id: PORT_GROUP_0_PMUX9}
     children:
     - type: Values
@@ -1751,7 +2094,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x80000030'}
+        attributes: {id: core, value: '0x80800030'}
   - type: String
     attributes: {id: PORT_GROUP_1_OUT}
     children:
@@ -1801,6 +2144,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: PB02}
+  - type: String
+    attributes: {id: PORT_GROUP_1_PAD_23}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: PB23}
   - type: String
     attributes: {id: PORT_GROUP_1_PAD_3}
     children:
@@ -1872,6 +2222,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x6'}
   - type: String
+    attributes: {id: PORT_GROUP_1_PINCFG23}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x40'}
+  - type: String
     attributes: {id: PORT_GROUP_1_PINCFG3}
     children:
     - type: Values
@@ -1908,6 +2265,13 @@ children:
         attributes: {id: core, value: '0x0'}
   - type: String
     attributes: {id: PORT_GROUP_1_PMUX1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x0'}
+  - type: String
+    attributes: {id: PORT_GROUP_1_PMUX11}
     children:
     - type: Values
       children:

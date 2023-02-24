@@ -83,20 +83,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 57E1F9EA5E404569BFC1A3629AEC05F2
-- generatedChecksum: EC962C21DDBEA3947327633543B281FB
+- generatedChecksum: 41717EC3E3AECFB3AB13EFBFD463BAFB
   logicalPath: config/default/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: EC962C21DDBEA3947327633543B281FB
-- generatedChecksum: 250A7BF95B1205AEB19B18FBA494B807
+  userChecksum: 41717EC3E3AECFB3AB13EFBFD463BAFB
+- generatedChecksum: FE2E3882648B236F554D2B05EFCDBD2B
   logicalPath: config/default/peripheral/rtc
   name: plib_rtc_timer.c
   physicalPath: peripheral/rtc
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 250A7BF95B1205AEB19B18FBA494B807
+  userChecksum: FE2E3882648B236F554D2B05EFCDBD2B
 - generatedChecksum: B04C03FB9E450A9B4407C434ED31DC6B
   logicalPath: config/default/peripheral/tc
   name: plib_tc0.c
@@ -615,13 +615,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: FD895019D50FEFCD49D89FCE2B0D9BBB
-- generatedChecksum: D4D32DF37FE0F1DF8AD52F977ABF2EF7
+- generatedChecksum: 3FA587738E14C6E4AA0A5518B5F31161
   logicalPath: config/default/peripheral/port
   name: plib_port.h
   physicalPath: peripheral/port
   security: NON_SECURE
   type: HEADER
-  userChecksum: D4D32DF37FE0F1DF8AD52F977ABF2EF7
+  userChecksum: 3FA587738E14C6E4AA0A5518B5F31161
 - generatedChecksum: BE830E46647CD89C924E8BDA8C9F8936
   logicalPath: config/default/peripheral/rtc
   name: plib_rtc.h

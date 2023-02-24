@@ -135,6 +135,7 @@
         #define PROTOCOL_SYSTEM_XRAY_BUTTON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x8, val) //!< This is the X-RAY button activation status
         #define PROTOCOL_SYSTEM_CLOSED_DOOR(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x10, val) //!< This is the Closed-Door activation status
         #define PROTOCOL_SYSTEM_BURNIN_JUMPER(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x20, val) //!< This is the burnin jumper presence
+        #define PROTOCOL_SYSTEM_POWER_LOCK(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x40, val) //!< This is the power lock activation feedback
         #define PROTOCOL_SYSTEM_PEDAL_UP(val)       MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x1, val) //!< This is the Pedal Up input status
         #define PROTOCOL_SYSTEM_PEDAL_DWN(val)       MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x2, val) //!< This is the Pedal Down input status
         #define PROTOCOL_SYSTEM_PEDAL_CMP_UP(val)    MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x4, val) //!< This is the Pedal Compression Up input status
@@ -176,6 +177,29 @@
      *  This section describes the implementation of the Application PARAMETER Registers 
      *  @{
      */
+        
+    /**
+     * Parameter index enumeration
+     */            
+    typedef enum{
+        POWER_ON_OFF_DELAY = 0, //!< This is the parameter setting the delay between power On Off events
+        HARDWARE_POWER_OFF_TIME, //!< This is the parameter setting the button pression time to activate a Hard Power Off
+        KEEP_ALIVE_POWER_OFF,//!< This is the parameter setting the Keep Alive time during a Powerdown condition
+        SOFT_POWER_OFF_DELAY,//!< This is the parameter setting the delay waiting the soft power off
+        LOW_BATT_LEVELS,//!< This is the parameter setting the battery voltage level for low batt signaling
+        BODY_ROTATION_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the BODY ROTATION activation
+        PEDALBOARD_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the PEDALBOARD activation
+        MANUAL_ROT_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the MANUAL ROTATION activation
+        XRAY_BUTTON_LOCK_TIME,
+    }PROTO_PARAMETERS_t;
+    
+        #define PARAMETER_POWER_ON_OFF_DELAY MET_Can_Protocol_GetParameter(POWER_ON_OFF_DELAY,0)
+        #define PARAMETER_HARDWARE_POWER_OFF_TIME MET_Can_Protocol_GetParameter(HARDWARE_POWER_OFF_TIME,0)
+        #define PARAMETER_KEEP_ALIVE_POWER_OFF MET_Can_Protocol_GetParameter(KEEP_ALIVE_POWER_OFF,0)
+        #define SOFT_POWER_OFF_DELAY MET_Can_Protocol_GetParameter(SOFT_POWER_OFF_DELAY,0)
+        #define PARAMETER_LOW_BATT1_LEVEL MET_Can_Protocol_GetParameter(LOW_BATT_LEVELS,0)
+        #define PARAMETER_LOW_BATT2_LEVEL MET_Can_Protocol_GetParameter(LOW_BATT_LEVELS,1)
+
     
         
     /** @}*/  // PARAM_Register
@@ -185,16 +209,12 @@
      *  This section describes the Application Command Execution codes
      *  @{
      */
-        typedef enum{
-            TEST_LOOPBACK = 1,      //!< This is a test loopback Immediate Command
-            TEST_100ms_LOOPBACK,    //!< This is a test loopback 100ms delayed Command        
-            TEST_INFINITE_CMD,      //!< This is a infinite execution command         
-        }PROTO_COMMAND_EXEC_t;
+      typedef enum{
+        ACTIVATE_SOFT_POWEROFF = 1,        
+      }PROTO_COMMAND_ENUM_t;
     
         ext void Protocol_7280_us_callback(void);
-        ext uint8_t Protocol_test_100ms_timer; 
-        ext uint8_t Protocol_test_d0, Protocol_test_d1;
-       
+        
         
     /** @}*/  // COMMAND_exec
 

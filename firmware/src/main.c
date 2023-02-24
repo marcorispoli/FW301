@@ -31,7 +31,7 @@
 #include "Motors/MET_can_open.h"
 #include "BusHardware/bushw.h"
 #include "GeneratorBus/generator.h"
-
+#include "Power/power.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -42,15 +42,16 @@ static uint8_t trigger_time = 0;
 
 #define _1024_ms_TriggerTime 0x1
 #define _7820_us_TriggerTime 0x2
-
+#define _15_64_ms_TriggerTime 0x4
 
 
 static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 {
     // Periodic Interval Handler: Freq = 1024 / 2 ^ (n+3)
     
-    if (intCause & RTC_TIMER32_INT_MASK_PER0) trigger_time |= _7820_us_TriggerTime; // 7.82ms Interrupt
-    if (intCause & RTC_TIMER32_INT_MASK_PER7) trigger_time |= _1024_ms_TriggerTime; // 1024 ms Interrupt
+    if (intCause & RTC_TIMER32_INT_MASK_PER0) trigger_time |= _7820_us_TriggerTime;  // 7.82ms Interrupt
+    if (intCause & RTC_TIMER32_INT_MASK_PER1) trigger_time |= _15_64_ms_TriggerTime; // 15.64ms Interrupt
+    if (intCause & RTC_TIMER32_INT_MASK_PER7) trigger_time |= _1024_ms_TriggerTime;  // 1024 ms Interrupt
     
 }
 
@@ -96,9 +97,16 @@ int main ( void )
             GeneratorLoop(); // Generator Signals Management 
             Protocol_7280_us_callback();
         }
+
+        if(trigger_time & _15_64_ms_TriggerTime){
+            trigger_time &=~ _15_64_ms_TriggerTime;
+            Power_1564us_Loop(); // Power module management    
+        }
         
-        if(trigger_time & _1024_ms_TriggerTime){
-            trigger_time &=~ _1024_ms_TriggerTime;
+        
+                
+        if(trigger_time & _15_64_ms_TriggerTime){
+            trigger_time &=~ _15_64_ms_TriggerTime;
              //MET_Can_Open_Send_WriteData(1,0x20,0,0,0);
                 //VITALITY_LED_Toggle();
                 /*
