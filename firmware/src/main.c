@@ -81,6 +81,9 @@ int main ( void )
     // Initializes the Generator signals
     GeneratorInit(); // Call AFTER the ApplicationProtocolInit();
     
+    // Initializes the Power Module
+    PowerInit();
+    
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */

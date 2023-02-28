@@ -196,7 +196,7 @@
         #define PARAMETER_POWER_ON_OFF_DELAY MET_Can_Protocol_GetParameter(POWER_ON_OFF_DELAY,0)
         #define PARAMETER_HARDWARE_POWER_OFF_TIME MET_Can_Protocol_GetParameter(HARDWARE_POWER_OFF_TIME,0)
         #define PARAMETER_KEEP_ALIVE_POWER_OFF MET_Can_Protocol_GetParameter(KEEP_ALIVE_POWER_OFF,0)
-        #define SOFT_POWER_OFF_DELAY MET_Can_Protocol_GetParameter(SOFT_POWER_OFF_DELAY,0)
+        #define PARAMETER_SOFT_POWER_OFF_DELAY MET_Can_Protocol_GetParameter(SOFT_POWER_OFF_DELAY,0)
         #define PARAMETER_LOW_BATT1_LEVEL MET_Can_Protocol_GetParameter(LOW_BATT_LEVELS,0)
         #define PARAMETER_LOW_BATT2_LEVEL MET_Can_Protocol_GetParameter(LOW_BATT_LEVELS,1)
 

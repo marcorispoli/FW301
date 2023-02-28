@@ -2,7 +2,7 @@
 
 #include "application.h"
 #include "protocol.h"
-
+#include "Power/power.h"
 
 static void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 );
 
@@ -58,11 +58,13 @@ void Protocol_7280_us_callback(void){
 void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 ){
     
     switch(cmd){
-        case MET_COMMAND_ABORT:            
+        case MET_COMMAND_ABORT:    
+            PowerModule_abortSoftPowerOff();
             MET_Can_Protocol_returnCommandAborted();
             break;
         case ACTIVATE_SOFT_POWEROFF:
-            MET_Can_Protocol_returnCommandExecuted(0,0);
+            if(PowerModule_requestSoftPowerOff())  MET_Can_Protocol_returnCommandExecuted(0,0);
+            else MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_ENABLED);
             break;
         default:
             MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_AVAILABLE);

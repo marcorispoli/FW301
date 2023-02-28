@@ -9,7 +9,9 @@ static uint16_t timer100ms = 0;
 static void managePowerOff(void);
 static void managePowerOn(void);
 static void initPowerOff(void);
-static void presenceLED_600ms_blink(void);
+
+static void presenceLED_200ms_blink(void);
+static void presenceLED_400ms_blink(void);
 static void presenceLED_5000ms_blink(void);
 
 static bool power_status; //!< Board Power ON/OFF current status
@@ -30,12 +32,11 @@ static uint8_t timer_powerdown; //< Timer to filter the powerdown input
 static bool powerdown_condition; //!< Current Powerdown filtered status
 
 
-#define FILTER_100ms_POWERON_BUTTON (100000/POWER_RTC_us_TIME_UNIT)
-#define FILTER_100ms_POWERDWN (100000/POWER_RTC_us_TIME_UNIT)
-#define TIMER_100MS (100000/POWER_RTC_us_TIME_UNIT)
+#define FILTER_100ms_POWERON_BUTTON ((100000/POWER_RTC_us_TIME_UNIT)-1)
+#define FILTER_100ms_POWERDWN ((100000/POWER_RTC_us_TIME_UNIT)-1)
+#define TIMER_100MS ((100000/POWER_RTC_us_TIME_UNIT)-1)
 
-#define PRESENCE_LED_600ms_PERIOD   3 //!< 600ms period 50% duty cycle
-#define PRESENCE_LED_5000ms_PERIOD  25 //!< 5000ms period 50% duty cycle
+
 #define HARD_POWER_BUTTON_TIME      50 //!< 5 seconds for the hard power button
 #define SOFT_POWER_BUTTON_TIME      20 //!< 2 seconds for the soft power button
 #define KEEPALIVE_PRESENCE_LED_TIME 100 //!< 10 seconds of the last blinking
@@ -100,36 +101,44 @@ void Power_1564us_Loop(void){
     
 }
 
-void presenceLED_600ms_blink(void){
+void presenceLED_200ms_blink(void){
     static uint8_t timer_presence_led =0;
-    if(timer_presence_led == PRESENCE_LED_600ms_PERIOD) {
+    if(timer_presence_led == 1) {
         uC_GEMMA_ON_Toggle();
-        timer_presence_led = 0;
+        timer_presence_led = 1;
+    }else timer_presence_led++;
+}
+
+void presenceLED_400ms_blink(void){
+    static uint8_t timer_presence_led =0;
+    if(timer_presence_led == 2) {
+        uC_GEMMA_ON_Toggle();
+        timer_presence_led = 1;
     }else timer_presence_led++;
 }
 
 void presenceLED_5000ms_blink(void){
     static uint8_t timer_presence_led =0;
-    if(timer_presence_led == PRESENCE_LED_5000ms_PERIOD) {
+    if(timer_presence_led == 25) {
         uC_GEMMA_ON_Toggle();
-        timer_presence_led = 0;
+        timer_presence_led = 1;
     }else timer_presence_led++;
 }
 
 
-bool requestSoftPowerOff(void){
+bool PowerModule_requestSoftPowerOff(void){
     if(power_lock) return false;
     if(!power_status) return false;
     if(request_soft_power_off) return true;
     
     // Initits the timer
-    timer_request_soft_power_off = SOFT_POWER_OFF_DELAY ;
+    timer_request_soft_power_off = PARAMETER_SOFT_POWER_OFF_DELAY ;
     request_soft_power_off = true;
     PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
     return true;
 }
 
-void abortSoftPowerOff(void){
+void PowerModule_abortSoftPowerOff(void){
     if(power_lock) return ;
     if(!power_status) return ;
     if(!request_soft_power_off) return ;
@@ -153,6 +162,7 @@ void initPowerOff(void){
     // Init of the power lock 
     power_lock = false;
     PROTOCOL_SYSTEM_POWER_LOCK(false);
+    uC_AUTORITENUTA_Clear();
     
     // Soft power Off
     PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
@@ -175,7 +185,7 @@ void managePowerOff(void){
             // When the delay time expires the LED shall be Set (Presemce Led = ON))
             if(timer_disable_button){
                timer_disable_button--;
-               presenceLED_600ms_blink();
+               presenceLED_200ms_blink();
                // No other activities are allowed during this time
                return;
             }
@@ -222,14 +232,19 @@ void managePowerOn(void){
         if(PROTOCOL_PROGRAMMING_OUT){
             power_lock = true;
             PROTOCOL_SYSTEM_POWER_LOCK(true);
+        
+            // No Power Off possible
+            uC_GEMMA_ON_Clear();
+            request_soft_power_off = false;
+            PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
+            
+            // Self retained output activated 
+            uC_AUTORITENUTA_Set();
         }
     }
     
     // IN power locking, no Power Off activities can be initiated
     if(power_lock){
-        uC_GEMMA_ON_Clear();
-        request_soft_power_off = false;
-        PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
         return;
     }
     
@@ -246,13 +261,13 @@ void managePowerOn(void){
     // Button soft power off request
     if((!request_soft_power_off) && (timer_hs_power_button > SOFT_POWER_BUTTON_TIME)){ 
         request_soft_power_off = true;     
-        timer_request_soft_power_off = SOFT_POWER_OFF_DELAY ;
+        timer_request_soft_power_off = PARAMETER_SOFT_POWER_OFF_DELAY ;
         PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
     }
         
     // Soft power off management
     if(request_soft_power_off){        
-        presenceLED_600ms_blink(); // Led blinks with 600ms period
+        presenceLED_400ms_blink(); // Led blinks with 600ms period
         if(!timer_request_soft_power_off) initPowerOff();
         else timer_request_soft_power_off--;
         return;
@@ -268,7 +283,7 @@ void managePowerOn(void){
         }else timer_keepalive--;
         
         // presence LED blinking
-        if(timer_keepalive < KEEPALIVE_PRESENCE_LED_TIME ) presenceLED_600ms_blink();
+        if(timer_keepalive < KEEPALIVE_PRESENCE_LED_TIME ) presenceLED_400ms_blink();
         else presenceLED_5000ms_blink();
         
     }else{ 

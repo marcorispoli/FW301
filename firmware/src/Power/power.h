@@ -160,6 +160,9 @@
         ext void Power_1564us_Loop(void);
         #define POWER_RTC_us_TIME_UNIT 15640 //!< microseconds of the loop routine
         
+        ext bool PowerModule_requestSoftPowerOff(void);
+        ext void PowerModule_abortSoftPowerOff(void);
+        
     /** @}*/ // powerModuleApi
     
 /** @}*/ // powerModule
