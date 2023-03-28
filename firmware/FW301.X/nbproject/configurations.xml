@@ -7,6 +7,11 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc0.h</itemPath>
+              <itemPath>../src/config/default/peripheral/adc/plib_adc1.h</itemPath>
+              <itemPath>../src/config/default/peripheral/adc/plib_adc_common.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f8" displayName="can" projectFiles="true">
               <itemPath>../src/config/default/peripheral/can/plib_can_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/can/plib_can1.h</itemPath>
@@ -196,6 +201,10 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc0.c</itemPath>
+              <itemPath>../src/config/default/peripheral/adc/plib_adc1.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f8" displayName="can" projectFiles="true">
               <itemPath>../src/config/default/peripheral/can/plib_can1.c</itemPath>
               <itemPath>../src/config/default/peripheral/can/plib_can0.c</itemPath>
@@ -276,6 +285,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/harmony-manifest-success.yml</itemPath>
+      <itemPath>FW301.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -368,6 +378,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -424,6 +435,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -463,6 +475,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -491,6 +504,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FW301 Power Service Board Firmware Documentation: CAN Communication Engine Module</title>
+<title>FW302 Compressor Board Firmware Documentation: CAN Communication Engine Module</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FW301 Power Service Board Firmware Documentation
+   <div id="projectname">FW302 Compressor Board Firmware Documentation
    </div>
   </td>
  </tr>
@@ -83,7 +83,8 @@ $(document).ready(function(){initNavTree('group__met_protocol_module.html',''); 
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Modules</a>  </div>
+<a href="#groups">Modules</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">CAN Communication Engine Module<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -98,12 +99,19 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__met_can_reg_api"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_reg_api.html">Module Register Access API</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2d97f49c73e2359eb75a88788faf5743"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_protocol_module.html#ga2d97f49c73e2359eb75a88788faf5743">MET_EEPROM_BLK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga2d97f49c73e2359eb75a88788faf5743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07ba8c5b1433525d6ca1ed85f978afdc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_protocol_module.html#ga07ba8c5b1433525d6ca1ed85f978afdc">MET_EEPROM_PSZ</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga07ba8c5b1433525d6ca1ed85f978afdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md35"></a>
 Overview</h1>
 <p >This module implements the engine communication functionalities of the Z190 Device Communication protocol specifications in the CAN CHannel 0.</p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 Communication settings</h1>
 <p >The CAN communication is based on the following characteristics:</p>
 <ul>
@@ -113,20 +121,30 @@ Communication settings</h1>
 <li>Can ID reception address: 0x200 + deviceID;</li>
 </ul>
 <p >The deviceID is a decimal value from 1 to 255.</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 Harmony 3 Configurator Settings</h1>
 <p >This Module makes use of the following Processor modules:</p><ul>
 <li>CAN0 peripheral module;</li>
-<li>Peripheral Can0 clock</li>
-<li>PIN Assignement</li>
+<li>Peripheral Can0 clock;</li>
+<li>PIN Assignement;</li>
+<li>SYSTEM Memory;</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
+SYSTEM Peripheral module setup</h2>
+<p >This Module makes use of the Smart EEPROM feature of the microcontroller. The module shall provides 256 32-bit word to be assigned to parameters. According with this requisite the SYSTEM peripheral module shall be set as follow:</p><ul>
+<li>SYSTEM/Device &amp; Project Configuration/ATSAME51J20A Device Configuration/Fuse settings:<ul>
+<li>Number Of Phisical NVM Blocks Composing a SmartEEPROM Sector = 1;</li>
+<li>Size Of SmartEEPROM Page = 1;</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Pin Assignement</h2>
 <ul>
 <li>The CAN TX Input shall be configured with CAN0-TX</li>
 <li>The CAN RX Input shall be configured with CAN0-TX</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Peripheral Clock Settings</h2>
 <ul>
 <li>Activate the GLK4 Clock:<ul>
@@ -136,7 +154,7 @@ Peripheral Clock Settings</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 CAN0 peripheral module</h2>
 <p >Follows only those settings that shall be activated. What is not reported is disabled or not modified.</p>
 <ul>
@@ -180,7 +198,7 @@ CAN0 peripheral module</h2>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md42"></a>
 Application Usage</h1>
 <p >The Application shall mandatory define a header file <a class="el" href="application_8h_source.html">application.h</a> that shall be stored into the same directory of the main.c file.</p>
 <p >The <a class="el" href="application_8h_source.html">application.h</a> shall contain the following defines:</p>
@@ -210,10 +228,10 @@ Application Usage</h1>
 </ul>
 </li>
 <li>Functions to Get/Set the Application ERRORS register:<ul>
-<li><a class="el" href="group__met_can_reg_api.html#gae467558a81ad807066c09c6499a1cede" title="Sets the bit-wise content of the ERRORS register">MET_Can_Protocol_SetErrorsBit()</a>: sets ON/OFF all the bits of a mask into the ERRORS register;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga2f5a3d573799369aa0e8c7e215285ab1" title="Sets the whole content of the ERRORS register">MET_Can_Protocol_SetErrorsReg()</a>: sets a byte of a ERRORS register;</li>
-<li><a class="el" href="group__met_can_reg_api.html#gaaf26c5e84bb238d3cba835a7b4a286eb" title="Returns the content of the ERRORS register array.">MET_Can_Protocol_GetErrors()</a>: returns a byte value of a ERRORS register;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga3923a24c8ba7badfde0fda5b9d3eadc4">MET_Can_Protocol_TestErrors()</a>: test a condition on a ERRORS register mask;</li>
+<li>MET_Can_Protocol_SetErrorsBit(): sets ON/OFF all the bits of a mask into the ERRORS register;</li>
+<li>MET_Can_Protocol_SetErrorsReg(): sets a byte of a ERRORS register;</li>
+<li><a class="el" href="group__met_can_reg_api.html#gafd61f60eae9c850fd3a2383be696449d" title="This function get the current error condition">MET_Can_Protocol_GetErrors()</a>: returns a byte value of a ERRORS register;</li>
+<li>MET_Can_Protocol_TestErrors(): test a condition on a ERRORS register mask;</li>
 </ul>
 </li>
 <li>Functions to Test the Application DATA registers:<ul>
@@ -223,19 +241,48 @@ Application Usage</h1>
 </li>
 <li>Functions to Test the Application PARAMETER registers:<ul>
 <li><a class="el" href="group__met_can_reg_api.html#ga095a896db42b78c51d1c73a008eaed30" title="Returns the pointer to the Application PARAMETER register array.">MET_Can_Protocol_GetParameter()</a>: returns a byte value of a PARAMETER register;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga37477233a8971c9759d9f053d8dfad22">MET_Can_Protocol_TestParameter()</a>: test a condition on a PARAMETER register mask;</li>
+<li><a class="el" href="group__met_can_reg_api.html#ga37477233a8971c9759d9f053d8dfad22" title="The function tests the content of a PARAMETER register with a mask byte.">MET_Can_Protocol_TestParameter()</a>: test a condition on a PARAMETER register mask;</li>
 </ul>
 </li>
 <li>Functions to handle the Command Execution:<ul>
-<li><a class="el" href="group__met_can_reg_api.html#gac0567d411699d9161b39b904085b0a44" title="Returns the current command execution code.">MET_Can_Protocol_getCommandCode()</a>: return the requested command code;</li>
-<li><a class="el" href="group__met_can_reg_api.html#gae647c8690c41df42d4c4fb1d82670e72" title="Returns the current command parameter 0.">MET_Can_Protocol_getCommandParam0()</a>: requests for the command parameter 0;</li>
-<li><a class="el" href="group__met_can_reg_api.html#gaf4ded6c5817e6db63ed45b3e381658da" title="Returns the current command parameter 1.">MET_Can_Protocol_getCommandParam1()</a>: requests for the command parameter 1;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga0c20e57e13a58474bac1c1d3dff426d8" title="Returns the current command parameter 2.">MET_Can_Protocol_getCommandParam2()</a>: requests for the command parameter 2;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga793a04dd4b409e65c972154333645a4c" title="Returns the current command parameter 3.">MET_Can_Protocol_getCommandParam3()</a>: requests for the command parameter 3;</li>
-<li><a class="el" href="group__met_can_reg_api.html#ga088eda5718ebb7e58257d9a1ab5f25b2" title="Set the execution returning code.">MET_Can_Protocol_setReturnCommand()</a>: set the return code should be returned after the command handling. </li>
+<li>MET_Can_Protocol_getCommandCode(): return the requested command code;</li>
+<li>MET_Can_Protocol_getCommandParam0(): requests for the command parameter 0;</li>
+<li>MET_Can_Protocol_getCommandParam1(): requests for the command parameter 1;</li>
+<li>MET_Can_Protocol_getCommandParam2(): requests for the command parameter 2;</li>
+<li>MET_Can_Protocol_getCommandParam3(): requests for the command parameter 3;</li>
+<li>MET_Can_Protocol_setReturnCommand(): set the return code should be returned after the command handling. </li>
 </ul>
 </li>
 </ul>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga2d97f49c73e2359eb75a88788faf5743" name="ga2d97f49c73e2359eb75a88788faf5743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d97f49c73e2359eb75a88788faf5743">&#9670;&nbsp;</a></span>MET_EEPROM_BLK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MET_EEPROM_BLK&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga07ba8c5b1433525d6ca1ed85f978afdc" name="ga07ba8c5b1433525d6ca1ed85f978afdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07ba8c5b1433525d6ca1ed85f978afdc">&#9670;&nbsp;</a></span>MET_EEPROM_PSZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MET_EEPROM_PSZ&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

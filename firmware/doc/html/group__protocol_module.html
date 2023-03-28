@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FW301 Power Service Board Firmware Documentation: CAN Communication Protocol Module</title>
+<title>FW302 Compressor Board Firmware Documentation: CAN Communication Protocol Module</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FW301 Power Service Board Firmware Documentation
+   <div id="projectname">FW302 Compressor Board Firmware Documentation
    </div>
   </td>
  </tr>
@@ -98,10 +98,12 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group___p_a_r_a_m___register"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_a_r_a_m___register.html">PARAMETER Registers Definition</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_o_m_m_a_n_d__exec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m_m_a_n_d__exec.html">COMMAND Execution Definition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This Module implements the functions of the PCB/22-301 Software Communication protocol specifications.</p>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Dependencies</h2>
 <p >This module requires the following library modules:</p><ul>
 <li>Shared/CAN/MET_Can_Protocol.c</li>
@@ -117,7 +119,7 @@ Dependencies</h2>
 <li>#define MET_CAN_DATA_REGISTERS : Defines the total number of implemented Application DATA registers</li>
 <li>#define MET_CAN_PARAM_REGISTERS : Defines the total number of implemented PARAMETER registers</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 Communication setting</h2>
 <p >The CAN communication is based on the following characteristics:</p>
 <ul>
@@ -126,11 +128,11 @@ Communication setting</h2>
 <li>Baude Rate: 1Mb/s;</li>
 <li>Can ID reception address: 0x211;</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Protocol description</h2>
 <p >The Application iplements the protocol Items described in the PCB/22-301 Software Communication protocol specifications.</p>
 <p >In this chapter it will be briefly described the protocol Items. For details refer to the document specification.</p>
-<h3><a class="anchor" id="autotoc_md21"></a>
+<h3><a class="anchor" id="autotoc_md31"></a>
 Application STATUS Registers</h3>
 <p >The requested status registers are :</p>
 <table class="markdownTable">
@@ -142,7 +144,7 @@ Application STATUS Registers</h3>
 <td class="markdownTableBodyLeft">BATTERY   </td><td class="markdownTableBodyLeft">1   </td><td class="markdownTableBodyLeft">Baackup battery monitored level   </td></tr>
 </table>
 <p>||</p>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 DATA Registers</h3>
 <p >The available DATA registers are:</p>
 <table class="markdownTable">
@@ -152,9 +154,9 @@ DATA Registers</h3>
 <td class="markdownTableBodyLeft">OUTPUTS   </td><td class="markdownTableBodyLeft">0   </td><td class="markdownTableBodyLeft">Output lines setting and other internal flags   </td></tr>
 </table>
 <p>||</p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 PARAMETER Registers</h3>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md34"></a>
 COMMAND Register</h3>
 </div><!-- contents -->
 </div><!-- doc-content -->

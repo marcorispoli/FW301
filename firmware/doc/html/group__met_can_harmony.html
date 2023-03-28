@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FW301 Power Service Board Firmware Documentation: Harmony 3 necessary declarations</title>
+<title>FW302 Compressor Board Firmware Documentation: Harmony 3 necessary declarations</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FW301 Power Service Board Firmware Documentation
+   <div id="projectname">FW302 Compressor Board Firmware Documentation
    </div>
   </td>
  </tr>
@@ -83,12 +83,27 @@ $(document).ready(function(){initNavTree('group__met_can_harmony.html',''); init
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Harmony 3 necessary declarations<div class="ingroups"><a class="el" href="group__library_modules.html">Library Modules Used in the Application.</a> &raquo; <a class="el" href="group__met_protocol_module.html">CAN Communication Engine Module</a> &raquo; <a class="el" href="group__met_can_implementation.html">Implementation module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gad7249a60aea60f22c5045a8d1f7dafc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#gad7249a60aea60f22c5045a8d1f7dafc7">NVMCTRL_SEESBLK_MASK_BITS</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="memdesc:gad7249a60aea60f22c5045a8d1f7dafc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the NVMCTRL_SEESBLK_MASK_BITS to extract the NVMCTRL_SEESBLK bits(35:32) from NVM User Page Mapping(0x00804000)  <a href="group__met_can_harmony.html#gad7249a60aea60f22c5045a8d1f7dafc7">More...</a><br /></td></tr>
+<tr class="separator:gad7249a60aea60f22c5045a8d1f7dafc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11fcfe437fb5653d937660072e49de67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga11fcfe437fb5653d937660072e49de67">NVMCTRL_SEEPSZ_MASK_BITS</a>&#160;&#160;&#160;0x07</td></tr>
+<tr class="memdesc:ga11fcfe437fb5653d937660072e49de67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the NVMCTRL_SEEPSZ_MASK_BITS to extract the NVMCTRL_SEEPSZ bits(38:36) from NVM User Page Mapping(0x00804000)  <a href="group__met_can_harmony.html#ga11fcfe437fb5653d937660072e49de67">More...</a><br /></td></tr>
+<tr class="separator:ga11fcfe437fb5653d937660072e49de67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98a9762ea372b4b2e10cd25953d77f2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga98a9762ea372b4b2e10cd25953d77f2f">SMEE_CUSTOM_SIG</a>&#160;&#160;&#160;0x5a5a5a5a</td></tr>
+<tr class="memdesc:ga98a9762ea372b4b2e10cd25953d77f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">EEPROM INIT WORD.  <a href="group__met_can_harmony.html#ga98a9762ea372b4b2e10cd25953d77f2f">More...</a><br /></td></tr>
+<tr class="separator:ga98a9762ea372b4b2e10cd25953d77f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ee2448e65ba390a7ddb293a9819b940"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga3ee2448e65ba390a7ddb293a9819b940">TEST_EEPROM_INDEX</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:ga3ee2448e65ba390a7ddb293a9819b940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga2a97ef52c4e97f6844a6dd703a5fd3fc"><td class="memItemLeft" align="right" valign="top">uint8_t Can0MessageRAM[CAN0_MESSAGE_RAM_CONFIG_SIZE]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga2a97ef52c4e97f6844a6dd703a5fd3fc">__attribute__</a> ((aligned(32)))</td></tr>
@@ -100,9 +115,78 @@ Variables</h2></td></tr>
 <tr class="memitem:ga30cf79b3e53e0facc45bd43a88698d30"><td class="memItemLeft" align="right" valign="top">CAN_MSG_RX_FRAME_ATTRIBUTE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga30cf79b3e53e0facc45bd43a88698d30">msgFrameAttr0</a> = CAN_MSG_RX_DATA_FRAME</td></tr>
 <tr class="memdesc:ga30cf79b3e53e0facc45bd43a88698d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute used into the CAN Rx/Tx functions.  <a href="group__met_can_harmony.html#ga30cf79b3e53e0facc45bd43a88698d30">More...</a><br /></td></tr>
 <tr class="separator:ga30cf79b3e53e0facc45bd43a88698d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga025f9bc55b0b0c1444566248930ac2b8"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga025f9bc55b0b0c1444566248930ac2b8">SmartEEPROM8</a> = (uint8_t *)SEEPROM_ADDR</td></tr>
+<tr class="memdesc:ga025f9bc55b0b0c1444566248930ac2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a pointer to access SmartEEPROM as bytes.  <a href="group__met_can_harmony.html#ga025f9bc55b0b0c1444566248930ac2b8">More...</a><br /></td></tr>
+<tr class="separator:ga025f9bc55b0b0c1444566248930ac2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4916fd59b16b1e5da43e7b76470872aa"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__met_can_harmony.html#ga4916fd59b16b1e5da43e7b76470872aa">SmartEEPROM32</a> = (uint32_t *)SEEPROM_ADDR</td></tr>
+<tr class="memdesc:ga4916fd59b16b1e5da43e7b76470872aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a pointer to access SmartEEPROM as words (32-bits)  <a href="group__met_can_harmony.html#ga4916fd59b16b1e5da43e7b76470872aa">More...</a><br /></td></tr>
+<tr class="separator:ga4916fd59b16b1e5da43e7b76470872aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >The declaration of this section are necessary for the usage of the CAN channel based on the Harmony 3 configuration library. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga11fcfe437fb5653d937660072e49de67" name="ga11fcfe437fb5653d937660072e49de67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11fcfe437fb5653d937660072e49de67">&#9670;&nbsp;</a></span>NVMCTRL_SEEPSZ_MASK_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVMCTRL_SEEPSZ_MASK_BITS&#160;&#160;&#160;0x07</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the NVMCTRL_SEEPSZ_MASK_BITS to extract the NVMCTRL_SEEPSZ bits(38:36) from NVM User Page Mapping(0x00804000) </p>
+
+</div>
+</div>
+<a id="gad7249a60aea60f22c5045a8d1f7dafc7" name="gad7249a60aea60f22c5045a8d1f7dafc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7249a60aea60f22c5045a8d1f7dafc7">&#9670;&nbsp;</a></span>NVMCTRL_SEESBLK_MASK_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVMCTRL_SEESBLK_MASK_BITS&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the NVMCTRL_SEESBLK_MASK_BITS to extract the NVMCTRL_SEESBLK bits(35:32) from NVM User Page Mapping(0x00804000) </p>
+
+</div>
+</div>
+<a id="ga98a9762ea372b4b2e10cd25953d77f2f" name="ga98a9762ea372b4b2e10cd25953d77f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98a9762ea372b4b2e10cd25953d77f2f">&#9670;&nbsp;</a></span>SMEE_CUSTOM_SIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SMEE_CUSTOM_SIG&#160;&#160;&#160;0x5a5a5a5a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EEPROM INIT WORD. </p>
+
+</div>
+</div>
+<a id="ga3ee2448e65ba390a7ddb293a9819b940" name="ga3ee2448e65ba390a7ddb293a9819b940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ee2448e65ba390a7ddb293a9819b940">&#9670;&nbsp;</a></span>TEST_EEPROM_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_EEPROM_INDEX&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga2a97ef52c4e97f6844a6dd703a5fd3fc" name="ga2a97ef52c4e97f6844a6dd703a5fd3fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2a97ef52c4e97f6844a6dd703a5fd3fc">&#9670;&nbsp;</a></span>__attribute__()</h2>
@@ -138,6 +222,38 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attribute used into the CAN Rx/Tx functions. </p>
+
+</div>
+</div>
+<a id="ga4916fd59b16b1e5da43e7b76470872aa" name="ga4916fd59b16b1e5da43e7b76470872aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4916fd59b16b1e5da43e7b76470872aa">&#9670;&nbsp;</a></span>SmartEEPROM32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* SmartEEPROM32 = (uint32_t *)SEEPROM_ADDR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a pointer to access SmartEEPROM as words (32-bits) </p>
+
+</div>
+</div>
+<a id="ga025f9bc55b0b0c1444566248930ac2b8" name="ga025f9bc55b0b0c1444566248930ac2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga025f9bc55b0b0c1444566248930ac2b8">&#9670;&nbsp;</a></span>SmartEEPROM8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* SmartEEPROM8 = (uint8_t *)SEEPROM_ADDR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a pointer to access SmartEEPROM as bytes. </p>
 
 </div>
 </div>

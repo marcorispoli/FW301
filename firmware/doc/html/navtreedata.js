@@ -24,27 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "FW301 Power Service Board Firmware Documentation", "index.html", [
-    [ "Overview", "index.html#autotoc_md0", null ],
-    [ "Dependencies", "index.html#autotoc_md1", null ],
-    [ "Modules", "index.html#autotoc_md2", null ],
-    [ "Compilation", "index.html#autotoc_md3", null ],
-    [ "Licensing", "index.html#autotoc_md4", null ],
-    [ "Documentation", "index.html#autotoc_md5", null ],
-    [ "Modules", "modules.html", "modules" ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ]
-  ] ]
+  [ "FW301", "index.html", ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

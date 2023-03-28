@@ -31,6 +31,8 @@ static uint16_t timer_keepalive; //!< Timer to handle the keepalive ;
 static uint8_t timer_powerdown; //< Timer to filter the powerdown input
 static bool powerdown_condition; //!< Current Powerdown filtered status
 
+static uint8_t batt1_level; //!< Battery 1 voltage level
+static uint8_t batt2_level; //!< Battery 2 voltage level
 
 #define FILTER_100ms_POWERON_BUTTON ((100000/POWER_RTC_us_TIME_UNIT)-1)
 #define FILTER_100ms_POWERDWN ((100000/POWER_RTC_us_TIME_UNIT)-1)
@@ -48,11 +50,18 @@ void PowerInit(void){
             
     // The initial status of the module is Power Off with a disable time active 
     initPowerOff();
+    ADC0_Enable();
+    ADC1_Enable();
+    ADC0_ConversionStart();
+    ADC1_ConversionStart();
     
+    powerdown_condition = false;
+    poweron_button = false;
 }
 
 
 void Power_1564us_Loop(void){
+
     
     // Input Power Button time filtering section 
     if(!poweron_button){
@@ -73,17 +82,17 @@ void Power_1564us_Loop(void){
     
     // Input powerdown_condition time filtering section 
     if(!powerdown_condition){
-        if(uC_POWER_DOWN_Get()) timer_powerdown++;
+        if(!uc_POWER_DOWN_Get()) timer_powerdown++;
         else timer_powerdown = 0;
         if(timer_powerdown >= FILTER_100ms_POWERDWN){ 
-            timer_powerdown = true;
+            powerdown_condition = true;
             timer_powerdown = 0;
         }
     }else{
-        if(!uC_POWER_DOWN_Get()) timer_powerdown++;
+        if(uc_POWER_DOWN_Get()) timer_powerdown++;
         else timer_powerdown = 0;
         if(timer_powerdown >= FILTER_100ms_POWERDWN){ 
-            timer_powerdown = false;
+            powerdown_condition = false;
             timer_powerdown = 0;
         }
     }
@@ -93,9 +102,24 @@ void Power_1564us_Loop(void){
     // --------------  Section 100ms ---------------
     if(!timer100ms){
         timer100ms = TIMER_100MS;
+            
         
         if(!power_status) managePowerOff();
         else managePowerOn();
+        
+        // Update the status of the Battery Ena button
+        PROTOCOL_SYSTEM_BATTENA(uc_BATT_ENA_Get());
+        
+        batt1_level = (ADC1_ConversionResultGet() * 100) / 124;        
+        PROTOCOL_BATTERY_VBATT1(batt1_level);
+        
+        batt2_level = (ADC0_ConversionResultGet() * 100) / 124;        
+        PROTOCOL_BATTERY_VBATT2(batt2_level);
+        
+        // Set the status of the system status bit 
+        PROTOCOL_SYSTEM_BATT1_LOW(batt1_level < PARAMETER_LOW_BATT1_LEVEL);
+        PROTOCOL_SYSTEM_BATT2_LOW(batt2_level < PARAMETER_LOW_BATT2_LEVEL);
+        
     }else timer100ms--;
     
     
@@ -104,7 +128,7 @@ void Power_1564us_Loop(void){
 void presenceLED_200ms_blink(void){
     static uint8_t timer_presence_led =0;
     if(timer_presence_led == 1) {
-        uC_GEMMA_ON_Toggle();
+        uc_GEMMA_ON_Toggle();
         timer_presence_led = 1;
     }else timer_presence_led++;
 }
@@ -112,7 +136,7 @@ void presenceLED_200ms_blink(void){
 void presenceLED_400ms_blink(void){
     static uint8_t timer_presence_led =0;
     if(timer_presence_led == 2) {
-        uC_GEMMA_ON_Toggle();
+        uc_GEMMA_ON_Toggle();
         timer_presence_led = 1;
     }else timer_presence_led++;
 }
@@ -120,7 +144,7 @@ void presenceLED_400ms_blink(void){
 void presenceLED_5000ms_blink(void){
     static uint8_t timer_presence_led =0;
     if(timer_presence_led == 25) {
-        uC_GEMMA_ON_Toggle();
+        uc_GEMMA_ON_Toggle();
         timer_presence_led = 1;
     }else timer_presence_led++;
 }
@@ -145,7 +169,7 @@ void PowerModule_abortSoftPowerOff(void){
     
     request_soft_power_off = false;  
     PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
-    uC_GEMMA_ON_Clear();
+    uc_GEMMA_ON_Clear();
     return ;
 }
 
@@ -157,12 +181,12 @@ void initPowerOff(void){
     timer_disable_button = PARAMETER_POWER_ON_OFF_DELAY;
     
     // DeActivates the power relay
-    uC_DEVICE_ON_Clear();
+    uc_DEVICE_ON_Clear();
             
     // Init of the power lock 
     power_lock = false;
     PROTOCOL_SYSTEM_POWER_LOCK(false);
-    uC_AUTORITENUTA_Clear();
+    uc_AUTORITENUTA_Clear();
     
     // Soft power Off
     PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
@@ -170,6 +194,7 @@ void initPowerOff(void){
   
     // Powerdown
     timer_keepalive = PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
+    PROTOCOL_SYSTEM_POWERDOWN(false);
     
     // Reset timer Hard and soft power On
     timer_hs_power_button = 0;
@@ -180,7 +205,7 @@ void managePowerOff(void){
     
     switch(power_off_workflow){
         case 0: 
-            
+           
             // During the disable time the presence LED blinks 500ms
             // When the delay time expires the LED shall be Set (Presemce Led = ON))
             if(timer_disable_button){
@@ -189,9 +214,15 @@ void managePowerOff(void){
                // No other activities are allowed during this time
                return;
             }
-
+            
+            // The button shall be OFF to continue
+            if(poweron_button){ 
+                presenceLED_200ms_blink();
+                return;
+            }
+           
             // Sets the presence LED 
-            uC_GEMMA_ON_Set();
+            uc_GEMMA_ON_Set();
             
             power_off_workflow++;
             return;
@@ -202,10 +233,7 @@ void managePowerOff(void){
             if(!poweron_button) return;
             
             // Activates the power relay
-            uC_DEVICE_ON_Set();
-
-            // Sets the presence LED 
-            uC_GEMMA_ON_Clear();
+            uc_DEVICE_ON_Set();
 
             power_off_workflow++;
             return;
@@ -213,11 +241,19 @@ void managePowerOff(void){
             
         case 2:
             
-            // Waits for the button release
-            if(poweron_button) return;
-            power_off_workflow = 0;
-            power_status = true;
+            // The button shall be OFF to continue
+            if(poweron_button){ 
+                presenceLED_200ms_blink();
+                return;
+            }
+           
+            // Sets the presence LED 
+            uc_GEMMA_ON_Clear();
+
             
+            // Waits for the button release            
+            power_off_workflow = 0;
+            power_status = true;            
             
             return;
      }
@@ -234,19 +270,14 @@ void managePowerOn(void){
             PROTOCOL_SYSTEM_POWER_LOCK(true);
         
             // No Power Off possible
-            uC_GEMMA_ON_Clear();
+            uc_GEMMA_ON_Clear();
             request_soft_power_off = false;
             PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
             
             // Self retained output activated 
-            uC_AUTORITENUTA_Set();
+            uc_AUTORITENUTA_Set();
         }
-    }
-    
-    // IN power locking, no Power Off activities can be initiated
-    if(power_lock){
-        return;
-    }
+    }else return;// IN power locking, no Power Off activities can be initiated
     
     // Hard and Soft Power Off handling
     if(poweron_button) timer_hs_power_button++;
@@ -274,6 +305,10 @@ void managePowerOn(void){
     }
     
     // Powerdown management
+    PROTOCOL_SYSTEM_POWERDOWN(powerdown_condition);
+    
+   
+    
     if(powerdown_condition){
         
         // Keepalive timer: when expires the system gets power off
@@ -288,7 +323,7 @@ void managePowerOn(void){
         
     }else{ 
         timer_keepalive = PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
-        uC_GEMMA_ON_Clear();
+        uc_GEMMA_ON_Clear();
     }
     
     return;

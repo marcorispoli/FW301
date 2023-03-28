@@ -141,8 +141,8 @@
         #define PROTOCOL_SYSTEM_PEDAL_CMP_UP(val)    MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x4, val) //!< This is the Pedal Compression Up input status
         #define PROTOCOL_SYSTEM_PEDAL_CMP_DWN(val)   MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x8, val) //!< This is the Pedal Compression Down input status
 
-        #define PROTOCOL_BATTERY_VBATT1(val)  MET_Can_Protocol_setStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 0, val )     //!< This is the voltage of the Battery 1
-        #define PROTOCOL_BATTERY_VBATT2(val)  MET_Can_Protocol_setStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 1, val ) //!< This is the voltage of the Battery 2
+        #define PROTOCOL_BATTERY_VBATT1(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 0, val )     //!< This is the voltage of the Battery 1
+        #define PROTOCOL_BATTERY_VBATT2(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 1, val ) //!< This is the voltage of the Battery 2
 
 
     /** @}*/  // STATUS_Register

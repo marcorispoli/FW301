@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['library_20modules_20used_20in_20the_20application_2e_0',['Library Modules Used in the Application.',['../group__library_modules.html',1,'']]],
-  ['locale_20module_20function_20declaration_1',['Locale Module function declaration',['../group__met_can_local.html',1,'']]]
+  ['keep_5falive_5fpower_5foff_0',['KEEP_ALIVE_POWER_OFF',['../group___p_a_r_a_m___register.html#ggadae3d60a42aecf41359bf929574200b3a62889077260eaeed4108278f9cc26ec0',1,'protocol.h']]]
 ];

@@ -47,6 +47,7 @@
  * |uC_DEVICE_ON|3|Out|Strong|-|
  * |uC_GEMMA_ON|31|Out|Strong|-|
  * |uC_AUTORITENUTA|50|Out|Strong|-|
+ * |uC_BATT_ENA|4|In|Pull-Down|-|
  * ||||||
  * 
  * # Module Function Description
@@ -57,19 +58,41 @@
  * + Power presence LED control;
  * + Power Down detection and management;
  * + Power Lock for programming purpose;
- * 
- * ## Power On activities
- * 
- * The module reads the Power-On button (uc_BUTTON_PWRON_REQ) and makes a time
- * filtering on the current status. If the filtered status is ON then the module
- * checks if the Delay time from a previous Power Off is expired.
- * 
- * When the previous conditions are meet the module activates the Power On sequence: 
- * + the output (uC_DEVICE_ON) is Set, closing the Power relay that provides the 24V Device ouput.
- * 
- * The presence LED  (uC_GEMMA_ON) is switched OFF.
+ * + Backup battery management:
+ *  + Battery Enable push button sens;
+ *  + Batteries voltage measurement;
  *  
- * ## Soft Power Off activities
+ * ## Manual Power On/Off
+ * 
+ * The module reads the uc_BUTTON_PWRON_REQ input to detect the 
+ * manual request to Power On or Power Off the system.
+ * 
+ * ### Power ON request
+ * 
+ * From the Power Off status the module waits for the button disable time 
+ * before to handle the button status. During this time the Presence Led (uC_GEMMA_ON)
+ * toggles with a period of 200ms.
+ * The disable time is elongated if the  uc_BUTTON_PWRON_REQ is kept pressed. 
+ * 
+ * >NOTE: the presence led is a diagnostic test on the button. If the button 
+ * should unexpected remain pressed the Presence Led continue to blink 
+ * and no other activities are conduced.
+ * 
+ * When finally the button is released the module starts monitoring its status:
+ * when the button is then detected activated the system starts the Power On process.
+ * 
+ *  
+ * ### Power OFF request
+ * 
+ * From the Power On status the module waits for the button disable time 
+ * before to handle the button status. During this time the Presence Led (uC_GEMMA_ON)
+ * toggles with a period of 200ms. The disable time is elongated if the  uc_BUTTON_PWRON_REQ is kept pressed. 
+ *
+ * When the disable time is expired then the module detect the button activation
+ * to start the Soft or Hard Power off sequence.
+ *    
+ *  
+ * ### Soft Power Off activities
  * 
  * The module implements the Soft Power Off command of the Communication PROTOCOL Command.
  * 
@@ -90,7 +113,7 @@
  * 
  * During this time the Power-On button is disabled.
  * 
- * ## Hard Power Off activities
+ * ### Hard Power Off activities
  * 
  * The module measure the time the Power-On button (uc_BUTTON_PWRON_REQ) is 
  * pressed. If the time exceeds the PARAMETER[HARDWARE_POWER_OFF_TIME] 
@@ -134,6 +157,15 @@
  * Because the power lock cannot be reset until the board is switched off, the 
  * STATUS_SYSTEM.power_lock will never be reset.
  *  
+ * ## Battery Management
+ * 
+ * The module handle the Battery status.
+ * 
+ * The module detects the Battery Enable push button activation, 
+ * settings accordingly the STATUS_SYSTEM.battena bit register.
+ * 
+ * The module update the current Battery voltage measurement into the 
+ * STATUS_BATTERY register.
  * 
  *  @{
  * 
