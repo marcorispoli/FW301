@@ -253,6 +253,9 @@
       <logicalFolder name="Motors" displayName="Motors" projectFiles="true">
         <itemPath>../src/Motors/MET_can_open.c</itemPath>
         <itemPath>../src/Motors/MET_can_open.h</itemPath>
+        <itemPath>../src/Motors/ARM.c</itemPath>
+        <itemPath>../src/Motors/ARM.h</itemPath>
+        <itemPath>../src/Motors/OD.h</itemPath>
       </logicalFolder>
       <logicalFolder name="Power" displayName="Power" projectFiles="true">
         <itemPath>../src/Power/power.c</itemPath>

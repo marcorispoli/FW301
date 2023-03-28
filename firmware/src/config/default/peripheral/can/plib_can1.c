@@ -70,8 +70,8 @@ static const can_sidfe_registers_t can1StdFilter[] =
 {
     {
         .CAN_SIDFE_0 = CAN_SIDFE_0_SFT(0UL) |
-                  CAN_SIDFE_0_SFID1(0x601UL) |
-                  CAN_SIDFE_0_SFID2(0x601UL) |
+                  CAN_SIDFE_0_SFID1(0x580UL) |
+                  CAN_SIDFE_0_SFID2(0x600UL) |
                   CAN_SIDFE_0_SFEC(1UL)
     },
 };
