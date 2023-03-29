@@ -76,8 +76,13 @@ bool MET_CanOpen_Protocol_Reception_Trigger(uint8_t tmo){
 void initWorkflow(uint8_t device){
     MET_CanOpen_Data_Struct.workflowData[device].workflow = WORKFLOW_INITIALIZATION;
     MET_CanOpen_Data_Struct.workflowData[device].workflow_step = 0;
-
+    MET_CanOpen_Data_Struct.workflowData[device].initialized = false;
+    MET_CanOpen_Data_Struct.workflowData[device].wait_zero_setting = true;    
     MET_CanOpen_Data_Struct.workflowData[device].cia_status = 0;
+    
+    MET_CanOpen_Data_Struct.workflowData[device].error_class = 0;
+    MET_CanOpen_Data_Struct.workflowData[device].error_code = 0;
+    
 }
 
 void changeDevice(void){
@@ -136,13 +141,30 @@ void MET_CanOpen_Protocol_Loop(void){
     
     // Evaluates the timeout in reception
     if(MET_CanOpen_Data_Struct.isWaiting){
-        if( (!MET_CanOpen_Data_Struct.rxReceptionTrigger) && (!MET_CanOpen_Data_Struct.rxErrorTrigger)){
+        
+        // Test Index and SubIndex and error returned code
+        if(MET_CanOpen_Data_Struct.rxReceptionTrigger){
+            if((MET_CanOpen_Data_Struct.rx_message[0] == SDO_ACK_ERR) ||
+               (MET_CanOpen_Data_Struct.rx_message[1] != MET_CanOpen_Data_Struct.tx_message[1])||
+               (MET_CanOpen_Data_Struct.rx_message[2] != MET_CanOpen_Data_Struct.tx_message[2]) ||
+               (MET_CanOpen_Data_Struct.rx_message[3] != MET_CanOpen_Data_Struct.tx_message[3])) MET_CanOpen_Data_Struct.rxErrorTrigger = true;            
+        }else if(!MET_CanOpen_Data_Struct.rxErrorTrigger){
+            // Verify the timeout reception
             if(!MET_CanOpen_Data_Struct.rx_tmo) MET_CanOpen_Data_Struct.rxErrorTrigger = true;
             else{
                 MET_CanOpen_Data_Struct.rx_tmo--;
                 return;
             }
         }
+        
+        // In case of error condition the current command will be repeated after the device poll
+        if(MET_CanOpen_Data_Struct.rxErrorTrigger){
+            MET_CanOpen_Data_Struct.isWaiting = false;
+            delay = 0;
+            changeDevice();
+            return;
+        }
+
     }
     
     // Calls the workflow routine related to the current device
@@ -191,52 +213,50 @@ void MET_CanOpen_Protocol_Reception_Callback(uintptr_t context)
 
 
 bool MET_canOpen_WriteSDO(uint8_t devId, uint16_t idx, uint8_t sub, uint8_t odt, uint32_t d, uint8_t tmo){
-    uint8_t tx_message[8]; //!< Transmitting data byte
     
     // OD TYPE
-    tx_message[0] = odt; 
+    MET_CanOpen_Data_Struct.tx_message[0] = odt; 
     
     // Index
-    tx_message[1] = idx & 0xFF; 
-    tx_message[2] = (idx >> 8 ) & 0xFF;
+    MET_CanOpen_Data_Struct.tx_message[1] = idx & 0xFF; 
+    MET_CanOpen_Data_Struct.tx_message[2] = (idx >> 8 ) & 0xFF;
     
     // Sub Index
-    tx_message[3] = sub; 
+    MET_CanOpen_Data_Struct.tx_message[3] = sub; 
     
     // Data
-    tx_message[4] = d & 0xff; d = d >> 8;
-    tx_message[5] = d & 0xff; d = d >> 8;
-    tx_message[6] = d & 0xff; d = d >> 8;
-    tx_message[7] = d & 0xff;
+    MET_CanOpen_Data_Struct.tx_message[4] = d & 0xff; d = d >> 8;
+    MET_CanOpen_Data_Struct.tx_message[5] = d & 0xff; d = d >> 8;
+    MET_CanOpen_Data_Struct.tx_message[6] = d & 0xff; d = d >> 8;
+    MET_CanOpen_Data_Struct.tx_message[7] = d & 0xff;
     
     // Sends the buffer to the caller
-    CAN1_MessageTransmit((uint32_t) 0x600 + (uint32_t) devId, 8, tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);      
+    CAN1_MessageTransmit((uint32_t) 0x600 + (uint32_t) devId, 8, MET_CanOpen_Data_Struct.tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);      
     MET_CanOpen_Data_Struct.isWaiting = MET_CanOpen_Protocol_Reception_Trigger(tmo); // Reschedule the new data reception
     return  MET_CanOpen_Data_Struct.isWaiting;
     
 }
 
 bool MET_canOpen_ReadSDO(uint8_t devId, uint16_t idx, uint8_t sub, uint8_t odt, uint8_t tmo){
-    uint8_t tx_message[8]; //!< Transmitting data byte
-    
+     
    
-    tx_message[0] = RD_COMMAND; 
+    MET_CanOpen_Data_Struct.tx_message[0] = RD_COMMAND; 
     
     // Index
-    tx_message[1] = idx & 0xFF; 
-    tx_message[2] = (idx >> 8 ) & 0xFF;
+    MET_CanOpen_Data_Struct.tx_message[1] = idx & 0xFF; 
+    MET_CanOpen_Data_Struct.tx_message[2] = (idx >> 8 ) & 0xFF;
     
     // Sub Index
-    tx_message[3] = sub; 
+    MET_CanOpen_Data_Struct.tx_message[3] = sub; 
     
     // Data
-    tx_message[4] = 0;
-    tx_message[5] = 0;
-    tx_message[6] = 0;
-    tx_message[7] = 0;
+    MET_CanOpen_Data_Struct.tx_message[4] = 0;
+    MET_CanOpen_Data_Struct.tx_message[5] = 0;
+    MET_CanOpen_Data_Struct.tx_message[6] = 0;
+    MET_CanOpen_Data_Struct.tx_message[7] = 0;
     
     // Sends the buffer to the caller
-    CAN1_MessageTransmit((uint32_t) 0x600 + (uint32_t) devId, 8, tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);      
+    CAN1_MessageTransmit((uint32_t) 0x600 + (uint32_t) devId, 8, MET_CanOpen_Data_Struct.tx_message, CAN_MODE_NORMAL, CAN_MSG_ATTR_TX_FIFO_DATA_FRAME);      
     MET_CanOpen_Data_Struct.isWaiting = MET_CanOpen_Protocol_Reception_Trigger(tmo); // Reschedule the new data reception
     return MET_CanOpen_Data_Struct.isWaiting;
 }

@@ -12,7 +12,7 @@
     // NMT Behavior in case of fault
     {OD_1029_01,0},
     {OD_1029_02,1},
-    {OD_2031_00,5000}, 	// Peak current
+    {OD_2031_00,5001}, 	// Peak current
     {OD_2032_00,5000}, 	// Maximum Speed
     {OD_2033_00,0 },	// Plunger Block
     {OD_2034_00,51500 },// Upper Voltage Warning Level
@@ -59,8 +59,8 @@
 
 
     // Following Error Option Code
-    {OD_3700_00,(uint) (-1)},
-            // -1 No reaction
+    {OD_3700_00,0xFFFF},
+            // 0xFFFF No reaction
             // 0 Immediate stop
             // 1 Braking with "slow down ramp"
             // 2 Braking with "quick stop ramp"

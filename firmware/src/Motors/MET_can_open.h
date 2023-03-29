@@ -169,8 +169,11 @@
         typedef struct {
             uint8_t workflow;
             uint8_t workflow_step;
-            
+            bool    initialized; //!< The configuration file has been uploaded and stored
+            bool    wait_zero_setting; //!< The device needs the zero setting procedure
             uint8_t cia_status;
+            uint8_t error_class; //! Fault error class
+            uint32_t error_code; //! Fault error code
         }canOpen_workflowData_t;
         
         typedef enum{
@@ -197,6 +200,8 @@
             bool rxErrorTrigger ;//!< TX received frame flag
             bool isWaiting; //!< Is waiting a reception
             uint8_t rx_tmo; //!< Timeout reception time
+            
+            uint8_t tx_message[8]; //!< transmitted data byte
             
             // Workflow management
             uint8_t currentDevice;
