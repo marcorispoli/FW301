@@ -101,6 +101,7 @@ int main ( void )
             GeneratorLoop(); // Generator Signals Management 
             Protocol_7280_us_callback();
             MET_CanOpen_Protocol_Loop();
+            MET_CanOpen_Protocol_Register_Update();
         }
 
         if(trigger_time & _15_64_ms_TriggerTime){
@@ -110,8 +111,9 @@ int main ( void )
         
         
                 
-        if(trigger_time & _15_64_ms_TriggerTime){
-            trigger_time &=~ _15_64_ms_TriggerTime;
+        if(trigger_time & _1024_ms_TriggerTime){
+            trigger_time &=~ _1024_ms_TriggerTime;
+            VITALITY_LED_Toggle();
              //MET_Can_Open_Send_WriteData(1,0x20,0,0,0);
                 //VITALITY_LED_Toggle();
                 /*

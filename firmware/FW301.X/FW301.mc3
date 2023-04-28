@@ -1792,6 +1792,55 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="can0" name="CAN0_STD_FILTER2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
+  &lt;can0 dnOrder=&quot;0&quot; id=&quot;CAN0_STD_FILTER2&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;Boolean dnOrder=&quot;1&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/can0&gt;
+&lt;/can0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="can0" name="CAN0_STD_FILTER2_CONFIG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
+  &lt;can0 dnOrder=&quot;0&quot; id=&quot;CAN0_STD_FILTER2_CONFIG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/can0&gt;
+&lt;/can0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="can0" name="CAN0_STD_FILTER2_SFID1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
+  &lt;can0 dnOrder=&quot;0&quot; id=&quot;CAN0_STD_FILTER2_SFID1&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;257&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/can0&gt;
+&lt;/can0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="can0" name="CAN0_STD_FILTER2_SFID2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
+  &lt;can0 dnOrder=&quot;0&quot; id=&quot;CAN0_STD_FILTER2_SFID2&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;257&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/can0&gt;
+&lt;/can0&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="can0" name="CAN_CORE_CLOCK_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
   &lt;can0 dnOrder=&quot;0&quot; id=&quot;CAN_CORE_CLOCK_FREQ&quot;&gt;
@@ -1985,7 +2034,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
   &lt;can0 dnOrder=&quot;0&quot; id=&quot;FILTERS_STD&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2&quot;/&gt;
     &lt;/Values&gt;
   &lt;/can0&gt;
 &lt;/can0&gt;
@@ -2144,7 +2193,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;can0&gt;
   &lt;can0 dnOrder=&quot;0&quot; id=&quot;RXF1_USE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/can0&gt;
 &lt;/can0&gt;
@@ -2573,7 +2622,7 @@
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;adc0&quot; x=&quot;298&quot; y=&quot;194&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;adc1&quot; x=&quot;301&quot; y=&quot;122&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;can0&quot; x=&quot;14&quot; y=&quot;228&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;can0&quot; x=&quot;15&quot; y=&quot;228&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;can1&quot; x=&quot;9&quot; y=&quot;317&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;cmsis&quot; x=&quot;410&quot; y=&quot;60&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;core&quot; x=&quot;310&quot; y=&quot;60&quot;/&gt;
@@ -2631,6 +2680,17 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;ADC1_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;60000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="APP_START_ADDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;APP_START_ADDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;2000&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -8098,7 +8158,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>40ef30117dbb192f295b9cc6e9971b3789141795ba942e3dcc1aebd4afb0cd71</hash>
+         <hash>b571bb220472791c999b9cf23ce81f2c09b7d7bdeaf8b45111fc61fea4b6195f</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -8338,7 +8398,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\can\plib_can0.h</file>
-         <hash>d384ce048179d99d530e0fda4e223af546db038d78165264c9932246a8b01558</hash>
+         <hash>504f4246fac161484c2a4c3bcbac184fa02cd7217e06178ecad37f5fa6d7cad2</hash>
       </entry>
       <entry>
          <file>..\src\config\default\exceptions.c</file>
@@ -8370,7 +8430,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\can\plib_can0.c</file>
-         <hash>909bf6de6dd09925ff7ef6ccaccea94290a7e0e4492f0476d53c7c911eb10e53</hash>
+         <hash>b1af7602c3c8393e6e209a6b2a0f9f16133cd3fac7566b0bae411b7494660230</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME51J20A_DFP\component\wdt.h</file>
@@ -8394,7 +8454,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>5c98616ac52cf9e49564c7e1eaa1f1d89253c90d791627dcd3565b932162be95</hash>
+         <hash>9d81a7232753d2475d70e6882646a4378ca148a5382cec82da9bbc4cae193fd9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME51J20A_DFP\component\adc.h</file>

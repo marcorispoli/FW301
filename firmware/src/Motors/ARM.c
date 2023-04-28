@@ -4,373 +4,173 @@
 #include "OD.h" 
 #include "ARM.h" 
 
+#define MOTOR_GEAR 80 // Gear * 10
+#define ENCODER_ROUNDS 833 // Tourns * 100
+#define ZERO_ENCODER 512
+#define SPEED_DENOMINATOR       120
+    
+ const MET_canOpen_Config_t ARM_CONFIG_VECTOR[]={
 
-#define DEVID   0x3
-#define DEVICE_DATA MET_CanOpen_Data_Struct.pWorkflowData
+   // Hardware configuration
+    {OD_4013_01,1},    // 1 = EXTERNAL VCC LOGIC ON
 
-static uint8_t deviceInitialization(void);
-static uint8_t ciaGetStatus(void);
-static uint8_t ciaNotReadyToSwitchOn(void);
-static uint8_t ciaSwitchOnDisabled(void);
-static uint8_t ciaReadyToSwitchOn(void);
-static uint8_t ciaSwitchedOn(void);
-static uint8_t ciaOperationEnabled(void);
-static uint8_t ciaQuickStopActive(void);
-static uint8_t ciaFaultReactionActive(void);
-static uint8_t ciaFault(void);
 
-MET_canOpenWorkflow armWorkflowVector[]={ \
-    deviceInitialization,
-    ciaGetStatus,
-    ciaNotReadyToSwitchOn,
-    ciaSwitchOnDisabled,
-    ciaReadyToSwitchOn,
-    ciaSwitchedOn,
-    ciaOperationEnabled,
-    ciaQuickStopActive,
-    ciaFaultReactionActive,
-    ciaFault
+    // NMT Behavior in case of fault
+    {OD_1029_01,0},
+    {OD_1029_02,1},
+    {OD_2031_00,5000}, 	// Peak current
+    {OD_2032_00,5000}, 	// Maximum Speed
+    {OD_2033_00,0 },	// Plunger Block
+    {OD_2034_00,51500 },// Upper Voltage Warning Level
+    {OD_2035_00,20000 },// ****************************************Lower Voltage Warning Level
+    {OD_2036_00,2000}, 	// Open Loop Current Reduction Idle Time
+    {OD_2037_00,(uint) (-50) },	// Open Loop Current Reduction Value/factor
+
+    // I2t Parameters
+    {OD_203B_01,5000 },	// Nominal Current
+    {OD_203B_02,1000 },	// Maximum Duration Of Peak Current
+    {OD_203B_03,0 },	// Threshold
+    {OD_203B_04,0 },	// CalcValue
+    {OD_203B_05,5000}, 	// LimitedCurrent
+    {OD_2056_00,500 },	// Limit Switch Tolerance Band
+
+    // user unitS
+    {OD_2061_00,1 },	// Velocity Numerator
+    {OD_2062_00,SPEED_DENOMINATOR },  // Velocity Denominator        ***********************
+    {OD_2063_00,1 },	// Acceleration Numerator
+    {OD_2064_00,SPEED_DENOMINATOR}, 	// Acceleration Denominator    ***********************
+    {OD_2065_00,1 },	// Jerk Numerator
+    {OD_2066_00,60 },	// Jerk Denominator
+    {OD_3202_00,9}, 	// Motor Drive Submode Select: 6:BLDC 3:CurRed 2:Brake 1:VoS 0:CLOOP/OLOOP
+
+    // Motor Drive Sensor Display Closed Loop
+    {OD_320B_01,0 	},  // Commutation
+    {OD_320B_02,0 },	// Torque
+    {OD_320B_03,1 },	// Velocity
+    {OD_320B_04,1}, 	// Position
+
+    // Motor Drive Parameter Set
+    {OD_3210_01,50000 }, // Position Loop, Proportional Gain (closed Loop)
+    {OD_3210_02,10 },	 // Position Loop, Integral Gain (closed Loop)
+
+    // Analogue Inputs Control
+    {OD_3221_00,0},     // 0 , Voltage, 1, Current
+
+
+    // Digital Input Capture
+    {OD_3241_01,0 },    // Control (0:off, 1:RE, 2:FE, 3:RE+FE)
+    // 3241:02,0        // Capture Count
+    //3241:03,0         // Encoder user units
+    //3241:04,0         // Encoder Raw Value
+
+
+    // Following Error Option Code
+    {OD_3700_00,0xFFFF},
+            // 0xFFFF No reaction
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+            // 2 Braking with "quick stop ramp"
+
+    // Quick Stop Option Code
+    {OD_605A_00,0 },
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+            // 2 Braking with "quick stop ramp"
+
+    // Shutdown Option Code
+    {OD_605B_00,0 },
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+
+    // Disable Option Code
+    {OD_605C_00,0 },
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+
+    // Halt Option Code
+    {OD_605D_00,0 },
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+            // 2 Braking with "quick stop ramp"
+
+    // Fault Option Code
+    {OD_605E_00,0 },
+            // 0 Immediate stop
+            // 1 Braking with "slow down ramp"
+            // 2 Braking with "quick stop ramp"
+
+    // Following Error Window and time
+    {OD_6065_00,256}, 	// Window
+    {OD_6066_00,100 },	// Time (ms)
+
+
+    // Position Window + time
+    {OD_6067_00,10 },	// Window
+    {OD_6068_00,100 },	// Time
+
+
+    // Position Range Limit
+    {OD_607B_01,0}, 	// Min Position Range Limit
+    {OD_607B_02,0 },	// Max Position Range Limit
+
+    // Software Position Limit
+    {OD_607D_01,(uint) (cGRAD_TO_ENCODER(-18000)) },	// Min Position Limit
+    {OD_607D_02,cGRAD_TO_ENCODER(18000) },	// Max Position Limit
+
+    // Polarity
+    {OD_607E_00,0 },	// b7:1-> inverse rotaion
+
+
+    // Position Encoder Resolution: EncInc/MotRev
+    {OD_608F_01,2000 },	// Encoder Increments
+    {OD_608F_02,1}, 	// Motor Revolutions
+
+    {OD_60F2_00,0x0002}, // Absolute positionning
+
+    // Gear Ratio
+    {OD_6091_01,1}, 	// Motor Revolutions
+    {OD_6091_02,1 },	// Shaft Revolutions
+
+    // Max Absolute Acceleration and Deceleration
+    {OD_60C5_00,5000 },// Max Acceleration
+    {OD_60C6_00,5000 },// Max Deceleration
+
+    // Homing registers
+    {OD_6098_00,35},                                            // Homing method 21
+    {OD_607C_00,0},                                             // Offset value
+
+    END_ODVECTOR // Last element always present!!
+
+
 };
 
-
-uint8_t ciaNotReadyToSwitchOn(void){
-    DEVICE_DATA->workflow = MET_canOpen_GetCiaStatus();
-    DEVICE_DATA->workflow_step = 0;
-    return 0;
+MET_canOpen_Config_t ARM_POSITIONING[] = {
+    {OD_607A_00,cGRAD_TO_ENCODER(-9000)},                        // Target First element always!!   
+    {OD_6083_00,cGRADsec_TO_ROT_min(200)}, // Acceleration ratio
+    {OD_6084_00,cGRADsec_TO_ROT_min(200)}, // Deceleration ratio
+    {OD_6081_00,cGRADsec_TO_ROT_min(100)}, // Speed
+    END_ODVECTOR // Last element always present!!
+};
+ 
+int32_t analogToPositionConversion(uint16_t analog){
+    return (((int32_t) analog - ZERO_ENCODER) * 35156 / (ENCODER_ROUNDS));       
 }
 
-uint8_t ciaQuickStopActive(void){
-    return ciaSwitchOnDisabled();
-}
-uint8_t ciaFaultReactionActive(void){
-    DEVICE_DATA->workflow = MET_canOpen_GetCiaStatus();
-    DEVICE_DATA->workflow_step = 0;
-    return 0;
+int32_t positionToEncoderConversion(int32_t position){           
+    return cGRAD_TO_ENCODER(position);    
 }
 
+int32_t encoderToPositionConversion(int32_t encoder){           
+    return ENCODER_TO_cGRAD(encoder);    
+}
 
-uint8_t ciaGetStatus(void){
+void armInitialization(canOpen_workflowData_t* pData){
+    pData->deviceId = 0x3;    
+    pData->config = ARM_CONFIG_VECTOR;
+    pData->positionRegisters = ARM_POSITIONING;
     
-     // In case of initialization request, proceed with the Initialization procedure
-     if(!DEVICE_DATA->initialized){
-        DEVICE_DATA->workflow = WORKFLOW_INITIALIZATION;
-        DEVICE_DATA->workflow_step = 0;
-        return 0;
-    }
+    pData->getAnalogToPositionConversion  = analogToPositionConversion;
+    pData->getPositionToEncoderConversion = positionToEncoderConversion;
+    pData->getEncoderToPositionConversion = encoderToPositionConversion;
     
-     switch(DEVICE_DATA->workflow_step){
-        case 0:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-         
-               // If the code is the RESET code then the device has been reset
-               if(MET_canOpen_getOdVal() == RESET_CODE){                   
-                   DEVICE_DATA->initialized = false;
-                   return 0;
-               }
-               
-               DEVICE_DATA->workflow_step++;
-               break;
-           }else{              
-               MET_canOpen_ReadSDO(DEVID,RESET_USER_PARAM, 2);
-           }
-        
-        break;
-        default: // Read and set the Status word
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;        
-
-                DEVICE_DATA->workflow = MET_canOpen_GetCiaStatus();
-                DEVICE_DATA->workflow_step = 0;
-                return 0;
-
-            }else{
-                MET_canOpen_ReadSDO(DEVID,OD_6041_00,2);
-            }
-     }
-  
-     return 0;
 }
-
-
-uint8_t ciaSwitchOnDisabled(void){
-     if(MET_CanOpen_Data_Struct.isWaiting){
-        MET_CanOpen_Data_Struct.isWaiting = false;        
-        
-        if(MET_canOpen_getOdType() == WR_ACK_OK) {
-            DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-            DEVICE_DATA->workflow_step = 0;
-            return 0;
-        }
-        
-        // Set the Shutdown code  To the Ready to SwitchOn Status
-        uint16_t ctrw = MET_canOpen_getOdVal();
-        ctrw &=~ 0x0087;
-        ctrw |= 0x0006;
-        MET_canOpen_WriteSDO(DEVID,OD_6040_00,ctrw,2); // Write the control word        
-        return 0;
-        
-    }else{
-        if(!MET_canOpen_ReadSDO(DEVID,OD_6040_00,2)) return 0; // Read the Control Word
-        return 0;
-    }
-    return 0;
-}
-
-uint8_t ciaReadyToSwitchOn(void){
-    
-    if(MET_CanOpen_Data_Struct.isWaiting){
-        MET_CanOpen_Data_Struct.isWaiting = false;        
-        
-        if(MET_canOpen_getOdType() == WR_ACK_OK) {
-            DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-            DEVICE_DATA->workflow_step = 0;
-            return 0;
-        }
-        
-        // To Switched On Status
-        uint16_t ctrw = MET_canOpen_getOdVal();
-        ctrw &=~ 0x008F;
-        ctrw |= 0x0007;
-        MET_canOpen_WriteSDO(DEVID,OD_6040_00,ctrw,2); // Write the control word        
-        return 0;
-        
-    }else{
-        if(!MET_canOpen_ReadSDO(DEVID,OD_6040_00,2)) return 0; // Read the Control Word
-        return 0;
-    }
-    return 0;
-}
-
-uint8_t ciaSwitchedOn(void){
-   
-    DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-    DEVICE_DATA->workflow_step = 0;
-    return 0;
-}
-
-
-uint8_t ciaOperationEnabled(void){
-    DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-    DEVICE_DATA->workflow_step = 0;
-    return 0;
-}
-
-uint8_t ciaFault(void){
-    static uint16_t ctrlw;
-    switch(DEVICE_DATA->workflow_step){
-        case 0:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                DEVICE_DATA->error_class = MET_canOpen_getOdVal();                
-                DEVICE_DATA->workflow_step++;
-                break;
-            }else{
-                MET_canOpen_ReadSDO(DEVID,OD_1001_00,2);
-            }
-        break;
-        
-        case 1:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                DEVICE_DATA->error_code = MET_canOpen_getOdVal();  
-                
-                if(DEVICE_DATA->error_class == 0){
-                    DEVICE_DATA->workflow_step++;
-                    return 0;
-                }
-                DEVICE_DATA->workflow_step--;
-                break;
-            }else{
-                MET_canOpen_ReadSDO(DEVID,OD_1003_01,2);
-            }
-        break;
-        
-        case 2:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                ctrlw = MET_canOpen_getOdVal() | 0x80; 
-                
-                DEVICE_DATA->workflow_step++;
-                break;
-            }else{
-                MET_canOpen_ReadSDO(DEVID,OD_6040_00,2);
-            }
-        break;
-        
-        case 3:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                ctrlw &=~ 0x80;                
-                DEVICE_DATA->workflow_step++;
-                break;
-            }else{
-                MET_canOpen_WriteSDO(DEVID,OD_6040_00,ctrlw,2);
-            }
-        break;
-        
-        case 4:
-            if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-                DEVICE_DATA->workflow_step = 0;
-                return 0;
-            }else{
-                MET_canOpen_WriteSDO(DEVID,OD_6040_00,ctrlw,2);
-            }
-        break;
-
-        
-    }
-    
-    return 0;
-}
-
-
-uint8_t deviceInitialization(void){
-    static uint16_t index = 0; 
-    static uint16_t chk;
-    
-                
-    switch(DEVICE_DATA->workflow_step){
-        case 0:
-             // Calc the checksum of the vector to evaluate the reload in memory            
-            chk = 0;
-            while(1){
-                if(MET_CanOpen_Data_Struct.pDeviceConfig[index++].type == 0) break;
-                chk += (ushort) MET_CanOpen_Data_Struct.pDeviceConfig[index].val;
-            }
-            DEVICE_DATA->workflow_step++;
-            break;
-            
-        case 1:
-             if(MET_CanOpen_Data_Struct.isWaiting){
-                MET_CanOpen_Data_Struct.isWaiting = false;
-                
-                // The User config is equal to the expected checksum. End of procedure
-                if(MET_canOpen_getOdVal() == chk){
-                    DEVICE_DATA->workflow_step = 100;
-                    return 1;
-                }
-                
-                // The device needs to be uploaded with the configuration parameters
-                index = 0;
-                DEVICE_DATA->workflow_step++;
-                break;
-            }else{
-                MET_canOpen_ReadSDO(DEVID,CONFIG_USER_PARAM,2);
-            }
-            break;
-            
-        case 2: // Writes the data
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-               
-               // Write successfully completed
-               index++;          
-               
-               // Go to read back to be sure the write is ok
-               DEVICE_DATA->workflow_step++;
-               break;
-           }else{
-               // End of vector
-               if(MET_CanOpen_Data_Struct.pDeviceConfig[index].type == 0){
-                 DEVICE_DATA->workflow_step++;                 
-                 return 0;
-               }
-               MET_canOpen_WriteSDO(DEVID,MET_CanOpen_Data_Struct.pDeviceConfig[index].idx, MET_CanOpen_Data_Struct.pDeviceConfig[index].sub,MET_CanOpen_Data_Struct.pDeviceConfig[index].type,MET_CanOpen_Data_Struct.pDeviceConfig[index].val, 2);
-           }
-        break;
-
-        case 3: // Writes the checksum on the User parameter space
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-               DEVICE_DATA->workflow_step++;
-               break;
-           }else{              
-               MET_canOpen_WriteSDO(DEVID,CONFIG_USER_PARAM,chk, 2);
-           }
-        break;
-       
-        case 4: // Reset the USER-RESET flag
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-               DEVICE_DATA->workflow_step++;
-               break;
-           }else{              
-               MET_canOpen_WriteSDO(DEVID,RESET_USER_PARAM,RESET_CODE, 2);
-           }
-        break;
-        
-        case 5: // Store the Object Dictionary parameter
-            MET_canOpen_WriteSDO(DEVID,OD_1010_01,OD_SAVE_CODE, 2);
-            MET_CanOpen_Data_Struct.isWaiting = false;
-            DEVICE_DATA->workflow_step++;
-            return 200;               
-        break;
-        
-        case 6: // Read the Store register 
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-               if(MET_canOpen_getOdVal() == 1){
-                    DEVICE_DATA->workflow_step++;
-                    return 0;
-                }
-               
-               break;
-           }else{              
-               MET_canOpen_ReadSDO(DEVID,OD_1010_01, 2);
-           }
-        break;
-        
-        case 7: // Store user parameters
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-               DEVICE_DATA->workflow_step++;
-               break;
-           }else{              
-               MET_canOpen_WriteSDO(DEVID,SAVE_USER_PARAM, 1,2);               
-           }
-        break;
-
-        case 8: // Read back the storing user param register
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-               if(MET_canOpen_getOdVal() == 0){
-                    DEVICE_DATA->workflow_step++;
-                    return 0;
-                }               
-               break;
-           }else{              
-               MET_canOpen_ReadSDO(DEVID,SAVE_USER_PARAM, 2);
-           }
-        break;
-        
-        default : // Set the Reset User param to 1
-            if(MET_CanOpen_Data_Struct.isWaiting){
-               MET_CanOpen_Data_Struct.isWaiting = false;
-                              
-                // End procedure
-                DEVICE_DATA->wait_zero_setting = true;
-                DEVICE_DATA->initialized = true;
-                DEVICE_DATA->workflow = WORKFLOW_GET_CIA_STATUS;
-                DEVICE_DATA->workflow_step = 0;
-                return 0;
-               break;
-           }else{              
-               MET_canOpen_WriteSDO(DEVID,RESET_USER_PARAM, 1,2);               
-           }
-    }
-    return 0;
-}
-

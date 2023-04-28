@@ -3,15 +3,15 @@
   <executable name="dist/default/debug/FW301.X.debug.elf">
     <memory name="program">
       <units>bytes</units>
-      <length>1048576</length>
-      <used>11208</used>
-      <free>1037368</free>
+      <length>1040384</length>
+      <used>16440</used>
+      <free>1023944</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>262144</length>
-      <used>628</used>
-      <free>261516</free>
+      <length>262128</length>
+      <used>967</used>
+      <free>261161</free>
     </memory>
   </executable>
 </project>

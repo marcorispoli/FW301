@@ -136,9 +136,9 @@ void SYS_Initialize ( void* data )
     ADC0_Initialize();
     CAN1_Initialize();
 
-    ADC1_Initialize();
     CAN0_Initialize();
 
+    ADC1_Initialize();
     RTC_Initialize();
 
     TC0_CompareInitialize();

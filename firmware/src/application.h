@@ -84,9 +84,9 @@
 
 // Can Module Definitions
 #define MET_CAN_APP_DEVICE_ID     0x1 //!< Application DEVICE CAN Id address
-#define MET_CAN_STATUS_REGISTERS    2 //!< Defines the total number of implemented STATUS registers 
+#define MET_CAN_STATUS_REGISTERS    3 //!< Defines the total number of implemented STATUS registers 
 #define MET_CAN_DATA_REGISTERS      1 //!< Defines the total number of implemented Application DATA registers 
-#define MET_CAN_PARAM_REGISTERS     9 //!< Defines the total number of implemented PARAMETER registers 
+#define MET_CAN_PARAM_REGISTERS     12 //!< Defines the total number of implemented PARAMETER registers 
 
 /** @}*/
         

@@ -16,7 +16,10 @@
 #define RD_4BYTE 0x43
 
 
-    
+#define _OD_MASK(x,y) (x)
+#define _OD_VAL(x,y) (y)
+#define OD_MASK(x) _OD_MASK(x)
+#define OD_VAL(x) _OD_VAL(x)    
 
 
 //_______________________ ZERO SETTING OBJECTS ________________________________________
@@ -40,17 +43,19 @@
 #define POSITION_SETTING_START      0x0370, 0x0030
 
 
-#define OD_1001_00 0x1001, 0x00, WR_1BYTE  // ERROR REGISTER
-#define OD_1001_00_GENERAL_ERROR   0x1
-#define OD_1001_00_I_ERROR         0x2
-#define OD_1001_00_VOLTAGE_ERROR   0x4
-#define OD_1001_00_TEMP_ERROR      0x8
-#define OD_1001_00_COM_ERROR       0x10
-#define OD_1001_00_PROFILE_ERROR   0x20
-#define OD_1001_00_RESERVED_ERROR  0x40
-#define OD_1001_00_MANUFACT_ERROR  0x80
+//_______________ ERROR REGISTERS ________________________________________________
+#define OD_1001_00 0x1001, 0x00, WR_1BYTE  // GENERAL ERROR REGISTER
+    #define OD_1001_00_GENERAL_ERROR   0x1
+    #define OD_1001_00_I_ERROR         0x2
+    #define OD_1001_00_VOLTAGE_ERROR   0x4
+    #define OD_1001_00_TEMP_ERROR      0x8
+    #define OD_1001_00_COM_ERROR       0x10
+    #define OD_1001_00_PROFILE_ERROR   0x20
+    #define OD_1001_00_RESERVED_ERROR  0x40
+    #define OD_1001_00_MANUFACT_ERROR  0x80
 
-#define OD_1003_01 0x1003, 0x01, WR_4BYTE  // SPECIFIC ERROR REGISTER
+#define OD_1003_00 0x1003, 0x00, WR_1BYTE  // SPECIFIC ERROR: NUMBER OF ERRORS IN THE STACK
+#define OD_1003_01 0x1003, 0x01, WR_4BYTE  // SPECIFIC ERROR: FIRST ELEMENT IN THE STACK
 
 //_______________ STORE PARAMETER REGISTER ________________________________________________
 #define OD_1010_01 0x1010, 0x01, WR_4BYTE  // Save All Parameters To Non-volatile Memory
@@ -133,7 +138,12 @@
 #define OD_3210_02  0x3210, 0x02 ,WR_4BYTE  // Position Loop, Integral Gain (closed Loop)
 
 // Analogue Inputs Control
+#define OD_3220_01  0x3220, 0x01 ,WR_2BYTE  // Analogue Input 1
+#define OD_3220_02  0x3220, 0x02 ,WR_2BYTE  // Analogue Input 2
 #define OD_3221_00  0x3221, 0x00 ,WR_4BYTE  // Analogue Inputs Control: 0 , Voltage, 1, Current
+
+#define OD_3320_01  0x3320, 0x01 ,WR_4BYTE  // Analogue Input 1
+#define OD_3320_02  0x3320, 0x02 ,WR_4BYTE  // Analogue Input 2
 
 // Digital Inputs Control
 #define OD_3240_01  0x3240, 0x01 ,WR_4BYTE  // Special Function Enable (b2:ZS, b1:PL, b0:Nl)
@@ -167,11 +177,25 @@
 
 // CiA 402 status word
 #define OD_6041_00 0x6041, 0x00, WR_2BYTE
-    
+    #define OD_6041_00_NotReadyToSwitchOn   0x004F,0x0000
+    #define OD_6041_00_SwitchOnDisabled     0x004F,0x0040
+    #define OD_6041_00_ReadyToSwitchOn      0x006F,0x0021
+    #define OD_6041_00_SwitchedOn           0x006F,0x0023
+    #define OD_6041_00_OperationEnabled     0x006F,0x0027
+    #define OD_6041_00_QuickStopActive      0x006F,0x0007
+    #define OD_6041_00_FaultReactionActive  0x004F,0x000F
+    #define OD_6041_00_Fault                0x004F,0x0008
+
 
 // CiA Control Word & Status change flags
 #define OD_6040_00 0x6040, 0x00, WR_2BYTE
-        
+    #define OD_6040_00_SHUTDOWN                    0x0087, 0x0006
+    #define OD_6040_00_QUICKSTOP                   0x0087, 0x0002
+    #define OD_6040_00_SWITCHON                    0x008F, 0x0007
+    #define OD_6040_00_DISVOLTAGE                  0x0082, 0x0000
+    #define OD_6040_00_ENABLEOP                    0x008F, 0x000F
+    #define OD_6040_00_DISABLEOP                   0x008F, 0x0007
+    #define OD_6040_00_RESET_OMS                   0x0270, 0x0000
 
 //___________ OPERATING MODE PROFILE ______________________________________________________
 #define OD_6060_00 0x6060, 0x00, WR_1BYTE  // OPERATING MODE CONROL WORD

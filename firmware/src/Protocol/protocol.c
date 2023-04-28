@@ -3,6 +3,7 @@
 #include "application.h"
 #include "protocol.h"
 #include "Power/power.h"
+#include "../Motors/MET_can_open.h"
 
 static void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 );
 
@@ -32,6 +33,9 @@ void ApplicationProtocolInit ( void )
     MET_Can_Protocol_SetDefaultParameter(MANUAL_ROT_LOCK_TIME,0,0,0,0);
     MET_Can_Protocol_SetDefaultParameter(XRAY_BUTTON_LOCK_TIME,0,0,0,0);
    
+    MET_Can_Protocol_SetDefaultParameter(ARM_ZERO_POSITION,0x00,0x02,0,0);
+    MET_Can_Protocol_SetDefaultParameter(LIFT_ZERO_POSITION,0x00,0x0,0,0);
+    MET_Can_Protocol_SetDefaultParameter(BODY_ZERO_POSITION,0,0,0,0);
 }
   
 /**
@@ -56,16 +60,26 @@ void Protocol_7280_us_callback(void){
  *  
  */
 void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 ){
+    uint8_t ris;
     
     switch(cmd){
         case MET_COMMAND_ABORT:    
             PowerModule_abortSoftPowerOff();
+            motorDeviceAbort();
             MET_Can_Protocol_returnCommandAborted();
             break;
         case ACTIVATE_SOFT_POWEROFF:
             if(PowerModule_requestSoftPowerOff())  MET_Can_Protocol_returnCommandExecuted(0,0);
             else MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_ENABLED);
             break;
+        
+        case ACTIVATE_MOTORS:
+            ris = motorDeviceActivate(d0, (int32_t)((int16_t)(d1 + 256 * d2)));
+            if(ris==1) MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_BUSY);
+            else if(ris==2) MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_AVAILABLE);
+            else MET_Can_Protocol_returnCommandExecuting();
+        break;
+
         default:
             MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_AVAILABLE);
     }

@@ -105,21 +105,26 @@
  *    @{
  * 
  */
-        #define cGRADsec_TO_ROT_min(x)  ((uint32_t) (((float)((int)x)  * (float) MOTOR_GEAR / 36000) * (float) SPEED_DENOMINATOR))
-        #define cGRAD_TO_ENCODER(x)        ((int) (((float) ((int)x) * (MOTOR_GEAR * 10) )/180))
-        #define ENCODER_TO_cGRAD(x)        ((int)((((float) ((int)x)) * 180) / (MOTOR_GEAR*10)))
+        #define cGRADsec_TO_ROT_min(x)     ((int32_t) x *  (int32_t)MOTOR_GEAR * (int32_t)SPEED_DENOMINATOR/(int32_t) 3600) 
+        #define cGRAD_TO_ENCODER(x)        ((int32_t) x * (int32_t) MOTOR_GEAR / (int32_t) 180)
+        #define ENCODER_TO_cGRAD(x)        ((int32_t) x * (int32_t) 180 / (int32_t) MOTOR_GEAR)
         #define END_ODVECTOR {0,0,0,0}
+
+        
 
 
         typedef enum{
             WORKFLOW_INITIALIZATION=0,
+            WORKFLOW_ZERO_SETTING,
             WORKFLOW_GET_CIA_STATUS,
             WORKFLOW_CIA_NOT_READY_TO_SWITCH_ON,
             WORKFLOW_CIA_SWITCH_ON_DISABLED,
             WORKFLOW_CIA_READY_TO_SWITCH_ON,
             WORKFLOW_CIA_SWITCHED_ON,
+            WORKFLOW_POSITIONING,
             WORKFLOW_CIA_OPERATION_ENABLED,
             WORKFLOW_CIA_QUICK_STOP_ACTIVE,
+            WORKFLOW_CIA_QUICK_STOP_ACTIVATION,
             WORKFLOW_CIA_FAULT_REACTION_ACTIVE,
             WORKFLOW_CIA_FAULT,
         }MET_CANOPEN_WORKFLOW_e;
@@ -140,7 +145,7 @@
             MET_CANOPEN_PROTOCOL_ERROR_TRANSMISSION, //!> Error during data transmission       
             MET_CANOPEN_PROTOCOL_ERROR_INVALID_CRC, //!> Frame with invalid CRC received        
             MET_CANOPEN_PROTOCOL_ERROR_INVALID_LENGHT, //!> Frame with invalid Lenght
-
+                        
         } MET_CANOPEN_PROTOCOL_ERROR_DEFS;
         
     /** 
@@ -167,13 +172,36 @@
         typedef uint8_t (*MET_canOpenWorkflow)(void);
         
         typedef struct {
+            uint16_t idx;
+            uint8_t  sub;
+            uint8_t  type;
+            uint32_t val;
+        }MET_canOpen_Config_t;
+        
+        
+        typedef struct {
+            const MET_canOpen_Config_t*   config;
+            MET_canOpen_Config_t*   positionRegisters;
+            int32_t (*getAnalogToPositionConversion)(uint16_t);
+            int32_t (*getPositionToEncoderConversion)(int32_t);
+            int32_t (*getEncoderToPositionConversion)(int32_t);
+            
+            
+            uint8_t execution_command;
+            int32_t target_position;
+            
+            uint8_t deviceId;
             uint8_t workflow;
             uint8_t workflow_step;
-            bool    initialized; //!< The configuration file has been uploaded and stored
-            bool    wait_zero_setting; //!< The device needs the zero setting procedure
-            uint8_t cia_status;
-            uint8_t error_class; //! Fault error class
-            uint32_t error_code; //! Fault error code
+            bool    initialized;        //!< The configuration file has been uploaded and stored
+            bool    wait_zero_setting;  //!< The device needs the zero setting procedure
+            int32_t analog1;           //!< This is the last Analog 1 read value
+            int32_t position;          //!< This is the last position value
+            
+            uint16_t index;             //!< Register index 
+            uint16_t chk;               //!< Configuration Checksum
+            uint8_t error_class;        //!< Fault error class
+            uint32_t error_code;        //!< Fault error code
         }canOpen_workflowData_t;
         
         typedef enum{
@@ -183,12 +211,21 @@
             MAX_CANOPEN_DEVICE        
         }MET_DEVICE_e;
         
-         typedef struct {
-            uint16_t idx;
-            uint8_t  sub;
-            uint8_t  type;
-            uint32_t val;
-        }MET_canOpen_Config_t;
+        typedef enum{
+            NO_COMMAND = 0,
+            ACTIVATE_ARM,
+            ACTIVATE_BODY,
+            ACTIVATE_LIFT,
+            ACTIVATE_ARM_LIFT        
+        }MET_CanOpen_Commands_e;
+        
+        typedef enum{
+            COMMAND_COMPLETED = 0,
+            COMMAND_EXECUTING,        
+            COMMAND_ERROR,
+        }MET_CanOpen_Commands_Completed_e;
+        
+      
         
         typedef struct {
             // Reception packets
@@ -206,13 +243,19 @@
             // Workflow management
             uint8_t currentDevice;
             canOpen_workflowData_t workflowData[MAX_CANOPEN_DEVICE];
-            canOpen_workflowData_t* pWorkflowData;
-            MET_canOpenWorkflow*    pWorkflowFunc;
-            MET_canOpen_Config_t*   pDeviceConfig;
+            
+            // Command management
+            MET_CanOpen_Commands_e current_command;
+            MET_CanOpen_Commands_Completed_e command_result;
+            bool abort_request;
             
         } MET_CanOpen_Data_t;
         
        
+        
+        #define NO_EXECECUTION_COMMAND             0
+        #define EXEC_POSITIONING    1
+
         
     /** @}*/  // metCanOpenData
 
@@ -239,17 +282,21 @@
         ext void MET_CanOpen_Protocol_Init(void);
         
         /// Application Main Loop function handler
-        void MET_CanOpen_Protocol_Loop(void);  
+        ext void MET_CanOpen_Protocol_Loop(void);  
+        
+        ext uint8_t  motorDeviceActivate(uint8_t command, int32_t val);
+        ext void motorDeviceAbort(void);
+        
      /** @}*/  // metCanOpenApi
         
         
         ext MET_CanOpen_Data_t MET_CanOpen_Data_Struct; //!< This is the internal protocol data structure
         
         ext void changeDevice(void);
-        ext bool MET_canOpen_WriteSDO(uint8_t devId, uint16_t idx, uint8_t sub, uint8_t odt, uint32_t d, uint8_t tmo);
-        ext bool MET_canOpen_ReadSDO(uint8_t devId, uint16_t idx, uint8_t sub, uint8_t odt, uint8_t tmo);
-    
-
+        ext bool MET_canOpen_WriteSDO(uint16_t idx, uint8_t sub, uint8_t odt, uint32_t d, uint8_t tmo);
+        ext bool MET_canOpen_ReadSDO(uint16_t idx, uint8_t sub, uint8_t odt, uint8_t tmo);
+        ext void MET_CanOpen_Protocol_Register_Update(void);
+        
         ext bool        MET_canOpen_isOdOk(void);
         ext uint8_t     MET_canOpen_getOdType(void);
         ext uint16_t    MET_canOpen_getOdId(void);

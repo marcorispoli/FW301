@@ -111,6 +111,7 @@
         
         #define PROTOCOL_STATUS_SYSTEM_IDX 0          //!< STATUS-SYSTEM Register Index definition
         #define PROTOCOL_STATUS_BATTERY_IDX 1         //!< STATUS-BATTERY Register Index definition
+        #define PROTOCOL_STATUS_ARM_POSITION_IDX 2    //!< STATUS-ARM-POS Register Index definition
 
         
         #define PROTOCOL_SYSTEM_ERROR(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x1, val) //!< This is the error bit in the system register
@@ -121,6 +122,7 @@
         #define PROTOCOL_SYSTEM_BATT1_LOW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x20, val) //!< This is the  batt1_low bit in the system register
         #define PROTOCOL_SYSTEM_BATT2_LOW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x40, val) //!< This is the  batt2_low bit in the system register
         #define PROTOCOL_SYSTEM_BATTENA(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x80, val) //!< This is the  battery_enable_button bit in the system register
+        
         #define PROTOCOL_SYSTEM_CARM_UP(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x1, val) //!< This is the c-arm up request flag
         #define PROTOCOL_SYSTEM_CARM_DWN(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x2, val) //!< This is the c-arm down request flag
         #define PROTOCOL_SYSTEM_SLIDE_UP(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x4, val) //!< This is the slide up request flag
@@ -129,6 +131,7 @@
         #define PROTOCOL_SYSTEM_ROT_CCW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x20, val) //!< This is the c-arm rot ccw request flag
         #define PROTOCOL_SYSTEM_BODY_CW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x40, val) //!< This is the body rot cw request flag
         #define PROTOCOL_SYSTEM_BODY_CCW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x80, val) //!< This is the body rot ccw request flag
+        
         #define PROTOCOL_SYSTEM_MOT_DCOK(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x1, val) //!< This is the motor DC-OK power DC flag
         #define PROTOCOL_SYSTEM_MOT_POWER_ON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x2, val) //!< This is the Motor power activatin status
         #define PROTOCOL_SYSTEM_COMPRESSION_ON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x4, val) //!< This is Compression On status
@@ -136,13 +139,20 @@
         #define PROTOCOL_SYSTEM_CLOSED_DOOR(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x10, val) //!< This is the Closed-Door activation status
         #define PROTOCOL_SYSTEM_BURNIN_JUMPER(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x20, val) //!< This is the burnin jumper presence
         #define PROTOCOL_SYSTEM_POWER_LOCK(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x40, val) //!< This is the power lock activation feedback
+        
         #define PROTOCOL_SYSTEM_PEDAL_UP(val)       MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x1, val) //!< This is the Pedal Up input status
         #define PROTOCOL_SYSTEM_PEDAL_DWN(val)       MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x2, val) //!< This is the Pedal Down input status
         #define PROTOCOL_SYSTEM_PEDAL_CMP_UP(val)    MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x4, val) //!< This is the Pedal Compression Up input status
         #define PROTOCOL_SYSTEM_PEDAL_CMP_DWN(val)   MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x8, val) //!< This is the Pedal Compression Down input status
+        #define PROTOCOL_SYSTEM_MOTORS_IDLE(val)   MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x10, val) //!< This is the Motor IDLE condition
 
         #define PROTOCOL_BATTERY_VBATT1(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 0, val )     //!< This is the voltage of the Battery 1
         #define PROTOCOL_BATTERY_VBATT2(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 1, val ) //!< This is the voltage of the Battery 2
+
+        #define PROTOCOL_ARMPOS_POTL(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_ARM_POSITION_IDX, 0, val )     //!< This is the Pot value (low byte)
+        #define PROTOCOL_ARMPOS_POTH(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_ARM_POSITION_IDX, 1, val )     //!< This is the Pot value (h byte)
+        #define PROTOCOL_ARMPOS_ENCODERL(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_ARM_POSITION_IDX, 2, val ) //!< This is the Encoder value (L byte)
+        #define PROTOCOL_ARMPOS_ENCODERH(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_ARM_POSITION_IDX, 3, val ) //!< This is the Encoder value (H byte)
 
 
     /** @}*/  // STATUS_Register
@@ -190,7 +200,10 @@
         BODY_ROTATION_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the BODY ROTATION activation
         PEDALBOARD_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the PEDALBOARD activation
         MANUAL_ROT_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the MANUAL ROTATION activation
-        XRAY_BUTTON_LOCK_TIME,
+        XRAY_BUTTON_LOCK_TIME,//!< This is the parameter setting the lock/unlock time of the XRAY BUTTON
+        ARM_ZERO_POSITION,
+        LIFT_ZERO_POSITION,        
+        BODY_ZERO_POSITION,                
     }PROTO_PARAMETERS_t;
     
         #define PARAMETER_POWER_ON_OFF_DELAY MET_Can_Protocol_GetParameter(POWER_ON_OFF_DELAY,0)
@@ -209,10 +222,19 @@
      *  This section describes the Application Command Execution codes
      *  @{
      */
-      typedef enum{
-        ACTIVATE_SOFT_POWEROFF = 1,        
-      }PROTO_COMMAND_ENUM_t;
+    typedef enum{
+      ACTIVATE_SOFT_POWEROFF = 1,    
+      ACTIVATE_MOTORS
+    }PROTO_COMMAND_ENUM_t;
     
+    typedef enum{
+        PROTO_COMMAND_NO_ERR = 0,
+        PROTO_ERR_MOTORS_SAFETY_ABORT = 100, // This is Mandatory
+        PROTO_ERR_MOTORS_BUTTON_ABORT,
+        PROTO_ERR_MOTORS_INVALID_CODE ,
+        PROTO_ERR_MOTORS_INVALID_STATUS
+    }PROTO_COMMAND_ERROR_ENUM_t;
+
         ext void Protocol_7280_us_callback(void);
         
         
