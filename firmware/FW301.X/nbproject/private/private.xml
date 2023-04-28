@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Power/power.h</file>
-            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/application.h</file>
-            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Protocol/protocol.h</file>
-            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Power/power.c</file>
+            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Shared/CAN/MET_can_protocol.h</file>
+            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Protocol/protocol.c</file>
+            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/Shared/CAN/MET_can_protocol.c</file>
+            <file>file:/C:/Users/marco/Documents/Data/Progetti-GIT/FW/fw_pcb301/firmware/src/main.c</file>
         </group>
     </open-files>
 </project-private>

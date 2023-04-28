@@ -3,15 +3,15 @@
   <executable name="dist/default/production/FW301.X.production.elf">
     <memory name="program">
       <units>bytes</units>
-      <length>1048576</length>
-      <used>7970</used>
-      <free>1040606</free>
+      <length>1040384</length>
+      <used>16590</used>
+      <free>1023794</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>262144</length>
-      <used>455</used>
-      <free>261689</free>
+      <length>262128</length>
+      <used>955</used>
+      <free>261173</free>
     </memory>
   </executable>
 </project>

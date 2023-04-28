@@ -69,8 +69,7 @@ int main ( void )
     // Start the TCo to start the Vitality LED
     TC0_CompareStart();
     
-    //MET_Can_Open_Init();
-    //MET_Can_Open_Start();
+    MET_CanOpen_Protocol_Init();
     
     // Application Protocol initialization
     ApplicationProtocolInit();
@@ -92,6 +91,8 @@ int main ( void )
         // Protocol management
         ApplicationProtocolLoop();
         
+        // CanOpen management
+       
         
         // Timer events activated into the RTC interrupt
         if(trigger_time & _7820_us_TriggerTime){
@@ -99,6 +100,8 @@ int main ( void )
             BusHwLoop(); // Bus Hardware Management    
             GeneratorLoop(); // Generator Signals Management 
             Protocol_7280_us_callback();
+            MET_CanOpen_Protocol_Loop();
+            MET_CanOpen_Protocol_Register_Update();
         }
 
         if(trigger_time & _15_64_ms_TriggerTime){
@@ -108,8 +111,9 @@ int main ( void )
         
         
                 
-        if(trigger_time & _15_64_ms_TriggerTime){
-            trigger_time &=~ _15_64_ms_TriggerTime;
+        if(trigger_time & _1024_ms_TriggerTime){
+            trigger_time &=~ _1024_ms_TriggerTime;
+            VITALITY_LED_Toggle();
              //MET_Can_Open_Send_WriteData(1,0x20,0,0,0);
                 //VITALITY_LED_Toggle();
                 /*

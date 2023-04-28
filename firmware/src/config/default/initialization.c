@@ -133,15 +133,15 @@ void SYS_Initialize ( void* data )
 
     EVSYS_Initialize();
 
+    ADC0_Initialize();
     CAN1_Initialize();
 
-    ADC0_Initialize();
     CAN0_Initialize();
 
     ADC1_Initialize();
-    TC0_CompareInitialize();
-
     RTC_Initialize();
+
+    TC0_CompareInitialize();
 
 
 
