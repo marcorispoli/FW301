@@ -47,6 +47,7 @@ static uint8_t trigger_time = 0;
 
 static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
 {
+    
     // Periodic Interval Handler: Freq = 1024 / 2 ^ (n+3)
     
     if (intCause & RTC_TIMER32_INT_MASK_PER0) trigger_time |= _7820_us_TriggerTime;  // 7.82ms Interrupt
