@@ -154,8 +154,6 @@
      * This section implements the data structures of the module
      *  @{
      */
-        #define _CAN_ID_BASE_ADDRESS 0x200 //!< This is the base address for the communication point to point
-        #define _CAN_ID_LOADER_ADDRESS 0x100 //!< This is the base address for the Loader frames
 
 
         /**
