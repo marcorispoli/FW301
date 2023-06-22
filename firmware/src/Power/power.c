@@ -108,17 +108,17 @@ void Power_1564us_Loop(void){
         else managePowerOn();
         
         // Update the status of the Battery Ena button
-        PROTOCOL_SYSTEM_BATTENA(uc_BATT_ENA_Get());
+        SETBIT_PROTOCOL_SYSTEM_BATTENA(uc_BATT_ENA_Get());
         
         batt1_level = (ADC1_ConversionResultGet() * 100) / 124;        
-        PROTOCOL_BATTERY_VBATT1(batt1_level);
+        SETBYTE_PROTOCOL_BATTERY_VBATT1(batt1_level);
         
         batt2_level = (ADC0_ConversionResultGet() * 100) / 124;        
-        PROTOCOL_BATTERY_VBATT2(batt2_level);
+        SETBYTE_PROTOCOL_BATTERY_VBATT2(batt2_level);
         
         // Set the status of the system status bit 
-        PROTOCOL_SYSTEM_BATT1_LOW(batt1_level < PARAMETER_LOW_BATT1_LEVEL);
-        PROTOCOL_SYSTEM_BATT2_LOW(batt2_level < PARAMETER_LOW_BATT2_LEVEL);
+        SETBIT_PROTOCOL_SYSTEM_BATT1_LOW(batt1_level < GETBYTE_PARAMETER_LOW_BATT1_LEVEL);
+        SETBIT_PROTOCOL_SYSTEM_BATT2_LOW(batt2_level < GETBYTE_PARAMETER_LOW_BATT2_LEVEL);
         
     }else timer100ms--;
     
@@ -156,9 +156,9 @@ bool PowerModule_requestSoftPowerOff(void){
     if(request_soft_power_off) return true;
     
     // Initits the timer
-    timer_request_soft_power_off = PARAMETER_SOFT_POWER_OFF_DELAY ;
+    timer_request_soft_power_off = GETBYTE_PARAMETER_SOFT_POWER_OFF_DELAY ;
     request_soft_power_off = true;
-    PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
+    SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
     return true;
 }
 
@@ -168,7 +168,7 @@ void PowerModule_abortSoftPowerOff(void){
     if(!request_soft_power_off) return ;
     
     request_soft_power_off = false;  
-    PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
+    SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
     uc_GEMMA_ON_Clear();
     return ;
 }
@@ -178,23 +178,23 @@ void initPowerOff(void){
     power_status = false;
     power_off_workflow = 0;
     
-    timer_disable_button = PARAMETER_POWER_ON_OFF_DELAY;
+    timer_disable_button = GETBYTE_PARAMETER_POWER_ON_OFF_DELAY;
     
     // DeActivates the power relay
     uc_DEVICE_ON_Clear();
             
     // Init of the power lock 
     power_lock = false;
-    PROTOCOL_SYSTEM_POWER_LOCK(false);
+    SETBIT_PROTOCOL_SYSTEM_POWER_LOCK(false);
     uc_AUTORITENUTA_Clear();
     
     // Soft power Off
-    PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
+    SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
     request_soft_power_off = false;
   
     // Powerdown
-    timer_keepalive = PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
-    PROTOCOL_SYSTEM_POWERDOWN(false);
+    timer_keepalive = GETBYTE_PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
+    SETBIT_PROTOCOL_SYSTEM_POWERDOWN(false);
     
     // Reset timer Hard and soft power On
     timer_hs_power_button = 0;
@@ -265,14 +265,14 @@ void managePowerOn(void){
     
     // Power Lock status: the status is self retaining
     if(!power_lock){
-        if(PROTOCOL_PROGRAMMING_OUT){
+        if(TESTBIT_PROTOCOL_PROGRAMMING_OUT){
             power_lock = true;
-            PROTOCOL_SYSTEM_POWER_LOCK(true);
+            SETBIT_PROTOCOL_SYSTEM_POWER_LOCK(true);
         
             // No Power Off possible
             uc_GEMMA_ON_Clear();
             request_soft_power_off = false;
-            PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
+            SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(false);
             
             // Self retained output activated 
             uc_AUTORITENUTA_Set();
@@ -292,8 +292,8 @@ void managePowerOn(void){
     // Button soft power off request
     if((!request_soft_power_off) && (timer_hs_power_button > SOFT_POWER_BUTTON_TIME)){ 
         request_soft_power_off = true;     
-        timer_request_soft_power_off = PARAMETER_SOFT_POWER_OFF_DELAY ;
-        PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
+        timer_request_soft_power_off = GETBYTE_PARAMETER_SOFT_POWER_OFF_DELAY ;
+        SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(true);
     }
         
     // Soft power off management
@@ -305,7 +305,7 @@ void managePowerOn(void){
     }
     
     // Powerdown management
-    PROTOCOL_SYSTEM_POWERDOWN(powerdown_condition);
+    SETBIT_PROTOCOL_SYSTEM_POWERDOWN(powerdown_condition);
     
    
     
@@ -322,7 +322,7 @@ void managePowerOn(void){
         else presenceLED_5000ms_blink();
         
     }else{ 
-        timer_keepalive = PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
+        timer_keepalive = GETBYTE_PARAMETER_KEEP_ALIVE_POWER_OFF * 10;
         uc_GEMMA_ON_Clear();
     }
     

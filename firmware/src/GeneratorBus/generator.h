@@ -25,42 +25,33 @@
  * - protocol.c
  * - protocol.h
  * 
- * ## Harmony 3 configurator setting
+ * ##  Generator interface Signal routing
  * 
- * ### Pin Assignement
- * 
- * |Signal name|Pin|Direction|Driver|Description|
- * |:---|:---:|:---:|:---:|:---|
- * |uc_XRAY_ENA|20|Out|Strong|This is the Generator XRAY-ENA output|
- * |uc_HV_ON|14|In|Pull-Down|Generator HV-ON signal activation|
- * ||||||
+ * |Signal|Direction|Source|Destination|Description|Internal name|uC Pin|
+ * |:---|:---:|:---:|:---|:---:|:---|:---|
+ * |gen_xray_ena|Out|Internal|Generator Device|This is the Generator XRAY-ENA output|uc_XRAY_ENA|20|
+ * |gen_hv_on|In|Generator Device|Internal|Generator HV-ON signal activation|uc_HV_ON|14|
  * 
  * ## Module Function Description
  * 
- * Most of the Generator Hardware signals enter the board through 
- * the Bus Hardware and exit the board to the generator after 
- * the opto insulator convert the levels from the Bus Hardware to the 
- * Generator Bus interfaces. Thos signals have no impact on the 
- * module because they don't interact with the micro controller.
+ * Most of the Generator interface signals transit only into the Power Service board
+ * without the uController interaction. However two of the Generator interface signals 
+ * are handled for internal usage:
  * 
- * Only the following signals are instead controlled for different
- * purpose:
- * + GENERATOR_XRAY_ENA signal (output) : Generator XRAY signal enable;
- * + GENERATOR_HV_ON signal (In): the Status of the Generator HV_ON signal
+ * + gen_xray_ena signal (output) : Generator XRAY signal enable;
+ * + gen_hv_on signal (In): the Status of the Generator HV_ON signal
  * 
- * ### XRAY_ENA Signal handling
+ * ## GEN_HV_ON Signal handling
  * 
- * The uc_XRAY_ENA microcontroller output shall be set according with the status of the 
- * Protocol/Output.generator_xray_ena signal.
+ * The module shall set the uc_XRAY_ENA according with the PROTOCOL.Output.generator_xray_ena
+ * signal status. 
  * 
- * The effective status of the GENRATOR_XRAY_ENA hardware signals 
- * will depend by the status of all the following signals:
+ * The Actual hardware output however depends by the status of other hardware signals:
  * + Input XRAY-Push button;
  * + Input safety CLOSED_DOOR;
- * + The uc_XRAY_ENA signal from the micro controller.
  * 
  * 
- * ### GENERATOR_HV_ON signal
+ * ## GENERATOR_HV_ON signal
  * 
  * The GENERATOR_HV_ON signal is activated by the Generator device 
  * whenever the HV voltage is activated. 
