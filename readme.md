@@ -1,43 +1,39 @@
-# 1. Power Service Board Firmware FW301 Project
+Collimator Board: firmware FW303 Project
 
-## 1.1. Overview
+# Project directory overview
 
-This project implement the firmware of the PCB/22-301 board 
-following the Software specifications of the:
-+  Gantry Software Detailed Documentation - Power Service Device Specification
+## MPLAB-X Progect directory
 
+firmware
+ └─ FW303.X
 
-## Directory Content
+## Project source directory
 
-+ firmware: this is the building project;
-  + boot: this is the directory where to place the application bootloader if present;
-  + doc: this is the Doxygen source documentation project directory;
-  + FW301.X: this is the MPLAB-X 5.50 IDE project directory;
-  + other_files: this is a non project directory with docs and tools helping the firmware development
-  + src: this is the source directory;
-    + config: this is the Harmony 3 configuration directory;
-    + packs: this is the Harmony 3 packs directory;
-    + Protocol: this is the Communication protocol source files;
-      + MET_can_protocol.c, MET_can_protocol.h: this is the library module implementing the Metaltronica Can protocol;
-      + protocol.c, protocol.h: this is the Power Service board implementation protocol;
-    + application.h: this is the application shared object declaration;
-    + licence.h: this is the microchip agreement license file (onòy for documentation);
-    + main.c: this is main of the application. 
+firmware
+ └─ src
 
-## 2. Related documentation
+## Project documentation directory
 
-+ doc_index.html: is a link to the firmware documentation.
+firmware
+ └─ doc
 
+# Project documentation description
 
- ## COMPILATION TOOLS
-  
-  This software is compiled with the MPLAB-X IDE 5.50:
-  - Compiler: XC32 Vs 3.1
+This project has been documented with Doxygen.
+The Doxygen project file is: 
+ 
+```text
+  firmware
+    └─doc
+        └─ fw303_doxygen
+```
 
-  The libraries are the Harmony 3 with the following packs:
-  + MSIS 5.4.0 for ARM processors;
-  + SAME51_DFP 3.6.130;
-  
-## APPLICATION DOCUMENTATION
-  
-The software has been documented with the Doxygen 1.9.3.
+The Document is compiled in HTML format.
+
+The HTML Document index is:
+
+```text
+  firmware
+    └─doc
+          └─ index.html
+```
