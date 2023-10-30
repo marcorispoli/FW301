@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_can0.h
+    plib_can1.h
 
   Summary:
     CAN PLIB interface declarations.
@@ -44,8 +44,8 @@
 *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef PLIB_CAN0_H
-#define PLIB_CAN0_H
+#ifndef PLIB_CAN1_H
+#define PLIB_CAN1_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -73,49 +73,49 @@
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
-/* CAN0 Message RAM Configuration Size */
-#define CAN0_RX_FIFO0_ELEMENT_SIZE       16U
-#define CAN0_RX_FIFO0_SIZE               16U
-#define CAN0_RX_FIFO1_ELEMENT_SIZE       16U
-#define CAN0_RX_FIFO1_SIZE               256U
-#define CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE 16U
-#define CAN0_TX_FIFO_BUFFER_SIZE         256U
-#define CAN0_TX_EVENT_FIFO_SIZE          128U
-#define CAN0_STD_MSG_ID_FILTER_SIZE      16U
+/* CAN1 Message RAM Configuration Size */
+#define CAN1_RX_FIFO0_ELEMENT_SIZE       16U
+#define CAN1_RX_FIFO0_SIZE               256U
+#define CAN1_RX_FIFO1_ELEMENT_SIZE       16U
+#define CAN1_RX_FIFO1_SIZE               16U
+#define CAN1_TX_FIFO_BUFFER_ELEMENT_SIZE 16U
+#define CAN1_TX_FIFO_BUFFER_SIZE         256U
+#define CAN1_TX_EVENT_FIFO_SIZE          128U
+#define CAN1_STD_MSG_ID_FILTER_SIZE      8U
 
-/* CAN0_MESSAGE_RAM_CONFIG_SIZE to be used by application or driver
+/* CAN1_MESSAGE_RAM_CONFIG_SIZE to be used by application or driver
    for allocating buffer from non-cached contiguous memory */
-#define CAN0_MESSAGE_RAM_CONFIG_SIZE     672U
+#define CAN1_MESSAGE_RAM_CONFIG_SIZE     664U
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-void CAN0_Initialize (void);
-bool CAN0_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, CAN_MODE mode, CAN_MSG_TX_ATTRIBUTE msgAttr);
-bool CAN0_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint16_t *timestamp,
+void CAN1_Initialize (void);
+bool CAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, CAN_MODE mode, CAN_MSG_TX_ATTRIBUTE msgAttr);
+bool CAN1_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint16_t *timestamp,
                                          CAN_MSG_RX_ATTRIBUTE msgAttr, CAN_MSG_RX_FRAME_ATTRIBUTE *msgFrameAttr);
-bool CAN0_TransmitEventFIFOElementGet(uint32_t *id, uint8_t *messageMarker, uint16_t *timestamp);
-CAN_ERROR CAN0_ErrorGet(void);
-void CAN0_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
-bool CAN0_InterruptGet(CAN_INTERRUPT_MASK interruptMask);
-void CAN0_InterruptClear(CAN_INTERRUPT_MASK interruptMask);
-bool CAN0_TxFIFOIsFull(void);
-void CAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress);
-bool CAN0_StandardFilterElementSet(uint8_t filterNumber, can_sidfe_registers_t *stdMsgIDFilterElement);
-bool CAN0_StandardFilterElementGet(uint8_t filterNumber, can_sidfe_registers_t *stdMsgIDFilterElement);
-void CAN0_SleepModeEnter(void);
-void CAN0_SleepModeExit(void);
-void CAN0_TxCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle);
-void CAN0_RxCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle, CAN_MSG_RX_ATTRIBUTE msgAttr);
+bool CAN1_TransmitEventFIFOElementGet(uint32_t *id, uint8_t *messageMarker, uint16_t *timestamp);
+CAN_ERROR CAN1_ErrorGet(void);
+void CAN1_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
+bool CAN1_InterruptGet(CAN_INTERRUPT_MASK interruptMask);
+void CAN1_InterruptClear(CAN_INTERRUPT_MASK interruptMask);
+bool CAN1_TxFIFOIsFull(void);
+void CAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress);
+bool CAN1_StandardFilterElementSet(uint8_t filterNumber, can_sidfe_registers_t *stdMsgIDFilterElement);
+bool CAN1_StandardFilterElementGet(uint8_t filterNumber, can_sidfe_registers_t *stdMsgIDFilterElement);
+void CAN1_SleepModeEnter(void);
+void CAN1_SleepModeExit(void);
+void CAN1_TxCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle);
+void CAN1_RxCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle, CAN_MSG_RX_ATTRIBUTE msgAttr);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
 #endif
 // DOM-IGNORE-END
 
-#endif // PLIB_CAN0_H
+#endif // PLIB_CAN1_H
 
 /*******************************************************************************
  End of File
