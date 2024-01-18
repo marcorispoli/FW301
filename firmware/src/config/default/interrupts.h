@@ -61,7 +61,6 @@ void NonMaskableInt_Handler (void);
 void HardFault_Handler (void);
 void RTC_InterruptHandler (void);
 void CAN0_InterruptHandler (void);
-void CAN1_InterruptHandler (void);
 
 
 

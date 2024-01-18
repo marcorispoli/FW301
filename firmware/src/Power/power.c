@@ -263,6 +263,7 @@ void managePowerOff(void){
 
 void managePowerOn(void){
     
+    
     // Power Lock status: the status is self retaining
     if(!power_lock){
         if(TESTBIT_PROTOCOL_PROGRAMMING_OUT){
@@ -307,7 +308,6 @@ void managePowerOn(void){
     // Powerdown management
     SETBIT_PROTOCOL_SYSTEM_POWERDOWN(powerdown_condition);
     
-   
     
     if(powerdown_condition){
         
@@ -329,5 +329,7 @@ void managePowerOn(void){
     return;
 }
 
-
+bool isPowerOn(void){
+    return power_status;
+}
 

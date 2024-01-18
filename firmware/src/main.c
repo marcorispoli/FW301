@@ -4,8 +4,8 @@
 #include "definitions.h"                // SYS function prototypes
 #include "application.h"
 #include "Protocol/protocol.h"
-//#include "Motors/MET_can_open.h"
-#include "BusHardware/bushw.h"
+
+#include "GPIO/gpio.h"
 #include "GeneratorBus/generator.h"
 #include "Power/power.h"
 
@@ -59,7 +59,7 @@ int main ( void )
     ApplicationProtocolInit();
     
     // Initializes the Bus Hardware signals
-    BusHwInit(); // Call AFTER the ApplicationProtocolInit();
+    GpioInit(); // Call AFTER the ApplicationProtocolInit();
     
     // Initializes the Generator signals
     GeneratorInit(); // Call AFTER the ApplicationProtocolInit();
@@ -82,7 +82,7 @@ int main ( void )
         // Timer events activated into the RTC interrupt
         if(trigger_time & _7820_us_TriggerTime){
             trigger_time &=~ _7820_us_TriggerTime;
-            BusHwLoop(); // Bus Hardware Management    
+            GpioLoop(); // Bus Hardware Management    
             GeneratorLoop(); // Generator Signals Management 
             Protocol_7280_us_callback();
             //MET_CanOpen_Protocol_Loop();

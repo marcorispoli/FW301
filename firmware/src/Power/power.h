@@ -185,7 +185,7 @@
          * 
          */
         ext void PowerInit(void);
-    
+        ext bool isPowerOn(void);
         /**
          * @brief This function handles the module activities        
          */

@@ -15,7 +15,6 @@
             <logicalFolder name="f8" displayName="can" projectFiles="true">
               <itemPath>../src/config/default/peripheral/can/plib_can_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/can/plib_can0.h</itemPath>
-              <itemPath>../src/config/default/peripheral/can/plib_can1.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
@@ -189,10 +188,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="BusHardware" displayName="BusHardware" projectFiles="true">
-        <itemPath>../src/BusHardware/bushw.c</itemPath>
-        <itemPath>../src/BusHardware/bushw.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="CAN" displayName="CAN" projectFiles="true">
         <itemPath>../src/Shared/CAN/MET_can_protocol.c</itemPath>
         <itemPath>../src/Shared/CAN/MET_can_protocol.h</itemPath>
@@ -209,7 +204,6 @@
             </logicalFolder>
             <logicalFolder name="f8" displayName="can" projectFiles="true">
               <itemPath>../src/config/default/peripheral/can/plib_can0.c</itemPath>
-              <itemPath>../src/config/default/peripheral/can/plib_can1.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
@@ -251,6 +245,10 @@
                      projectFiles="true">
         <itemPath>../src/GeneratorBus/generator.c</itemPath>
         <itemPath>../src/GeneratorBus/generator.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
+        <itemPath>../src/GPIO/gpio.c</itemPath>
+        <itemPath>../src/GPIO/gpio.h</itemPath>
       </logicalFolder>
       <logicalFolder name="Power" displayName="Power" projectFiles="true">
         <itemPath>../src/Power/power.c</itemPath>
@@ -295,7 +293,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.01</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

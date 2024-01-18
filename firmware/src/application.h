@@ -197,7 +197,7 @@ static const unsigned char  APPLICATION_MAJ_REV =  1 ;  //!< Application Revisio
 static const unsigned char  APPLICATION_MIN_REV =  0 ;  //!< Application Revision Minor Number
 static const unsigned char  APPLICATION_SUB_REV =  1 ;  //!< Application Revision build Number
 
-#define _MET_MOTOR_BRIDGE_
+//#define _MET_MOTOR_BRIDGE_
 
 /** @}*/
         

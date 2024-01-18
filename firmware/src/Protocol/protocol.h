@@ -156,7 +156,7 @@
         #define SETBIT_PROTOCOL_SYSTEM_ERROR(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x1, val) //!< This is the error bit in the system register
         #define SETBIT_PROTOCOL_SYSTEM_EMERGENCY(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x2, val) //!< This is the emergency_button bit in the system register
         #define SETBIT_PROTOCOL_SYSTEM_POWERDOWN(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x4, val) //!< This is the powerdown_detected bit in the system register
-        #define SETBIT_PROTOCOL_SYSTEM_MOTOR_SAFETY(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x8, val) //!< This is the motor_safety bit in the system register
+        #define SETBIT_PROTOCOL_SYSTEM_CABINET_SAFETY(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x8, val) //!< This is the motor_safety bit in the system register
         #define SETBIT_PROTOCOL_SYSTEM_SOFT_POWEROFF(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x10, val) //!< This is the  soft_poweroff bit in the system register
         #define SETBIT_PROTOCOL_SYSTEM_BATT1_LOW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x20, val) //!< This is the  batt1_low bit in the system register
         #define SETBIT_PROTOCOL_SYSTEM_BATT2_LOW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 0, 0x40, val) //!< This is the  batt2_low bit in the system register
@@ -172,7 +172,7 @@
         #define SETBIT_PROTOCOL_SYSTEM_BODY_CCW(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 1, 0x80, val) //!< This is the body rot ccw request flag
         
         #define SETBIT_PROTOCOL_SYSTEM_MOT_DCOK(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x1, val) //!< This is the motor DC-OK power DC flag
-        #define SETBIT_PROTOCOL_SYSTEM_MOT_POWER_ON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x2, val) //!< This is the Motor power activatin status
+        #define SETBIT_PROTOCOL_SYSTEM_MOT_SWICTH_ON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x2, val) //!< This is the Motor power activatin status
         #define SETBIT_PROTOCOL_SYSTEM_COMPRESSION_ON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x4, val) //!< This is Compression On status
         #define SETBIT_PROTOCOL_SYSTEM_XRAY_BUTTON(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x8, val) //!< This is the X-RAY button activation status
         #define SETBIT_PROTOCOL_SYSTEM_CLOSED_DOOR(val)  MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 2, 0x10, val) //!< This is the Closed-Door activation status
@@ -183,8 +183,7 @@
         #define SETBIT_PROTOCOL_SYSTEM_PEDAL_DWN(val)       MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x2, val) //!< This is the Pedal Down input status
         #define SETBIT_PROTOCOL_SYSTEM_PEDAL_CMP_UP(val)    MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x4, val) //!< This is the Pedal Compression Up input status
         #define SETBIT_PROTOCOL_SYSTEM_PEDAL_CMP_DWN(val)   MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x8, val) //!< This is the Pedal Compression Down input status
-        #define SETBIT_PROTOCOL_SYSTEM_MOTORS_IDLE(val)   MET_Can_Protocol_SetStatusBit(PROTOCOL_STATUS_SYSTEM_IDX, 3, 0x10, val) //!< This is the Motor IDLE condition
-
+        
         #define SETBYTE_PROTOCOL_BATTERY_VBATT1(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 0, val )     //!< This is the voltage of the Battery 1
         #define SETBYTE_PROTOCOL_BATTERY_VBATT2(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 1, val ) //!< This is the voltage of the Battery 2
         /// @}   macroStatusRegister
@@ -203,7 +202,7 @@
 
         #define TESTBIT_PROTOCOL_BURNIN_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x1) //!< D1.0 - This flag activates the burnin output
         #define TESTBIT_PROTOCOL_MAN_BUZZER_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x2) //!< D1.1 - This flag manually activates the buzzer
-        #define TESTBIT_PROTOCOL_BUZZER_MODE_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x4) //!< D1.2 - This flag set the buzzer activation mode
+        #define TESTBIT_PROTOCOL_BUZZER_MANUAL_MODE  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x4) //!< D1.2 - This flag set the buzzer activation mode
         #define TESTBIT_PROTOCOL_XRAY_LED_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x8) //!< D1.3 - This flag activate the XRAY-LED output
         #define TESTBIT_PROTOCOL_XRAY_LAMP1_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x10) //!< D1.4 - This flag activates the external Lamp 1 during Exposure
         #define TESTBIT_PROTOCOL_XRAY_LAMP2_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x20) //!< D1.5 - This flag activates the external Lamp 2 during Exposure
