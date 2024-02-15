@@ -4,7 +4,14 @@
 #include "protocol.h"
 #include "Power/power.h"
 
+static volatile bool timout_master = true;
+static volatile int  timeout_timer = 0;
+
 static void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_t d2,uint8_t d3 ); //!< This is the Command protocol callback
+
+bool timeoutMasterCommunication(void){
+    return timout_master;
+}
 
 /**
  * This function initializes the CAN Protocol module.
@@ -23,7 +30,9 @@ static void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1
  */
 void ApplicationProtocolInit ( void )
 {
-     
+    timout_master = true;
+    timeout_timer = 0;
+    
     // Initialize the Met Can Library
     MET_Can_Protocol_Init(MET_CAN_APP_DEVICE_ID, PROTOCOL_STATUS_LENGHT, PROTOCOL_DATA_LENGHT, PROTOCOL_PARAMETER_LENGHT, APPLICATION_MAJ_REV, APPLICATION_MIN_REV, APPLICATION_SUB_REV, ApplicationProtocolCommandHandler);
     
@@ -84,6 +93,20 @@ void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_
  * This function is called every 7.82ms from the main loop
  */
 void Protocol_7280_us_callback(void){
+    
+    // handles the KEEPALIVE BIT
+    // The Keep-alive bit shall change status in less than 2 second 
+    static bool tmo_stat = false;
+    if(TESTBIT_KEEP_ALIVE != tmo_stat){
+        tmo_stat = TESTBIT_KEEP_ALIVE;
+        timeout_timer = 276;
+        timout_master = false;
+    }else{
+        if(timeout_timer){
+            timeout_timer--;
+            if(!timeout_timer) timout_master = true;
+        }
+    }
     
 }
 

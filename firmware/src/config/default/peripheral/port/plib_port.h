@@ -92,14 +92,14 @@
 #define uc_CALIB_ENA_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 4U)) & 0x01U)
 #define uc_CALIB_ENA_PIN                  PORT_PIN_PB04
 
-/*** Macros for uc_HW_SPO2 pin ***/
-#define uc_HW_SPO2_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 5U))
-#define uc_HW_SPO2_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 5U))
-#define uc_HW_SPO2_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 5U))
-#define uc_HW_SPO2_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 5U))
-#define uc_HW_SPO2_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 5U))
-#define uc_HW_SPO2_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 5U)) & 0x01U)
-#define uc_HW_SPO2_PIN                  PORT_PIN_PB05
+/*** Macros for uc_HW_MAN_ENA pin ***/
+#define uc_HW_MAN_ENA_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 5U))
+#define uc_HW_MAN_ENA_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 5U))
+#define uc_HW_MAN_ENA_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 5U))
+#define uc_HW_MAN_ENA_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 5U))
+#define uc_HW_MAN_ENA_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 5U))
+#define uc_HW_MAN_ENA_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 5U)) & 0x01U)
+#define uc_HW_MAN_ENA_PIN                  PORT_PIN_PB05
 
 /*** Macros for uc_BATT2 pin ***/
 #define uc_BATT2_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 8U)) & 0x01U)
@@ -386,14 +386,14 @@
 #define uc_SLIDE_DWN_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 27U)) & 0x01U)
 #define uc_SLIDE_DWN_PIN                  PORT_PIN_PA27
 
-/*** Macros for VITALITY_LED pin ***/
-#define VITALITY_LED_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 31U))
-#define VITALITY_LED_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 31U))
-#define VITALITY_LED_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 31U))
-#define VITALITY_LED_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 31U))
-#define VITALITY_LED_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 31U))
-#define VITALITY_LED_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 31U)) & 0x01U)
-#define VITALITY_LED_PIN                  PORT_PIN_PB31
+/*** Macros for uc_VITALITY_LED pin ***/
+#define uc_VITALITY_LED_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 31U))
+#define uc_VITALITY_LED_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 31U))
+#define uc_VITALITY_LED_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 31U))
+#define uc_VITALITY_LED_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 31U))
+#define uc_VITALITY_LED_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 31U))
+#define uc_VITALITY_LED_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 31U)) & 0x01U)
+#define uc_VITALITY_LED_PIN                  PORT_PIN_PB31
 
 /*** Macros for uc_ROT_CW pin ***/
 #define uc_ROT_CW_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 0U))

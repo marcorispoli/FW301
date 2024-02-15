@@ -51,7 +51,7 @@ int main ( void )
     RTC_Timer32Start(); // Start the RTC module
             
     // Start the TCo to start the Vitality LED
-    TC0_CompareStart();
+    //TC0_CompareStart();
     
     //MET_CanOpen_Protocol_Init();
     
@@ -82,6 +82,7 @@ int main ( void )
         // Timer events activated into the RTC interrupt
         if(trigger_time & _7820_us_TriggerTime){
             trigger_time &=~ _7820_us_TriggerTime;
+                       
             GpioLoop(); // Bus Hardware Management    
             GeneratorLoop(); // Generator Signals Management 
             Protocol_7280_us_callback();
@@ -98,7 +99,7 @@ int main ( void )
                 
         if(trigger_time & _1024_ms_TriggerTime){
             trigger_time &=~ _1024_ms_TriggerTime;
-            VITALITY_LED_Toggle();
+            uc_VITALITY_LED_Toggle();
              
         }        
      

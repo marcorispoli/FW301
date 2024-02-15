@@ -1599,6 +1599,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/m.rispoli/Documents/Workspace/Git/FW/fw301/firmware/FW301.X/debug/default/FW301_ptg"/>
         <property key="programmerToGoImageName" value="FW301_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

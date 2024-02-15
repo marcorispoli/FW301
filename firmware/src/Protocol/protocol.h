@@ -70,6 +70,9 @@
         /// This is the 7.280ms rtc function 
         ext void Protocol_7280_us_callback(void);
          
+        /// This function tests the communication status with the master
+        ext bool timeoutMasterCommunication(void);
+        
      /// @}   moduleApiInterface
     
 
@@ -206,6 +209,9 @@
         #define TESTBIT_PROTOCOL_XRAY_LED_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x8) //!< D1.3 - This flag activate the XRAY-LED output
         #define TESTBIT_PROTOCOL_XRAY_LAMP1_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x10) //!< D1.4 - This flag activates the external Lamp 1 during Exposure
         #define TESTBIT_PROTOCOL_XRAY_LAMP2_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x20) //!< D1.5 - This flag activates the external Lamp 2 during Exposure
+
+        #define TESTBIT_MANUAL_ROT_LED            MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 3,0x20) //!< D3.7 - Manual Rotation Button LED        
+        #define TESTBIT_KEEP_ALIVE               MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 3,0x80) //!< D3.7 - Keepalive bit to test the master communication
 
     /// @}   macroDataRegister
     
