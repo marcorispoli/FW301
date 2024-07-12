@@ -257,6 +257,8 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/application.h</itemPath>
       <itemPath>../src/license.h</itemPath>
+      <itemPath>../src/Buzzer/buzzer.c</itemPath>
+      <itemPath>../src/Buzzer/buzzer.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -1600,7 +1602,7 @@
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/m.rispoli/Documents/Workspace/Git/FW/fw301/firmware/FW301.X/debug/default/FW301_ptg"/>
+                  value="C:/Users/marco/Documents/GitHub/FW301/firmware/FW301.X/debug/default/FW301_ptg"/>
         <property key="programmerToGoImageName" value="FW301_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

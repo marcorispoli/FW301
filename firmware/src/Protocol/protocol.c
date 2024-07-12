@@ -3,6 +3,7 @@
 #include "application.h"
 #include "protocol.h"
 #include "Power/power.h"
+#include "GPIO/gpio.h"
 
 static volatile bool timout_master = true;
 static volatile int  timeout_timer = 0;
@@ -79,7 +80,11 @@ void ApplicationProtocolCommandHandler(uint8_t cmd, uint8_t d0,uint8_t d1,uint8_
             else MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_ENABLED);
             break;
         
-       
+        case ACTIVATE_DEMO_TOMO:
+            // Tries to activate the Demo Buzzer for Tomo pulses
+            if(BuzzerDemoInit(d0,d1))  MET_Can_Protocol_returnCommandExecuting();
+            else MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_ENABLED);
+            break;
 
         default:
             MET_Can_Protocol_returnCommandError(MET_CAN_COMMAND_NOT_AVAILABLE);

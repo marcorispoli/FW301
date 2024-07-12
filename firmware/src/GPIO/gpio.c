@@ -9,23 +9,6 @@
 static bool burning_jumper_status = false;
 static bool burning_jumper_test = false;
 
-void buzzerManagement(bool run){
-    if(!run){
-        uc_BUZZER_Clear();
-        return;
-    }
-    
-    // Buzzer Out
-    if(TESTBIT_PROTOCOL_BUZZER_MANUAL_MODE){
-        // Manual mode
-        if(TESTBIT_PROTOCOL_MAN_BUZZER_OUT) uc_BUZZER_Set();
-        else uc_BUZZER_Clear();
-    }else{
-        // Auto mode
-        uc_BUZZER_Clear();
-    }
-}
-
 
 void motorPowerManagement(bool run){
     
@@ -234,7 +217,7 @@ void GpioLoop(void){
     // Read the closed door input
     SETBIT_PROTOCOL_SYSTEM_CLOSED_DOOR(uc_CLOSED_DOOR_Get());
         
-    buzzerManagement(run);
+    
     motorPowerManagement(run);
     xrayManagement(run);
     compressorManagement(run);
@@ -248,4 +231,8 @@ void GpioLoop(void){
     else SETBIT_PROTOCOL_SYSTEM_MOT_SWICTH_ON(0);
 
        
+}
+
+bool isRunningMode(void){
+    return ((isPowerOn() && (!timeoutMasterCommunication()) ));
 }

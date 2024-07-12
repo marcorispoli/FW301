@@ -85,7 +85,7 @@
      /// This is the list of the implemented STATUS REGISTERS    
      typedef enum{
         PROTOCOL_STATUS_SYSTEM_IDX = 0,      //!< STATUS-SYSTEM Register Index definition
-        PROTOCOL_STATUS_BATTERY_IDX = 1,     //!< STATUS-BATTERY Register Index definition  
+        PROTOCOL_STATUS_BATTERY_IDX = 1,     //!< STATUS-BATTERY Register Index definition          
         PROTOCOL_STATUS_LENGHT               //!< Total number of Status registers
      }PROTO_STATUS_t;
      
@@ -100,7 +100,7 @@
 
          /// This is the list of the implemented DATA REGISTERS    
          typedef enum{
-            PROTOCOL_DATA_OUTPUTS_IDX = 0, //!< DATA-OUTPUT Register Index definition
+            PROTOCOL_DATA_OUTPUTS_IDX = 0, //!< OUTPUT GPIO Register Index definition            
             PROTOCOL_DATA_LENGHT            //!< Total number of Data registers
          }PROTO_DATA_t;
         
@@ -138,7 +138,8 @@
         /// This is the list of the implemented COMMANDS
         typedef enum{
           RESERVED_COMMAND = 0,   
-          ACTIVATE_SOFT_POWEROFF = 1 //!< Request for the Power Off Activation    
+          ACTIVATE_SOFT_POWEROFF,   //!< Request for the Power Off Activation  
+          ACTIVATE_DEMO_TOMO        //!< Activates the Demo of the Tomo
         }PROTO_COMMAND_ENUM_t;
 
         /// This is the list of the implemented ERRORS
@@ -189,6 +190,8 @@
         
         #define SETBYTE_PROTOCOL_BATTERY_VBATT1(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 0, val )     //!< This is the voltage of the Battery 1
         #define SETBYTE_PROTOCOL_BATTERY_VBATT2(val)  MET_Can_Protocol_SetStatusReg(PROTOCOL_STATUS_BATTERY_IDX, 1, val ) //!< This is the voltage of the Battery 2
+        
+        
         /// @}   macroStatusRegister
         
      /** \defgroup macroDataRegister DATA Register Access Macros
@@ -210,7 +213,6 @@
         #define TESTBIT_PROTOCOL_XRAY_LAMP1_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x10) //!< D1.4 - This flag activates the external Lamp 1 during Exposure
         #define TESTBIT_PROTOCOL_XRAY_LAMP2_OUT  MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x20) //!< D1.5 - This flag activates the external Lamp 2 during Exposure
         #define TESTBIT_MANUAL_ROT_LED           MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 1,0x40) //!< D1.6 - Manual Rotation Button LED        
-
         #define TESTBIT_KEEP_ALIVE               MET_Can_Protocol_TestData(PROTOCOL_DATA_OUTPUTS_IDX, 3,0x80) //!< D4.7 - Keepalive bit to test the master communication
 
     /// @}   macroDataRegister

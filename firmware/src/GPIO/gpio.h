@@ -53,7 +53,7 @@
          * 
          */
         ext void GpioInit(void);
-    
+        ext bool BuzzerDemoInit(int samples, int fps);
         /**
          * @brief This function handles the IOs status
          * 
@@ -61,7 +61,10 @@
          */
         ext void GpioLoop(void);
         
-        
+        /**
+         * @brief This function returns the Board status
+         */
+        ext bool isRunningMode(void);
         
     /** @}*/ // gpioModuleApi
     

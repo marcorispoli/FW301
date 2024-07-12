@@ -6,6 +6,8 @@
 #include "Protocol/protocol.h"
 
 #include "GPIO/gpio.h"
+#include "Buzzer/buzzer.h"
+
 #include "GeneratorBus/generator.h"
 #include "Power/power.h"
 
@@ -76,18 +78,15 @@ int main ( void )
         // Protocol management
         ApplicationProtocolLoop();
         
-        // CanOpen management
-       
         
         // Timer events activated into the RTC interrupt
         if(trigger_time & _7820_us_TriggerTime){
             trigger_time &=~ _7820_us_TriggerTime;
                        
-            GpioLoop(); // Bus Hardware Management    
-            GeneratorLoop(); // Generator Signals Management 
-            Protocol_7280_us_callback();
-            //MET_CanOpen_Protocol_Loop();
-            //MET_CanOpen_Protocol_Register_Update();
+            GpioLoop();         // GPIO Hardware Management    
+            GeneratorLoop();    // Generator Signals Management 
+            Buzzer728msLoop();  // Buzzer module
+            Protocol_7280_us_callback(); // Protocol module
         }
 
         if(trigger_time & _15_64_ms_TriggerTime){

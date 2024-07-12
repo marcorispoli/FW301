@@ -28,94 +28,98 @@ section                    address  length [bytes]      (dec)  Description
 .text.Power_1564us_Loop     0x268c          0x394         916   
 .text.CAN0_InterruptHan     0x2a20          0x190         400   
 .text.CLOCK_Initialize      0x2bb0          0x160         352   
-.dinit                      0x2d10          0x130         304   
-.text.MET_Can_Protocol_     0x2e40          0x124         292   
-.text.PORT_Initialize       0x2f64           0xec         236   
-.text.GpioLoop              0x3050           0xb8         184   
-.text.ApplicationProtoc     0x3108           0xb4         180   
-.text.manualRotationAct     0x31bc           0xb0         176   
-.text.CAN0_MessageTrans     0x326c           0xac         172   
-.text.xrayManagement        0x3318           0xac         172   
-.text.CAN0_MessageRAMCo     0x33c4           0xa0         160   
-.text.burningManagement     0x3464           0x9c         156   
-.text.Reset_Handler         0x3500           0x90         144   
-.text.initPowerOff          0x3590           0x8c         140   
-.text.CAN0_Initialize       0x361c           0x88         136   
-.text.main                  0x36a4           0x80         128   
-.text.motorPowerManagem     0x3724           0x6c         108   
-.text.compressorManagem     0x3790           0x6c         108   
-.text.ADC0_Initialize       0x37fc           0x5c          92   
-.text.ADC1_Initialize       0x3858           0x5c          92   
-.text.__libc_start_init     0x38b4           0x5c          92   
-.text.MET_Can_AppRestar     0x3910           0x58          88   
-.text.Protocol_7280_us_     0x3968           0x58          88   
-.text.pedalboardActivat     0x39c0           0x54          84   
-.text.GeneratorLoop         0x3a14           0x50          80   
-.text.buzzerManagement      0x3a64           0x50          80   
-.text.CAN0_MessageRecei     0x3ab4           0x4c          76   
-.text.PowerModule_reque     0x3b00           0x4c          76   
-.text.__pic32c_data_ini     0x3b4c           0x4c          76   
-.text.RTC_Initialize        0x3b98           0x44          68   
-.text                       0x3bdc           0x40          64  App's exec code 
-.text.MET_Can_Protocol_     0x3c1c           0x40          64   
-.text.CAN0_ErrorGet         0x3c5c           0x40          64   
-.text.NVIC_Initialize       0x3c9c           0x40          64   
-.text.PowerModule_abort     0x3cdc           0x40          64   
-.text.MET_Can_Protocol_     0x3d1c           0x38          56   
-.text.MET_Can_Protocol_     0x3d54           0x38          56   
-.text.MET_Can_Protocol_     0x3d8c           0x38          56   
-.text.rtcEventHandler       0x3dc4           0x38          56   
-.text.PowerInit             0x3dfc           0x34          52   
-.text.ApplicationProtoc     0x3e30           0x32          50   
-.text.EVSYS_Initialize      0x3e62            0x2           2   
-.text.MET_Can_Protocol_     0x3e64           0x30          48   
-.text.TC0_CompareInitia     0x3e94           0x30          48   
-.text.SYS_Initialize        0x3ec4           0x2c          44   
-.text.MET_Can_Protocol_     0x3ef0           0x28          40   
-.text.RTC_InterruptHand     0x3f18           0x28          40   
-.text.presenceLED_200ms     0x3f40           0x28          40   
-.text.presenceLED_400ms     0x3f68           0x28          40   
-.text.MET_Can_Protocol_     0x3f90           0x20          32   
-.text.__dinit_copy          0x3fb0           0x1e          30   
-.text.Dummy_Handler         0x3fce            0x2           2   
-.text.CAN0_RxCallbackRe     0x3fd0           0x1c          28   
-.text.memcpy                0x3fec           0x1c          28   
-.text.ADC0_Enable           0x4008           0x18          24   
-.text.ADC0_ConversionSt     0x4020           0x18          24   
-.text.ADC1_Enable           0x4038           0x18          24   
-.text.ADC1_ConversionSt     0x4050           0x18          24   
-.text.RTC_Timer32Start      0x4068           0x18          24   
-.text.GpioInit              0x4080           0x18          24   
-.text.MET_Can_Protocol_     0x4098           0x14          20   
-.rodata                     0x40ac           0x14          20  Read-only const 
-.text.memset                0x40c0           0x14          20   
-.text.__dinit_clear         0x40d4           0x12          18   
-.text.NonMaskableInt_Ha     0x40e6            0x2           2   
-.text.MET_Can_Protocol_     0x40e8           0x10          16   
-.text.MET_Can_Protocol_     0x40f8           0x10          16   
-.text.CAN0_TxCallbackRe     0x4108           0x10          16   
-.rodata                     0x4118           0x10          16  Read-only const 
-.text.NVMCTRL_Initializ     0x4128           0x10          16   
-.text.NVMCTRL_SmartEEPR     0x4138           0x10          16   
-.text.GeneratorInit         0x4148           0x10          16   
-.text.timeoutMasterComm     0x4158            0xc          12   
-.text.ADC0_ConversionRe     0x4164            0xc          12   
-.text.ADC1_ConversionRe     0x4170            0xc          12   
-.text.RTC_Timer32Callba     0x417c            0xc          12   
-.text.isPowerOn             0x4188            0xc          12   
-.text.ApplicationProtoc     0x4194            0x8           8   
-.rodata.can0StdFilter       0x419c            0x8           8   
-.text.__dummy_decompres     0x41a4            0x4           4   
-.text.HardFault_Handler     0x41a8            0x2           2   
-.text.DebugMonitor_Hand     0x41aa            0x2           2   
-.text.MemoryManagement_     0x41ac            0x2           2   
-.text.BusFault_Handler      0x41ae            0x2           2   
-.text.UsageFault_Handle     0x41b0            0x2           2   
-.text.Dummy_App_Func        0x41b2            0x2           2   
-.text.__dummy               0x41b4            0x2           2   
-      Total ROM used  :      0x21b6        8630  0.8% of 0xfe000
+.dinit                      0x2d10          0x140         320   
+.text.MET_Can_Protocol_     0x2e50          0x124         292   
+.text.buzzer_demo_seque     0x2f74          0x108         264   
+.text.PORT_Initialize       0x307c           0xec         236   
+.text.ApplicationProtoc     0x3168           0xb4         180   
+.text.GpioLoop              0x321c           0xb4         180   
+.text.manualRotationAct     0x32d0           0xb0         176   
+.text.CAN0_MessageTrans     0x3380           0xac         172   
+.text.xrayManagement        0x342c           0xac         172   
+.text.CAN0_MessageRAMCo     0x34d8           0xa0         160   
+.text.burningManagement     0x3578           0x9c         156   
+.text.Reset_Handler         0x3614           0x90         144   
+.text.initPowerOff          0x36a4           0x8c         140   
+.text.CAN0_Initialize       0x3730           0x88         136   
+.text.main                  0x37b8           0x84         132   
+.text.motorPowerManagem     0x383c           0x6c         108   
+.text.compressorManagem     0x38a8           0x6c         108   
+.text.Buzzer728msLoop       0x3914           0x6c         108   
+.text.ADC0_Initialize       0x3980           0x5c          92   
+.text.ADC1_Initialize       0x39dc           0x5c          92   
+.text.__libc_start_init     0x3a38           0x5c          92   
+.text.MET_Can_AppRestar     0x3a94           0x58          88   
+.text.Protocol_7280_us_     0x3aec           0x58          88   
+.text.pedalboardActivat     0x3b44           0x54          84   
+.text.ApplicationProtoc     0x3b98           0x52          82   
+.text.EVSYS_Initialize      0x3bea            0x2           2   
+.text.GeneratorLoop         0x3bec           0x50          80   
+.text.CAN0_MessageRecei     0x3c3c           0x4c          76   
+.text.PowerModule_reque     0x3c88           0x4c          76   
+.text.__pic32c_data_ini     0x3cd4           0x4c          76   
+.text.RTC_Initialize        0x3d20           0x44          68   
+.text.BuzzerDemoInit        0x3d64           0x44          68   
+.text                       0x3da8           0x40          64  App's exec code 
+.text.MET_Can_Protocol_     0x3de8           0x40          64   
+.text.CAN0_ErrorGet         0x3e28           0x40          64   
+.text.NVIC_Initialize       0x3e68           0x40          64   
+.text.PowerModule_abort     0x3ea8           0x40          64   
+.text.MET_Can_Protocol_     0x3ee8           0x38          56   
+.text.MET_Can_Protocol_     0x3f20           0x38          56   
+.text.MET_Can_Protocol_     0x3f58           0x38          56   
+.text.rtcEventHandler       0x3f90           0x38          56   
+.text.PowerInit             0x3fc8           0x34          52   
+.text.MET_Can_Protocol_     0x3ffc           0x30          48   
+.text.TC0_CompareInitia     0x402c           0x30          48   
+.text.SYS_Initialize        0x405c           0x2c          44   
+.text.MET_Can_Protocol_     0x4088           0x28          40   
+.text.RTC_InterruptHand     0x40b0           0x28          40   
+.text.presenceLED_200ms     0x40d8           0x28          40   
+.text.presenceLED_400ms     0x4100           0x28          40   
+.text.MET_Can_Protocol_     0x4128           0x20          32   
+.text.__dinit_copy          0x4148           0x1e          30   
+.text.Dummy_Handler         0x4166            0x2           2   
+.text.CAN0_RxCallbackRe     0x4168           0x1c          28   
+.text.isRunningMode         0x4184           0x1c          28   
+.text.memcpy                0x41a0           0x1c          28   
+.text.ADC0_Enable           0x41bc           0x18          24   
+.text.ADC0_ConversionSt     0x41d4           0x18          24   
+.text.ADC1_Enable           0x41ec           0x18          24   
+.text.ADC1_ConversionSt     0x4204           0x18          24   
+.text.RTC_Timer32Start      0x421c           0x18          24   
+.text.GpioInit              0x4234           0x18          24   
+.text.MET_Can_Protocol_     0x424c           0x14          20   
+.text.MET_Can_Protocol_     0x4260           0x14          20   
+.rodata                     0x4274           0x14          20  Read-only const 
+.text.memset                0x4288           0x14          20   
+.text.__dinit_clear         0x429c           0x12          18   
+.text.NonMaskableInt_Ha     0x42ae            0x2           2   
+.text.MET_Can_Protocol_     0x42b0           0x10          16   
+.text.MET_Can_Protocol_     0x42c0           0x10          16   
+.text.CAN0_TxCallbackRe     0x42d0           0x10          16   
+.rodata                     0x42e0           0x10          16  Read-only const 
+.text.NVMCTRL_Initializ     0x42f0           0x10          16   
+.text.NVMCTRL_SmartEEPR     0x4300           0x10          16   
+.text.GeneratorInit         0x4310           0x10          16   
+.text.timeoutMasterComm     0x4320            0xc          12   
+.text.ADC0_ConversionRe     0x432c            0xc          12   
+.text.ADC1_ConversionRe     0x4338            0xc          12   
+.text.RTC_Timer32Callba     0x4344            0xc          12   
+.text.isPowerOn             0x4350            0xc          12   
+.text.ApplicationProtoc     0x435c            0x8           8   
+.rodata.can0StdFilter       0x4364            0x8           8   
+.text.__dummy_decompres     0x436c            0x4           4   
+.text.HardFault_Handler     0x4370            0x2           2   
+.text.DebugMonitor_Hand     0x4372            0x2           2   
+.text.MemoryManagement_     0x4374            0x2           2   
+.text.BusFault_Handler      0x4376            0x2           2   
+.text.UsageFault_Handle     0x4378            0x2           2   
+.text.Dummy_App_Func        0x437a            0x2           2   
+.text.__dummy               0x437c            0x2           2   
+      Total ROM used  :      0x237e        9086  0.9% of 0xfe000
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x21b6        8630  0.8% of 0xfe000
+         Total Program Memory used  :      0x237e        9086  0.9% of 0xfe000
         --------------------------------------------------------------------------
 
 
@@ -132,53 +136,58 @@ section                    address  length [bytes]      (dec)  Description
 .bss.MET_Can_Protocol_R 0x20000bd8           0x20          32   
 .bss.can0CallbackObj    0x20000bf8           0x20          32   
 .bss                    0x20000c18           0x1c          28  Uninitialized data 
-.bss.test_step.8843     0x20000c34            0x4           4   
-.bss                    0x20000c38            0x4           4  Uninitialized data 
-.bss                    0x20000c3c            0x4           4  Uninitialized data 
-.bss.timer100ms         0x20000c40            0x2           2   
-.bss.timer_keepalive    0x20000c42            0x2           2   
-.bss.lastSequence.8929  0x20000c44            0x1           1   
-.bss.msgFrameAttr0      0x20000c45            0x1           1   
-.bss.rxBootloaderErrorT 0x20000c46            0x1           1   
-.bss.rxBootloaderRecept 0x20000c47            0x1           1   
-.bss.rxErrorTrigger     0x20000c48            0x1           1   
-.bss.rxReceptionTrigger 0x20000c49            0x1           1   
-.bss.tmo_stat.8853      0x20000c4a            0x1           1   
-.bss.messageMarker.8206 0x20000c4b            0x1           1   
-.bss.Generator_HV_ON_st 0x20000c4c            0x1           1   
-.bss.uc_HV_ON_back      0x20000c4d            0x1           1   
-.bss.burning_jumper_sta 0x20000c4e            0x1           1   
-.bss.burning_jumper_tes 0x20000c4f            0x1           1   
-.bss.batt1_level        0x20000c50            0x1           1   
-.bss.batt2_level        0x20000c51            0x1           1   
-.bss.power_lock         0x20000c52            0x1           1   
-.bss.power_off_workflow 0x20000c53            0x1           1   
-.bss.power_status       0x20000c54            0x1           1   
-.bss.powerdown_conditio 0x20000c55            0x1           1   
-.bss.poweron_button     0x20000c56            0x1           1   
-.bss.request_soft_power 0x20000c57            0x1           1   
-.bss.timer_disable_butt 0x20000c58            0x1           1   
-.bss.timer_hs_power_but 0x20000c59            0x1           1   
-.bss.timer_powerdown    0x20000c5a            0x1           1   
-.bss.timer_poweron_butt 0x20000c5b            0x1           1   
-.bss.timer_presence_led 0x20000c5c            0x1           1   
-.bss.timer_presence_led 0x20000c5d            0x1           1   
-.bss.timer_presence_led 0x20000c5e            0x1           1   
-.bss.timer_request_soft 0x20000c5f            0x1           1   
-.bss.trigger_time       0x20000c60            0x1           1   
-.data.timout_master     0x20000c61            0x1           1   
-.data.SmartEEPROM32     0x20000c64            0x4           4   
-         Total RAM used  :       0xc56        3158  1.2% of 0x3fff0
+.bss.test_step.8846     0x20000c34            0x4           4   
+.bss.buz_demo_fps       0x20000c38            0x4           4   
+.bss.buz_demo_samples   0x20000c3c            0x4           4   
+.bss.buz_demo_seq       0x20000c40            0x4           4   
+.bss                    0x20000c44            0x4           4  Uninitialized data 
+.bss                    0x20000c48            0x4           4  Uninitialized data 
+.bss.timer100ms         0x20000c4c            0x2           2   
+.bss.timer_keepalive    0x20000c4e            0x2           2   
+.bss.lastSequence.8929  0x20000c50            0x1           1   
+.bss.msgFrameAttr0      0x20000c51            0x1           1   
+.bss.rxBootloaderErrorT 0x20000c52            0x1           1   
+.bss.rxBootloaderRecept 0x20000c53            0x1           1   
+.bss.rxErrorTrigger     0x20000c54            0x1           1   
+.bss.rxReceptionTrigger 0x20000c55            0x1           1   
+.bss.tmo_stat.8864      0x20000c56            0x1           1   
+.bss.messageMarker.8206 0x20000c57            0x1           1   
+.bss.Generator_HV_ON_st 0x20000c58            0x1           1   
+.bss.uc_HV_ON_back      0x20000c59            0x1           1   
+.bss.burning_jumper_sta 0x20000c5a            0x1           1   
+.bss.burning_jumper_tes 0x20000c5b            0x1           1   
+.bss.batt1_level        0x20000c5c            0x1           1   
+.bss.batt2_level        0x20000c5d            0x1           1   
+.bss.power_lock         0x20000c5e            0x1           1   
+.bss.power_off_workflow 0x20000c5f            0x1           1   
+.bss.power_status       0x20000c60            0x1           1   
+.bss.powerdown_conditio 0x20000c61            0x1           1   
+.bss.poweron_button     0x20000c62            0x1           1   
+.bss.request_soft_power 0x20000c63            0x1           1   
+.bss.timer_disable_butt 0x20000c64            0x1           1   
+.bss.timer_hs_power_but 0x20000c65            0x1           1   
+.bss.timer_powerdown    0x20000c66            0x1           1   
+.bss.timer_poweron_butt 0x20000c67            0x1           1   
+.bss.timer_presence_led 0x20000c68            0x1           1   
+.bss.timer_presence_led 0x20000c69            0x1           1   
+.bss.timer_presence_led 0x20000c6a            0x1           1   
+.bss.timer_request_soft 0x20000c6b            0x1           1   
+.bss.trigger_time       0x20000c6c            0x1           1   
+.bss.buz_demo_current_p 0x20000c6d            0x1           1   
+.bss.buz_demo_pulse_cou 0x20000c6e            0x1           1   
+.data.timout_master     0x20000c6f            0x1           1   
+.data.SmartEEPROM32     0x20000c70            0x4           4   
+         Total RAM used  :       0xc64        3172  1.2% of 0x3fff0
         --------------------------------------------------------------------------
-            Total Data Memory used  :       0xc56        3158  1.2% of 0x3fff0
+            Total Data Memory used  :       0xc64        3172  1.2% of 0x3fff0
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0x20000c70          0x200         512  Reserved for heap 
-stack                   0x20000e88        0x3f170      258416  Reserved for stack 
+heap                    0x20000c78          0x200         512  Reserved for heap 
+stack                   0x20000e90        0x3f160      258400  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -186,16 +195,17 @@ Microchip PIC32 Memory-Usage Report By Module
 
         text        data         bss         dec         hex    basename                   filename
 --------------------------------------------------------------------------------
-        1820           4        2878        4702        125e    MET_can_protocol.o     build/default/production/_ext/1894469536/MET_can_protocol.o
+        1840           4        2878        4722        1272    MET_can_protocol.o     build/default/production/_ext/1894469536/MET_can_protocol.o
         1340           0          20        1360         550    power.o                build/default/production/_ext/1554269333/power.o
         1076           0         113        1189         4a5    plib_can0.o            build/default/production/_ext/60165182/plib_can0.o
-        1092           0           6        1098         44a    gpio.o                 build/default/production/_ext/1020268407/gpio.o
+        1036           0           6        1042         412    gpio.o                 build/default/production/_ext/1020268407/gpio.o
          610           0           0         610         262    interrupts.o           build/default/production/_ext/1171490990/interrupts.o
+         440           0          14         454         1c6    buzzer.o               build/default/production/_ext/1332866790/buzzer.o
+         370           1           5         376         178    protocol.o             build/default/production/_ext/1042908558/protocol.o
          352           0           0         352         160    plib_clock.o           build/default/production/_ext/1984496892/plib_clock.o
-         338           1           5         344         158    protocol.o             build/default/production/_ext/1042908558/protocol.o
-         304           0           0         304         130    data_init              data_init
+         320           0           0         320         140    data_init              data_init
          236           0           0         236          ec    plib_port.o            build/default/production/_ext/1865521619/plib_port.o
-         184           0           1         185          b9    main.o                 build/default/production/_ext/1360937237/main.o
+         188           0           1         189          bd    main.o                 build/default/production/_ext/1360937237/main.o
          144           0          12         156          9c    plib_rtc_timer.o       build/default/production/_ext/60180175/plib_rtc_timer.o
          152           0           0         152          98    plib_adc0.o            build/default/production/_ext/60163342/plib_adc0.o
          152           0           0         152          98    plib_adc1.o            build/default/production/_ext/60163342/plib_adc1.o
@@ -219,7 +229,7 @@ Microchip PIC32 Memory-Usage Report By Module
            0           0           4           4           4    __environ.o            libc-musl.a
            2           0           0           2           2    plib_evsys.o           build/default/production/_ext/1986646378/plib_evsys.o
 --------------------------------------------------------------------------------
-        8642           5        3153       11800        2e18    dist/default/production/FW301.X.production.elf
+        9098           5        3167       12270        2fee    dist/default/production/FW301.X.production.elf
 
 
 Discarded input sections
@@ -251,8 +261,6 @@ Discarded input sections
                 0x00000000       0x28 build/default/production/_ext/1894469536/MET_can_protocol.o
  .text.MET_Can_Protocol_TestParameter
                 0x00000000       0x30 build/default/production/_ext/1894469536/MET_can_protocol.o
- .text.MET_Can_Protocol_returnCommandExecuting
-                0x00000000       0x14 build/default/production/_ext/1894469536/MET_can_protocol.o
  .text.MET_InitCanBridge
                 0x00000000        0x2 build/default/production/_ext/1894469536/MET_can_protocol.o
  .data.SmartEEPROM8
@@ -537,7 +545,7 @@ Discarded input sections
  .bss           0x00000000        0x0 build/default/production/_ext/1020268407/gpio.o
  .text.gpioTest
                 0x00000000       0x4c build/default/production/_ext/1020268407/gpio.o
- .bss.step.8856
+ .bss.step.8859
                 0x00000000        0x4 build/default/production/_ext/1020268407/gpio.o
  .text          0x00000000        0x0 build/default/production/_ext/1554269333/power.o
  .data          0x00000000        0x0 build/default/production/_ext/1554269333/power.o
@@ -545,6 +553,9 @@ Discarded input sections
  .text          0x00000000        0x0 build/default/production/_ext/1360937237/main.o
  .data          0x00000000        0x0 build/default/production/_ext/1360937237/main.o
  .bss           0x00000000        0x0 build/default/production/_ext/1360937237/main.o
+ .text          0x00000000        0x0 build/default/production/_ext/1332866790/buzzer.o
+ .data          0x00000000        0x0 build/default/production/_ext/1332866790/buzzer.o
+ .bss           0x00000000        0x0 build/default/production/_ext/1332866790/buzzer.o
  .text          0x00000000        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
  .data          0x00000000        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
  .xc_stack_usage
@@ -647,6 +658,7 @@ LOAD build/default/production/_ext/31884679/generator.o
 LOAD build/default/production/_ext/1020268407/gpio.o
 LOAD build/default/production/_ext/1554269333/power.o
 LOAD build/default/production/_ext/1360937237/main.o
+LOAD build/default/production/_ext/1332866790/buzzer.o
                 0x00000001                __MPLAB_BUILD = 0x1
                 0x00100000                __rom_end = (ORIGIN (rom) + LENGTH (rom))
                 0x20040000                __ram_end = (ORIGIN (ram) + LENGTH (ram))
@@ -798,23 +810,25 @@ LOAD stack
  .ARM.attributes
                 0x0000042e       0x34 build/default/production/_ext/1360937237/main.o
  .ARM.attributes
-                0x00000462       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+                0x00000462       0x34 build/default/production/_ext/1332866790/buzzer.o
  .ARM.attributes
-                0x00000496       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+                0x00000496       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
  .ARM.attributes
-                0x000004cc       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+                0x000004ca       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
  .ARM.attributes
-                0x00000500       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+                0x00000500       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
  .ARM.attributes
-                0x00000536       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+                0x00000534       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
  .ARM.attributes
-                0x0000056c       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+                0x0000056a       0x36 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
  .ARM.attributes
-                0x000005a0       0x1e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x000005a0       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
  .ARM.attributes
-                0x000005be       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+                0x000005d4       0x1e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtn.o
  .ARM.attributes
-                0x000005f2       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+                0x000005f2       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .ARM.attributes
+                0x00000626       0x34 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
 .comment        0x00000000       0x2b
  .comment       0x00000000       0x2b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -839,6 +853,7 @@ LOAD stack
  .comment       0x0000002b       0x2c build/default/production/_ext/1020268407/gpio.o
  .comment       0x0000002b       0x2c build/default/production/_ext/1554269333/power.o
  .comment       0x0000002b       0x2c build/default/production/_ext/1360937237/main.o
+ .comment       0x0000002b       0x2c build/default/production/_ext/1332866790/buzzer.o
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
@@ -848,37 +863,38 @@ LOAD stack
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_info     0x00000000    0x12ce1
+.debug_info     0x00000000    0x135f3
  .debug_info    0x00000000     0x202a build/default/production/_ext/1894469536/MET_can_protocol.o
- .debug_info    0x0000202a      0xad0 build/default/production/_ext/1042908558/protocol.o
- .debug_info    0x00002afa      0xdce build/default/production/_ext/60163342/plib_adc0.o
- .debug_info    0x000038c8      0xdce build/default/production/_ext/60163342/plib_adc1.o
- .debug_info    0x00004696     0x1c42 build/default/production/_ext/60165182/plib_can0.o
- .debug_info    0x000062d8      0xbb8 build/default/production/_ext/1984496892/plib_clock.o
- .debug_info    0x00006e90      0x31c build/default/production/_ext/1986646378/plib_evsys.o
- .debug_info    0x000071ac     0x1386 build/default/production/_ext/1865468468/plib_nvic.o
- .debug_info    0x00008532      0xc51 build/default/production/_ext/1593096446/plib_nvmctrl.o
- .debug_info    0x00009183      0xdcb build/default/production/_ext/1865521619/plib_port.o
- .debug_info    0x00009f4e      0xfe6 build/default/production/_ext/60180175/plib_rtc_timer.o
- .debug_info    0x0000af34      0xc2c build/default/production/_ext/829342655/plib_tc0.o
- .debug_info    0x0000bb60      0x411 build/default/production/_ext/1171490990/initialization.o
- .debug_info    0x0000bf71     0x1673 build/default/production/_ext/1171490990/interrupts.o
- .debug_info    0x0000d5e4      0x3d5 build/default/production/_ext/1171490990/exceptions.o
- .debug_info    0x0000d9b9      0x901 build/default/production/_ext/1171490990/startup_xc32.o
- .debug_info    0x0000e2ba      0x7af build/default/production/_ext/31884679/generator.o
- .debug_info    0x0000ea69      0xe92 build/default/production/_ext/1020268407/gpio.o
- .debug_info    0x0000f8fb      0xfd8 build/default/production/_ext/1554269333/power.o
- .debug_info    0x000108d3      0x862 build/default/production/_ext/1360937237/main.o
- .debug_info    0x00011135      0x2c3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_info    0x000113f8      0x620 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_info    0x00011a18      0x532 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
- .debug_info    0x00011f4a      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_info    0x00012242      0x2bc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_info    0x000124fe      0x2ac c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
- .debug_info    0x000127aa      0x29c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_info    0x00012a46      0x29b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_info    0x0000202a      0xb32 build/default/production/_ext/1042908558/protocol.o
+ .debug_info    0x00002b5c      0xdce build/default/production/_ext/60163342/plib_adc0.o
+ .debug_info    0x0000392a      0xdce build/default/production/_ext/60163342/plib_adc1.o
+ .debug_info    0x000046f8     0x1c42 build/default/production/_ext/60165182/plib_can0.o
+ .debug_info    0x0000633a      0xbb8 build/default/production/_ext/1984496892/plib_clock.o
+ .debug_info    0x00006ef2      0x31c build/default/production/_ext/1986646378/plib_evsys.o
+ .debug_info    0x0000720e     0x1386 build/default/production/_ext/1865468468/plib_nvic.o
+ .debug_info    0x00008594      0xc51 build/default/production/_ext/1593096446/plib_nvmctrl.o
+ .debug_info    0x000091e5      0xdcb build/default/production/_ext/1865521619/plib_port.o
+ .debug_info    0x00009fb0      0xfe6 build/default/production/_ext/60180175/plib_rtc_timer.o
+ .debug_info    0x0000af96      0xc2c build/default/production/_ext/829342655/plib_tc0.o
+ .debug_info    0x0000bbc2      0x411 build/default/production/_ext/1171490990/initialization.o
+ .debug_info    0x0000bfd3     0x1673 build/default/production/_ext/1171490990/interrupts.o
+ .debug_info    0x0000d646      0x3d5 build/default/production/_ext/1171490990/exceptions.o
+ .debug_info    0x0000da1b      0x901 build/default/production/_ext/1171490990/startup_xc32.o
+ .debug_info    0x0000e31c      0x7af build/default/production/_ext/31884679/generator.o
+ .debug_info    0x0000eacb      0xe47 build/default/production/_ext/1020268407/gpio.o
+ .debug_info    0x0000f912      0xfd8 build/default/production/_ext/1554269333/power.o
+ .debug_info    0x000108ea      0x879 build/default/production/_ext/1360937237/main.o
+ .debug_info    0x00011163      0x8e4 build/default/production/_ext/1332866790/buzzer.o
+ .debug_info    0x00011a47      0x2c3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_info    0x00011d0a      0x620 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_info    0x0001232a      0x532 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+ .debug_info    0x0001285c      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_info    0x00012b54      0x2bc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_info    0x00012e10      0x2ac c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+ .debug_info    0x000130bc      0x29c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_info    0x00013358      0x29b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_abbrev   0x00000000     0x24ae
+.debug_abbrev   0x00000000     0x2650
  .debug_abbrev  0x00000000      0x421 build/default/production/_ext/1894469536/MET_can_protocol.o
  .debug_abbrev  0x00000421      0x14c build/default/production/_ext/1042908558/protocol.o
  .debug_abbrev  0x0000056d      0x18a build/default/production/_ext/60163342/plib_adc0.o
@@ -896,42 +912,44 @@ LOAD stack
  .debug_abbrev  0x000017e9       0x3e build/default/production/_ext/1171490990/exceptions.o
  .debug_abbrev  0x00001827      0x1f6 build/default/production/_ext/1171490990/startup_xc32.o
  .debug_abbrev  0x00001a1d      0x15c build/default/production/_ext/31884679/generator.o
- .debug_abbrev  0x00001b79      0x1b2 build/default/production/_ext/1020268407/gpio.o
- .debug_abbrev  0x00001d2b      0x23d build/default/production/_ext/1554269333/power.o
- .debug_abbrev  0x00001f68      0x14d build/default/production/_ext/1360937237/main.o
- .debug_abbrev  0x000020b5       0x44 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_abbrev  0x000020f9      0x117 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_abbrev  0x00002210       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
- .debug_abbrev  0x000022c8       0x9c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_abbrev  0x00002364       0x97 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_abbrev  0x000023fb       0x57 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
- .debug_abbrev  0x00002452       0x2e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_abbrev  0x00002480       0x2e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_abbrev  0x00001b79      0x1d0 build/default/production/_ext/1020268407/gpio.o
+ .debug_abbrev  0x00001d49      0x23d build/default/production/_ext/1554269333/power.o
+ .debug_abbrev  0x00001f86      0x14d build/default/production/_ext/1360937237/main.o
+ .debug_abbrev  0x000020d3      0x184 build/default/production/_ext/1332866790/buzzer.o
+ .debug_abbrev  0x00002257       0x44 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_abbrev  0x0000229b      0x117 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_abbrev  0x000023b2       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+ .debug_abbrev  0x0000246a       0x9c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_abbrev  0x00002506       0x97 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_abbrev  0x0000259d       0x57 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+ .debug_abbrev  0x000025f4       0x2e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_abbrev  0x00002622       0x2e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_loc      0x00000000     0x284c
+.debug_loc      0x00000000     0x2902
  .debug_loc     0x00000000      0x9f3 build/default/production/_ext/1894469536/MET_can_protocol.o
- .debug_loc     0x000009f3      0x238 build/default/production/_ext/1042908558/protocol.o
- .debug_loc     0x00000c2b      0x129 build/default/production/_ext/60163342/plib_adc0.o
- .debug_loc     0x00000d54      0x129 build/default/production/_ext/60163342/plib_adc1.o
- .debug_loc     0x00000e7d      0x9fc build/default/production/_ext/60165182/plib_can0.o
- .debug_loc     0x00001879       0xf9 build/default/production/_ext/1865468468/plib_nvic.o
- .debug_loc     0x00001972      0x4bf build/default/production/_ext/1593096446/plib_nvmctrl.o
- .debug_loc     0x00001e31      0x1e8 build/default/production/_ext/1865521619/plib_port.o
- .debug_loc     0x00002019       0xb4 build/default/production/_ext/60180175/plib_rtc_timer.o
- .debug_loc     0x000020cd      0x141 build/default/production/_ext/829342655/plib_tc0.o
- .debug_loc     0x0000220e       0x45 build/default/production/_ext/1171490990/initialization.o
- .debug_loc     0x00002253       0x60 build/default/production/_ext/1171490990/startup_xc32.o
- .debug_loc     0x000022b3       0x20 build/default/production/_ext/31884679/generator.o
- .debug_loc     0x000022d3      0x27c build/default/production/_ext/1020268407/gpio.o
- .debug_loc     0x0000254f       0xdc build/default/production/_ext/1554269333/power.o
- .debug_loc     0x0000262b       0x20 build/default/production/_ext/1360937237/main.o
- .debug_loc     0x0000264b       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_loc     0x0000265f       0x51 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_loc     0x000026b0      0x10b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_loc     0x000027bb       0x7d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_loc     0x00002838       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_loc     0x000009f3      0x28c build/default/production/_ext/1042908558/protocol.o
+ .debug_loc     0x00000c7f      0x129 build/default/production/_ext/60163342/plib_adc0.o
+ .debug_loc     0x00000da8      0x129 build/default/production/_ext/60163342/plib_adc1.o
+ .debug_loc     0x00000ed1      0x9fc build/default/production/_ext/60165182/plib_can0.o
+ .debug_loc     0x000018cd       0xf9 build/default/production/_ext/1865468468/plib_nvic.o
+ .debug_loc     0x000019c6      0x4bf build/default/production/_ext/1593096446/plib_nvmctrl.o
+ .debug_loc     0x00001e85      0x1e8 build/default/production/_ext/1865521619/plib_port.o
+ .debug_loc     0x0000206d       0xb4 build/default/production/_ext/60180175/plib_rtc_timer.o
+ .debug_loc     0x00002121      0x141 build/default/production/_ext/829342655/plib_tc0.o
+ .debug_loc     0x00002262       0x45 build/default/production/_ext/1171490990/initialization.o
+ .debug_loc     0x000022a7       0x60 build/default/production/_ext/1171490990/startup_xc32.o
+ .debug_loc     0x00002307       0x20 build/default/production/_ext/31884679/generator.o
+ .debug_loc     0x00002327      0x23a build/default/production/_ext/1020268407/gpio.o
+ .debug_loc     0x00002561       0xdc build/default/production/_ext/1554269333/power.o
+ .debug_loc     0x0000263d       0x20 build/default/production/_ext/1360937237/main.o
+ .debug_loc     0x0000265d       0xa4 build/default/production/_ext/1332866790/buzzer.o
+ .debug_loc     0x00002701       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_loc     0x00002715       0x51 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_loc     0x00002766      0x10b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_loc     0x00002871       0x7d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_loc     0x000028ee       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_aranges  0x00000000      0x818
+.debug_aranges  0x00000000      0x848
  .debug_aranges
                 0x00000000       0xc0 build/default/production/_ext/1894469536/MET_can_protocol.o
  .debug_aranges
@@ -973,23 +991,25 @@ LOAD stack
  .debug_aranges
                 0x000006f0       0x28 build/default/production/_ext/1360937237/main.o
  .debug_aranges
-                0x00000718       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+                0x00000718       0x30 build/default/production/_ext/1332866790/buzzer.o
  .debug_aranges
-                0x00000740       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+                0x00000748       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
  .debug_aranges
-                0x00000768       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+                0x00000770       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
  .debug_aranges
-                0x00000780       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+                0x00000798       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
  .debug_aranges
-                0x000007a0       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+                0x000007b0       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
  .debug_aranges
-                0x000007c0       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+                0x000007d0       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
  .debug_aranges
-                0x000007d8       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+                0x000007f0       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
  .debug_aranges
-                0x000007f8       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+                0x00000808       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_aranges
+                0x00000828       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_ranges   0x00000000      0x6f8
+.debug_ranges   0x00000000      0x718
  .debug_ranges  0x00000000       0xe0 build/default/production/_ext/1894469536/MET_can_protocol.o
  .debug_ranges  0x000000e0       0x30 build/default/production/_ext/1042908558/protocol.o
  .debug_ranges  0x00000110       0x70 build/default/production/_ext/60163342/plib_adc0.o
@@ -1010,74 +1030,77 @@ LOAD stack
  .debug_ranges  0x00000570       0x58 build/default/production/_ext/1020268407/gpio.o
  .debug_ranges  0x000005c8       0x80 build/default/production/_ext/1554269333/power.o
  .debug_ranges  0x00000648       0x18 build/default/production/_ext/1360937237/main.o
- .debug_ranges  0x00000660       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_ranges  0x00000678       0x40 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_ranges  0x000006b8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_ranges  0x000006c8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_ranges  0x000006d8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_ranges  0x000006e8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_ranges  0x00000660       0x20 build/default/production/_ext/1332866790/buzzer.o
+ .debug_ranges  0x00000680       0x18 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_ranges  0x00000698       0x40 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_ranges  0x000006d8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_ranges  0x000006e8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_ranges  0x000006f8       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_ranges  0x00000708       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_line     0x00000000     0x4e85
+.debug_line     0x00000000     0x515e
  .debug_line    0x00000000      0xc41 build/default/production/_ext/1894469536/MET_can_protocol.o
- .debug_line    0x00000c41      0x1ff build/default/production/_ext/1042908558/protocol.o
- .debug_line    0x00000e40      0x34e build/default/production/_ext/60163342/plib_adc0.o
- .debug_line    0x0000118e      0x34e build/default/production/_ext/60163342/plib_adc1.o
- .debug_line    0x000014dc      0x808 build/default/production/_ext/60165182/plib_can0.o
- .debug_line    0x00001ce4      0x329 build/default/production/_ext/1984496892/plib_clock.o
- .debug_line    0x0000200d       0x66 build/default/production/_ext/1986646378/plib_evsys.o
- .debug_line    0x00002073      0x2f7 build/default/production/_ext/1865468468/plib_nvic.o
- .debug_line    0x0000236a      0x430 build/default/production/_ext/1593096446/plib_nvmctrl.o
- .debug_line    0x0000279a      0x3f1 build/default/production/_ext/1865521619/plib_port.o
- .debug_line    0x00002b8b      0x39f build/default/production/_ext/60180175/plib_rtc_timer.o
- .debug_line    0x00002f2a      0x339 build/default/production/_ext/829342655/plib_tc0.o
- .debug_line    0x00003263      0x25b build/default/production/_ext/1171490990/initialization.o
- .debug_line    0x000034be       0xba build/default/production/_ext/1171490990/interrupts.o
- .debug_line    0x00003578       0xc6 build/default/production/_ext/1171490990/exceptions.o
- .debug_line    0x0000363e      0x26b build/default/production/_ext/1171490990/startup_xc32.o
- .debug_line    0x000038a9      0x19b build/default/production/_ext/31884679/generator.o
- .debug_line    0x00003a44      0x436 build/default/production/_ext/1020268407/gpio.o
- .debug_line    0x00003e7a      0x5d8 build/default/production/_ext/1554269333/power.o
- .debug_line    0x00004452      0x265 build/default/production/_ext/1360937237/main.o
- .debug_line    0x000046b7       0xec c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_line    0x000047a3      0x1cd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_line    0x00004970       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
- .debug_line    0x00004a28       0xfc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_line    0x00004b24       0xe6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_line    0x00004c0a      0x101 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
- .debug_line    0x00004d0b       0xb9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_line    0x00004dc4       0xc1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_line    0x00000c41      0x22b build/default/production/_ext/1042908558/protocol.o
+ .debug_line    0x00000e6c      0x34e build/default/production/_ext/60163342/plib_adc0.o
+ .debug_line    0x000011ba      0x34e build/default/production/_ext/60163342/plib_adc1.o
+ .debug_line    0x00001508      0x808 build/default/production/_ext/60165182/plib_can0.o
+ .debug_line    0x00001d10      0x329 build/default/production/_ext/1984496892/plib_clock.o
+ .debug_line    0x00002039       0x66 build/default/production/_ext/1986646378/plib_evsys.o
+ .debug_line    0x0000209f      0x2f7 build/default/production/_ext/1865468468/plib_nvic.o
+ .debug_line    0x00002396      0x430 build/default/production/_ext/1593096446/plib_nvmctrl.o
+ .debug_line    0x000027c6      0x3f1 build/default/production/_ext/1865521619/plib_port.o
+ .debug_line    0x00002bb7      0x39f build/default/production/_ext/60180175/plib_rtc_timer.o
+ .debug_line    0x00002f56      0x339 build/default/production/_ext/829342655/plib_tc0.o
+ .debug_line    0x0000328f      0x25b build/default/production/_ext/1171490990/initialization.o
+ .debug_line    0x000034ea       0xba build/default/production/_ext/1171490990/interrupts.o
+ .debug_line    0x000035a4       0xc6 build/default/production/_ext/1171490990/exceptions.o
+ .debug_line    0x0000366a      0x26b build/default/production/_ext/1171490990/startup_xc32.o
+ .debug_line    0x000038d5      0x19b build/default/production/_ext/31884679/generator.o
+ .debug_line    0x00003a70      0x412 build/default/production/_ext/1020268407/gpio.o
+ .debug_line    0x00003e82      0x5d8 build/default/production/_ext/1554269333/power.o
+ .debug_line    0x0000445a      0x280 build/default/production/_ext/1360937237/main.o
+ .debug_line    0x000046da      0x2b6 build/default/production/_ext/1332866790/buzzer.o
+ .debug_line    0x00004990       0xec c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_line    0x00004a7c      0x1cd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_line    0x00004c49       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+ .debug_line    0x00004d01       0xfc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_line    0x00004dfd       0xe6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_line    0x00004ee3      0x101 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+ .debug_line    0x00004fe4       0xb9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_line    0x0000509d       0xc1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_str      0x00000000      0x7c7
+.debug_str      0x00000000      0x85d
  .debug_str     0x00000000       0xaf build/default/production/_ext/1894469536/MET_can_protocol.o
- .debug_str     0x000000af      0x11a build/default/production/_ext/1042908558/protocol.o
- .debug_str     0x000001c9       0x19 build/default/production/_ext/60163342/plib_adc0.o
- .debug_str     0x000001e2       0x19 build/default/production/_ext/60163342/plib_adc1.o
- .debug_str     0x000001fb       0x88 build/default/production/_ext/60165182/plib_can0.o
- .debug_str     0x00000283       0x1e build/default/production/_ext/1984496892/plib_clock.o
- .debug_str     0x000002a1        0x0 build/default/production/_ext/1986646378/plib_evsys.o
- .debug_str     0x000002a1        0xa build/default/production/_ext/1865468468/plib_nvic.o
- .debug_str     0x000002ab       0x1b build/default/production/_ext/1593096446/plib_nvmctrl.o
- .debug_str     0x000002c6        0xb build/default/production/_ext/1865521619/plib_port.o
- .debug_str     0x000002d1      0x115 build/default/production/_ext/60180175/plib_rtc_timer.o
- .debug_str     0x000003e6       0xc6 build/default/production/_ext/829342655/plib_tc0.o
- .debug_str     0x000004ac       0xaa build/default/production/_ext/1171490990/initialization.o
- .debug_str     0x00000556        0x0 build/default/production/_ext/1171490990/interrupts.o
- .debug_str     0x00000556        0x0 build/default/production/_ext/1171490990/exceptions.o
- .debug_str     0x00000556       0x2f build/default/production/_ext/1171490990/startup_xc32.o
- .debug_str     0x00000585       0x1a build/default/production/_ext/31884679/generator.o
- .debug_str     0x0000059f       0x5d build/default/production/_ext/1020268407/gpio.o
- .debug_str     0x000005fc       0xfb build/default/production/_ext/1554269333/power.o
- .debug_str     0x000006f7       0xd0 build/default/production/_ext/1360937237/main.o
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_str     0x000007c7        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_str     0x000000af      0x151 build/default/production/_ext/1042908558/protocol.o
+ .debug_str     0x00000200       0x19 build/default/production/_ext/60163342/plib_adc0.o
+ .debug_str     0x00000219       0x19 build/default/production/_ext/60163342/plib_adc1.o
+ .debug_str     0x00000232       0x88 build/default/production/_ext/60165182/plib_can0.o
+ .debug_str     0x000002ba       0x1e build/default/production/_ext/1984496892/plib_clock.o
+ .debug_str     0x000002d8        0x0 build/default/production/_ext/1986646378/plib_evsys.o
+ .debug_str     0x000002d8        0xa build/default/production/_ext/1865468468/plib_nvic.o
+ .debug_str     0x000002e2       0x1b build/default/production/_ext/1593096446/plib_nvmctrl.o
+ .debug_str     0x000002fd        0xb build/default/production/_ext/1865521619/plib_port.o
+ .debug_str     0x00000308      0x115 build/default/production/_ext/60180175/plib_rtc_timer.o
+ .debug_str     0x0000041d       0xc6 build/default/production/_ext/829342655/plib_tc0.o
+ .debug_str     0x000004e3       0xaa build/default/production/_ext/1171490990/initialization.o
+ .debug_str     0x0000058d        0x0 build/default/production/_ext/1171490990/interrupts.o
+ .debug_str     0x0000058d        0x0 build/default/production/_ext/1171490990/exceptions.o
+ .debug_str     0x0000058d       0x2f build/default/production/_ext/1171490990/startup_xc32.o
+ .debug_str     0x000005bc       0x1a build/default/production/_ext/31884679/generator.o
+ .debug_str     0x000005d6       0x5d build/default/production/_ext/1020268407/gpio.o
+ .debug_str     0x00000633       0xfb build/default/production/_ext/1554269333/power.o
+ .debug_str     0x0000072e       0xe0 build/default/production/_ext/1360937237/main.o
+ .debug_str     0x0000080e       0x4f build/default/production/_ext/1332866790/buzzer.o
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(libc.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_str     0x0000085d        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_frame    0x00000000      0xedc
+.debug_frame    0x00000000      0xf38
  .debug_frame   0x00000000      0x1d4 build/default/production/_ext/1894469536/MET_can_protocol.o
  .debug_frame   0x000001d4       0x88 build/default/production/_ext/1042908558/protocol.o
  .debug_frame   0x0000025c       0xe0 build/default/production/_ext/60163342/plib_adc0.o
@@ -1098,12 +1121,13 @@ LOAD stack
  .debug_frame   0x00000bb8       0xf4 build/default/production/_ext/1020268407/gpio.o
  .debug_frame   0x00000cac       0xec build/default/production/_ext/1554269333/power.o
  .debug_frame   0x00000d98       0x38 build/default/production/_ext/1360937237/main.o
- .debug_frame   0x00000dd0       0x3c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_frame   0x00000e0c       0x3c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
- .debug_frame   0x00000e48       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
- .debug_frame   0x00000e74       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
- .debug_frame   0x00000e94       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_frame   0x00000eb4       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_frame   0x00000dd0       0x5c build/default/production/_ext/1332866790/buzzer.o
+ .debug_frame   0x00000e2c       0x3c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_frame   0x00000e68       0x3c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+ .debug_frame   0x00000ea4       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+ .debug_frame   0x00000ed0       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+ .debug_frame   0x00000ef0       0x20 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_frame   0x00000f10       0x28 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
 .note.GNU-stack
                 0x00000000        0x0
@@ -1118,8 +1142,8 @@ LOAD stack
  .note.GNU-stack
                 0x00000000        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
 
-.stack          0x20000e88      0x100
- .stack         0x20000e88      0x100 stack
+.stack          0x20000e90      0x100
+ .stack         0x20000e90      0x100 stack
 
 .bss.MET_Protocol_Data_Struct%1
                 0x20000010      0x980
@@ -1171,845 +1195,894 @@ LOAD stack
  .bss.timeout_timer
                 0x2000099c        0x4 build/default/production/_ext/1042908558/protocol.o
 
-.bss.test_step.8843%11
+.bss.test_step.8846%11
                 0x20000c34        0x4
- .bss.test_step.8843
+ .bss.test_step.8846
                 0x20000c34        0x4 build/default/production/_ext/1020268407/gpio.o
 
-.bss%12         0x20000c38        0x4
- .bss           0x20000c38        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+.bss.buz_demo_fps%12
+                0x20000c38        0x4
+ .bss.buz_demo_fps
+                0x20000c38        0x4 build/default/production/_ext/1332866790/buzzer.o
 
-.bss%13         0x20000c3c        0x4
- .bss           0x20000c3c        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
-                0x20000c3c                __environ
-                0x20000c3c                environ
-                0x20000c3c                ___environ
-                0x20000c3c                _environ
+.bss.buz_demo_samples%13
+                0x20000c3c        0x4
+ .bss.buz_demo_samples
+                0x20000c3c        0x4 build/default/production/_ext/1332866790/buzzer.o
 
-.bss.timer100ms%14
-                0x20000c40        0x2
+.bss.buz_demo_seq%14
+                0x20000c40        0x4
+ .bss.buz_demo_seq
+                0x20000c40        0x4 build/default/production/_ext/1332866790/buzzer.o
+
+.bss%15         0x20000c44        0x4
+ .bss           0x20000c44        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+
+.bss%16         0x20000c48        0x4
+ .bss           0x20000c48        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__environ.o)
+                0x20000c48                __environ
+                0x20000c48                environ
+                0x20000c48                ___environ
+                0x20000c48                _environ
+
+.bss.timer100ms%17
+                0x20000c4c        0x2
  .bss.timer100ms
-                0x20000c40        0x2 build/default/production/_ext/1554269333/power.o
+                0x20000c4c        0x2 build/default/production/_ext/1554269333/power.o
 
-.bss.timer_keepalive%15
-                0x20000c42        0x2
+.bss.timer_keepalive%18
+                0x20000c4e        0x2
  .bss.timer_keepalive
-                0x20000c42        0x2 build/default/production/_ext/1554269333/power.o
+                0x20000c4e        0x2 build/default/production/_ext/1554269333/power.o
 
-.bss.lastSequence.8929%16
-                0x20000c44        0x1
- .bss.lastSequence.8929
-                0x20000c44        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.bss.msgFrameAttr0%17
-                0x20000c45        0x1
- .bss.msgFrameAttr0
-                0x20000c45        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x20000c45                msgFrameAttr0
-
-.bss.rxBootloaderErrorTrigger%18
-                0x20000c46        0x1
- .bss.rxBootloaderErrorTrigger
-                0x20000c46        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.bss.rxBootloaderReceptionTrigger%19
-                0x20000c47        0x1
- .bss.rxBootloaderReceptionTrigger
-                0x20000c47        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.bss.rxErrorTrigger%20
-                0x20000c48        0x1
- .bss.rxErrorTrigger
-                0x20000c48        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.bss.rxReceptionTrigger%21
-                0x20000c49        0x1
- .bss.rxReceptionTrigger
-                0x20000c49        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.bss.tmo_stat.8853%22
-                0x20000c4a        0x1
- .bss.tmo_stat.8853
-                0x20000c4a        0x1 build/default/production/_ext/1042908558/protocol.o
-
-.bss.messageMarker.8206%23
-                0x20000c4b        0x1
- .bss.messageMarker.8206
-                0x20000c4b        0x1 build/default/production/_ext/60165182/plib_can0.o
-
-.bss.Generator_HV_ON_status%24
-                0x20000c4c        0x1
- .bss.Generator_HV_ON_status
-                0x20000c4c        0x1 build/default/production/_ext/31884679/generator.o
-
-.bss.uc_HV_ON_back%25
-                0x20000c4d        0x1
- .bss.uc_HV_ON_back
-                0x20000c4d        0x1 build/default/production/_ext/31884679/generator.o
-
-.bss.burning_jumper_status%26
-                0x20000c4e        0x1
- .bss.burning_jumper_status
-                0x20000c4e        0x1 build/default/production/_ext/1020268407/gpio.o
-
-.bss.burning_jumper_test%27
-                0x20000c4f        0x1
- .bss.burning_jumper_test
-                0x20000c4f        0x1 build/default/production/_ext/1020268407/gpio.o
-
-.bss.batt1_level%28
+.bss.lastSequence.8929%19
                 0x20000c50        0x1
- .bss.batt1_level
-                0x20000c50        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.lastSequence.8929
+                0x20000c50        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.bss.batt2_level%29
+.bss.msgFrameAttr0%20
                 0x20000c51        0x1
- .bss.batt2_level
-                0x20000c51        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.msgFrameAttr0
+                0x20000c51        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x20000c51                msgFrameAttr0
 
-.bss.power_lock%30
+.bss.rxBootloaderErrorTrigger%21
                 0x20000c52        0x1
- .bss.power_lock
-                0x20000c52        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.rxBootloaderErrorTrigger
+                0x20000c52        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.bss.power_off_workflow%31
+.bss.rxBootloaderReceptionTrigger%22
                 0x20000c53        0x1
- .bss.power_off_workflow
-                0x20000c53        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.rxBootloaderReceptionTrigger
+                0x20000c53        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.bss.power_status%32
+.bss.rxErrorTrigger%23
                 0x20000c54        0x1
- .bss.power_status
-                0x20000c54        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.rxErrorTrigger
+                0x20000c54        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.bss.powerdown_condition%33
+.bss.rxReceptionTrigger%24
                 0x20000c55        0x1
- .bss.powerdown_condition
-                0x20000c55        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.rxReceptionTrigger
+                0x20000c55        0x1 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.bss.poweron_button%34
+.bss.tmo_stat.8864%25
                 0x20000c56        0x1
- .bss.poweron_button
-                0x20000c56        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.tmo_stat.8864
+                0x20000c56        0x1 build/default/production/_ext/1042908558/protocol.o
 
-.bss.request_soft_power_off%35
+.bss.messageMarker.8206%26
                 0x20000c57        0x1
- .bss.request_soft_power_off
-                0x20000c57        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.messageMarker.8206
+                0x20000c57        0x1 build/default/production/_ext/60165182/plib_can0.o
 
-.bss.timer_disable_button%36
+.bss.Generator_HV_ON_status%27
                 0x20000c58        0x1
- .bss.timer_disable_button
-                0x20000c58        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.Generator_HV_ON_status
+                0x20000c58        0x1 build/default/production/_ext/31884679/generator.o
 
-.bss.timer_hs_power_button%37
+.bss.uc_HV_ON_back%28
                 0x20000c59        0x1
- .bss.timer_hs_power_button
-                0x20000c59        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.uc_HV_ON_back
+                0x20000c59        0x1 build/default/production/_ext/31884679/generator.o
 
-.bss.timer_powerdown%38
+.bss.burning_jumper_status%29
                 0x20000c5a        0x1
- .bss.timer_powerdown
-                0x20000c5a        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.burning_jumper_status
+                0x20000c5a        0x1 build/default/production/_ext/1020268407/gpio.o
 
-.bss.timer_poweron_button%39
+.bss.burning_jumper_test%30
                 0x20000c5b        0x1
- .bss.timer_poweron_button
-                0x20000c5b        0x1 build/default/production/_ext/1554269333/power.o
+ .bss.burning_jumper_test
+                0x20000c5b        0x1 build/default/production/_ext/1020268407/gpio.o
 
-.bss.timer_presence_led.8858%40
+.bss.batt1_level%31
                 0x20000c5c        0x1
- .bss.timer_presence_led.8858
+ .bss.batt1_level
                 0x20000c5c        0x1 build/default/production/_ext/1554269333/power.o
 
-.bss.timer_presence_led.8862%41
+.bss.batt2_level%32
                 0x20000c5d        0x1
- .bss.timer_presence_led.8862
+ .bss.batt2_level
                 0x20000c5d        0x1 build/default/production/_ext/1554269333/power.o
 
-.bss.timer_presence_led.8866%42
+.bss.power_lock%33
                 0x20000c5e        0x1
- .bss.timer_presence_led.8866
+ .bss.power_lock
                 0x20000c5e        0x1 build/default/production/_ext/1554269333/power.o
 
-.bss.timer_request_soft_power_off%43
+.bss.power_off_workflow%34
                 0x20000c5f        0x1
- .bss.timer_request_soft_power_off
+ .bss.power_off_workflow
                 0x20000c5f        0x1 build/default/production/_ext/1554269333/power.o
 
-.bss.trigger_time%44
+.bss.power_status%35
                 0x20000c60        0x1
- .bss.trigger_time
-                0x20000c60        0x1 build/default/production/_ext/1360937237/main.o
+ .bss.power_status
+                0x20000c60        0x1 build/default/production/_ext/1554269333/power.o
 
-.data.SmartEEPROM32%45
-                0x20000c64        0x4
- .data.SmartEEPROM32
-                0x20000c64        0x4 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x20000c64                SmartEEPROM32
-
-.data.timout_master%46
+.bss.powerdown_condition%36
                 0x20000c61        0x1
+ .bss.powerdown_condition
+                0x20000c61        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.poweron_button%37
+                0x20000c62        0x1
+ .bss.poweron_button
+                0x20000c62        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.request_soft_power_off%38
+                0x20000c63        0x1
+ .bss.request_soft_power_off
+                0x20000c63        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_disable_button%39
+                0x20000c64        0x1
+ .bss.timer_disable_button
+                0x20000c64        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_hs_power_button%40
+                0x20000c65        0x1
+ .bss.timer_hs_power_button
+                0x20000c65        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_powerdown%41
+                0x20000c66        0x1
+ .bss.timer_powerdown
+                0x20000c66        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_poweron_button%42
+                0x20000c67        0x1
+ .bss.timer_poweron_button
+                0x20000c67        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_presence_led.8859%43
+                0x20000c68        0x1
+ .bss.timer_presence_led.8859
+                0x20000c68        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_presence_led.8863%44
+                0x20000c69        0x1
+ .bss.timer_presence_led.8863
+                0x20000c69        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_presence_led.8867%45
+                0x20000c6a        0x1
+ .bss.timer_presence_led.8867
+                0x20000c6a        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.timer_request_soft_power_off%46
+                0x20000c6b        0x1
+ .bss.timer_request_soft_power_off
+                0x20000c6b        0x1 build/default/production/_ext/1554269333/power.o
+
+.bss.trigger_time%47
+                0x20000c6c        0x1
+ .bss.trigger_time
+                0x20000c6c        0x1 build/default/production/_ext/1360937237/main.o
+
+.bss.buz_demo_current_pulse%48
+                0x20000c6d        0x1
+ .bss.buz_demo_current_pulse
+                0x20000c6d        0x1 build/default/production/_ext/1332866790/buzzer.o
+
+.bss.buz_demo_pulse_count%49
+                0x20000c6e        0x1
+ .bss.buz_demo_pulse_count
+                0x20000c6e        0x1 build/default/production/_ext/1332866790/buzzer.o
+
+.data.SmartEEPROM32%50
+                0x20000c70        0x4
+ .data.SmartEEPROM32
+                0x20000c70        0x4 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x20000c70                SmartEEPROM32
+
+.data.timout_master%51
+                0x20000c6f        0x1
  .data.timout_master
-                0x20000c61        0x1 build/default/production/_ext/1042908558/protocol.o
+                0x20000c6f        0x1 build/default/production/_ext/1042908558/protocol.o
 
 .eh_frame%z1    0x00000000        0x0
  .eh_frame      0x00000000        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.config_00804000.__config_00804000%47
+.config_00804000.__config_00804000%52
                 0x00804000        0x4
  .config_00804000.__config_00804000
                 0x00804000        0x4 build/default/production/_ext/1171490990/initialization.o
                 0x00804000                __config_00804000
 
-.config_00804004.__config_00804004%48
+.config_00804004.__config_00804004%53
                 0x00804004        0x4
  .config_00804004.__config_00804004
                 0x00804004        0x4 build/default/production/_ext/1171490990/initialization.o
                 0x00804004                __config_00804004
 
-.config_00804008.__config_00804008%49
+.config_00804008.__config_00804008%54
                 0x00804008        0x4
  .config_00804008.__config_00804008
                 0x00804008        0x4 build/default/production/_ext/1171490990/initialization.o
                 0x00804008                __config_00804008
 
-.text.MET_Can_Protocol_Loop%50
+.text.MET_Can_Protocol_Loop%55
                 0x00002280      0x40c
  .text.MET_Can_Protocol_Loop
                 0x00002280      0x40c build/default/production/_ext/1894469536/MET_can_protocol.o
                 0x00002280                MET_Can_Protocol_Loop
 
-.text.Power_1564us_Loop%51
+.text.Power_1564us_Loop%56
                 0x0000268c      0x394
  .text.Power_1564us_Loop
                 0x0000268c      0x394 build/default/production/_ext/1554269333/power.o
                 0x0000268c                Power_1564us_Loop
 
-.text.CAN0_InterruptHandler%52
+.text.CAN0_InterruptHandler%57
                 0x00002a20      0x190
  .text.CAN0_InterruptHandler
                 0x00002a20      0x190 build/default/production/_ext/60165182/plib_can0.o
                 0x00002a20                CAN0_InterruptHandler
 
-.text.CLOCK_Initialize%53
+.text.CLOCK_Initialize%58
                 0x00002bb0      0x160
  .text.CLOCK_Initialize
                 0x00002bb0      0x160 build/default/production/_ext/1984496892/plib_clock.o
                 0x00002bb0                CLOCK_Initialize
 
-.dinit%54       0x00002d10      0x130
- .dinit         0x00002d10      0x130 data_init
+.dinit%59       0x00002d10      0x140
+ .dinit         0x00002d10      0x140 data_init
 
-.text.MET_Can_Protocol_Init%55
-                0x00002e40      0x124
+.text.MET_Can_Protocol_Init%60
+                0x00002e50      0x124
  .text.MET_Can_Protocol_Init
-                0x00002e40      0x124 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00002e40                MET_Can_Protocol_Init
+                0x00002e50      0x124 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00002e50                MET_Can_Protocol_Init
 
-.text.PORT_Initialize%56
-                0x00002f64       0xec
+.text.buzzer_demo_sequence%61
+                0x00002f74      0x108
+ .text.buzzer_demo_sequence
+                0x00002f74      0x108 build/default/production/_ext/1332866790/buzzer.o
+                0x00002f74                buzzer_demo_sequence
+
+.text.PORT_Initialize%62
+                0x0000307c       0xec
  .text.PORT_Initialize
-                0x00002f64       0xec build/default/production/_ext/1865521619/plib_port.o
-                0x00002f64                PORT_Initialize
+                0x0000307c       0xec build/default/production/_ext/1865521619/plib_port.o
+                0x0000307c                PORT_Initialize
 
-.text.GpioLoop%57
-                0x00003050       0xb8
- .text.GpioLoop
-                0x00003050       0xb8 build/default/production/_ext/1020268407/gpio.o
-                0x00003050                GpioLoop
-
-.text.ApplicationProtocolInit%58
-                0x00003108       0xb4
+.text.ApplicationProtocolInit%63
+                0x00003168       0xb4
  .text.ApplicationProtocolInit
-                0x00003108       0xb4 build/default/production/_ext/1042908558/protocol.o
-                0x00003108                ApplicationProtocolInit
+                0x00003168       0xb4 build/default/production/_ext/1042908558/protocol.o
+                0x00003168                ApplicationProtocolInit
 
-.text.manualRotationActivation%59
-                0x000031bc       0xb0
+.text.GpioLoop%64
+                0x0000321c       0xb4
+ .text.GpioLoop
+                0x0000321c       0xb4 build/default/production/_ext/1020268407/gpio.o
+                0x0000321c                GpioLoop
+
+.text.manualRotationActivation%65
+                0x000032d0       0xb0
  .text.manualRotationActivation
-                0x000031bc       0xb0 build/default/production/_ext/1020268407/gpio.o
-                0x000031bc                manualRotationActivation
+                0x000032d0       0xb0 build/default/production/_ext/1020268407/gpio.o
+                0x000032d0                manualRotationActivation
 
-.text.CAN0_MessageTransmit%60
-                0x0000326c       0xac
+.text.CAN0_MessageTransmit%66
+                0x00003380       0xac
  .text.CAN0_MessageTransmit
-                0x0000326c       0xac build/default/production/_ext/60165182/plib_can0.o
-                0x0000326c                CAN0_MessageTransmit
+                0x00003380       0xac build/default/production/_ext/60165182/plib_can0.o
+                0x00003380                CAN0_MessageTransmit
 
-.text.xrayManagement%61
-                0x00003318       0xac
+.text.xrayManagement%67
+                0x0000342c       0xac
  .text.xrayManagement
-                0x00003318       0xac build/default/production/_ext/1020268407/gpio.o
-                0x00003318                xrayManagement
+                0x0000342c       0xac build/default/production/_ext/1020268407/gpio.o
+                0x0000342c                xrayManagement
 
-.text.CAN0_MessageRAMConfigSet%62
-                0x000033c4       0xa0
+.text.CAN0_MessageRAMConfigSet%68
+                0x000034d8       0xa0
  .text.CAN0_MessageRAMConfigSet
-                0x000033c4       0xa0 build/default/production/_ext/60165182/plib_can0.o
-                0x000033c4                CAN0_MessageRAMConfigSet
+                0x000034d8       0xa0 build/default/production/_ext/60165182/plib_can0.o
+                0x000034d8                CAN0_MessageRAMConfigSet
 
-.text.burningManagement%63
-                0x00003464       0x9c
+.text.burningManagement%69
+                0x00003578       0x9c
  .text.burningManagement
-                0x00003464       0x9c build/default/production/_ext/1020268407/gpio.o
-                0x00003464                burningManagement
+                0x00003578       0x9c build/default/production/_ext/1020268407/gpio.o
+                0x00003578                burningManagement
 
-.text.Reset_Handler%64
-                0x00003500       0x90
+.text.Reset_Handler%70
+                0x00003614       0x90
  .text.Reset_Handler
-                0x00003500       0x90 build/default/production/_ext/1171490990/startup_xc32.o
-                0x00003500                Reset_Handler
+                0x00003614       0x90 build/default/production/_ext/1171490990/startup_xc32.o
+                0x00003614                Reset_Handler
 
-.text.initPowerOff%65
-                0x00003590       0x8c
+.text.initPowerOff%71
+                0x000036a4       0x8c
  .text.initPowerOff
-                0x00003590       0x8c build/default/production/_ext/1554269333/power.o
+                0x000036a4       0x8c build/default/production/_ext/1554269333/power.o
 
-.text.CAN0_Initialize%66
-                0x0000361c       0x88
+.text.CAN0_Initialize%72
+                0x00003730       0x88
  .text.CAN0_Initialize
-                0x0000361c       0x88 build/default/production/_ext/60165182/plib_can0.o
-                0x0000361c                CAN0_Initialize
+                0x00003730       0x88 build/default/production/_ext/60165182/plib_can0.o
+                0x00003730                CAN0_Initialize
 
-.text.main%67   0x000036a4       0x80
- .text.main     0x000036a4       0x80 build/default/production/_ext/1360937237/main.o
-                0x000036a4                main
+.text.main%73   0x000037b8       0x84
+ .text.main     0x000037b8       0x84 build/default/production/_ext/1360937237/main.o
+                0x000037b8                main
 
-.text.motorPowerManagement%68
-                0x00003724       0x6c
+.text.motorPowerManagement%74
+                0x0000383c       0x6c
  .text.motorPowerManagement
-                0x00003724       0x6c build/default/production/_ext/1020268407/gpio.o
-                0x00003724                motorPowerManagement
+                0x0000383c       0x6c build/default/production/_ext/1020268407/gpio.o
+                0x0000383c                motorPowerManagement
 
-.text.compressorManagement%69
-                0x00003790       0x6c
+.text.compressorManagement%75
+                0x000038a8       0x6c
  .text.compressorManagement
-                0x00003790       0x6c build/default/production/_ext/1020268407/gpio.o
-                0x00003790                compressorManagement
+                0x000038a8       0x6c build/default/production/_ext/1020268407/gpio.o
+                0x000038a8                compressorManagement
 
-.text.ADC0_Initialize%70
-                0x000037fc       0x5c
+.text.Buzzer728msLoop%76
+                0x00003914       0x6c
+ .text.Buzzer728msLoop
+                0x00003914       0x6c build/default/production/_ext/1332866790/buzzer.o
+                0x00003914                Buzzer728msLoop
+
+.text.ADC0_Initialize%77
+                0x00003980       0x5c
  .text.ADC0_Initialize
-                0x000037fc       0x5c build/default/production/_ext/60163342/plib_adc0.o
-                0x000037fc                ADC0_Initialize
+                0x00003980       0x5c build/default/production/_ext/60163342/plib_adc0.o
+                0x00003980                ADC0_Initialize
 
-.text.ADC1_Initialize%71
-                0x00003858       0x5c
+.text.ADC1_Initialize%78
+                0x000039dc       0x5c
  .text.ADC1_Initialize
-                0x00003858       0x5c build/default/production/_ext/60163342/plib_adc1.o
-                0x00003858                ADC1_Initialize
+                0x000039dc       0x5c build/default/production/_ext/60163342/plib_adc1.o
+                0x000039dc                ADC1_Initialize
 
-.text.__libc_start_init%72
-                0x000038b4       0x5c
+.text.__libc_start_init%79
+                0x00003a38       0x5c
  .text.__libc_start_init
-                0x000038b4       0x5c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
-                0x000038b4                __libc_init_array
+                0x00003a38       0x5c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+                0x00003a38                __libc_init_array
 
-.text.MET_Can_AppRestartCallback%73
-                0x00003910       0x58
+.text.MET_Can_AppRestartCallback%80
+                0x00003a94       0x58
  .text.MET_Can_AppRestartCallback
-                0x00003910       0x58 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00003a94       0x58 build/default/production/_ext/1894469536/MET_can_protocol.o
 
-.text.Protocol_7280_us_callback%74
-                0x00003968       0x58
+.text.Protocol_7280_us_callback%81
+                0x00003aec       0x58
  .text.Protocol_7280_us_callback
-                0x00003968       0x58 build/default/production/_ext/1042908558/protocol.o
-                0x00003968                Protocol_7280_us_callback
+                0x00003aec       0x58 build/default/production/_ext/1042908558/protocol.o
+                0x00003aec                Protocol_7280_us_callback
 
-.text.pedalboardActivation%75
-                0x000039c0       0x54
+.text.pedalboardActivation%82
+                0x00003b44       0x54
  .text.pedalboardActivation
-                0x000039c0       0x54 build/default/production/_ext/1020268407/gpio.o
-                0x000039c0                pedalboardActivation
+                0x00003b44       0x54 build/default/production/_ext/1020268407/gpio.o
+                0x00003b44                pedalboardActivation
 
-.text.GeneratorLoop%76
-                0x00003a14       0x50
- .text.GeneratorLoop
-                0x00003a14       0x50 build/default/production/_ext/31884679/generator.o
-                0x00003a14                GeneratorLoop
-
-.text.buzzerManagement%77
-                0x00003a64       0x50
- .text.buzzerManagement
-                0x00003a64       0x50 build/default/production/_ext/1020268407/gpio.o
-                0x00003a64                buzzerManagement
-
-.text.CAN0_MessageReceive%78
-                0x00003ab4       0x4c
- .text.CAN0_MessageReceive
-                0x00003ab4       0x4c build/default/production/_ext/60165182/plib_can0.o
-                0x00003ab4                CAN0_MessageReceive
-
-.text.PowerModule_requestSoftPowerOff%79
-                0x00003b00       0x4c
- .text.PowerModule_requestSoftPowerOff
-                0x00003b00       0x4c build/default/production/_ext/1554269333/power.o
-                0x00003b00                PowerModule_requestSoftPowerOff
-
-.text.__pic32c_data_initialization%80
-                0x00003b4c       0x4c
- .text.__pic32c_data_initialization
-                0x00003b4c       0x4c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
-                0x00003b4c                __pic32c_data_initialization
-
-.text.RTC_Initialize%81
-                0x00003b98       0x44
- .text.RTC_Initialize
-                0x00003b98       0x44 build/default/production/_ext/60180175/plib_rtc_timer.o
-                0x00003b98                RTC_Initialize
-
-.text%82        0x00003bdc       0x40
- .text          0x00003bdc       0x40 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-
-.text.MET_Can_Protocol_SetDefaultParameter%83
-                0x00003c1c       0x40
- .text.MET_Can_Protocol_SetDefaultParameter
-                0x00003c1c       0x40 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00003c1c                MET_Can_Protocol_SetDefaultParameter
-
-.text.CAN0_ErrorGet%84
-                0x00003c5c       0x40
- .text.CAN0_ErrorGet
-                0x00003c5c       0x40 build/default/production/_ext/60165182/plib_can0.o
-                0x00003c5c                CAN0_ErrorGet
-
-.text.NVIC_Initialize%85
-                0x00003c9c       0x40
- .text.NVIC_Initialize
-                0x00003c9c       0x40 build/default/production/_ext/1865468468/plib_nvic.o
-                0x00003c9c                NVIC_Initialize
-
-.text.PowerModule_abortSoftPowerOff%86
-                0x00003cdc       0x40
- .text.PowerModule_abortSoftPowerOff
-                0x00003cdc       0x40 build/default/production/_ext/1554269333/power.o
-                0x00003cdc                PowerModule_abortSoftPowerOff
-
-.text.MET_Can_Protocol_Reception_Trigger%87
-                0x00003d1c       0x38
- .text.MET_Can_Protocol_Reception_Trigger
-                0x00003d1c       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.text.MET_Can_Protocol_Reception_Callback%88
-                0x00003d54       0x38
- .text.MET_Can_Protocol_Reception_Callback
-                0x00003d54       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
-
-.text.MET_Can_Protocol_SetStatusBit%89
-                0x00003d8c       0x38
- .text.MET_Can_Protocol_SetStatusBit
-                0x00003d8c       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00003d8c                MET_Can_Protocol_SetStatusBit
-
-.text.rtcEventHandler%90
-                0x00003dc4       0x38
- .text.rtcEventHandler
-                0x00003dc4       0x38 build/default/production/_ext/1360937237/main.o
-
-.text.PowerInit%91
-                0x00003dfc       0x34
- .text.PowerInit
-                0x00003dfc       0x34 build/default/production/_ext/1554269333/power.o
-                0x00003dfc                PowerInit
-
-.text.ApplicationProtocolCommandHandler%92
-                0x00003e30       0x32
+.text.ApplicationProtocolCommandHandler%83
+                0x00003b98       0x52
  .text.ApplicationProtocolCommandHandler
-                0x00003e30       0x32 build/default/production/_ext/1042908558/protocol.o
+                0x00003b98       0x52 build/default/production/_ext/1042908558/protocol.o
 
-.text.MET_Can_Protocol_TestData%93
-                0x00003e64       0x30
+.text.GeneratorLoop%84
+                0x00003bec       0x50
+ .text.GeneratorLoop
+                0x00003bec       0x50 build/default/production/_ext/31884679/generator.o
+                0x00003bec                GeneratorLoop
+
+.text.CAN0_MessageReceive%85
+                0x00003c3c       0x4c
+ .text.CAN0_MessageReceive
+                0x00003c3c       0x4c build/default/production/_ext/60165182/plib_can0.o
+                0x00003c3c                CAN0_MessageReceive
+
+.text.PowerModule_requestSoftPowerOff%86
+                0x00003c88       0x4c
+ .text.PowerModule_requestSoftPowerOff
+                0x00003c88       0x4c build/default/production/_ext/1554269333/power.o
+                0x00003c88                PowerModule_requestSoftPowerOff
+
+.text.__pic32c_data_initialization%87
+                0x00003cd4       0x4c
+ .text.__pic32c_data_initialization
+                0x00003cd4       0x4c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+                0x00003cd4                __pic32c_data_initialization
+
+.text.RTC_Initialize%88
+                0x00003d20       0x44
+ .text.RTC_Initialize
+                0x00003d20       0x44 build/default/production/_ext/60180175/plib_rtc_timer.o
+                0x00003d20                RTC_Initialize
+
+.text.BuzzerDemoInit%89
+                0x00003d64       0x44
+ .text.BuzzerDemoInit
+                0x00003d64       0x44 build/default/production/_ext/1332866790/buzzer.o
+                0x00003d64                BuzzerDemoInit
+
+.text%90        0x00003da8       0x40
+ .text          0x00003da8       0x40 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.text.MET_Can_Protocol_SetDefaultParameter%91
+                0x00003de8       0x40
+ .text.MET_Can_Protocol_SetDefaultParameter
+                0x00003de8       0x40 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00003de8                MET_Can_Protocol_SetDefaultParameter
+
+.text.CAN0_ErrorGet%92
+                0x00003e28       0x40
+ .text.CAN0_ErrorGet
+                0x00003e28       0x40 build/default/production/_ext/60165182/plib_can0.o
+                0x00003e28                CAN0_ErrorGet
+
+.text.NVIC_Initialize%93
+                0x00003e68       0x40
+ .text.NVIC_Initialize
+                0x00003e68       0x40 build/default/production/_ext/1865468468/plib_nvic.o
+                0x00003e68                NVIC_Initialize
+
+.text.PowerModule_abortSoftPowerOff%94
+                0x00003ea8       0x40
+ .text.PowerModule_abortSoftPowerOff
+                0x00003ea8       0x40 build/default/production/_ext/1554269333/power.o
+                0x00003ea8                PowerModule_abortSoftPowerOff
+
+.text.MET_Can_Protocol_Reception_Trigger%95
+                0x00003ee8       0x38
+ .text.MET_Can_Protocol_Reception_Trigger
+                0x00003ee8       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
+
+.text.MET_Can_Protocol_Reception_Callback%96
+                0x00003f20       0x38
+ .text.MET_Can_Protocol_Reception_Callback
+                0x00003f20       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
+
+.text.MET_Can_Protocol_SetStatusBit%97
+                0x00003f58       0x38
+ .text.MET_Can_Protocol_SetStatusBit
+                0x00003f58       0x38 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00003f58                MET_Can_Protocol_SetStatusBit
+
+.text.rtcEventHandler%98
+                0x00003f90       0x38
+ .text.rtcEventHandler
+                0x00003f90       0x38 build/default/production/_ext/1360937237/main.o
+
+.text.PowerInit%99
+                0x00003fc8       0x34
+ .text.PowerInit
+                0x00003fc8       0x34 build/default/production/_ext/1554269333/power.o
+                0x00003fc8                PowerInit
+
+.text.MET_Can_Protocol_TestData%100
+                0x00003ffc       0x30
  .text.MET_Can_Protocol_TestData
-                0x00003e64       0x30 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00003e64                MET_Can_Protocol_TestData
+                0x00003ffc       0x30 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00003ffc                MET_Can_Protocol_TestData
 
-.text.TC0_CompareInitialize%94
-                0x00003e94       0x30
+.text.TC0_CompareInitialize%101
+                0x0000402c       0x30
  .text.TC0_CompareInitialize
-                0x00003e94       0x30 build/default/production/_ext/829342655/plib_tc0.o
-                0x00003e94                TC0_CompareInitialize
+                0x0000402c       0x30 build/default/production/_ext/829342655/plib_tc0.o
+                0x0000402c                TC0_CompareInitialize
 
-.text.SYS_Initialize%95
-                0x00003ec4       0x2c
+.text.SYS_Initialize%102
+                0x0000405c       0x2c
  .text.SYS_Initialize
-                0x00003ec4       0x2c build/default/production/_ext/1171490990/initialization.o
-                0x00003ec4                SYS_Initialize
+                0x0000405c       0x2c build/default/production/_ext/1171490990/initialization.o
+                0x0000405c                SYS_Initialize
 
-.text.MET_Can_Protocol_GetParameter%96
-                0x00003ef0       0x28
+.text.MET_Can_Protocol_GetParameter%103
+                0x00004088       0x28
  .text.MET_Can_Protocol_GetParameter
-                0x00003ef0       0x28 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00003ef0                MET_Can_Protocol_GetParameter
+                0x00004088       0x28 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00004088                MET_Can_Protocol_GetParameter
 
-.text.RTC_InterruptHandler%97
-                0x00003f18       0x28
+.text.RTC_InterruptHandler%104
+                0x000040b0       0x28
  .text.RTC_InterruptHandler
-                0x00003f18       0x28 build/default/production/_ext/60180175/plib_rtc_timer.o
-                0x00003f18                RTC_InterruptHandler
+                0x000040b0       0x28 build/default/production/_ext/60180175/plib_rtc_timer.o
+                0x000040b0                RTC_InterruptHandler
 
-.text.presenceLED_200ms_blink%98
-                0x00003f40       0x28
+.text.presenceLED_200ms_blink%105
+                0x000040d8       0x28
  .text.presenceLED_200ms_blink
-                0x00003f40       0x28 build/default/production/_ext/1554269333/power.o
+                0x000040d8       0x28 build/default/production/_ext/1554269333/power.o
 
-.text.presenceLED_400ms_blink%99
-                0x00003f68       0x28
+.text.presenceLED_400ms_blink%106
+                0x00004100       0x28
  .text.presenceLED_400ms_blink
-                0x00003f68       0x28 build/default/production/_ext/1554269333/power.o
+                0x00004100       0x28 build/default/production/_ext/1554269333/power.o
 
-.text.MET_Can_Protocol_SetStatusReg%100
-                0x00003f90       0x20
+.text.MET_Can_Protocol_SetStatusReg%107
+                0x00004128       0x20
  .text.MET_Can_Protocol_SetStatusReg
-                0x00003f90       0x20 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00003f90                MET_Can_Protocol_SetStatusReg
+                0x00004128       0x20 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00004128                MET_Can_Protocol_SetStatusReg
 
-.text.__dinit_copy%101
-                0x00003fb0       0x1e
+.text.__dinit_copy%108
+                0x00004148       0x1e
  .text.__dinit_copy
-                0x00003fb0       0x1e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
-                0x00003fb0                __dinit_copy_needed
-                0x00003fb0                __dinit_copy
+                0x00004148       0x1e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+                0x00004148                __dinit_copy_needed
+                0x00004148                __dinit_copy
 
-.text.CAN0_RxCallbackRegister%102
-                0x00003fd0       0x1c
+.text.CAN0_RxCallbackRegister%109
+                0x00004168       0x1c
  .text.CAN0_RxCallbackRegister
-                0x00003fd0       0x1c build/default/production/_ext/60165182/plib_can0.o
-                0x00003fd0                CAN0_RxCallbackRegister
+                0x00004168       0x1c build/default/production/_ext/60165182/plib_can0.o
+                0x00004168                CAN0_RxCallbackRegister
 
-.text.memcpy%103
-                0x00003fec       0x1c
- .text.memcpy   0x00003fec       0x1c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
-                0x00003fec                memcpy
+.text.isRunningMode%110
+                0x00004184       0x1c
+ .text.isRunningMode
+                0x00004184       0x1c build/default/production/_ext/1020268407/gpio.o
+                0x00004184                isRunningMode
 
-.text.ADC0_Enable%104
-                0x00004008       0x18
+.text.memcpy%111
+                0x000041a0       0x1c
+ .text.memcpy   0x000041a0       0x1c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memcpy.o)
+                0x000041a0                memcpy
+
+.text.ADC0_Enable%112
+                0x000041bc       0x18
  .text.ADC0_Enable
-                0x00004008       0x18 build/default/production/_ext/60163342/plib_adc0.o
-                0x00004008                ADC0_Enable
+                0x000041bc       0x18 build/default/production/_ext/60163342/plib_adc0.o
+                0x000041bc                ADC0_Enable
 
-.text.ADC0_ConversionStart%105
-                0x00004020       0x18
+.text.ADC0_ConversionStart%113
+                0x000041d4       0x18
  .text.ADC0_ConversionStart
-                0x00004020       0x18 build/default/production/_ext/60163342/plib_adc0.o
-                0x00004020                ADC0_ConversionStart
+                0x000041d4       0x18 build/default/production/_ext/60163342/plib_adc0.o
+                0x000041d4                ADC0_ConversionStart
 
-.text.ADC1_Enable%106
-                0x00004038       0x18
+.text.ADC1_Enable%114
+                0x000041ec       0x18
  .text.ADC1_Enable
-                0x00004038       0x18 build/default/production/_ext/60163342/plib_adc1.o
-                0x00004038                ADC1_Enable
+                0x000041ec       0x18 build/default/production/_ext/60163342/plib_adc1.o
+                0x000041ec                ADC1_Enable
 
-.text.ADC1_ConversionStart%107
-                0x00004050       0x18
+.text.ADC1_ConversionStart%115
+                0x00004204       0x18
  .text.ADC1_ConversionStart
-                0x00004050       0x18 build/default/production/_ext/60163342/plib_adc1.o
-                0x00004050                ADC1_ConversionStart
+                0x00004204       0x18 build/default/production/_ext/60163342/plib_adc1.o
+                0x00004204                ADC1_ConversionStart
 
-.text.RTC_Timer32Start%108
-                0x00004068       0x18
+.text.RTC_Timer32Start%116
+                0x0000421c       0x18
  .text.RTC_Timer32Start
-                0x00004068       0x18 build/default/production/_ext/60180175/plib_rtc_timer.o
-                0x00004068                RTC_Timer32Start
+                0x0000421c       0x18 build/default/production/_ext/60180175/plib_rtc_timer.o
+                0x0000421c                RTC_Timer32Start
 
-.text.GpioInit%109
-                0x00004080       0x18
+.text.GpioInit%117
+                0x00004234       0x18
  .text.GpioInit
-                0x00004080       0x18 build/default/production/_ext/1020268407/gpio.o
-                0x00004080                GpioInit
+                0x00004234       0x18 build/default/production/_ext/1020268407/gpio.o
+                0x00004234                GpioInit
 
-.text.MET_Can_Protocol_returnCommandExecuted%110
-                0x00004098       0x14
+.text.MET_Can_Protocol_returnCommandExecuting%118
+                0x0000424c       0x14
+ .text.MET_Can_Protocol_returnCommandExecuting
+                0x0000424c       0x14 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x0000424c                MET_Can_Protocol_returnCommandExecuting
+
+.text.MET_Can_Protocol_returnCommandExecuted%119
+                0x00004260       0x14
  .text.MET_Can_Protocol_returnCommandExecuted
-                0x00004098       0x14 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x00004098                MET_Can_Protocol_returnCommandExecuted
+                0x00004260       0x14 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x00004260                MET_Can_Protocol_returnCommandExecuted
 
-.rodata%111     0x000040ac       0x14
- .rodata        0x000040ac       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+.rodata%120     0x00004274       0x14
+ .rodata        0x00004274       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
 
-.text.memset%112
-                0x000040c0       0x14
- .text.memset   0x000040c0       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
-                0x000040c0                memset
+.text.memset%121
+                0x00004288       0x14
+ .text.memset   0x00004288       0x14 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(memset.o)
+                0x00004288                memset
 
-.text.__dinit_clear%113
-                0x000040d4       0x12
+.text.__dinit_clear%122
+                0x0000429c       0x12
  .text.__dinit_clear
-                0x000040d4       0x12 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
-                0x000040d4                __dinit_clear
-                0x000040d4                __dinit_clear_needed
+                0x0000429c       0x12 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+                0x0000429c                __dinit_clear
+                0x0000429c                __dinit_clear_needed
 
-.text.MET_Can_Protocol_returnCommandError%114
-                0x000040e8       0x10
+.text.MET_Can_Protocol_returnCommandError%123
+                0x000042b0       0x10
  .text.MET_Can_Protocol_returnCommandError
-                0x000040e8       0x10 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x000040e8                MET_Can_Protocol_returnCommandError
+                0x000042b0       0x10 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x000042b0                MET_Can_Protocol_returnCommandError
 
-.text.MET_Can_Protocol_returnCommandAborted%115
-                0x000040f8       0x10
+.text.MET_Can_Protocol_returnCommandAborted%124
+                0x000042c0       0x10
  .text.MET_Can_Protocol_returnCommandAborted
-                0x000040f8       0x10 build/default/production/_ext/1894469536/MET_can_protocol.o
-                0x000040f8                MET_Can_Protocol_returnCommandAborted
+                0x000042c0       0x10 build/default/production/_ext/1894469536/MET_can_protocol.o
+                0x000042c0                MET_Can_Protocol_returnCommandAborted
 
-.text.CAN0_TxCallbackRegister%116
-                0x00004108       0x10
+.text.CAN0_TxCallbackRegister%125
+                0x000042d0       0x10
  .text.CAN0_TxCallbackRegister
-                0x00004108       0x10 build/default/production/_ext/60165182/plib_can0.o
-                0x00004108                CAN0_TxCallbackRegister
+                0x000042d0       0x10 build/default/production/_ext/60165182/plib_can0.o
+                0x000042d0                CAN0_TxCallbackRegister
 
-.rodata%117     0x00004118       0x10
- .rodata        0x00004118       0x10 build/default/production/_ext/60165182/plib_can0.o
+.rodata%126     0x000042e0       0x10
+ .rodata        0x000042e0       0x10 build/default/production/_ext/60165182/plib_can0.o
 
-.text.NVMCTRL_Initialize%118
-                0x00004128       0x10
+.text.NVMCTRL_Initialize%127
+                0x000042f0       0x10
  .text.NVMCTRL_Initialize
-                0x00004128       0x10 build/default/production/_ext/1593096446/plib_nvmctrl.o
-                0x00004128                NVMCTRL_Initialize
+                0x000042f0       0x10 build/default/production/_ext/1593096446/plib_nvmctrl.o
+                0x000042f0                NVMCTRL_Initialize
 
-.text.NVMCTRL_SmartEEPROM_IsBusy%119
-                0x00004138       0x10
+.text.NVMCTRL_SmartEEPROM_IsBusy%128
+                0x00004300       0x10
  .text.NVMCTRL_SmartEEPROM_IsBusy
-                0x00004138       0x10 build/default/production/_ext/1593096446/plib_nvmctrl.o
-                0x00004138                NVMCTRL_SmartEEPROM_IsBusy
+                0x00004300       0x10 build/default/production/_ext/1593096446/plib_nvmctrl.o
+                0x00004300                NVMCTRL_SmartEEPROM_IsBusy
 
-.text.GeneratorInit%120
-                0x00004148       0x10
+.text.GeneratorInit%129
+                0x00004310       0x10
  .text.GeneratorInit
-                0x00004148       0x10 build/default/production/_ext/31884679/generator.o
-                0x00004148                GeneratorInit
+                0x00004310       0x10 build/default/production/_ext/31884679/generator.o
+                0x00004310                GeneratorInit
 
-.text.timeoutMasterCommunication%121
-                0x00004158        0xc
+.text.timeoutMasterCommunication%130
+                0x00004320        0xc
  .text.timeoutMasterCommunication
-                0x00004158        0xc build/default/production/_ext/1042908558/protocol.o
-                0x00004158                timeoutMasterCommunication
+                0x00004320        0xc build/default/production/_ext/1042908558/protocol.o
+                0x00004320                timeoutMasterCommunication
 
-.text.ADC0_ConversionResultGet%122
-                0x00004164        0xc
+.text.ADC0_ConversionResultGet%131
+                0x0000432c        0xc
  .text.ADC0_ConversionResultGet
-                0x00004164        0xc build/default/production/_ext/60163342/plib_adc0.o
-                0x00004164                ADC0_ConversionResultGet
+                0x0000432c        0xc build/default/production/_ext/60163342/plib_adc0.o
+                0x0000432c                ADC0_ConversionResultGet
 
-.text.ADC1_ConversionResultGet%123
-                0x00004170        0xc
+.text.ADC1_ConversionResultGet%132
+                0x00004338        0xc
  .text.ADC1_ConversionResultGet
-                0x00004170        0xc build/default/production/_ext/60163342/plib_adc1.o
-                0x00004170                ADC1_ConversionResultGet
+                0x00004338        0xc build/default/production/_ext/60163342/plib_adc1.o
+                0x00004338                ADC1_ConversionResultGet
 
-.text.RTC_Timer32CallbackRegister%124
-                0x0000417c        0xc
+.text.RTC_Timer32CallbackRegister%133
+                0x00004344        0xc
  .text.RTC_Timer32CallbackRegister
-                0x0000417c        0xc build/default/production/_ext/60180175/plib_rtc_timer.o
-                0x0000417c                RTC_Timer32CallbackRegister
+                0x00004344        0xc build/default/production/_ext/60180175/plib_rtc_timer.o
+                0x00004344                RTC_Timer32CallbackRegister
 
-.text.isPowerOn%125
-                0x00004188        0xc
+.text.isPowerOn%134
+                0x00004350        0xc
  .text.isPowerOn
-                0x00004188        0xc build/default/production/_ext/1554269333/power.o
-                0x00004188                isPowerOn
+                0x00004350        0xc build/default/production/_ext/1554269333/power.o
+                0x00004350                isPowerOn
 
-.text.ApplicationProtocolLoop%126
-                0x00004194        0x8
+.text.ApplicationProtocolLoop%135
+                0x0000435c        0x8
  .text.ApplicationProtocolLoop
-                0x00004194        0x8 build/default/production/_ext/1042908558/protocol.o
-                0x00004194                ApplicationProtocolLoop
+                0x0000435c        0x8 build/default/production/_ext/1042908558/protocol.o
+                0x0000435c                ApplicationProtocolLoop
 
-.rodata.can0StdFilter%127
-                0x0000419c        0x8
+.rodata.can0StdFilter%136
+                0x00004364        0x8
  .rodata.can0StdFilter
-                0x0000419c        0x8 build/default/production/_ext/60165182/plib_can0.o
+                0x00004364        0x8 build/default/production/_ext/60165182/plib_can0.o
 
-.text.__dummy_decompress%128
-                0x000041a4        0x4
+.text.__dummy_decompress%137
+                0x0000436c        0x4
  .text.__dummy_decompress
-                0x000041a4        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
-                0x000041a4                __dinit_decompress
-                0x000041a4                __dinit_copy_val_data
-                0x000041a4                __dinit_copy_emb
+                0x0000436c        0x4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+                0x0000436c                __dinit_decompress
+                0x0000436c                __dinit_copy_val_data
+                0x0000436c                __dinit_copy_emb
 
-.text.EVSYS_Initialize%129
-                0x00003e62        0x2
+.text.EVSYS_Initialize%138
+                0x00003bea        0x2
  .text.EVSYS_Initialize
-                0x00003e62        0x2 build/default/production/_ext/1986646378/plib_evsys.o
-                0x00003e62                EVSYS_Initialize
+                0x00003bea        0x2 build/default/production/_ext/1986646378/plib_evsys.o
+                0x00003bea                EVSYS_Initialize
 
-.text.Dummy_Handler%130
-                0x00003fce        0x2
+.text.Dummy_Handler%139
+                0x00004166        0x2
  .text.Dummy_Handler
-                0x00003fce        0x2 build/default/production/_ext/1171490990/interrupts.o
-                0x00003fce                EIC_EXTINT_9_Handler
-                0x00003fce                TCC0_MC5_Handler
-                0x00003fce                SVCall_Handler
-                0x00003fce                SERCOM0_2_Handler
-                0x00003fce                USB_SOF_HSOF_Handler
-                0x00003fce                TCC4_OTHER_Handler
-                0x00003fce                TCC2_MC2_Handler
-                0x00003fce                EVSYS_0_Handler
-                0x00003fce                TRNG_Handler
-                0x00003fce                TC2_Handler
-                0x00003fce                USB_TRCPT0_Handler
-                0x00003fce                DAC_OTHER_Handler
-                0x00003fce                AC_Handler
-                0x00003fce                DAC_EMPTY_0_Handler
-                0x00003fce                DMAC_OTHER_Handler
-                0x00003fce                EIC_EXTINT_5_Handler
-                0x00003fce                SERCOM3_1_Handler
-                0x00003fce                SysTick_Handler
-                0x00003fce                SERCOM4_OTHER_Handler
-                0x00003fce                SERCOM3_2_Handler
-                0x00003fce                EIC_EXTINT_6_Handler
-                0x00003fce                PendSV_Handler
-                0x00003fce                TCC4_MC0_Handler
-                0x00003fce                EVSYS_3_Handler
-                0x00003fce                QSPI_Handler
-                0x00003fce                TCC2_MC0_Handler
-                0x00003fce                PDEC_OTHER_Handler
-                0x00003fce                TCC3_MC0_Handler
-                0x00003fce                PDEC_MC1_Handler
-                0x00003fce                TCC2_MC1_Handler
-                0x00003fce                OSCCTRL_XOSC1_Handler
-                0x00003fce                PDEC_MC0_Handler
-                0x00003fce                EIC_EXTINT_4_Handler
-                0x00003fce                EIC_EXTINT_7_Handler
-                0x00003fce                SERCOM0_OTHER_Handler
-                0x00003fce                EVSYS_OTHER_Handler
-                0x00003fce                SERCOM0_0_Handler
-                0x00003fce                SERCOM4_0_Handler
-                0x00003fce                TCC1_MC0_Handler
-                0x00003fce                SERCOM1_OTHER_Handler
-                0x00003fce                TCC2_OTHER_Handler
-                0x00003fce                EIC_EXTINT_11_Handler
-                0x00003fce                SUPC_BODDET_Handler
-                0x00003fce                EIC_EXTINT_14_Handler
-                0x00003fce                OSC32KCTRL_Handler
-                0x00003fce                EVSYS_1_Handler
-                0x00003fce                TCC4_MC1_Handler
-                0x00003fce                DMAC_0_Handler
-                0x00003fce                SUPC_OTHER_Handler
-                0x00003fce                WDT_Handler
-                0x00003fce                EIC_EXTINT_15_Handler
-                0x00003fce                EIC_EXTINT_1_Handler
-                0x00003fce                TCC3_MC1_Handler
-                0x00003fce                SERCOM5_0_Handler
-                0x00003fce                TC4_Handler
-                0x00003fce                TC1_Handler
-                0x00003fce                TCC1_MC1_Handler
-                0x00003fce                EIC_EXTINT_0_Handler
-                0x00003fce                TCC1_OTHER_Handler
-                0x00003fce                PAC_Handler
-                0x00003fce                SERCOM4_1_Handler
-                0x00003fce                TC3_Handler
-                0x00003fce                Dummy_Handler
-                0x00003fce                DAC_RESRDY_0_Handler
-                0x00003fce                SERCOM5_1_Handler
-                0x00003fce                DMAC_2_Handler
-                0x00003fce                TCC0_MC4_Handler
-                0x00003fce                USB_TRCPT1_Handler
-                0x00003fce                SERCOM0_1_Handler
-                0x00003fce                TCC0_MC3_Handler
-                0x00003fce                EIC_EXTINT_12_Handler
-                0x00003fce                OSCCTRL_DPLL0_Handler
-                0x00003fce                SERCOM5_OTHER_Handler
-                0x00003fce                PM_Handler
-                0x00003fce                OSCCTRL_DFLL_Handler
-                0x00003fce                DAC_RESRDY_1_Handler
-                0x00003fce                DMAC_1_Handler
-                0x00003fce                USB_OTHER_Handler
-                0x00003fce                CAN1_Handler
-                0x00003fce                TCC0_OTHER_Handler
-                0x00003fce                EIC_EXTINT_10_Handler
-                0x00003fce                TCC1_MC3_Handler
-                0x00003fce                OSCCTRL_XOSC0_Handler
-                0x00003fce                TCC0_MC0_Handler
-                0x00003fce                EIC_EXTINT_2_Handler
-                0x00003fce                SDHC0_Handler
-                0x00003fce                SERCOM1_1_Handler
-                0x00003fce                I2S_Handler
-                0x00003fce                PCC_Handler
-                0x00003fce                TCC3_OTHER_Handler
-                0x00003fce                EIC_EXTINT_13_Handler
-                0x00003fce                SERCOM1_0_Handler
-                0x00003fce                PUKCC_Handler
-                0x00003fce                SERCOM2_1_Handler
-                0x00003fce                SERCOM1_2_Handler
-                0x00003fce                SERCOM3_0_Handler
-                0x00003fce                SERCOM4_2_Handler
-                0x00003fce                TCC1_MC2_Handler
-                0x00003fce                ADC1_RESRDY_Handler
-                0x00003fce                NVMCTRL_1_Handler
-                0x00003fce                SERCOM5_2_Handler
-                0x00003fce                SERCOM2_2_Handler
-                0x00003fce                DAC_EMPTY_1_Handler
-                0x00003fce                ADC1_OTHER_Handler
-                0x00003fce                OSCCTRL_DPLL1_Handler
-                0x00003fce                EIC_EXTINT_3_Handler
-                0x00003fce                SERCOM3_OTHER_Handler
-                0x00003fce                EIC_EXTINT_8_Handler
-                0x00003fce                NVMCTRL_0_Handler
-                0x00003fce                ADC0_RESRDY_Handler
-                0x00003fce                ADC0_OTHER_Handler
-                0x00003fce                MCLK_Handler
-                0x00003fce                EVSYS_2_Handler
-                0x00003fce                SERCOM2_OTHER_Handler
-                0x00003fce                FREQM_Handler
-                0x00003fce                TC0_Handler
-                0x00003fce                TCC0_MC1_Handler
-                0x00003fce                DMAC_3_Handler
-                0x00003fce                RAMECC_Handler
-                0x00003fce                TC5_Handler
-                0x00003fce                SERCOM2_0_Handler
-                0x00003fce                AES_Handler
-                0x00003fce                ICM_Handler
-                0x00003fce                TCC0_MC2_Handler
+                0x00004166        0x2 build/default/production/_ext/1171490990/interrupts.o
+                0x00004166                EIC_EXTINT_9_Handler
+                0x00004166                TCC0_MC5_Handler
+                0x00004166                SVCall_Handler
+                0x00004166                SERCOM0_2_Handler
+                0x00004166                USB_SOF_HSOF_Handler
+                0x00004166                TCC4_OTHER_Handler
+                0x00004166                TCC2_MC2_Handler
+                0x00004166                EVSYS_0_Handler
+                0x00004166                TRNG_Handler
+                0x00004166                TC2_Handler
+                0x00004166                USB_TRCPT0_Handler
+                0x00004166                DAC_OTHER_Handler
+                0x00004166                AC_Handler
+                0x00004166                DAC_EMPTY_0_Handler
+                0x00004166                DMAC_OTHER_Handler
+                0x00004166                EIC_EXTINT_5_Handler
+                0x00004166                SERCOM3_1_Handler
+                0x00004166                SysTick_Handler
+                0x00004166                SERCOM4_OTHER_Handler
+                0x00004166                SERCOM3_2_Handler
+                0x00004166                EIC_EXTINT_6_Handler
+                0x00004166                PendSV_Handler
+                0x00004166                TCC4_MC0_Handler
+                0x00004166                EVSYS_3_Handler
+                0x00004166                QSPI_Handler
+                0x00004166                TCC2_MC0_Handler
+                0x00004166                PDEC_OTHER_Handler
+                0x00004166                TCC3_MC0_Handler
+                0x00004166                PDEC_MC1_Handler
+                0x00004166                TCC2_MC1_Handler
+                0x00004166                OSCCTRL_XOSC1_Handler
+                0x00004166                PDEC_MC0_Handler
+                0x00004166                EIC_EXTINT_4_Handler
+                0x00004166                EIC_EXTINT_7_Handler
+                0x00004166                SERCOM0_OTHER_Handler
+                0x00004166                EVSYS_OTHER_Handler
+                0x00004166                SERCOM0_0_Handler
+                0x00004166                SERCOM4_0_Handler
+                0x00004166                TCC1_MC0_Handler
+                0x00004166                SERCOM1_OTHER_Handler
+                0x00004166                TCC2_OTHER_Handler
+                0x00004166                EIC_EXTINT_11_Handler
+                0x00004166                SUPC_BODDET_Handler
+                0x00004166                EIC_EXTINT_14_Handler
+                0x00004166                OSC32KCTRL_Handler
+                0x00004166                EVSYS_1_Handler
+                0x00004166                TCC4_MC1_Handler
+                0x00004166                DMAC_0_Handler
+                0x00004166                SUPC_OTHER_Handler
+                0x00004166                WDT_Handler
+                0x00004166                EIC_EXTINT_15_Handler
+                0x00004166                EIC_EXTINT_1_Handler
+                0x00004166                TCC3_MC1_Handler
+                0x00004166                SERCOM5_0_Handler
+                0x00004166                TC4_Handler
+                0x00004166                TC1_Handler
+                0x00004166                TCC1_MC1_Handler
+                0x00004166                EIC_EXTINT_0_Handler
+                0x00004166                TCC1_OTHER_Handler
+                0x00004166                PAC_Handler
+                0x00004166                SERCOM4_1_Handler
+                0x00004166                TC3_Handler
+                0x00004166                Dummy_Handler
+                0x00004166                DAC_RESRDY_0_Handler
+                0x00004166                SERCOM5_1_Handler
+                0x00004166                DMAC_2_Handler
+                0x00004166                TCC0_MC4_Handler
+                0x00004166                USB_TRCPT1_Handler
+                0x00004166                SERCOM0_1_Handler
+                0x00004166                TCC0_MC3_Handler
+                0x00004166                EIC_EXTINT_12_Handler
+                0x00004166                OSCCTRL_DPLL0_Handler
+                0x00004166                SERCOM5_OTHER_Handler
+                0x00004166                PM_Handler
+                0x00004166                OSCCTRL_DFLL_Handler
+                0x00004166                DAC_RESRDY_1_Handler
+                0x00004166                DMAC_1_Handler
+                0x00004166                USB_OTHER_Handler
+                0x00004166                CAN1_Handler
+                0x00004166                TCC0_OTHER_Handler
+                0x00004166                EIC_EXTINT_10_Handler
+                0x00004166                TCC1_MC3_Handler
+                0x00004166                OSCCTRL_XOSC0_Handler
+                0x00004166                TCC0_MC0_Handler
+                0x00004166                EIC_EXTINT_2_Handler
+                0x00004166                SDHC0_Handler
+                0x00004166                SERCOM1_1_Handler
+                0x00004166                I2S_Handler
+                0x00004166                PCC_Handler
+                0x00004166                TCC3_OTHER_Handler
+                0x00004166                EIC_EXTINT_13_Handler
+                0x00004166                SERCOM1_0_Handler
+                0x00004166                PUKCC_Handler
+                0x00004166                SERCOM2_1_Handler
+                0x00004166                SERCOM1_2_Handler
+                0x00004166                SERCOM3_0_Handler
+                0x00004166                SERCOM4_2_Handler
+                0x00004166                TCC1_MC2_Handler
+                0x00004166                ADC1_RESRDY_Handler
+                0x00004166                NVMCTRL_1_Handler
+                0x00004166                SERCOM5_2_Handler
+                0x00004166                SERCOM2_2_Handler
+                0x00004166                DAC_EMPTY_1_Handler
+                0x00004166                ADC1_OTHER_Handler
+                0x00004166                OSCCTRL_DPLL1_Handler
+                0x00004166                EIC_EXTINT_3_Handler
+                0x00004166                SERCOM3_OTHER_Handler
+                0x00004166                EIC_EXTINT_8_Handler
+                0x00004166                NVMCTRL_0_Handler
+                0x00004166                ADC0_RESRDY_Handler
+                0x00004166                ADC0_OTHER_Handler
+                0x00004166                MCLK_Handler
+                0x00004166                EVSYS_2_Handler
+                0x00004166                SERCOM2_OTHER_Handler
+                0x00004166                FREQM_Handler
+                0x00004166                TC0_Handler
+                0x00004166                TCC0_MC1_Handler
+                0x00004166                DMAC_3_Handler
+                0x00004166                RAMECC_Handler
+                0x00004166                TC5_Handler
+                0x00004166                SERCOM2_0_Handler
+                0x00004166                AES_Handler
+                0x00004166                ICM_Handler
+                0x00004166                TCC0_MC2_Handler
 
-.text.NonMaskableInt_Handler%131
-                0x000040e6        0x2
+.text.NonMaskableInt_Handler%140
+                0x000042ae        0x2
  .text.NonMaskableInt_Handler
-                0x000040e6        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000040e6                NonMaskableInt_Handler
+                0x000042ae        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x000042ae                NonMaskableInt_Handler
 
-.text.HardFault_Handler%132
-                0x000041a8        0x2
+.text.HardFault_Handler%141
+                0x00004370        0x2
  .text.HardFault_Handler
-                0x000041a8        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000041a8                HardFault_Handler
+                0x00004370        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x00004370                HardFault_Handler
 
-.text.DebugMonitor_Handler%133
-                0x000041aa        0x2
+.text.DebugMonitor_Handler%142
+                0x00004372        0x2
  .text.DebugMonitor_Handler
-                0x000041aa        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000041aa                DebugMonitor_Handler
+                0x00004372        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x00004372                DebugMonitor_Handler
 
-.text.MemoryManagement_Handler%134
-                0x000041ac        0x2
+.text.MemoryManagement_Handler%143
+                0x00004374        0x2
  .text.MemoryManagement_Handler
-                0x000041ac        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000041ac                MemoryManagement_Handler
+                0x00004374        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x00004374                MemoryManagement_Handler
 
-.text.BusFault_Handler%135
-                0x000041ae        0x2
+.text.BusFault_Handler%144
+                0x00004376        0x2
  .text.BusFault_Handler
-                0x000041ae        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000041ae                BusFault_Handler
+                0x00004376        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x00004376                BusFault_Handler
 
-.text.UsageFault_Handler%136
-                0x000041b0        0x2
+.text.UsageFault_Handler%145
+                0x00004378        0x2
  .text.UsageFault_Handler
-                0x000041b0        0x2 build/default/production/_ext/1171490990/exceptions.o
-                0x000041b0                UsageFault_Handler
+                0x00004378        0x2 build/default/production/_ext/1171490990/exceptions.o
+                0x00004378                UsageFault_Handler
 
-.text.Dummy_App_Func%137
-                0x000041b2        0x2
+.text.Dummy_App_Func%146
+                0x0000437a        0x2
  .text.Dummy_App_Func
-                0x000041b2        0x2 build/default/production/_ext/1171490990/startup_xc32.o
-                0x000041b2                _on_reset
-                0x000041b2                _on_bootstrap
-                0x000041b2                __xc32_on_reset
-                0x000041b2                Dummy_App_Func
-                0x000041b2                __xc32_on_bootstrap
+                0x0000437a        0x2 build/default/production/_ext/1171490990/startup_xc32.o
+                0x0000437a                _on_reset
+                0x0000437a                _on_bootstrap
+                0x0000437a                __xc32_on_reset
+                0x0000437a                Dummy_App_Func
+                0x0000437a                __xc32_on_bootstrap
 
-.text.__dummy%138
-                0x000041b4        0x2
- .text.__dummy  0x000041b4        0x2 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
-                0x000041b4                __init_stdio
-                0x000041b4                __init_host
+.text.__dummy%147
+                0x0000437c        0x2
+ .text.__dummy  0x0000437c        0x2 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libc-musl.a(__libc_start_main.o)
+                0x0000437c                __init_stdio
+                0x0000437c                __init_host
